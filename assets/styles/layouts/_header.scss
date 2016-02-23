@@ -1,0 +1,85 @@
+/*
+
+!! REMEMBER TO BEM !!
+
+.block {
+}
+.block__element {
+}
+.block--modifier {
+}
+
+*/
+
+// DEFAULT NAVBAR WRAPPER
+.home #nav-banner {
+	z-index: 5;
+}
+
+// DEFAULT NAVBAR
+.navbar.navbar-default {
+	position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0;
+}
+
+// HOMEPAGE NAVBAR
+.home .navbar {
+	background-color: rgba(255,255,255,0);
+}
+
+
+// HOMEPAGE NAV, ON LARGER SCREENS ONLY
+@media (min-width: $grid-float-breakpoint) {
+
+	// HOMEPAGE NAV BANNER
+	.home #nav-banner {
+		//@include transition(.25s ease-in-out all);
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		// WHEN AT DEFAULT POSITION
+		&.affix-top {
+			top: 100px;
+		}
+		// WHEN AT SCROLLED 'FIXED'
+		&.affix { 
+			position: fixed;
+		}
+	}
+
+
+	// HOMEPAGE NAVBAR ON DEFAULT
+	.home #nav-banner {
+		
+		.navbar {
+			@include transition(.25s ease-in-out all);
+			background-color: rgba(255,255,255,0);
+			padding-left: 20%;
+			padding-right: 20%;
+			a {
+				color: $white;
+			}
+		}
+	}
+
+	// HOMEPAGE NAV BANNER ON AFFIX
+	.home #nav-banner.affix {
+		//top: 0;
+		.navbar {
+			@include transition(.25s ease-in-out all);
+			background-color: rgba(255,255,255,1);
+			padding-left: 20px;
+			padding-right: 20px;	
+			a {
+				color: $gray;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,51 @@
+#home-intro {
+	
+}
+
+#home-intro {
+    /* CSS declarations for `.block` */
+
+	@include transition(.25s ease-in-out background-color);
+    background: #74C390;
+    
+
+	// ELEMENT
+	#person {
+
+	}
+	#make-really {
+
+	}
+	#adjective {
+
+	}
+	#object {
+
+	}
+
+	// MODIFIERS
+	&.bg--1 {
+	background-color: #74C390;
+	}
+	&.bg--2 {
+	background-color: #51BCE8;
+	}
+	&.bg--3 {
+	background-color: #E46653;
+	}
+
+}
+
+#home-intro-text {
+	width: 25%;
+	position: absolute;
+	z-index: 10;
+    top: 50%;
+    left: 50%;
+    margin-left: -10%;
+    margin-top: -10%;
+    color: $white;
+    h1 {
+    	font-size: 60px;
+    }
+}

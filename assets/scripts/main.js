@@ -74,4 +74,67 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+
+
+  // ##################
+  // MY CODE SNIPPETS
+
+
+  // When the document is ready, remove preloader
+  $(document).ready(function($) {  
+
+    // site preloader -- also uncomment the div in the header and the css style for #preloader
+    $(window).load(function(){
+      $('#spinner-wrapper').fadeOut('50000',function(){$(this).remove();});
+    });
+
+  });
+
+
+  // Fix navbar on scroll
+  // http://getbootstrap.com/javascript/#affix
+
+  $('.home #nav-banner').affix({
+    offset: {
+      top: 100,
+      bottom: function () {
+        return (this.bottom = $('.footer').outerHeight(true));
+      }
+    }
+  });
+
+  // slick carousel http://kenwheeler.github.io/slick/
+
+  $('#person-carousel').slick();
+  $('#adjective-carousel').slick();
+  $('#object-carousel').slick();
+
+
+  /*
+  $('#splash-carousel').on('slide.bs.carousel', function (e) {
+    var index = $(e.target).find(".active").index();
+    // slide 1
+    if(index === 0) { 
+      $('#home-intro').attr('class', 'bg--1');
+    }
+    // slide 2
+    else if (index === 1) {
+      $('#home-intro').attr('class', 'bg--2');
+    }
+    // slide 3
+    else if (index === 2) {
+      $('#home-intro').attr('class', 'bg--3');
+    }
+  });
+
+*/
+
+  
+
+
+
+
+
+
+
 })(jQuery); // Fully reference jQuery after this point.
