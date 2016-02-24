@@ -16,6 +16,15 @@
 	z-index: 5;
 }
 
+.home .navbar .navbar-header,
+.home .navbar .navbar-collapse {
+	position: relative;
+	z-index: 1000;
+}
+
+
+
+
 // DEFAULT NAVBAR
 .navbar.navbar-default {
 	position: relative;

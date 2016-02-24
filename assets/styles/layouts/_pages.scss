@@ -5,6 +5,8 @@
 #home-intro {
     /* CSS declarations for `.block` */
 
+    position: relative;
+
 	@include transition(.25s ease-in-out background-color);
     background: #74C390;
     
@@ -39,26 +41,31 @@
 #home-intro-text {
 	width: 25%;
 	position: absolute;
-	z-index: 10;
+	z-index: 25;
     top: 50%;
-    left: 50%;
-    margin-left: -10%;
+    left: 60%;
+    margin-left: 0;
     margin-top: -10%;
     color: $white;
-    h1 {
-    	font-size: 60px;
+    .item {
+    	font-size: 70px;
+    	font-weight: 700;
+    }
+    #make-really .item {
+    	font-weight: 100;
     }
 }
 
 #float-illustrations-1,
 #float-illustrations-2 {
-	width: 25%;
+	width: 60%;
 	position: absolute;
 	z-index: 10;
-    top: 50%;
+	top: 0;
+    bottom: 20px;
     left: 20px;
     margin-left: 0;
-    margin-top: -10%;
+    margin-bottom: 0;
     color: $white;
     .item {
     	font-size: 80px;
@@ -76,7 +83,10 @@
     }
 }
 #float-illustrations-1 .item {
-	height: 50vh;
+	height: 100vh;
+	&.slick-active span {
+    	left: -10%;
+    }
 }
 #float-illustrations-2 {
 	top: 50%;
@@ -84,6 +94,6 @@
 	z-index: 11;
 	.item {
     	font-size: 50px;
-    	height: 30vh;
+    	height: 50vh;
     }
 }

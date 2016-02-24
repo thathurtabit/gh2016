@@ -8,11 +8,11 @@
 		<div class="item">Ghost Horses</div>
 		<div class="item">Donald Trump</div>
 		<div class="item">Khal Drogo</div>
-		<div class="item">Bjork</div>
+		<div class="item">Björk</div>
 		<div class="item">Ryan Giggs</div>
 		<div class="item">Rosa Parks</div>
 	</div>
-	<div id="make-really">Makes Really</div>
+	<div id="make-really"><div class="item">Makes Really</div></div>
 	<div id="adjective-carousel">
 		<div class="item">Excellent</div>
 		<div class="item">Disappointing</div>
@@ -33,12 +33,12 @@
 </h1>
 
 <section id="float-illustrations-1">
-	<div class="item"><span>Ghost Horses</span></div>
-	<div class="item"><span>Donald Trump</span></div>
-	<div class="item"><span>Khal Drogo</span></div>
-	<div class="item"><span>Bjork</span></div>
-	<div class="item"><span>Ryan Giggs</span></div>
-	<div class="item"><span>Rosa Parks</span></div>
+	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-ghost.png" alt="Ghost Horses" /></span></div>
+	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-trump.png" alt="Donald Trump" /></span></div>
+	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-drogo.png" alt="Khal Drogo" /></span></div>
+	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-bjork.png" alt="Bjork" /></span></div>
+	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-giggs.png" alt="Ryan Giggs" /></span></div>
+	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-rosa.png" alt="Rosa Parks" /></span></div>
 </section>
 
 <section id="float-illustrations-2">
@@ -51,6 +51,7 @@
 </section>
 
 <div id="bg-carousel">
+	<div class="item"></div>
 	<div class="item"></div>
 	<div class="item"></div>
 	<div class="item"></div>
