@@ -32,16 +32,42 @@
 	<!--googleon: all-->
 </h1>
 
+<section id="float-illustrations-1">
+	<div class="item"><span>Ghost Horses</span></div>
+	<div class="item"><span>Donald Trump</span></div>
+	<div class="item"><span>Khal Drogo</span></div>
+	<div class="item"><span>Bjork</span></div>
+	<div class="item"><span>Ryan Giggs</span></div>
+	<div class="item"><span>Rosa Parks</span></div>
+</section>
 
-<div id="splash-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-  <!-- Indicators -->
+<section id="float-illustrations-2">
+	<div class="item"><span>Websites<span></div>
+	<div class="item"><span>Hummus<span></div>
+	<div class="item"><span>Life Descisions<span></div>
+	<div class="item"><span>Birthday Cards<span></div>
+	<div class="item"><span>Shoes<span></div>
+	<div class="item"><span>Stir Fry<span></div>
+</section>
+
+<div id="bg-carousel">
+	<div class="item"></div>
+	<div class="item"></div>
+	<div class="item"></div>
+	<div class="item"></div>
+	<div class="item"></div>
+	<div class="item"></div>
+</div>
+
+<!--
+<div id="" class="carousel slide carousel-fade" data-ride="carousel">
+  
   <ol class="carousel-indicators">
     <li data-target="#splash-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#splash-carousel" data-slide-to="1"></li>
     <li data-target="#splash-carousel" data-slide-to="2"></li>
   </ol>
-
-  <!-- Wrapper for slides -->
+  
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       
@@ -55,6 +81,7 @@
   </div>
 
 </div>
+-->
 
 </section><!-- / HOME INTRO CAROUSEL -->
 

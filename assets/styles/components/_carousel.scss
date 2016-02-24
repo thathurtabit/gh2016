@@ -17,63 +17,58 @@
 
 
 
-.carousel,
-.carousel .item {
+#bg-carousel,
+#bg-carousel .slick-slide {
 	height: 100vh;
 }
 
-.carousel .item {
-	//box-shadow: inset 0 0 0 0 #fff;
-	//@include transition(.25s ease-in-out box-shadow);
-	&.active {
-		//box-shadow: inset 0 0 0 30px #fff;
-	}
-}
 
-// Transition fade http://codepen.io/Rowno/pen/Afykb
-
-.carousel-fade {
-    .carousel-inner {
-        .item {
-            transition-property: opacity, box-shadow;
-        }
-
-        .item:nth-child(1) {
-		    //background: #74C390;
-		}
-
-		.item:nth-child(2) {
-		    //background: #51BCE8;
-		}
-
-		.item:nth-child(3) {
-		    //background: #E46653;
-		}
-        
-        .item,
-        .active.left,
-        .active.right {
-            opacity: 0;
+#bg-carousel {
+    .slick-slide {
+        &.item {
+            //transition-property: opacity, box-shadow;
+            @include transition(.25s ease-in-out box-shadow);
+            left: 0;
             box-shadow: inset 0 0 0 0 $white;
         }
 
-        .active,
-        .next.left,
-        .prev.right {
+        &.slick-active {
             opacity: 1;
+            left: 0;
+            transform: translate3d(0, 0, 0);
             box-shadow: inset 0 0 0 20px $white;
         }
 
-        .next,
+        &.item:nth-child(1) {
+		    background: #74C390;
+		}
+
+		&.item:nth-child(2) {
+		    background: #51BCE8;
+		}
+
+		&.item:nth-child(3) {
+		    background: #E46653;
+		}
+
+        &.item:nth-child(4) {
+            background: #ded869;
+        }
+
+        &.item:nth-child(5) {
+            background: #9069de;
+        }
+        
+        
+
+        /*.next,
         .prev,
-        .active.left,
-        .active.right {
+        .slick-active.left,
+        .slick-active.right {
             left: 0;
             transform: translate3d(0, 0, 0);
         }
+        */
     }
 
-    .carousel-control {
-        z-index: 2;
-    }
 }

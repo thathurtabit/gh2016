@@ -49,3 +49,41 @@
     	font-size: 60px;
     }
 }
+
+#float-illustrations-1,
+#float-illustrations-2 {
+	width: 25%;
+	position: absolute;
+	z-index: 10;
+    top: 50%;
+    left: 20px;
+    margin-left: 0;
+    margin-top: -10%;
+    color: $white;
+    .item {
+    	font-size: 80px;
+    	overflow: hidden;
+    	span {
+    		@include transition(all 0.75s cubic-bezier(.87,-.41,.19,1.44));
+    		@include transition-delay(0.25s);
+    		position: absolute;
+    		left: -500px;
+
+    	}
+    	&.slick-active span {
+    		left: 0;
+    	}
+    }
+}
+#float-illustrations-1 .item {
+	height: 50vh;
+}
+#float-illustrations-2 {
+	top: 50%;
+	margin-top: 0%;
+	z-index: 11;
+	.item {
+    	font-size: 50px;
+    	height: 30vh;
+    }
+}

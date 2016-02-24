@@ -105,32 +105,24 @@
 
   // slick carousel http://kenwheeler.github.io/slick/
 
-  $('#person-carousel').slick();
-  $('#adjective-carousel').slick();
-  $('#object-carousel').slick();
-
-
-  /*
-  $('#splash-carousel').on('slide.bs.carousel', function (e) {
-    var index = $(e.target).find(".active").index();
-    // slide 1
-    if(index === 0) { 
-      $('#home-intro').attr('class', 'bg--1');
-    }
-    // slide 2
-    else if (index === 1) {
-      $('#home-intro').attr('class', 'bg--2');
-    }
-    // slide 3
-    else if (index === 2) {
-      $('#home-intro').attr('class', 'bg--3');
-    }
+  $('#person-carousel').slick({
+    asNavFor: '#bg-carousel, #float-illustrations-1'
   });
-
-*/
-
-  
-
+  $('#adjective-carousel').slick();
+  $('#object-carousel').slick({
+    asNavFor: '#float-illustrations-2'
+  });
+  $('#bg-carousel').slick({
+      fade: true
+  });
+  $('#float-illustrations-1').slick({
+    arrows: false,
+    fade: true
+  });
+  $('#float-illustrations-2').slick({
+    arrows: false,
+    fade: true
+  });
 
 
 
