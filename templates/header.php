@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><span class="sr-only"><?php bloginfo('name'); ?>"</span><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

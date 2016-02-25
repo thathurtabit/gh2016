@@ -5,9 +5,6 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
-// Colors
-$brand-primary:         #27ae60;
-
 
 $bootstrap-sass-asset-helper: false !default;
 //
@@ -27,7 +24,14 @@ $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white:           		 #fff;
 
-$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-green:			#74C390 !default;
+$brand-blue:			#51BCE8 !default;
+$brand-red:				#E46653 !default;
+$brand-yellow:			#ded869 !default;
+$brand-purple:			#9069de !default;
+$brand-pink:			#e2839d !default;
+
+$brand-primary:         #51BCE8 !default; // #337ab7
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -374,7 +378,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height:                    100px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;

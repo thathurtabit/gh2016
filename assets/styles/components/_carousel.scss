@@ -40,27 +40,27 @@
         }
 
         &.item:nth-child(1) {
-		    background: #74C390;
+		    background: $brand-green;
 		}
 
 		&.item:nth-child(2) {
-		    background: #51BCE8;
+		    background: $brand-blue;
 		}
 
 		&.item:nth-child(3) {
-		    background: #E46653;
+		    background: $brand-red;
 		}
 
         &.item:nth-child(4) {
-            background: #ded869;
+            background: $brand-yellow;
         }
 
         &.item:nth-child(5) {
-            background: #9069de;
+            background: $brand-purple;
         }
 
         &.item:nth-child(6) {
-            background: #e2839d;
+            background: $brand-pink;
         }
         
         

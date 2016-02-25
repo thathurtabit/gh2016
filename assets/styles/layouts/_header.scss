@@ -13,16 +13,33 @@
 
 // DEFAULT NAVBAR WRAPPER
 .home #nav-banner {
-	z-index: 5;
+	z-index: 32;
+}
+
+.navbar-brand {
+	@include transition(.25s ease-in-out all);
+	display: block;
+	max-width: 100%;
+	padding: 0;
+	width: 200px;
+	#horse {		
+		@include transition(.25s ease-in-out all);
+	    height: 75px;
+	    margin-top: 12px;
+		#outline .whitelogo {
+		@include transition(.25s ease-in-out all);
+			fill: $white;
+		}
+	}
 }
 
 .home .navbar .navbar-header,
 .home .navbar .navbar-collapse {
 	position: relative;
 	z-index: 1000;
+	font-size: 40px;
+	text-transform: uppercase;
 }
-
-
 
 
 // DEFAULT NAVBAR
@@ -88,7 +105,17 @@
 			a {
 				color: $gray;
 			}
+			.navbar-brand {
+				width: 100px;
+				#horse #outline .whitelogo {
+					fill: $gray;
+				}
+				&:hover {
+					#horse #outline .whitelogo {
+
+					}
+				}
+			}
 		}
 	}
-
 }

@@ -6,6 +6,8 @@
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
+@import "common/variables";
+
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
@@ -14,6 +16,7 @@
 @import "components/wp-classes";
 @import "components/carousel";
 @import "components/preloader";
+@import "components/animations";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
