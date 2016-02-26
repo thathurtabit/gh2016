@@ -33,7 +33,7 @@
 </h1>
 
 <section id="float-illustrations-1">
-	<div class="item item--horse"><span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span></div>
+	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-man.png" alt="Ghost Horses" /></span><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-comp.png" alt="Website Design" /></span></div>
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-trump.png" alt="Donald Trump" /></span></div>
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-drogo.png" alt="Khal Drogo" /></span></div>
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-bjork.png" alt="Bjork" /></span></div>
@@ -77,6 +77,8 @@
 </ul>
 
 </section><!-- / BUT HOW? -->
+
+<span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
 
 
 <?php the_content(); ?>

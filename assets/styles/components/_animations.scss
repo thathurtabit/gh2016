@@ -32,7 +32,7 @@
 // Animate=spin spin keyframes
 @-moz-keyframes bgcolor {
     0% {
-        @include transform(scale3d(0.8, 0.8, 0.8));
+        //@include transform(scale3d(0.9, 0.9, 0.9));
           fill: $brand-blue;
       }
       16% {
@@ -43,7 +43,7 @@
       }
       48% {
           fill: $brand-yellow;
-          @include transform(scale3d(1, 1, 1));
+          //@include transform(scale3d(1, 1, 1));
       }
       64% {
           fill: $brand-purple;
@@ -53,12 +53,12 @@
       }
       100% {
           fill: $brand-blue;
-          @include transform(scale3d(0.8, 0.8, 0.8));
+          //@include transform(scale3d(0.9, 0.9, 0.9));
       }
 }
 @-webkit-keyframes bgcolor {
     0% {
-        @include transform(scale3d(0.8, 0.8, 0.8));
+        //@include transform(scale3d(0.9, 0.9, 0.9));
           fill: $brand-blue;
       }
       16% {
@@ -69,7 +69,7 @@
       }
       48% {
           fill: $brand-yellow;
-          @include transform(scale3d(1, 1, 1));
+          //@include transform(scale3d(1, 1, 1));
       }
       64% {
           fill: $brand-purple;
@@ -79,12 +79,12 @@
       }
       100% {
           fill: $brand-blue;
-          @include transform(scale3d(0.8, 0.8, 0.8));
+          //@include transform(scale3d(0.9, 0.9, 0.9));
       }
 }
 @keyframes bgcolor {
     0% {
-        @include transform(scale3d(0.8, 0.8, 0.8));
+        //@include transform(scale3d(0.9, 0.9, 0.9));
           fill: $brand-blue;
       }
       16% {
@@ -95,7 +95,7 @@
       }
       48% {
           fill: $brand-yellow;
-          @include transform(scale3d(1, 1, 1));
+          //@include transform(scale3d(1, 1, 1));
       }
       64% {
           fill: $brand-purple;
@@ -105,6 +105,6 @@
       }
       100% {
           fill: $brand-blue;
-          @include transform(scale3d(0.8, 0.8, 0.8));
+          //@include transform(scale3d(0.9, 0.9, 0.9));
       }
 }

@@ -130,6 +130,10 @@
       new Vivus('logo-svg', {duration: 300});
     //});
   
+  // Only Fire after the page has fully loaded
+  $(window).load(function() {
+    $('body').addClass('pageloaded');
+  });
 
 
 

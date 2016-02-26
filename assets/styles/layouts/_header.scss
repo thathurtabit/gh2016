@@ -16,13 +16,24 @@
 	z-index: 35;
 }
 
+
+
+#nav-banner .navbar {
+	@include transition(.25s ease-in-out all);
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+}
+
 .navbar-brand {
 	@include transition(.25s ease-in-out all);
 	display: block;
+	position: relative;
 	max-width: 100%;
 	padding: 0;
 	width: 200px;
 	z-index: 1001;
+	padding-left: 20%;
 	#horse {		
 		@include transition(.25s ease-in-out all);
 	    height: 75px;
@@ -88,12 +99,17 @@
 
 	// HOMEPAGE NAVBAR ON DEFAULT
 	.home #nav-banner {
-		
-		.navbar {
+		@include transition(.25s ease-in-out all);
+		background-color: rgba(255,255,255,0);
+
+		.container-fluid {
 			@include transition(.25s ease-in-out all);
-			background-color: rgba(255,255,255,0);
 			padding-left: 20%;
 			padding-right: 20%;
+		}
+		.navbar .navbar-collapse {
+			@include transition(.25s ease-in-out all);
+			
 			a {
 				position: relative;
 				color: $white;
@@ -114,30 +130,60 @@
 				}
 				&:hover:after {
 					@include scale(1,1);
-					background-color: rgba(255,255,255,0.5);
+					background-color: rgba(255,255,255,0.25);
 				}
+			}
+		}
+		// NAVBAR COLOURS
+		.navbar .navbar-collapse li.menu-item {
+			@include transition(.25s ease-in-out all);
+			&:nth-child(1) a:hover:after {
+				background-color: $brand-green;
+				opacity: .75;
+			}
+			&:nth-child(2) a:hover:after {
+				background-color: $brand-red;
+				opacity: .75;
+			}
+			&:nth-child(3) a:hover:after {
+				background-color: $brand-purple;
+				opacity: .75;
+			}
+			&:nth-child(4) a:hover:after {
+				background-color: $brand-blue;
+				opacity: .75;
 			}
 		}
 	}
 
+
+
 	// HOMEPAGE NAV BANNER ON AFFIX
 	.home #nav-banner.affix {
-		//top: 0;
-		.navbar {
+		@include transition(.25s ease-in-out all);
+		background-color: rgba(255,255,255,1);
+
+		.container-fluid {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.navbar .navbar-collapse {
 			@include transition(.25s ease-in-out all);
-			background-color: rgba(255,255,255,1);
 			padding-left: 20px;
 			padding-right: 20px;	
 			a {
+				@include transition(.25s ease-in-out all);
 				color: $gray;
 				&:after {					
 					background-color: rgba(0,0,0,0);
 				}
 				&:hover:after {
-					background-color: rgba(0,0,0,0.1);
+					background-color: rgba(0,0,0,0.05);
 				}
 			}
-			.navbar-brand {
+			
+		}
+		.navbar-brand {
 				width: 100px;
 				padding-left: 20px;
 				#horse {
@@ -151,6 +197,37 @@
 					#horse #outline .whitelogo {
 
 					}
+				}
+			}
+		// NAVBAR COLOURS
+		.navbar .navbar-collapse li.menu-item {
+			@include transition(.25s ease-in-out all);
+			&:nth-child(1) a:hover {
+				color: $brand-green;
+				&:after {
+					opacity: 1;
+					background-color: rgba(0,0,0,0.05);
+				}
+			}
+			&:nth-child(2) a:hover {
+				color: $brand-red;
+				&:after {
+					opacity: 1;
+					background-color: rgba(0,0,0,0.05);
+				}
+			}
+			&:nth-child(3) a:hover {
+				color: $brand-purple;
+				&:after {
+					opacity: 1;
+					background-color: rgba(0,0,0,0.05);
+				}
+			}
+			&:nth-child(4) a:hover {
+				color: $brand-blue;
+				&:after {
+					opacity: 1;
+					background-color: rgba(0,0,0,0.05);
 				}
 			}
 		}

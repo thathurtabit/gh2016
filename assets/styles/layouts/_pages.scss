@@ -84,7 +84,10 @@ img {
 
     	}
     	&.slick-active span {
-    		left: 0;
+    		
+            .pageloaded & {
+                left: 0;
+            }
     	}
     }
 }
