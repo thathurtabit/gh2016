@@ -256,6 +256,7 @@ gulp.task('watch', function() {
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
   gulp.watch([path.source + 'images/**/*'], ['images']);
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
+  //.pipe(gulp.dest(path.dist + 'images'));
 });
 
 // ### Build

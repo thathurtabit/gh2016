@@ -127,7 +127,7 @@
   // https://github.com/maxwellito/vivus
   // load Vivus SVG outline animation after document loads
     //$(window).load(function(){
-      new Vivus('logo-svg', {duration: 500});
+      new Vivus('logo-svg', {duration: 300});
     //});
   
 

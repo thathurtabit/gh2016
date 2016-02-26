@@ -1,5 +1,6 @@
-#home-intro {
-	
+// Make all images responsive
+img {
+    @include img-responsive;
 }
 
 #home-intro {
@@ -41,7 +42,7 @@
 #home-intro-text {
 	width: 25%;
 	position: absolute;
-	z-index: 25;
+	z-index: 33;
     top: 50%;
     left: 60%;
     margin-left: 0;
@@ -100,18 +101,21 @@
 #float-illustrations-2 {
 	top: 50%;
 	margin-top: 0%;
-	z-index: 11;
+	z-index: 32;
 	.item {
     	font-size: 50px;
     	height: 50vh;
     }
 }
 
-.item.item--horse span {
+#float-illustrations-1 .item.item--horse span {
     display: block;
     width: 100%;
 }
 
-.item.item--horse #logo-svg #inner-circle .ho1 {
-    @include animate-spin();
+#float-illustrations-1 #horse-white-bg-span {
+    //@extend .animated;
+    //@extend .animated.infinite;
+    //@extend .jello;
+    @include bounceInUp();
 }

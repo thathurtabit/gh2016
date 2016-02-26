@@ -10,7 +10,8 @@
     "bootstrap-sass": "3.3.6",
     "font-awesome": "fontawesome#^4.5.0",
     "slick-carousel": "^1.5.9",
-    "vivus": "^0.3.0"
+    "vivus": "^0.3.0",
+    "animatewithsass": "^3.2.2"
   },
   "overrides": {
     "bootstrap-sass": {

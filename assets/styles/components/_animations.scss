@@ -19,3 +19,92 @@
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
 }
+
+
+@mixin animate-bgcolor() {
+    @include animation-name(bgcolor);
+    @include animation-duration(1s);
+    @include transform-origin(50% 50%);
+    @include animation-timing-function(ease-in-out);
+    @include animation-iteration-count(infinite);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes bgcolor {
+    0% {
+        @include transform(scale3d(0.8, 0.8, 0.8));
+          fill: $brand-blue;
+      }
+      16% {
+          fill: $brand-green;
+      }
+      32% {
+          fill: $brand-red;
+      }
+      48% {
+          fill: $brand-yellow;
+          @include transform(scale3d(1, 1, 1));
+      }
+      64% {
+          fill: $brand-purple;
+      }
+      80% {
+          fill: $brand-pink;
+      }
+      100% {
+          fill: $brand-blue;
+          @include transform(scale3d(0.8, 0.8, 0.8));
+      }
+}
+@-webkit-keyframes bgcolor {
+    0% {
+        @include transform(scale3d(0.8, 0.8, 0.8));
+          fill: $brand-blue;
+      }
+      16% {
+          fill: $brand-green;
+      }
+      32% {
+          fill: $brand-red;
+      }
+      48% {
+          fill: $brand-yellow;
+          @include transform(scale3d(1, 1, 1));
+      }
+      64% {
+          fill: $brand-purple;
+      }
+      80% {
+          fill: $brand-pink;
+      }
+      100% {
+          fill: $brand-blue;
+          @include transform(scale3d(0.8, 0.8, 0.8));
+      }
+}
+@keyframes bgcolor {
+    0% {
+        @include transform(scale3d(0.8, 0.8, 0.8));
+          fill: $brand-blue;
+      }
+      16% {
+          fill: $brand-green;
+      }
+      32% {
+          fill: $brand-red;
+      }
+      48% {
+          fill: $brand-yellow;
+          @include transform(scale3d(1, 1, 1));
+      }
+      64% {
+          fill: $brand-purple;
+      }
+      80% {
+          fill: $brand-pink;
+      }
+      100% {
+          fill: $brand-blue;
+          @include transform(scale3d(0.8, 0.8, 0.8));
+      }
+}

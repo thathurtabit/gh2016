@@ -4,11 +4,15 @@
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/animatewithsass/animate.scss";
 // endbower
+
+
 
 @import "common/variables";
 
 @import "common/global";
+//@import "common/animatewithsass"; // go to the file for settings
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

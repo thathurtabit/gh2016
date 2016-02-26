@@ -33,7 +33,7 @@
 </h1>
 
 <section id="float-illustrations-1">
-	<div class="item item--horse"><span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span></div>
+	<div class="item item--horse"><span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span></div>
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-trump.png" alt="Donald Trump" /></span></div>
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-drogo.png" alt="Khal Drogo" /></span></div>
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-bjork.png" alt="Bjork" /></span></div>
@@ -59,30 +59,6 @@
 	<div class="item"></div>
 	<div class="item"></div>
 </div>
-
-<!--
-<div id="" class="carousel slide carousel-fade" data-ride="carousel">
-  
-  <ol class="carousel-indicators">
-    <li data-target="#splash-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#splash-carousel" data-slide-to="1"></li>
-    <li data-target="#splash-carousel" data-slide-to="2"></li>
-  </ol>
-  
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      
-    </div>
-    <div class="item">
-      
-    </div>
-    <div class="item">
-     
-    </div>
-  </div>
-
-</div>
--->
 
 </section><!-- / HOME INTRO CAROUSEL -->
 
