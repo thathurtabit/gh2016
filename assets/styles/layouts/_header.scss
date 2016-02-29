@@ -31,15 +31,20 @@
 	position: relative;
 	max-width: 100%;
 	padding: 0;
-	width: 200px;
+	width: 100px;
 	z-index: 1001;
-	padding-left: 20%;
+	padding-left: 0;
+	border-radius: 100%;
+	background-color: rgba(255,255,255,.2);
 	#horse {		
 		@include transition(.25s ease-in-out all);
-	    height: 75px;
-	    margin: 12px auto 0;
+	    height: 60px;
+	    width: 60px;
+	    display: block;
+	    margin: 20px auto 0;
 		#outline .whitelogo {
-		@include transition(.25s ease-in-out all);
+			@include transition(.25s ease-in-out all);
+			@include translate(-10px, 0);
 			fill: $white;
 		}
 	}
@@ -77,6 +82,14 @@
 // HOMEPAGE NAV, ON LARGER SCREENS ONLY
 @media (min-width: $grid-float-breakpoint) {
 
+	.navbar-header {
+		float: right;
+	}
+
+	.navbar-nav {
+		margin-right: 30px;
+	}
+
 	// HOMEPAGE NAV BANNER
 	.home #nav-banner {
 		//@include transition(.25s ease-in-out all);
@@ -94,8 +107,11 @@
 		}
 	}
 
+}
 
 
+// HOMEPAGE NAV, ON LARGER SCREENS ONLY
+@media (min-width: $grid-float-breakpoint) {
 
 	// HOMEPAGE NAVBAR ON DEFAULT
 	.home #nav-banner {
@@ -137,27 +153,17 @@
 		// NAVBAR COLOURS
 		.navbar .navbar-collapse li.menu-item {
 			@include transition(.25s ease-in-out all);
-			&:nth-child(1) a:hover:after {
-				background-color: $brand-green;
-				opacity: .75;
-			}
-			&:nth-child(2) a:hover:after {
-				background-color: $brand-red;
-				opacity: .75;
-			}
-			&:nth-child(3) a:hover:after {
-				background-color: $brand-purple;
-				opacity: .75;
-			}
-			&:nth-child(4) a:hover:after {
-				background-color: $brand-blue;
-				opacity: .75;
+			a:hover:after {
+				background-color: rgba(255,255,255,0.2);
 			}
 		}
 	}
 
+}
 
-
+// HOMEPAGE NAV, ON LARGER SCREENS ONLY
+@media (min-width: $grid-float-breakpoint) {
+	
 	// HOMEPAGE NAV BANNER ON AFFIX
 	.home #nav-banner.affix {
 		@include transition(.25s ease-in-out all);
@@ -185,7 +191,7 @@
 		}
 		.navbar-brand {
 				width: 100px;
-				padding-left: 20px;
+				padding-left: 0;
 				#horse {
 				    height: 50px;
 				    margin: 25px auto 0;

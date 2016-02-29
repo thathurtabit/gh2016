@@ -103,26 +103,39 @@
     }
   });
 
-  // slick carousel http://kenwheeler.github.io/slick/
-
-  $('#person-carousel').slick({
-    asNavFor: '#bg-carousel, #float-illustrations-1'
+  // Responsive text fitting
+  $('body').flowtype({
+     minimum   : 400,
+     maximum   : 500,
+     minFont   : 12,
+     maxFont   : 40,
+     fontRatio : 30
   });
-  $('#adjective-carousel').slick();
+
+  // slick carousel http://kenwheeler.github.io/slick/
+  $('#person-carousel').slick({
+    asNavFor: '#bg-carousel, #float-illustrations-1',
+    speed: '200'
+  });
+  $('#adjective-carousel').slick({
+    speed: '200'
+  });
   $('#object-carousel').slick({
-    asNavFor: '#float-illustrations-2'
+    asNavFor: '#float-illustrations-2',
+    speed: '200'
   });
   $('#bg-carousel').slick({
-      fade: true
+      fade: true,
+      arrows: false
   });
   $('#float-illustrations-1').slick({
     arrows: false,
     fade: true
   });
-  $('#float-illustrations-2').slick({
-    arrows: false,
-    fade: true
-  });
+  //$('#float-illustrations-2').slick({
+  //  arrows: false,
+  //  fade: true
+  //});
 
   // https://github.com/maxwellito/vivus
   // load Vivus SVG outline animation after document loads

@@ -41,6 +41,7 @@
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-rosa.png" alt="Rosa Parks" /></span></div>
 </section>
 
+<!--
 <section id="float-illustrations-2">
 	<div class="item"><span>Websites<span></div>
 	<div class="item"><span>Hummus<span></div>
@@ -49,6 +50,7 @@
 	<div class="item"><span>Shoes<span></div>
 	<div class="item"><span>Stir Fry<span></div>
 </section>
+-->
 
 <div id="bg-carousel">
 	<div class="item"></div>

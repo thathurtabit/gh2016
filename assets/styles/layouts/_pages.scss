@@ -3,6 +3,13 @@ img {
     @include img-responsive;
 }
 
+// Make homepage .main act like normal div
+.home .main {
+    float: none;
+    width: auto;
+}
+
+
 #home-intro {
     /* CSS declarations for `.block` */
 
@@ -49,11 +56,13 @@ img {
     margin-top: -10%;
     color: $white;
     .item {
-    	font-size: 70px;
+        @include transition(all 0.75s cubic-bezier(.87,-.41,.19,1.44));
+    	//font-size: 70px;
     	font-weight: 700;
     }
     #make-really .item {
-    	font-weight: 100;
+    	font-family: $font-family-serif;
+        font-weight: normal;
     }
 }
 
@@ -72,10 +81,11 @@ img {
     	font-size: 80px;
     	overflow: hidden;
     	span {
-    		@include transition(all 0.75s cubic-bezier(.87,-.41,.19,1.44));
+    		@include transition(left 0.75s cubic-bezier(.87,-.41,.19,1.44));
     		@include transition-delay(0.25s);
     		position: absolute;
     		left: -500px;
+            bottom: 20px;
             // target next span
             + span {
                 @include transition-delay(0.5s);
@@ -87,6 +97,7 @@ img {
     		
             .pageloaded & {
                 left: 0;
+                bottom: 20px;
             }
     	}
     }

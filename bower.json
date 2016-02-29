@@ -11,7 +11,8 @@
     "font-awesome": "fontawesome#^4.5.0",
     "slick-carousel": "^1.5.9",
     "vivus": "^0.3.0",
-    "animatewithsass": "^3.2.2"
+    "animatewithsass": "^3.2.2",
+    "Flowtype.js": "^1.1.0"
   },
   "overrides": {
     "bootstrap-sass": {
