@@ -1,3 +1,4 @@
+// SPIN
 @mixin animate-spin() {
 	@include animation-name(spin);
 	@include animation-duration(2s);
@@ -19,8 +20,148 @@
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
 }
+// end SPIN
 
 
+// Background white flash
+@mixin white-flash() {
+  @include animation-name(white-flash);
+  @include animation-duration(.5s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes white-flash {
+    0% {
+        background-color: rgba(255,255,255,0.2);
+      }
+      50% {
+          background-color: rgba(255,255,255,0.5);
+      }
+      100% {
+          background-color: rgba(255,255,255,0.2);
+      }
+}
+@-webkit-keyframes white-flash {
+    0% {
+        background-color: rgba(255,255,255,0.2);
+      }
+      50% {
+          background-color: rgba(255,255,255,0.5);
+      }
+      100% {
+          background-color: rgba(255,255,255,0.2);
+      }
+}
+@keyframes white-flash {
+    0% {
+        background-color: rgba(255,255,255,0.2);
+      }
+      50% {
+          background-color: rgba(255,255,255,0.5);
+      }
+      100% {
+          background-color: rgba(255,255,255,0.2);
+      }
+}
+// end Background white flash
+
+
+
+// Animate bg colours FILL
+@mixin animate-bgcolor-fill() {
+    @include animation-name(bgcolor-fill);
+    @include animation-duration(1s);
+    @include transform-origin(50% 50%);
+    @include animation-timing-function(ease-in-out);
+    @include animation-iteration-count(infinite);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes bgcolor-fill {
+    0% {
+        //@include transform(scale3d(0.9, 0.9, 0.9));
+          fill: $brand-blue;
+      }
+      16% {
+          fill: $brand-green;
+      }
+      32% {
+          fill: $brand-red;
+      }
+      48% {
+          fill: $brand-yellow;
+          //@include transform(scale3d(1, 1, 1));
+      }
+      64% {
+          fill: $brand-purple;
+      }
+      80% {
+          fill: $brand-pink;
+      }
+      100% {
+          fill: $brand-blue;
+          //@include transform(scale3d(0.9, 0.9, 0.9));
+      }
+}
+@-webkit-keyframes bgcolor-fill {
+    0% {
+        //@include transform(scale3d(0.9, 0.9, 0.9));
+          fill: $brand-blue;
+      }
+      16% {
+          fill: $brand-green;
+      }
+      32% {
+          fill: $brand-red;
+      }
+      48% {
+          fill: $brand-yellow;
+          //@include transform(scale3d(1, 1, 1));
+      }
+      64% {
+          fill: $brand-purple;
+      }
+      80% {
+          fill: $brand-pink;
+      }
+      100% {
+          fill: $brand-blue;
+          //@include transform(scale3d(0.9, 0.9, 0.9));
+      }
+}
+@keyframes bgcolor-fill {
+    0% {
+        //@include transform(scale3d(0.9, 0.9, 0.9));
+          fill: $brand-blue;
+      }
+      16% {
+          fill: $brand-green;
+      }
+      32% {
+          fill: $brand-red;
+      }
+      48% {
+          fill: $brand-yellow;
+          //@include transform(scale3d(1, 1, 1));
+      }
+      64% {
+          fill: $brand-purple;
+      }
+      80% {
+          fill: $brand-pink;
+      }
+      100% {
+          fill: $brand-blue;
+          //@include transform(scale3d(0.9, 0.9, 0.9));
+      }
+}
+// end Animate bg colours
+
+
+// Animate bg colours FILL
 @mixin animate-bgcolor() {
     @include animation-name(bgcolor);
     @include animation-duration(1s);
@@ -32,79 +173,71 @@
 // Animate=spin spin keyframes
 @-moz-keyframes bgcolor {
     0% {
-        //@include transform(scale3d(0.9, 0.9, 0.9));
-          fill: $brand-blue;
+          background-color: $brand-blue;
       }
       16% {
-          fill: $brand-green;
+          background-color: $brand-green;
       }
       32% {
-          fill: $brand-red;
+          background-color: $brand-red;
       }
       48% {
-          fill: $brand-yellow;
-          //@include transform(scale3d(1, 1, 1));
+          background-color: $brand-yellow;
       }
       64% {
-          fill: $brand-purple;
+          background-color: $brand-purple;
       }
       80% {
-          fill: $brand-pink;
+          background-color: $brand-pink;
       }
       100% {
-          fill: $brand-blue;
-          //@include transform(scale3d(0.9, 0.9, 0.9));
+          background-color:$brand-blue;
       }
 }
 @-webkit-keyframes bgcolor {
     0% {
-        //@include transform(scale3d(0.9, 0.9, 0.9));
-          fill: $brand-blue;
+          background-color: $brand-blue;
       }
       16% {
-          fill: $brand-green;
+          background-color: $brand-green;
       }
       32% {
-          fill: $brand-red;
+          background-color: $brand-red;
       }
       48% {
-          fill: $brand-yellow;
-          //@include transform(scale3d(1, 1, 1));
+          background-color: $brand-yellow;
       }
       64% {
-          fill: $brand-purple;
+          background-color: $brand-purple;
       }
       80% {
-          fill: $brand-pink;
+          background-color: $brand-pink;
       }
       100% {
-          fill: $brand-blue;
-          //@include transform(scale3d(0.9, 0.9, 0.9));
+          background-color:$brand-blue;
       }
 }
 @keyframes bgcolor {
     0% {
-        //@include transform(scale3d(0.9, 0.9, 0.9));
-          fill: $brand-blue;
+          background-color: $brand-blue;
       }
       16% {
-          fill: $brand-green;
+          background-color: $brand-green;
       }
       32% {
-          fill: $brand-red;
+          background-color: $brand-red;
       }
       48% {
-          fill: $brand-yellow;
-          //@include transform(scale3d(1, 1, 1));
+          background-color: $brand-yellow;
       }
       64% {
-          fill: $brand-purple;
+          background-color: $brand-purple;
       }
       80% {
-          fill: $brand-pink;
+          background-color: $brand-pink;
       }
       100% {
-          fill: $brand-blue;
-          //@include transform(scale3d(0.9, 0.9, 0.9));
+          background-color:$brand-blue;
       }
 }
+// end Animate bg colours

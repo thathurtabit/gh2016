@@ -1,0 +1,54 @@
+.btn {
+	@include transition(all 0.2s ease-in-out);
+	position: relative;
+	text-transform: uppercase;
+	box-shadow: 0 0 0 3px $white;
+	&:hover {
+		box-shadow: 0 0 0 5px $white;
+	}
+}
+
+.-size-large {
+	@extend .btn-lg;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.-color-white {
+	@extend .btn;
+	color: $white;
+	border-color: $white;
+	&:hover {
+		color: $white;
+	}
+}
+
+.-arrow-down {
+	padding-right: 40px;
+	&:after {
+		@include square(20px);
+		position: absolute;
+		float: right;
+		font-family: "FontAwesome";
+		line-height: 20px;
+		top: 11px;
+		right: 11px;
+		text-align: center;
+		content: $fa-var-arrow-circle-down;
+
+	}
+	&:hover {
+		padding-right: 45px;
+		&:after {
+			@include animate-spin();
+			@include animation-duration(.2s);
+		}
+	}
+}
+
+.-bgcolor-spin {
+	@extend .btn;
+	&:hover {
+		@include animate-bgcolor();
+	}
+}

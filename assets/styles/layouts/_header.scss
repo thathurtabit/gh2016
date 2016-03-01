@@ -12,10 +12,21 @@
 */
 
 // DEFAULT NAVBAR WRAPPER
-.home #nav-banner {
+#nav-banner {
 	z-index: 35;
 }
 
+
+// HOMEPAGE NAV, ON LARGEST SCREENS ONLY
+@media (min-width: $screen-lg-min) {
+	#nav-banner {
+		left: auto;
+		min-width: 800px;
+		&.affix {
+
+		}
+	}
+}
 
 
 #nav-banner .navbar {
@@ -48,12 +59,15 @@
 			fill: $white;
 		}
 	}
+	&:hover {
+		@include white-flash();
+	}
 	&:hover #horse #outline .whitelogo {
-    	@include animate-bgcolor();
+    	@include animate-bgcolor-fill();
 	}
 }
 
-.home .navbar .navbar-collapse {
+.navbar .navbar-collapse {
 	position: relative;
 	z-index: 1000;
 	font-size: 20px;
@@ -74,7 +88,7 @@
 }
 
 // HOMEPAGE NAVBAR
-.home .navbar {
+.navbar {
 	background-color: rgba(255,255,255,0);
 }
 
@@ -87,23 +101,25 @@
 	}
 
 	.navbar-nav {
-		margin-right: 30px;
+		margin-right: 20px;
 	}
 
 	// HOMEPAGE NAV BANNER
-	.home #nav-banner {
+	#nav-banner {
 		//@include transition(.25s ease-in-out all);
 		position: absolute;
-		left: 0;
+		//left: 0;
 		right: 0;
 
 		// WHEN AT DEFAULT POSITION
 		&.affix-top {
-			top: 100px;
+			top: 100px;			
+			margin-top: 20px;
 		}
 		// WHEN AT SCROLLED 'FIXED'
 		&.affix { 
 			position: fixed;
+			margin-top: 20px;
 		}
 	}
 
@@ -114,13 +130,13 @@
 @media (min-width: $grid-float-breakpoint) {
 
 	// HOMEPAGE NAVBAR ON DEFAULT
-	.home #nav-banner {
+	#nav-banner {
 		@include transition(.25s ease-in-out all);
 		background-color: rgba(255,255,255,0);
 
 		.container-fluid {
 			@include transition(.25s ease-in-out all);
-			padding-left: 20%;
+			//padding-left: 20%;
 			padding-right: 20%;
 		}
 		.navbar .navbar-collapse {
@@ -165,9 +181,19 @@
 @media (min-width: $grid-float-breakpoint) {
 	
 	// HOMEPAGE NAV BANNER ON AFFIX
-	.home #nav-banner.affix {
+	#nav-banner.affix {
 		@include transition(.25s ease-in-out all);
 		background-color: rgba(255,255,255,1);
+		min-width: 600px;
+		left: auto;
+		border-radius: ($navbar-height/2) 0 0 ($navbar-height/2);
+		&:after {
+			content: "";
+			position: absolute;
+			right: 20px;
+			top: 0;
+			border-left: 1px solid $border-color;
+		}
 
 		.container-fluid {
 			padding-left: 0;
@@ -192,6 +218,7 @@
 		.navbar-brand {
 				width: 100px;
 				padding-left: 0;
+				margin-right: 20px;
 				#horse {
 				    height: 50px;
 				    margin: 25px auto 0;
@@ -230,7 +257,7 @@
 				}
 			}
 			&:nth-child(4) a:hover {
-				color: $brand-blue;
+				color: $brand-orange;
 				&:after {
 					opacity: 1;
 					background-color: rgba(0,0,0,0.05);

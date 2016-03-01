@@ -30,6 +30,9 @@
 		<div class="item">Stir Fry</div>
 	</div>
 	<!--googleon: all-->
+	<p>
+		<a href="#but-how" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">Learn more</a>
+	</p>
 </h1>
 
 <section id="float-illustrations-1">
@@ -40,7 +43,7 @@
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-giggs.png" alt="Ryan Giggs" /></span></div>
 	<div class="item"><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-rosa.png" alt="Rosa Parks" /></span></div>
 </section>
-
+ 
 <!--
 <section id="float-illustrations-2">
 	<div class="item"><span>Websites<span></div>
@@ -65,11 +68,11 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section><!-- BUT HOW? -->
+<section id="but-how"><!-- BUT HOW? -->
 
-<h2>Yeah, but how?</h2>
+<h2 class="sub-heading">Lovely websites you say, b-but how?</h2>
 
-<ul>
+<ul class="large-ul-blocks">
 	<li>Creativity</li>
 	<li>Smarts</li>
 	<li>Love</li>
@@ -79,6 +82,22 @@
 </ul>
 
 </section><!-- / BUT HOW? -->
+
+<section id="but-what"><!-- BUT WHAT -->
+
+<h2 class="sub-heading">But like, what do you DO?</h2>
+
+<ul class="large-ul-blocks">
+	<li>Digital Design / UI</li>
+	<li>Logos</li>
+	<li>HTML5 / CSS3</li>
+	<li>SASS / LESS</li>
+	<li>Responsive</li>
+	<li>WordPress</li>	
+</ul>
+
+</section><!-- / BUT WHAT -->
+
 
 <span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
 

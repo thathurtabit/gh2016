@@ -90,11 +90,18 @@
 
   });
 
+  // Smooth scroll to #target
+  $(".--scrollto").click(function(e){   
+  e.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},
+    { duration:800, easing:'swing'});
+  });
+
 
   // Fix navbar on scroll
   // http://getbootstrap.com/javascript/#affix
 
-  $('.home #nav-banner').affix({
+  $('#nav-banner').affix({
     offset: {
       top: 100,
       bottom: function () {
