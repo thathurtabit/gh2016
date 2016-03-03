@@ -1,3 +1,25 @@
+/*
+// DEFAULT
+
+.myclass {
+}
+
+// FROM BREAKPOINT
+@media (min-width: $grid-float-breakpoint) {
+}
+
+// FROM MEDIUM 
+@media (min-width: $screen-md-min) {
+}
+
+// FROM LARGE 
+@media (min-width: $screen-lg-min) {
+}
+
+*/
+
+
+
 // Make all images responsive
 img {
     @include img-responsive;
@@ -46,34 +68,116 @@ img {
 
 }
 
+
+
+// DEFAULT
 #home-intro-text {
-	width: 30%;
-	position: absolute;
-	z-index: 33;
-    top: 50%;
-    left: 60%;
+    position: absolute;
+    z-index: 33;
+    top: 120px;
+    left: 50px;
+    right: 50px;
     margin-left: 0;
     margin-top: -10%;
-    color: $white;
+    color: #fff;
     .item {
         @include transition(all 0.75s cubic-bezier(.87,-.41,.19,1.44));
-    	font-family: $font-family-serif;
+        font-family: $font-family-serif;
         font-weight: normal;
+        font-size: 29px;
+        line-height: 29px;
     }
     #make-really .item {
-    	font-family: $font-family-serif;
+        font-family: $font-family-serif;
         font-weight: normal;
+    }
+    #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+        height: 38px;
+        line-height: 38px;
+        .slick-track {
+            height: 38px;
+        }
+    }
+    .slick-next:before, .slick-prev:before {
+        font-size: 14px;
+        line-height: inherit;
     }
 }
 
-#float-illustrations-1,
-#float-illustrations-2 {
-	width: 55%;
-	position: absolute;
-	z-index: 10;
-	top: 0;
+// FROM BREAKPOINT
+@media (min-width: $grid-float-breakpoint) {
+    #home-intro-text {
+        width: 70%;
+    }
+}
+
+// FROM MEDIUM 
+@media (min-width: $screen-md-min) {
+    #home-intro-text {
+        width: 65%;
+    }
+}
+
+// FROM LARGE 
+@media (min-width: $screen-lg-min) {
+    #home-intro-text {
+        width: 30%;
+        position: absolute;
+        z-index: 33;
+        top: 50%;
+        left: 60%;
+        margin-left: 0;
+        margin-top: -10%;
+        color: $white;
+    }
+    #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+        max-height: 80px;
+        line-height: 80px;
+    }
+}
+
+
+
+// DEFAULT
+#float-illustrations-1 {
+    width: 88%;
+    top: 0;
     bottom: 20px;
     left: 20px;
+    right: 20px;
+    img {
+        max-width: 350px;
+    }
+}
+
+// FROM BREAKPOINT
+@media (min-width: $grid-float-breakpoint) {
+    #float-illustrations-1 {
+        width: 70%;
+    }
+}
+
+// FROM MEDIUM 
+@media (min-width: $screen-md-min) {
+    #float-illustrations-1 {
+        width: 65%;
+    }
+}
+
+// FROM LARGE 
+@media (min-width: $screen-lg-min) {
+    #float-illustrations-1 {
+        width: 55%;
+    }
+}
+
+
+#float-illustrations-1,
+#float-illustrations-2 {
+	
+	position: absolute;
+	z-index: 10;
+	
     margin-left: 0;
     margin-bottom: 0;
     color: $white;
@@ -151,19 +255,35 @@ img {
     color: $white;
 }
 
-
 .large-ul-blocks {
     list-style-type: none;
     padding: 0;
     margin: 0;
     li {
-        background-color: rgba(255,255,255,0.2);
-        float: left;
-        width: 33.33%;
-        height: 300px;
-        font-size: 80px;
-        line-height: 300px;
+        background-color: rgba(255,255,255,0.2);        
+        height: 150px;
+        overflow: hidden;
+        font-size: 50px;
+        line-height: 150px;
         text-align: center;
         font-family: $font-family-serif;
+    }
+}
+
+// FROM BREAKPOINT
+@media (min-width: $grid-float-breakpoint) {
+}
+
+// FROM MEDIUM 
+@media (min-width: $screen-md-min) {
+}
+
+// FROM LARGE 
+@media (min-width: $screen-lg-min) {
+    .large-ul-blocks {
+        li {
+            float: left;
+            width: 33.33%;
+        }
     }
 }

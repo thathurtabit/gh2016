@@ -101,7 +101,7 @@
   // Fix navbar on scroll
   // http://getbootstrap.com/javascript/#affix
 
-  $('#nav-banner').affix({
+  $('.home #nav-banner').affix({
     offset: {
       top: 100,
       bottom: function () {
@@ -111,13 +111,14 @@
   });
 
   // Responsive text fitting
-  $('body').flowtype({
+  /* $('body').flowtype({
      minimum   : 400,
      maximum   : 500,
      minFont   : 12,
      maxFont   : 40,
      fontRatio : 30
   });
+  */
 
   // slick carousel http://kenwheeler.github.io/slick/
   $('#person-carousel').slick({
@@ -137,7 +138,9 @@
   });
   $('#float-illustrations-1').slick({
     arrows: false,
-    fade: true
+    fade: true,
+    touchMove: false,
+    swipe: false
   });
   //$('#float-illustrations-2').slick({
   //  arrows: false,

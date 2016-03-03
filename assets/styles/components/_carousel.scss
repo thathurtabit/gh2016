@@ -25,6 +25,13 @@
     }
 }
 
+.slick-slide,
+.slick-list,
+.slick-slide span:focus,
+.slick-slide img:focus {
+    outline: none;
+}
+
 .slick-prev:before {
     //content: $fa-var-chevron-left;
     content: $fa-var-long-arrow-left;    
@@ -35,29 +42,32 @@
     content: $fa-var-long-arrow-right;
 }
 
-#person-carousel,
-#adjective-carousel,
-#make-really,
-#object-carousel {
-    max-height: 80px;
-    line-height: 80px;
-}
+
 
 #home-intro,
 #bg-carousel {
     //position: relative;
 	height: 100vh;
-    min-height: 800px;
+    // FROM MEDIUM 
+    @media (min-width: $screen-md-min) {
+        min-height: 800px;
+        .slick-slide {
+            min-height: 800px;
+        }
+    }
 }
 #bg-carousel .slick-slide {
 
 }
 
 
+
+
+
 #bg-carousel {
     .slick-slide {
         height: 100vh;
-        min-height: 800px;
+        //min-height: 800px;
         &.item {
             //transition-property: opacity, box-shadow;
             @include transition(.25s ease-in-out box-shadow);

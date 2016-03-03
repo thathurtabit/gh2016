@@ -1,8 +1,14 @@
-.btn {
+a, a:link, a:visited, a:active, a:hover {
+	text-decoration: none;
+}
+
+.btn,
+.btn:focus {
 	@include transition(all 0.2s ease-in-out);
 	position: relative;
 	text-transform: uppercase;
 	box-shadow: 0 0 0 3px $white;
+	outline: none;
 	&:hover {
 		box-shadow: 0 0 0 5px $white;
 	}
@@ -18,7 +24,8 @@
 	@extend .btn;
 	color: $white;
 	border-color: $white;
-	&:hover {
+	&:hover,
+	&:focus {
 		color: $white;
 	}
 }
@@ -31,7 +38,7 @@
 		float: right;
 		font-family: "FontAwesome";
 		line-height: 20px;
-		top: 11px;
+		top: 13px;
 		right: 11px;
 		text-align: center;
 		content: $fa-var-arrow-circle-down;

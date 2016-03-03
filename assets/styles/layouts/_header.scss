@@ -11,15 +11,140 @@
 
 */
 
-// DEFAULT NAVBAR WRAPPER
+// Only AFFIX on larger screens
+.affix {
+    position: relative;
+    @media (min-width: $screen-lg-min) {
+    	position: fixed;
+    }
+}
+
+
+// CORE #NAV-BANNER
 #nav-banner {
 	z-index: 35;
+	background-color: $white;
+	.navbar-brand {
+		display: block;
+		position: relative;
+		max-width: 100%;
+		margin-left: 20px;
+		padding: 0;
+		width: 75px;
+		z-index: 1001;
+		padding-left: 0;
+		#horse {		
+			@include transition(.25s ease-in-out all);
+		    height: 60px;
+		    width: 60px;
+		    display: block;
+		    margin: 20px auto 0;
+			#outline .whitelogo {
+				@include transition(.25s ease-in-out all);
+				@include translate(-10px, 0);
+				fill: $brand-blue;
+			}
+		}
+	}
+	.navbar-default .navbar-nav>li>a {
+		text-align: center;
+	}
+	.navbar-toggle {
+		@include transition(all 0.2s ease-in-out);
+		margin: 26px 20px 0 0;
+		border-radius: 100%;
+		height: 50px;
+		width: 50px;
+		border: none;
+		.icon-bar {
+			width: 30px;
+		    height: 5px;
+		    border-radius: 0px;
+		}
+		&:hover, &:focus {
+			background-color: $brand-blue;
+			.icon-bar {
+				background-color: $white;
+			}
+		}
+	}
+}
+
+// FROM BREAKPOINT #NAV-BANNER
+@media (min-width: $grid-float-breakpoint) {
+	#nav-banner {
+		left: 0;
+		right: 0;
+		.container-fluid {
+			// HOME
+			.home & {
+				padding-left: 5%;
+				padding-right: 13%;
+			}
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.navbar-brand {
+			@include transition(.25s ease-in-out all);
+			display: block;
+			position: relative;
+			max-width: 100%;
+			padding: 0;
+			width: 100px;
+			z-index: 1001;
+			padding-left: 0;
+			border-radius: 100%;
+			background-color: rgba(255,255,255,.2);
+			#horse {		
+				@include transition(.25s ease-in-out all);
+			    height: 60px;
+			    width: 60px;
+			    display: block;
+			    margin: 20px auto 0;
+				#outline .whitelogo {
+					@include transition(.25s ease-in-out all);
+					@include translate(-10px, 0);
+					fill: $white;
+				}
+			}
+			&:hover {
+				@include white-flash();
+			}
+			&:hover #horse #outline .whitelogo {
+		    	@include animate-bgcolor-fill();
+			}
+		}
+	}
+}
+
+// FROM MEDIUM #NAV-BANNER
+@media (min-width: $screen-md-min) {
+	.home #nav-banner {
+		width: 620px;
+		left: auto;
+		.container-fluid {
+			padding-left: 0;
+			padding-right: 10%;
+		}
+	}
+}
+
+// FROM LARGE #NAV-BANNER
+@media (min-width: $screen-lg-min) {
+	.home #nav-banner {
+		width: 620px;
+		left: auto;
+		.container-fluid {
+			padding-left: 0;
+			padding-right: 20%;
+		}
+	}
 }
 
 
 // HOMEPAGE NAV, ON LARGEST SCREENS ONLY
 @media (min-width: $screen-lg-min) {
-	#nav-banner {
+	.home #nav-banner {
 		left: auto;
 		min-width: 800px;
 		&.affix {
@@ -36,36 +161,7 @@
 	margin: 0;
 }
 
-.navbar-brand {
-	@include transition(.25s ease-in-out all);
-	display: block;
-	position: relative;
-	max-width: 100%;
-	padding: 0;
-	width: 100px;
-	z-index: 1001;
-	padding-left: 0;
-	border-radius: 100%;
-	background-color: rgba(255,255,255,.2);
-	#horse {		
-		@include transition(.25s ease-in-out all);
-	    height: 60px;
-	    width: 60px;
-	    display: block;
-	    margin: 20px auto 0;
-		#outline .whitelogo {
-			@include transition(.25s ease-in-out all);
-			@include translate(-10px, 0);
-			fill: $white;
-		}
-	}
-	&:hover {
-		@include white-flash();
-	}
-	&:hover #horse #outline .whitelogo {
-    	@include animate-bgcolor-fill();
-	}
-}
+
 
 .navbar .navbar-collapse {
 	position: relative;
@@ -87,6 +183,84 @@
     border-radius: 0;
 }
 
+// DEFAULT NAVBAR (NOT HOMEPAGE)
+body:not(.home) #nav-banner {
+	background-color: $white;		
+}
+
+// DEFAULT NAVBAR (NOT HOMEPAGE)
+body:not(.home) #nav-banner .navbar .navbar-collapse li.menu-item {
+	@include transition(.25s ease-in-out all);
+	&:nth-child(1) a:hover {
+		color: $brand-green;
+		&:after {
+			opacity: 1;
+			background-color: rgba(0,0,0,0.05);
+		}
+	}
+	&:nth-child(2) a:hover {
+		color: $brand-red;
+		&:after {
+			opacity: 1;
+			background-color: rgba(0,0,0,0.05);
+		}
+	}
+	&:nth-child(3) a:hover {
+		color: $brand-purple;
+		&:after {
+			opacity: 1;
+			background-color: rgba(0,0,0,0.05);
+		}
+	}
+	&:nth-child(4) a:hover {
+		color: $brand-orange;
+		&:after {
+			opacity: 1;
+			background-color: rgba(0,0,0,0.05);
+		}
+	}
+}
+
+
+// DEFAULT NAVBAR (NOT HOMEPAGE)
+body:not(.home) #nav-banner .navbar .navbar-collapse {
+	@include transition(.25s ease-in-out all);
+	padding-left: 20px;
+	padding-right: 20px;	
+	a {
+		@include transition(.25s ease-in-out all);
+		color: $gray;
+		&:after {					
+			background-color: rgba(0,0,0,0);
+		}
+		&:hover:after {
+			background-color: rgba(0,0,0,0.05);
+		}
+	}
+	
+}
+
+// DEFAULT NAVBAR BRAND (NOT HOMEPAGE)
+body:not(.home) #nav-banner .navbar .navbar-brand {
+	width: 100px;
+	padding-left: 0;
+	margin-right: 20px;
+	#horse {
+	    height: 50px;
+	    margin: 25px auto 0;
+	}
+	#horse #outline .whitelogo {
+		fill: $brand-blue;
+	}
+	&:hover {
+		#horse #outline .whitelogo {
+
+		}
+	}
+}
+
+
+
 // HOMEPAGE NAVBAR
 .navbar {
 	background-color: rgba(255,255,255,0);
@@ -96,7 +270,7 @@
 // HOMEPAGE NAV, ON LARGER SCREENS ONLY
 @media (min-width: $grid-float-breakpoint) {
 
-	.navbar-header {
+	.home .navbar-header {
 		float: right;
 	}
 
@@ -105,7 +279,7 @@
 	}
 
 	// HOMEPAGE NAV BANNER
-	#nav-banner {
+	.home #nav-banner {
 		//@include transition(.25s ease-in-out all);
 		position: absolute;
 		//left: 0;
@@ -135,9 +309,11 @@
 		background-color: rgba(255,255,255,0);
 
 		.container-fluid {
-			@include transition(.25s ease-in-out all);
-			//padding-left: 20%;
-			padding-right: 20%;
+			.home & {
+				@include transition(.25s ease-in-out all);
+				//padding-left: 20%;
+				//padding-right: 20%;
+			}
 		}
 		.navbar .navbar-collapse {
 			@include transition(.25s ease-in-out all);
@@ -178,7 +354,7 @@
 }
 
 // HOMEPAGE NAV, ON LARGER SCREENS ONLY
-@media (min-width: $grid-float-breakpoint) {
+@media (min-width: $screen-desktop) {
 	
 	// HOMEPAGE NAV BANNER ON AFFIX
 	#nav-banner.affix {
@@ -187,13 +363,14 @@
 		min-width: 600px;
 		left: auto;
 		border-radius: ($navbar-height/2) 0 0 ($navbar-height/2);
-		&:after {
+		/* &:after {
 			content: "";
 			position: absolute;
 			right: 20px;
 			top: 0;
 			border-left: 1px solid $border-color;
 		}
+		*/
 
 		.container-fluid {
 			padding-left: 0;
