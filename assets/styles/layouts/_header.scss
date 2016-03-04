@@ -14,14 +14,15 @@
 // Only AFFIX on larger screens
 .affix {
     position: relative;
-    @media (min-width: $screen-lg-min) {
-    	position: fixed;
-    }
 }
+
+
+
 
 
 // CORE #NAV-BANNER
 #nav-banner {
+	@include transition(.25s ease-in-out all);
 	z-index: 35;
 	background-color: $white;
 	.navbar-brand {
@@ -147,9 +148,6 @@
 	.home #nav-banner {
 		left: auto;
 		min-width: 800px;
-		&.affix {
-
-		}
 	}
 }
 
@@ -284,17 +282,9 @@ body:not(.home) #nav-banner .navbar .navbar-brand {
 		position: absolute;
 		//left: 0;
 		right: 0;
-
-		// WHEN AT DEFAULT POSITION
-		&.affix-top {
-			top: 100px;			
-			margin-top: 20px;
-		}
-		// WHEN AT SCROLLED 'FIXED'
-		&.affix { 
-			position: fixed;
-			margin-top: 20px;
-		}
+		top: 100px;			
+		margin-top: 0;	
+		
 	}
 
 }
@@ -358,7 +348,6 @@ body:not(.home) #nav-banner .navbar .navbar-brand {
 	
 	// HOMEPAGE NAV BANNER ON AFFIX
 	#nav-banner.affix {
-		@include transition(.25s ease-in-out all);
 		background-color: rgba(255,255,255,1);
 		min-width: 600px;
 		left: auto;
@@ -441,5 +430,15 @@ body:not(.home) #nav-banner .navbar .navbar-brand {
 				}
 			}
 		}
+	}
+}
+
+
+@media (min-width: $screen-md-min) {
+	// WHEN AT SCROLLED 'FIXED'
+	.home #nav-banner.affix { 
+		position: fixed;
+		margin-top: 20px;
+		top: 0;
 	}
 }

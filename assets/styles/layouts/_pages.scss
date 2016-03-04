@@ -38,7 +38,7 @@ img {
     position: relative;
 
 	@include transition(.25s ease-in-out background-color);
-    background: #74C390;
+    background: $brand-blue;
     
 
 	// ELEMENT
@@ -102,7 +102,100 @@ img {
         font-size: 14px;
         line-height: inherit;
     }
+    // Learn more button p wrapper
+    p {
+        margin-top: 20px;
+    }
 }
+
+// FROM iPhone 6
+@media (min-width: 374px) {
+    #home-intro-text .item {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    #home-intro-text {
+        #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+            height: 40px;
+            line-height: 40px;
+            .slick-track {
+                height: 40px;
+            }
+        }
+    }
+}
+
+// FROM iPhone 6+
+@media (min-width: 414px) {
+    #home-intro-text .item {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #home-intro-text {
+        #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+            height: 43px;
+            line-height: 43px;
+            .slick-track {
+                height: 43px;
+            }
+        }
+    }
+}
+
+// FROM Small Screens up
+@media (min-width: $screen-phone) {
+    #home-intro-text .item {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    #home-intro-text {
+        #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+            height: 48px;
+            line-height: 48px;
+            .slick-track {
+                height: 48px;
+            }
+        }
+    }
+}
+
+// FROM Small Screens up
+@media (min-width: $screen-sm-min) {
+    #home-intro-text .item {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    #home-intro-text {
+        #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+            height: 53px;
+            line-height: 53px;
+            .slick-track {
+                height: 53px;
+            }
+        }
+    }
+}
+
+// FROM  Medium Screens up
+@media (min-width: $screen-md-min) {
+    #home-intro-text .item {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    #home-intro-text {
+        #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+            height: 64px;
+            line-height: 64px;
+            .slick-track {
+                height: 67px;
+            }
+        }
+    }
+}
+
+
+
+
 
 // FROM BREAKPOINT
 @media (min-width: $grid-float-breakpoint) {
@@ -111,10 +204,30 @@ img {
     }
 }
 
+// FROM Small Screens up
+@media (min-width: $screen-phone) {
+    #home-intro-text {
+        width: 65%;
+        left: 16%;
+        right: 16%;
+    }
+}
+
+// FROM MEDIUM 
+@media (min-width: $screen-sm-min) {
+    #home-intro-text {
+        top: 355px;
+        width: 60%;
+        left: 20%;
+        right: 20%;
+    }
+}
+
 // FROM MEDIUM 
 @media (min-width: $screen-md-min) {
     #home-intro-text {
-        width: 65%;
+        width: 38%;
+        left: auto;
     }
 }
 
@@ -124,8 +237,9 @@ img {
         width: 30%;
         position: absolute;
         z-index: 33;
-        top: 50%;
-        left: 60%;
+        top: 430px;
+        left: auto;
+        right: 15%;
         margin-left: 0;
         margin-top: -10%;
         color: $white;
@@ -146,14 +260,69 @@ img {
     left: 20px;
     right: 20px;
     img {
-        max-width: 350px;
+        max-width: 280px;
+    }
+    // FROM iPhone 6
+    @media (min-width: 374px) {
+        img {
+            max-width: 335px;
+        }
+    }
+
+    // FROM iPhone 6+
+    @media (min-width: 414px) {
+        img {
+            max-width: 374px;
+        }
+    }
+
+    // FROM iPhone 6+ (bigger)
+    @media (min-width: 500px) {
+        img {
+            max-width: 450px;
+        }
+    }
+
+    // FROM iPhone 6+ (bigger still)
+    @media (min-width: 600px) {
+        img {
+            max-width: 500px;
+        }
+    }
+
+    // FROM LARGE 
+    @media (min-width: $screen-sm-min) {
+        img {
+           max-width: 580px;
+        }
+    }
+
+    // FROM LARGE 
+    @media (min-width: $screen-md-min) {
+        img {
+            max-width: 650px;
+        }
+    }
+
+    // FROM LARGE 
+    @media (min-width: $screen-lg-min) {
+        img {
+            max-width: 700px;
+        }
+    }
+
+    // FROM LARGER 
+    @media (min-width: 1500px) {
+        img {
+            max-width: 100%;
+        }
     }
 }
 
 // FROM BREAKPOINT
 @media (min-width: $grid-float-breakpoint) {
     #float-illustrations-1 {
-        width: 70%;
+        width: 75%;
     }
 }
 
@@ -166,6 +335,13 @@ img {
 
 // FROM LARGE 
 @media (min-width: $screen-lg-min) {
+    #float-illustrations-1 {
+        width: 62%;
+    }
+}
+
+// FROM LARGER 
+@media (min-width: 1500px) {
     #float-illustrations-1 {
         width: 55%;
     }
@@ -274,16 +450,24 @@ img {
 @media (min-width: $grid-float-breakpoint) {
 }
 
-// FROM MEDIUM 
-@media (min-width: $screen-md-min) {
+// FROM LARGE 
+@media (min-width: $screen-sm-min) {
+    .large-ul-blocks {
+        li {
+            float: left;
+            width: 50%;
+            font-size: 30px;
+        }
+    }
 }
 
 // FROM LARGE 
-@media (min-width: $screen-lg-min) {
+@media (min-width: $screen-md-min) {
     .large-ul-blocks {
         li {
             float: left;
             width: 33.33%;
+            font-size: 30px;
         }
     }
 }

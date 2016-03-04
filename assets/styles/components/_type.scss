@@ -6,11 +6,6 @@ h1,h2,h3,h4,h5,h6,p {
    line-height: 1.45;
 }
 
-h1 { font-size: 4em; }
-h2 { font-size: 3em; }
-h3 { font-size: 3em; }
-h4 { font-size: 2.5em; }
-h5 { font-size: 2em; }
 
 
 .sub-heading {
@@ -18,12 +13,18 @@ h5 { font-size: 2em; }
 	position: relative;
 	margin: 0;
 	text-align: center;
+    font-size: 23px;
 	padding: 30px;
 	font-family: $font-family-sans-serif;
-	font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
+
+    // FROM MEDIUM 
+    @media (min-width: $screen-md-min) {
+        font-size: 30px;
+    }
+
     // Make icon appear above
     &:before, &:after {
     	@include square(70px);    	
