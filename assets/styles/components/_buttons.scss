@@ -44,15 +44,15 @@ a, a:link, a:visited, a:active, a:hover {
 .-arrow-down {
 	padding-right: 40px;
 	&:after {
-		@include square(20px);
+		@include square(20px);		
+		font-family: "FontAwesome";
+		content: $fa-var-arrow-circle-down;
 		position: absolute;
 		float: right;
-		font-family: "FontAwesome";
 		line-height: 20px;
 		top: 6px;
 		right: 11px;
 		text-align: center;
-		content: $fa-var-arrow-circle-down;
 	}
 	// FROM MEDIUM 
 	@media (min-width: $screen-md-min) {

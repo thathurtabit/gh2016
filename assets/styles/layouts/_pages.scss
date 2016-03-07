@@ -18,11 +18,19 @@
 
 */
 
-
+.--screen-v-height {
+    min-height: 600px;
+    height: 100vh;
+}
 
 // Make all images responsive
 img {
     @include img-responsive;
+}
+
+// animate the SVg rectangle on the homepage
+#home-intro {
+    
 }
 
 // Make homepage .main act like normal div
@@ -36,35 +44,42 @@ img {
     /* CSS declarations for `.block` */
 
     position: relative;
+    overflow: hidden;
 
 	@include transition(.25s ease-in-out background-color);
     background: $brand-blue;
     
 
-	// ELEMENT
-	#person {
-
-	}
-	#make-really {
-
-	}
-	#adjective {
-
-	}
-	#object {
-
-	}
-
-	// MODIFIERS
-	&.bg--1 {
-	background-color: #74C390;
-	}
-	&.bg--2 {
-	background-color: #51BCE8;
-	}
-	&.bg--3 {
-	background-color: #E46653;
-	}
+    svg {
+        @include rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .splash-rectangle {            
+        @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        stroke-dasharray: 140;
+        stroke-dashoffset: -400;
+        stroke-width: 10px;
+        fill: transparent;
+        stroke: $gray;
+    }
+    &:hover {
+        .splash-rectangle { 
+            stroke-width: 10px;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 200;
+        }
+    }
 
 }
 
@@ -179,13 +194,47 @@ img {
 // FROM  Medium Screens up
 @media (min-width: $screen-md-min) {
     #home-intro-text .item {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    #home-intro-text {
+        #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+            height: 53px;
+            line-height: 53px;
+            .slick-track {
+                height: 57px;
+            }
+        }
+    }
+}
+
+// FROM  Large Screens up
+@media (min-width: $screen-lg-min) {
+    #home-intro-text .item {
+        font-size: 52px;
+        line-height: 52px;
+    }
+    #home-intro-text {
+        #adjective-carousel, #make-really, #object-carousel, #person-carousel {
+            height: 58px;
+            line-height: 58px;
+            .slick-track {
+                height: 60px;
+            }
+        }
+    }
+}
+
+// FROM  Large Screens up
+@media (min-width: 1500px) {
+    #home-intro-text .item {
         font-size: 60px;
         line-height: 60px;
     }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
-            height: 64px;
-            line-height: 64px;
+            height: 65px;
+            line-height: 65px;
             .slick-track {
                 height: 67px;
             }
@@ -226,7 +275,8 @@ img {
 // FROM MEDIUM 
 @media (min-width: $screen-md-min) {
     #home-intro-text {
-        width: 38%;
+        width: 35%;        
+        right: 8%;
         left: auto;
     }
 }
@@ -239,7 +289,7 @@ img {
         z-index: 33;
         top: 430px;
         left: auto;
-        right: 15%;
+        right: 8%;
         margin-left: 0;
         margin-top: -10%;
         color: $white;
@@ -247,6 +297,24 @@ img {
     #adjective-carousel, #make-really, #object-carousel, #person-carousel {
         max-height: 80px;
         line-height: 80px;
+    }
+}
+
+// FROM LARGER
+@media (min-width: 1500px) {
+    #home-intro-text {
+        top: 500px;
+        right: 10%;
+         width: 30%;
+    }
+}
+
+// FROM LARGEST
+@media (min-width: 1800px) {
+    #home-intro-text {
+        top: 500px;
+        right: 10%;
+         width: 27.5%;
     }
 }
 
@@ -300,7 +368,7 @@ img {
     // FROM LARGE 
     @media (min-width: $screen-md-min) {
         img {
-            max-width: 650px;
+            max-width: 575px;
         }
     }
 
@@ -434,15 +502,58 @@ img {
 .large-ul-blocks {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 20px;
     li {
-        background-color: rgba(255,255,255,0.2);        
-        height: 150px;
-        overflow: hidden;
-        font-size: 50px;
-        line-height: 150px;
+        @include transition(all 0.25s ease-in-out);
+        @include scale(1);
+        position: relative;
         text-align: center;
         font-family: $font-family-serif;
+        span {
+            @include transition(all 0.25s ease-in-out);    
+            background-color: rgba(255,255,255,0.2); 
+            display: block;
+            margin: 20px;
+            height: 150px;
+            overflow: hidden;
+            font-size: 50px;
+            line-height: 150px;
+        }
+        svg {
+            @include rotate(45deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -25px;
+            z-index: -1;
+        }
+        .__rectangle {            
+            @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            stroke-dasharray: 140;
+            stroke-dashoffset: -400;
+            stroke-width: 10px;
+            fill: transparent;
+            stroke: $gray;
+        }
+    }
+    // HOVER BLOCK
+    li:hover {
+        @include scale(1.05);    
+        span {
+            margin: 20px;
+            background-color: rgba(255,255,255,0.3);
+        }
+        .__rectangle {
+           stroke-width: 10px;
+          stroke-dashoffset: 0;
+          stroke-dasharray: 200;
+        }
     }
 }
 
@@ -453,10 +564,14 @@ img {
 // FROM LARGE 
 @media (min-width: $screen-sm-min) {
     .large-ul-blocks {
+        margin: 40px;
         li {
             float: left;
             width: 50%;
             font-size: 30px;
+            span {
+
+            }
         }
     }
 }
@@ -468,6 +583,10 @@ img {
             float: left;
             width: 33.33%;
             font-size: 30px;
+            span {
+                height: 200px;
+                line-height: 200px;
+            }
         }
     }
 }

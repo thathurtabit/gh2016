@@ -1,4 +1,4 @@
-<section id="home-intro"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="--screen-v-height"><!-- HOME INTRO CAROUSEL -->
 
 
 <h1 id="home-intro-text">
@@ -65,35 +65,37 @@
 	<div class="item"></div>
 </div>
 
+<svg height="100%" width="100%"><rect height="100%" width="100%" class="splash-rectangle" /></svg>
+
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how"><!-- BUT HOW? -->
+<section id="but-how" class="--screen-v-height"><!-- BUT HOW? -->
 
 <h2 class="sub-heading">Lovely websites you say, b-but how?</h2>
 
 <ul class="large-ul-blocks">
-	<li>Creativity</li>
-	<li>Smarts</li>
-	<li>Love</li>
-	<li>Perspiration</li>
-	<li>Magic</li>
-	<li>Good-Looks</li>
+	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
+	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
+	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
+	<li><span>Perspiration</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
+	<li><span>Magic</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
+	<li><span>Good-Looks</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
 </ul>
 
 </section><!-- / BUT HOW? -->
 
-<section id="but-what"><!-- BUT WHAT -->
+<section id="but-what" class="--screen-v-height"><!-- BUT WHAT -->
 
 <h2 class="sub-heading">But like, what do you DO?</h2>
 
 <ul class="large-ul-blocks">
-	<li>Digital Design / UI</li>
-	<li>Logos</li>
-	<li>HTML5 / CSS3</li>
-	<li>SASS / LESS</li>
-	<li>Responsive</li>
-	<li>WordPress</li>	
+	<li><span>Digital Design / UI</span></li>
+	<li><span>Logos</span></li>
+	<li><span>HTML5 / CSS3</span></li>
+	<li><span>SASS / LESS</span></li>
+	<li><span>Responsive</span></li>
+	<li><span>WordPress</span></li>	
 </ul>
 
 </section><!-- / BUT WHAT -->

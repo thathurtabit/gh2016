@@ -103,7 +103,7 @@
 
   $('.home #nav-banner').affix({
     offset: {
-      top: 100,
+      top: 80,
       bottom: function () {
         return (this.bottom = $('.footer').outerHeight(true));
       }
@@ -123,14 +123,14 @@
   // slick carousel http://kenwheeler.github.io/slick/
   $('#person-carousel').slick({
     asNavFor: '#bg-carousel, #float-illustrations-1',
-    speed: '200'
+    speed: 250
   });
   $('#adjective-carousel').slick({
-    speed: '200'
+    speed: 250
   });
   $('#object-carousel').slick({
     asNavFor: '#float-illustrations-2',
-    speed: '200'
+    speed: 250
   });
   $('#bg-carousel').slick({
       fade: true,

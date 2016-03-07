@@ -29,10 +29,10 @@ h1,h2,h3,h4,h5,h6,p {
     &:before, &:after {
     	@include square(70px);    	
     	font-family: "FontAwesome";
-    	content: "";
+        content: "";
     	line-height: 70px;
     	text-align: center;
-    	top: -50px;
+    	top: -48px;
     	left: 50%;
     	margin-left: -35px;
     	position: absolute;
@@ -43,8 +43,9 @@ h1,h2,h3,h4,h5,h6,p {
     	border-radius: 100%;
     }
     &:after {
-    	color: $brand-green;
-    	content: $fa-var-edge;
+    	color: $gray;        
+        font-family: "FontAwesome";
+    	content: $fa-var-gear;
     	font-size: 20px;
     }
 }
