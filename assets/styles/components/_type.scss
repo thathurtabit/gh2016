@@ -8,13 +8,13 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 
-.sub-heading {
+.section-heading {
 	display: block;
 	position: relative;
 	margin: 0;
 	text-align: center;
     font-size: 23px;
-	padding: 30px;
+	padding: 60px 30px 10px;
 	font-family: $font-family-sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -24,6 +24,7 @@ h1,h2,h3,h4,h5,h6,p {
     @media (min-width: $screen-md-min) {
         font-size: 30px;
     }
+   
 
     // Make icon appear above
     &:before, &:after {
@@ -43,9 +44,80 @@ h1,h2,h3,h4,h5,h6,p {
     	border-radius: 100%;
     }
     &:after {
+        @include transition(all 0.25s ease-in-out);
     	color: $gray;        
         font-family: "FontAwesome";
     	content: $fa-var-gear;
     	font-size: 20px;
     }
+
+    &:hover:after {
+        @include tada();
+        @include scale(1.5);
+        @include backface-visibility(visible);
+    }
+
+}
+
+
+.sub-heading {
+    @extend .section-heading;
+    font-size: 20px;
+    margin: 10px;
+    padding: 40px;
+}
+
+
+// ICON CHANGES
+.sub-heading,
+.section-heading {
+    // ICON CHANGES
+    &.--icon-bolt:after {
+        content: $fa-var-bolt;
+    }
+    &.--icon-news:after {
+        content: $fa-var-newspaper-o;
+    }
+    &.--icon-code:after {
+        content: $fa-var-code;
+    }
+    &.--icon-cog:after {
+        content: $fa-var-cog;
+    }
+    &.--icon-question:after {
+        font-family: $font-family-sans-serif;
+        content: "?";
+    }
+}
+
+
+
+article {
+    header h1 {
+        font-family: $font-family-serif;
+        line-height: 1;
+        font-size: 35px;
+    }
+
+    time {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .__content {
+        margin: 20px 0;
+    }
+
+    // MAKE THE TEXT WHITE
+    &.--white {
+        color: $white;
+        a, a:link, a:visited, a:active {
+            color: $white;
+        }
+        a:hover {
+            color: darken($white, 10%);
+        }
+    }
+
 }

@@ -72,9 +72,9 @@
 
 <section id="but-how" class="--screen-v-height"><!-- BUT HOW? -->
 
-<h2 class="sub-heading">Lovely websites you say, b-but how?</h2>
+<h2 class="section-heading --icon-question">Lovely websites you say, b-but how?</h2>
 
-<ul class="large-ul-blocks">
+<ul class="large-ul-blocks --diamond">
 	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
 	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
 	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
@@ -87,23 +87,116 @@
 
 <section id="but-what" class="--screen-v-height"><!-- BUT WHAT -->
 
-<h2 class="sub-heading">But like, what do you DO?</h2>
+<h2 class="section-heading --icon-code">But like, what do you DO?</h2>
 
-<ul class="large-ul-blocks">
-	<li><span>Digital Design / UI</span></li>
-	<li><span>Logos</span></li>
-	<li><span>HTML5 / CSS3</span></li>
-	<li><span>SASS / LESS</span></li>
-	<li><span>Responsive</span></li>
-	<li><span>WordPress</span></li>	
+<ul class="large-ul-blocks --circle">
+	<li><span>Digital Design / UI</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>Logos</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>HTML5 / CSS3</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>SASS / LESS</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>Responsive</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>WordPress</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>	
 </ul>
 
 </section><!-- / BUT WHAT -->
 
+<section id="latest-split" class="--background-purple"><!-- LATEST STUFF -->
+<h2 class="section-heading  --icon-bolt">Latest stuff</h2>
 
+<div class="row">
+	<div class="col-md-6">
+		<article class="--spacing">
+			<h2 class="sub-heading --icon-news">News</h2>
+			 <?php
+		// NEWS Custom Loop Args
+		$news_args = array('post_type' => 'post','showposts' => '1' );
+		// my loop
+		$news_loop = new WP_Query( $news_args );		  
+		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
+				<!-- NEWS ARTICLE -->
+			    <article class="--white">
+			       <header>
+				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+				        <?php the_title(); ?>
+				        </a></h1>
+
+				        <time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+				        <?php the_time('jS'); ?>
+				        <span>
+				        <?php the_time('M'); ?>
+				        </span>
+				        <?php the_time('Y'); ?>
+				        </span></time>
+			        </header>
+
+			        <p class="__content">
+				      	<?php
+				      	// GET THE CONTENT
+						$content = get_the_content();
+						echo wp_trim_words( $content , '30' ); ?>
+					</p>
+
+			      <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-dright -bgcolor-spin">Learn more</a>
+			      </p>
+			    </article>
+    			<!--/ NEWS ARTICLE -->
+
+			<?php } } ?>
+		</article>
+	</div>
+
+	<div class="col-md-6">
+		<article class="--spacing">
+			<h2 class="sub-heading  --icon-cog">Production Diary</h2>
+			
+			<?php
+		// PRODUCTION DIARY Custom Loop Args
+		$prod_args = array('post_type' => 'production-diary','showposts' => '1' );
+		// my loop
+		$prod_loop = new WP_Query( $prod_args );		  
+		if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
+				<!--PRODUCTION ARTICLE -->
+			    <article class="--white">
+			      
+			      <header>
+				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+				        <?php the_title(); ?>
+				        </a></h1>
+
+				        <time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+				        <?php the_time('jS'); ?>
+				        <span>
+				        <?php the_time('M'); ?>
+				        </span>
+				        <?php the_time('Y'); ?>
+				        </span></time>
+			        </header>
+
+			      <p class="__content">
+				      	<?php
+				      	// GET THE CONTENT
+						$content = get_the_content();
+						echo wp_trim_words( $content , '30' ); ?>
+					</p>
+
+			      <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
+			      </p>
+			    </article>
+    			<!--/ PRODUCTION ARTICLE-->
+
+			<?php } } ?>
+			
+			</div>
+		</article>
+</div>
+
+
+</section><!-- / LATEST STUFF -->
+
+<section id="ghost-horses-svg" class="--screen-v-height"><!-- GHOST HORSES SVG -->
 <span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
+</section><!-- / GHOST HORSES SVG -->
 
 
-<?php the_content(); ?>
 
 
