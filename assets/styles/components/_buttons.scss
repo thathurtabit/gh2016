@@ -69,6 +69,35 @@ a, a:link, a:visited, a:active, a:hover {
 	}
 }
 
+.-arrow-right {
+	padding-right: 30px;
+	&:after {
+		@include square(20px);		
+		font-family: "FontAwesome";
+		content: $fa-var-arrow-circle-right;
+		position: absolute;
+		float: right;
+		line-height: 20px;
+		top: 7px;
+		right: 6px;
+		text-align: center;
+	}
+	// FROM MEDIUM 
+	@media (min-width: $screen-md-min) {
+		&:after {
+			top: 7px;
+		}
+	}
+	&:hover {
+		padding-right: 45px;
+		&:after {
+			@include animate-spin();
+			@include animation-duration(.2s);
+		}
+	}
+}
+
+
 .-bgcolor-spin {
 	@extend .btn;
 	&:hover {

@@ -105,7 +105,7 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<article class="--spacing">
+		<section class="--spacing">
 			<h2 class="sub-heading --icon-news">News</h2>
 			 <?php
 		// NEWS Custom Loop Args
@@ -114,7 +114,19 @@
 		$news_loop = new WP_Query( $news_args );		  
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 				<!-- NEWS ARTICLE -->
-			    <article class="--white">
+			    <article class="--position-absolute --white">
+			    	<aside class="featured-img">
+			    		<?php
+			      		// check if the post has a Post Thumbnail assigned to it.
+						if ( has_post_thumbnail() ) {
+							the_post_thumbnail();
+						} 
+						?>
+			      	</aside>
+
+			      	<!-- ARTICLE CONTENT WRAP -->
+			      <div class="article-content-wrap --background-purple">
+
 			       <header>
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
@@ -136,28 +148,48 @@
 						echo wp_trim_words( $content , '30' ); ?>
 					</p>
 
-			      <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-dright -bgcolor-spin">Learn more</a>
+			      <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
 			      </p>
+
+
+			      </div>
+			    <!-- /ARTICLE CONTENT WRAP -->
+
+
 			    </article>
     			<!--/ NEWS ARTICLE -->
 
+
+    			
+
 			<?php } } ?>
-		</article>
+		</section>
 	</div>
 
 	<div class="col-md-6">
-		<article class="--spacing">
+		<section class="--spacing">
 			<h2 class="sub-heading  --icon-cog">Production Diary</h2>
 			
 			<?php
-		// PRODUCTION DIARY Custom Loop Args
-		$prod_args = array('post_type' => 'production-diary','showposts' => '1' );
-		// my loop
-		$prod_loop = new WP_Query( $prod_args );		  
-		if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
+			// PRODUCTION DIARY Custom Loop Args
+			$prod_args = array('post_type' => 'production-diary','showposts' => '1' );
+			// my loop
+			$prod_loop = new WP_Query( $prod_args );		  
+			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 				<!--PRODUCTION ARTICLE -->
-			    <article class="--white">
-			      
+			    <article class="--position-absolute --white">
+			      <aside class="featured-img">
+						<?php
+				      		// check if the post has a Post Thumbnail assigned to it.
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail();
+							} 
+						?>
+			      </aside>
+
+			      <!-- ARTICLE CONTENT WRAP -->
+			      <div class="article-content-wrap --background-purple">
+
 			      <header>
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
@@ -170,7 +202,7 @@
 				        </span>
 				        <?php the_time('Y'); ?>
 				        </span></time>
-			        </header>
+			       </header>
 
 			      <p class="__content">
 				      	<?php
@@ -181,13 +213,17 @@
 
 			      <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
 			      </p>
+			      
+			      </div>
+			      <!-- /ARTICLE CONTENT WRAP -->
+
 			    </article>
-    			<!--/ PRODUCTION ARTICLE-->
+    			<!--/ PRODUCTION ARTICLE -->
 
 			<?php } } ?>
 			
 			</div>
-		</article>
+		</section>
 </div>
 
 

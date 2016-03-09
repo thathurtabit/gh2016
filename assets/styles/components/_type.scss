@@ -91,12 +91,21 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 
-
 article {
+    padding: 10%;
+    //background: rgba(255,255,255,0.2);
     header h1 {
         font-family: $font-family-serif;
         line-height: 1;
         font-size: 35px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            top: -20px;
+            border-top: 1px solid $brand-blue;
+        }
     }
 
     time {
@@ -106,7 +115,7 @@ article {
     }
 
     .__content {
-        margin: 20px 0;
+        margin: 10px 0 20px 0;
     }
 
     // MAKE THE TEXT WHITE
@@ -118,6 +127,37 @@ article {
         a:hover {
             color: darken($white, 10%);
         }
+        header h1:before {
+            border-top-color: $white;
+        }
     }
+}
 
+
+article {
+    position: relative;
+    min-height: 600px;
+    aside.featured-img {
+        height: 200px;
+        overflow: hidden;
+        border-radius: 5px;
+        position: relative;
+        img {
+            @include transition(all 0.25s ease-in-out);
+            @include scale(1);
+            position: absolute;
+            top: -10%;
+        }
+    }
+    &:hover aside.featured-img img {
+          @include scale(1.05);
+    }
+}
+
+
+.article-content-wrap {
+    position: absolute;
+    top: 70px;
+    padding: 30px;
+    margin: 30px;
 }

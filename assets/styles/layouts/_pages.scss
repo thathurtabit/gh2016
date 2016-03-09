@@ -19,7 +19,7 @@
 */
 
 .--spacing {
-    margin: 10%;
+    margin: 12.5%;
     // FROM BREAKPOINT
     @media (min-width: $grid-float-breakpoint) {
     }
@@ -700,3 +700,4 @@ img {
     border: 20px solid $white;
     border-top: none;
 }
+
