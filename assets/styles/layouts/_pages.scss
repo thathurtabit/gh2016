@@ -33,6 +33,12 @@
     }
 }
 
+
+.--border-white {
+    border: 20px solid $white;
+    border-top: none;
+}
+
 .--screen-v-height {
     min-height: 600px;
     height: 100vh;
@@ -61,6 +67,10 @@
 
 .--background-orange {
     background-color: $brand-orange;
+}
+
+.--background-gray-dark {
+    background-color: $gray-dark;
 }
 
 
@@ -699,5 +709,104 @@ img {
 #latest-split {
     border: 20px solid $white;
     border-top: none;
+}
+
+
+
+.featured-img {
+    @include transition(all 0.25s ease-in-out);
+    @include square(100px);
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    // 
+
+
+    
+    img,
+    a {
+        @include transition(all 0.25s ease-in-out);
+        @include square(100px);
+        overflow: hidden;
+        position: relative;
+        border-radius: 100%;
+    }
+
+    a {
+        z-index: 0;        
+        background-color: $gray;
+    }
+
+    // IMG
+    img {
+        z-index: 1;
+    }
+
+
+    a:after,
+    a:before {
+        @include transition(all 0.25s ease-in-out);
+        @include square(100px);
+        text-align: center;
+        line-height: 100px;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        overflow: hidden;
+        border-radius: 100%; 
+    }
+    a:after {
+        @include scale(0);
+        color: $white;
+        font-family: "FontAwesome";
+        content: $fa-var-arrow-circle-o-right;
+        font-size: 30px;
+    }
+    a:before {
+        @include square(100px);
+        content: "";
+        position: absolute;
+        background-color: rgba(0,0,0,0);
+    }
+
+    // HOVER
+    a:hover img {
+          @include scale(1.2);
+          @include opacity(.5);
+    }
+    a:hover:after {
+        @include scale(1);
+    }
+    a:hover:before {
+        background-color: rgba(0,0,0,0);
+    }
+
+    // RESPONSIVE
+    // FROM MEDIUM 
+    @media (min-width: $screen-md-min) {
+        float: left;
+        margin: 0 30px 25px 0;
+        position: relative;
+        top: 0;
+        min-height: 70px;
+    }
+}
+
+
+
+
+
+// FROM BREAKPOINT
+@media (min-width: $grid-float-breakpoint) {
+}
+
+
+
+// FROM LARGE 
+@media (min-width: $screen-lg-min) {
 }
 

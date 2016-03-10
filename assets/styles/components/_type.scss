@@ -1,3 +1,24 @@
+/*
+// DEFAULT
+
+.myclass {
+}
+
+// FROM BREAKPOINT
+@media (min-width: $grid-float-breakpoint) {
+}
+
+// FROM MEDIUM 
+@media (min-width: $screen-md-min) {
+}
+
+// FROM LARGE 
+@media (min-width: $screen-lg-min) {
+}
+
+*/
+
+
 body {
    font-size: 18px;
 }
@@ -61,10 +82,24 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 .sub-heading {
-    @extend .section-heading;
+    @extend .section-heading;    
     font-size: 20px;
     margin: 10px;
     padding: 40px;
+    &:before {
+        @include rotate(45deg);
+        @include square(50px);
+        margin-left: -25px;
+        background-color: transparent;
+        border: 3px solid $white;
+        border-radius: 0;
+    }
+    &:after {
+        @include square(70px);
+        margin-left: -35px;
+        margin-top: -9px;
+        color: $white;
+    }
 }
 
 
@@ -92,13 +127,19 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 article {
-    padding: 10%;
+    padding: 0 10% 10%;
     //background: rgba(255,255,255,0.2);
-    header h1 {
+    header {
+        max-height: 125px;
+        overflow: hidden;
+    }
+    header h1 {        
         font-family: $font-family-serif;
         line-height: 1;
         font-size: 35px;
-        position: relative;
+        position: relative;        
+        max-height: 70px;
+        text-overflow: ellipsis;
         &:before {
             content: "";
             position: absolute;
@@ -112,6 +153,18 @@ article {
         font-size: 13px;
         text-transform: uppercase;
         letter-spacing: 3px;
+        position: relative;
+        &:after {
+            font-family: "FontAwesome";
+            content: $fa-var-ellipsis-h;
+            font-size: 30px;
+            text-align: left;
+            position: absolute;
+            bottom: -20px;
+            width: 50px;
+            bottom: -46px;
+            left: 0;
+        }
     }
 
     .__content {
@@ -133,31 +186,14 @@ article {
     }
 }
 
+.__section-title-time {
+    min-height: 100px;
+}
+
 
 article {
     position: relative;
     min-height: 600px;
-    aside.featured-img {
-        height: 200px;
-        overflow: hidden;
-        border-radius: 5px;
-        position: relative;
-        img {
-            @include transition(all 0.25s ease-in-out);
-            @include scale(1);
-            position: absolute;
-            top: -10%;
-        }
-    }
-    &:hover aside.featured-img img {
-          @include scale(1.05);
-    }
+    
 }
 
-
-.article-content-wrap {
-    position: absolute;
-    top: 70px;
-    padding: 30px;
-    margin: 30px;
-}

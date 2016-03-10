@@ -115,19 +115,22 @@
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 				<!-- NEWS ARTICLE -->
 			    <article class="--position-absolute --white">
-			    	<aside class="featured-img">
+			    	
+			       <header class="row">
+			      	<!-- ASIDE FEATURED IMG -->
+			      	<aside class="featured-img">
 			    		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
 						if ( has_post_thumbnail() ) {
-							the_post_thumbnail();
-						} 
-						?>
+							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<?php } else { ?>
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
+						<?php }	?>
 			      	</aside>
+			      	<!-- / ASIDE FEATURED IMG -->
 
-			      	<!-- ARTICLE CONTENT WRAP -->
-			      <div class="article-content-wrap --background-purple">
-
-			       <header>
+			      	<!-- SECTION TITLE & TIME -->
+		      		<section class="__section-title-time">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
 				        </a></h1>
@@ -139,27 +142,27 @@
 				        </span>
 				        <?php the_time('Y'); ?>
 				        </span></time>
-			        </header>
+				    </section>
+				    <!-- / SECTION TITLE & TIME -->
+			       </header>
 
-			        <p class="__content">
-				      	<?php
-				      	// GET THE CONTENT
-						$content = get_the_content();
-						echo wp_trim_words( $content , '30' ); ?>
-					</p>
+			       <!-- CONTENT -->
+			       <section class="row">
+				        <p class="__content ">
+					      	<?php
+					      	// GET THE CONTENT
+							$content = get_the_content();
+							echo wp_trim_words( $content , '38' ); ?>
+						</p>
 
-			      <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
-			      </p>
-
-
-			      </div>
-			    <!-- /ARTICLE CONTENT WRAP -->
-
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
+				      </p>
+				  </section>
+				  <!-- / CONTENT -->
+			      
 
 			    </article>
     			<!--/ NEWS ARTICLE -->
-
-
     			
 
 			<?php } } ?>
@@ -178,19 +181,23 @@
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 				<!--PRODUCTION ARTICLE -->
 			    <article class="--position-absolute --white">
-			      <aside class="featured-img">
-						<?php
-				      		// check if the post has a Post Thumbnail assigned to it.
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail();
-							} 
-						?>
-			      </aside>
+			     
 
-			      <!-- ARTICLE CONTENT WRAP -->
-			      <div class="article-content-wrap --background-purple">
+			      <header class="row">
+			      	<!-- ASIDE FEATURED IMG -->
+			      	<aside class="featured-img">
+			    		<?php
+			      		// check if the post has a Post Thumbnail assigned to it.
+						if ( has_post_thumbnail() ) {
+							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<?php } else { ?>
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
+						<?php }	?>
+			      	</aside>
+			      	<!-- / ASIDE FEATURED IMG -->
 
-			      <header>
+			      	<!-- SECTION TITLE & TIME -->
+		      		<section class="__section-title-time">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
 				        </a></h1>
@@ -202,20 +209,25 @@
 				        </span>
 				        <?php the_time('Y'); ?>
 				        </span></time>
+				    </section>
+				    <!-- / SECTION TITLE & TIME -->
 			       </header>
 
-			      <p class="__content">
-				      	<?php
-				      	// GET THE CONTENT
-						$content = get_the_content();
-						echo wp_trim_words( $content , '30' ); ?>
-					</p>
+			     <!-- CONTENT -->
+			       <section class="row">
+				        <p class="__content ">
+					      	<?php
+					      	// GET THE CONTENT
+							$content = get_the_content();
+							echo wp_trim_words( $content , '38' ); ?>
+						</p>
 
-			      <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
-			      </p>
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
+				      </p>
+				  </section>
+				  <!-- / CONTENT -->
 			      
-			      </div>
-			      <!-- /ARTICLE CONTENT WRAP -->
+			     
 
 			    </article>
     			<!--/ PRODUCTION ARTICLE -->
