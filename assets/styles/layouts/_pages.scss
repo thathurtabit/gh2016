@@ -33,6 +33,29 @@
     }
 }
 
+.--position-relative {
+    position: relative;
+}
+
+.the-divider {
+    @extend .visible-lg-block;
+    position: absolute;
+    width: 20px;
+    background: $white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.--spacing-center {
+    text-align: center;
+    padding: 20px;
+}
+
+.--no-top-padding {
+    padding-top: 0;
+}
 
 .--border-white {
     border: 20px solid $white;
@@ -73,6 +96,10 @@
     background-color: $gray-dark;
 }
 
+.--background-white {
+    background-color: $white;
+    color: $gray;
+}
 
 
 // Make all images responsive
@@ -690,18 +717,21 @@ img {
 }
 
 #ghost-horses-svg {
+    background: url(../images/code.png);
+    background-attachment: fixed;
     position: relative;
     padding: 10%;
     border: 20px solid $white;
     border-top: none;
+    min-height: 700px;
     span {
         display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 50%;
-        margin-left: -25%;
-        margin-top: -25%;
+        width: 36%;
+        margin-left: -18%;
+        margin-top: -18%;
     }
 }
 
@@ -719,9 +749,9 @@ img {
     border-radius: 100%;
     overflow: hidden;
     position: relative;
-    // 
-
-
+    left: 6px;
+    top: 9px;
+    box-shadow: 0 0 0 5px $white;
     
     img,
     a {
@@ -733,13 +763,14 @@ img {
     }
 
     a {
-        z-index: 0;        
-        background-color: $gray;
+        display: block;
+        z-index: 1;        
+        background-color: $gray-dark;
     }
 
     // IMG
     img {
-        z-index: 1;
+        z-index: 2;
     }
 
 
@@ -767,10 +798,16 @@ img {
         font-size: 30px;
     }
     a:before {
-        @include square(100px);
+        @include animate-spin();
+        @include transform-origin(300% -300%);
+        @include animation-duration(1.5s);
+        @include square(7px);
         content: "";
+        border-radius: 100%;
         position: absolute;
-        background-color: rgba(0,0,0,0);
+        background-color: rgba(255,255,255,0);
+        left: 30%;
+        top: 70%;
     }
 
     // HOVER
@@ -782,7 +819,8 @@ img {
         @include scale(1);
     }
     a:hover:before {
-        background-color: rgba(0,0,0,0);
+
+        background-color: rgba(255,255,255,1);
     }
 
     // RESPONSIVE
@@ -791,7 +829,6 @@ img {
         float: left;
         margin: 0 30px 25px 0;
         position: relative;
-        top: 0;
         min-height: 70px;
     }
 }

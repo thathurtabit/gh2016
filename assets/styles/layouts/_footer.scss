@@ -1,5 +1,47 @@
 #main-footer {
-	background-color: $gray;
-	padding: 40px;
+	background-color: $gray-dark;
 	color: $white;
+	position: relative;
+}
+
+.the-divider {
+	width: 20px;
+}
+
+.footer-col {
+	padding: 30px;
+}
+
+.footer-col h3 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.footer-social-icons {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li {
+		padding: 20px;
+		margin: 20px;
+		float: left;
+		font-size: 30px;
+		a {
+			@include square(50px);
+			line-height: 50px;
+			text-align: center;
+			display: block;
+			background-color: rgba(255,255,255,0.05);
+			border-radius: 100%;
+		}
+	}
+}
+
+#footer-meta {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 15px;
+    letter-spacing: 4px;
+    padding: 40px;
+    padding-top: 20px;
 }

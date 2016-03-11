@@ -103,7 +103,7 @@
 <section id="latest-split" class="--background-purple"><!-- LATEST STUFF -->
 <h2 class="section-heading  --icon-bolt">Latest stuff</h2>
 
-<div class="row">
+<div class="row --position-relative">
 	<div class="col-md-6">
 		<section class="--spacing">
 			<h2 class="sub-heading --icon-news">News</h2>
@@ -234,14 +234,17 @@
 
 			<?php } } ?>
 			
-			</div>
-		</section>
+			
+			</section>
+	</div>
+
 </div>
 
 
 </section><!-- / LATEST STUFF -->
 
 <section id="ghost-horses-svg" class="--screen-v-height"><!-- GHOST HORSES SVG -->
+<h4><a href="contact">Get In Touch</a></h4>
 <span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
 </section><!-- / GHOST HORSES SVG -->
 

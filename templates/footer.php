@@ -1,30 +1,44 @@
-<footer id="main-footer" class="content-info --border-white">
+<footer id="main-footer" class="content-info --position-relative --border-white">
+	<h2 class="section-heading  --icon-ellipsis-h">Footer stuff</h2>
   <div class="row">
-		<div class="col-md-3">
-			<h3>Quick Links</h3>
-			
+		<div class="col-md-6">
+			<h2 class="sub-heading --icon-bars">Links</h2>
+			<!-- FOOTER COL -->
+			<section class="footer-col">
+			 <?php
+        if (has_nav_menu('footer_navigation')) :
+          wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav']);
+        endif;
+        ?>
+			</section>
+			<!-- / FOOTER COL -->
 		</div>
-		<div class="col-md-3">
-			<h3>Twitter</h3>
-			
-		</div>
-		<div class="col-md-3">
-			<h3>Last.fm</h3>
-			
-		</div>
-		<div class="col-md-3">
-			<h3>Social</h3>
+		
+		<div class="col-md-6">
+			<h2 class="sub-heading --icon-globe">Social</h2>
+			<!-- FOOTER COL -->
+			<section class="footer-col">
+				<ul class="footer-social-icons">
+					<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-google"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-codepen"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>
+				</ul>
+			</section>
+			<!-- / FOOTER COL -->
 			
 		</div>
 	</div>
+	<!--<div class="the-divider"></div>-->
 </footer>
-<div class="container-fluid --background-gray-dark --border-white">
+<div id="footer-meta" class="container-fluid --background-white">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-6">
 			<small>This website is best viewed whilst looking directly at it.</small>
 		</div>
-		<div class="col-md-4 pull-right">
-			<small>&copy; 2005 - <?php echo date("Y") ?></small>
+		<div class="col-md-6 pull-right">
+			<small>&copy; Ghost Horses Ltd 2005 - <?php echo date("Y") ?> | Reg No: 08556760</small>
 		</div>
 
 	</div>
