@@ -182,7 +182,6 @@
 				<!--PRODUCTION ARTICLE -->
 			    <article class="--position-absolute --white">
 			     
-
 			      <header class="row">
 			      	<!-- ASIDE FEATURED IMG -->
 			      	<aside class="featured-img">
@@ -243,9 +242,21 @@
 
 </section><!-- / LATEST STUFF -->
 
-<section id="ghost-horses-svg" class="--screen-v-height"><!-- GHOST HORSES SVG -->
-<h4><a href="contact">Get In Touch</a></h4>
-<span><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
+<section id="ghost-horses-svg" class="--screen-v-height scrollme"><!-- GHOST HORSES SVG -->
+<div id="finger-slider" class="animateme" data-when="enter"
+        data-from="1"
+        data-to="0.5"
+        data-opacity="1"
+        data-translatex="-1000">
+	<h4 id="finger-get-in-touch"><a href="contact">Get In Touch</a></h4>
+<span id="finger-point-wrap"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
+</div>
+
+<span class="horses" data-when="enter"
+        data-from="1"
+        data-to="0.5"
+        data-opacity="1"
+        data-translatex="1000"><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span" class="horses"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
 </section><!-- / GHOST HORSES SVG -->
 
 

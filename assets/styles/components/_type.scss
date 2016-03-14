@@ -123,13 +123,13 @@ h1,h2,h3,h4,h5,h6,p {
         font-family: $font-family-sans-serif;
         content: "?";
     }
-    &.--icon-ellipsis-h {
+    &.--icon-ellipsis-h:after {
         content: $fa-var-ellipsis-h;
     }
-    &.--icon-globe {
+    &.--icon-globe:after {
         content: $fa-var-globe;
     }
-    &.--icon-bars {
+    &.--icon-bars:after {
         content: $fa-var-bars;
     }
 }
@@ -206,3 +206,47 @@ article {
     
 }
 
+
+.list-center {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        position: relative;
+        display: inline-block;        
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 2px;
+        &:after {
+            @include transition(all 0.2s ease-in-out);
+            @include square(50px);
+            content: "";
+            box-shadow: 0 0 0 0 rgba(255,255,255,0.1);
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            z-index: 0;
+        }
+        // Link 
+        a {
+            margin: 20px;
+            position: relative;
+            z-index: 1;
+            padding: 35px 0;
+            display: block;
+            color: $white;
+            &:hover {
+                color: $brand-blue;
+            }      
+        }
+        // LI:HOVER
+        &:hover:after {
+            box-shadow: 0 0 0 5px rgba(255,255,255,0.1);
+        }
+    }
+}
