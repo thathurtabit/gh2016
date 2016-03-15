@@ -21,6 +21,8 @@
     border-radius: 100%;
     &:before {
         font-family: "FontAwesome";
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -33,27 +35,48 @@
 
 .slick-prev:before {
     //content: $fa-var-chevron-left;
-    content: $fa-var-long-arrow-left;
+    //content: $fa-var-long-arrow-left;
+    content: $fa-var-arrow-left;
 }
 
 .slick-next:before {
     //content: $fa-var-chevron-right;
-    content: $fa-var-long-arrow-right;
+    //content: $fa-var-long-arrow-right;
+    content: $fa-var-arrow-right;
+}
+
+.slick-prev {
+    left: -35px;
+}
+
+.slick-next {
+    right: -35px;
 }
 
 .slick-prev:after,
 .slick-next:after {
-    @include square(20px);
+    @include square(16px);
     @include rotate(45deg);
     content: "";
     top: 50%;
     left: 50%;
-    margin-left: -10px;
-    margin-top: -10px;
+    margin-left: -8px;
+    margin-top: -9px;
     background: transparent;
     box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
     position: absolute;
     z-index: 1;
+}
+
+.slick-next:after {
+    margin-top: -10px;
+    margin-left: -9px;
+}
+
+.slick-prev:hover:after,
+.slick-next:hover:after {
+    @include animate-bgcolor();
+    color: $white;
 }
 
 #bg-carousel {

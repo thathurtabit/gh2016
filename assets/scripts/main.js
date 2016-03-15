@@ -142,10 +142,85 @@
     touchMove: false,
     swipe: false
   });
-  //$('#float-illustrations-2').slick({
-  //  arrows: false,
-  //  fade: true
-  //});
+
+
+// GOOGLEY EYES
+  // If you use this code, please link to this pen (cdpn.io/rkcjt). Thanks :)
+
+function doGooglyEyes() {
+
+  var DrawEye = function(eyecontainer, pupil, eyeposx, eyeposy){
+    // Initialise core variables
+    var r = $(pupil).width()/2;
+    var center = {
+      x: $(eyecontainer).width()/2 - r, 
+      y: $(eyecontainer).height()/2 - r
+    };
+    var distanceThreshold = $(eyecontainer).width()/2 - r;
+    var mouseX = 0, mouseY = 0;
+    
+    // Listen for mouse movement
+    $(window).mousemove(function(e){ 
+      var d = {
+        x: e.pageX - r - eyeposx - center.x,
+        y: e.pageY - r - eyeposy - center.y
+      };
+      var distance = Math.sqrt(d.x*d.x + d.y*d.y);
+      if (distance < distanceThreshold) {
+        mouseX = e.pageX - eyeposx - r;
+        mouseY = e.pageY - eyeposy - r;
+      } else {
+        mouseX = d.x / distance * distanceThreshold + center.x;
+        mouseY = d.y / distance * distanceThreshold + center.y;
+      }
+    });
+    
+    // Update pupil location
+    var pupil = $(pupil);
+    var xp = 0, yp = 0;
+    var loop = setInterval(function(){
+      // change 1 to alter damping/momentum - higher is slower
+      xp += (mouseX - xp) / 1;
+      yp += (mouseY - yp) / 1;
+      pupil.css({left:xp, top:yp});    
+    }, 1);
+  };
+
+  // Ghost Horses Eyes
+  var gheye1 = new DrawEye("#eyeleft--gh", "#pupilleft--gh", 213, 72);
+  var gheye2 = new DrawEye("#eyeright--gh", "#pupilright--gh", 50, 130);
+
+  // Donald Trump Eyes
+  var dteye1 = new DrawEye("#eyeleft--dt", "#pupilleft--dt", 213, 72);
+  var dteye2 = new DrawEye("#eyeright--dt", "#pupilright--dt", 50, 130);
+
+  // Khal Drogo Eyes
+  var kdeye1 = new DrawEye("#eyeleft--kd", "#pupilleft--kd", 213, 72);
+  var kdeye2 = new DrawEye("#eyeright--kd", "#pupilright--kd", 50, 130);
+
+  // Bjork Eyes
+  var bjeye1 = new DrawEye("#eyeleft--bj", "#pupilleft--bj", 213, 72);
+  var bjeye2 = new DrawEye("#eyeright--bj", "#pupilright--bj", 50, 130);
+
+  // Ryan Giggs Eyes
+  var rgeye1 = new DrawEye("#eyeleft--rg", "#pupilleft--rg", 213, 72);
+  var rgeye2 = new DrawEye("#eyeright--rg", "#pupilright--rg", 50, 130);
+
+  // Rosa Parks Eyes
+  var rpeye1 = new DrawEye("#eyeleft--rp", "#pupilleft--rp", 213, 72);
+  var rpeye2 = new DrawEye("#eyeright--rp", "#pupilright--rp", 50, 130);
+
+}
+
+
+
+
+// On before slide change
+$('#person-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  // Do function
+  doGooglyEyes();
+});
+
 
   // https://github.com/maxwellito/vivus
   // load Vivus SVG outline animation after document loads
@@ -156,7 +231,11 @@
   // Only Fire after the page has fully loaded
   $(window).load(function() {
     $('body').addClass('pageloaded');
+    doGooglyEyes();
   });
+
+
+  
 
 
 
