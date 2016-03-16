@@ -230,8 +230,9 @@ img {
         line-height: 29px;
     }
     #make-really .item {
-        font-family: $font-family-sans-serif;
+        font-family: $font-family-serif-alt;
         font-weight: normal;
+
     }
     #adjective-carousel, #make-really, #object-carousel, #person-carousel {
         height: 38px;
@@ -886,20 +887,25 @@ img {
     padding: 10%;
     border: 20px solid $white;
     border-top: none;
-    min-height: 700px;
+    min-height: 600px;
     overflow: hidden;
     span.horses {
         display: block;
         position: absolute;
         top: 50%;
-        left: 75%;
-        width: 36%;
-        margin-left: -18%;
-        margin-top: -18%;
+        left: 50%;
+        width: 30%;
+        margin-left: -15%;
+        margin-top: -15%;
     }
 }
 
 
+#contact-finger-wrap {
+    position: relative;
+    padding: 10%;    
+    overflow: hidden;
+}
 
 
 #finger-slider {
@@ -907,7 +913,7 @@ img {
     left: 20px;
     top: 0;
     bottom: 0;
-    right: 30%;
+    right: 40%;
 }
 
 
@@ -924,10 +930,20 @@ img {
     position: absolute;
     z-index: 4;
     top: 48%;
-    left: 11%;
+    left: 25%;
     text-align: center;
     color: $black;
     font-size: 60px;
-    font-family: $font-family-serif;
+    font-family: $font-family-serif-alt;
     color: $gray-dark;
 }
+
+
+#contact-slider {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    margin-top: -150px;
+    font-size: 80px;
+}
+

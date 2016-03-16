@@ -381,27 +381,29 @@
 </div>
 
 	<div class="row --spacing-center --position-bottom --position-absolute">
-		<a href="#ghost-horses-svg" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">More</a>
+		<a href="#contact-finger-wrap" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">More</a>
 	</div>
 
 
 </section><!-- / LATEST STUFF -->
 
-<section id="ghost-horses-svg" class="--screen-v-height scrollme"><!-- GHOST HORSES SVG -->
+<section id="contact-finger-wrap" class="--screen-v-height --border-white scrollme"><!-- GHOST HORSES SVG -->
 <div id="finger-slider" class="animateme" data-when="enter"
         data-from="1"
         data-to="0.5"
         data-opacity="1"
-        data-translatex="-1000">
-	<h4 id="finger-get-in-touch"><a href="contact">Get In Touch</a></h4>
+        data-translatex="-900">
+	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
 <span id="finger-point-wrap"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
 </div>
 
-<span class="horses" data-when="enter"
+<div id="contact-slider" data-when="enter"
         data-from="1"
         data-to="0.5"
         data-opacity="1"
-        data-translatex="1000"><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span" class="horses"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
+        data-scale="0" class="animateme">
+	<a href="contact" class="btn -color-white -size-x-large -bgcolor-spin --background-blue">Contact</a>
+</div>
 </section><!-- / GHOST HORSES SVG -->
 
 
