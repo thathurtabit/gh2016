@@ -2,7 +2,7 @@
 	<h2 class="section-heading  --icon-ellipsis-h">Footer stuff</h2>
   <div class="row">
 		<div class="col-md-6">
-			<h2 class="sub-heading --icon-bars">Links</h2>
+			<h2 class="sub-heading --icon-bars">Links<span></span></h2>
 			<!-- FOOTER COL -->
 			<section class="footer-col">
 			 <?php
@@ -15,7 +15,7 @@
 		</div>
 		
 		<div class="col-md-6">
-			<h2 class="sub-heading --icon-globe">Social</h2>
+			<h2 class="sub-heading --icon-globe">Social<span></span></h2>
 			<!-- FOOTER COL -->
 			<section class="footer-col">
 				<ul class="footer-social-icons list-center">

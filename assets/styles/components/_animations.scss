@@ -22,6 +22,30 @@
 }
 // end SPIN
 
+// SPIN ANTI
+@mixin animate-spin-anti() {
+  @include animation-name(spin-anti);
+  @include animation-duration(2s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes spin-anti {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(-360deg); }
+}
+@-webkit-keyframes spin-anti {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(-360deg); }
+}
+@keyframes spin-anti {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(-360deg);}
+}
+// end SPIN ANTI
+
 
 // Background white flash
 @mixin white-flash() {
@@ -68,6 +92,51 @@
 }
 // end Background white flash
 
+
+// Background shadow pulse
+@mixin shadow-pulse() {
+  @include animation-name(shadow-pulse);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes shadow-pulse {
+    0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 80px rgba(255,255,255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
+}
+@-webkit-keyframes shadow-pulse {
+    0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 80px rgba(255,255,255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
+}
+@keyframes shadow-pulse {
+    0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 80px rgba(255,255,255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
+}
+// end Background shadow pulse
 
 
 // Animate bg colours FILL

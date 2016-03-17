@@ -224,8 +224,8 @@
 		>
 		</div>
 
-		<section class="--spacing --margin-top">
-			<h2 class="sub-heading --icon-news">News</h2>
+		<section class="split-bg-content --background-purple">
+			<h2 class="sub-heading --icon-news">News<span></span></h2>
 			 <?php
 		// NEWS Custom Loop Args
 		$news_args = array('post_type' => 'post','showposts' => '1' );
@@ -310,8 +310,8 @@
 		>
 		</div>
 
-		<section class="--spacing --margin-top">
-			<h2 class="sub-heading  --icon-cog">Production Diary</h2>
+		<section class="split-bg-content --bg-right --background-purple">
+			<h2 class="sub-heading  --icon-cog">Production Diary<span></span></h2>
 			
 			<?php
 			// PRODUCTION DIARY Custom Loop Args
@@ -384,6 +384,7 @@
 		<a href="#contact-finger-wrap" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">More</a>
 	</div>
 
+<div class="the-divider"></div>
 
 </section><!-- / LATEST STUFF -->
 
@@ -394,15 +395,15 @@
         data-opacity="1"
         data-translatex="-900">
 	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
-<span id="finger-point-wrap"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
+<span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
 </div>
 
 <div id="contact-slider" data-when="enter"
         data-from="1"
         data-to="0.5"
         data-opacity="1"
-        data-scale="0" class="animateme">
-	<a href="contact" class="btn -color-white -size-x-large -bgcolor-spin --background-blue">Contact</a>
+       data-translatex="900" class="animateme">
+	<a href="contact" class="btn -color-white -size-x-large -bgcolor-spin --background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></a>
 </div>
 </section><!-- / GHOST HORSES SVG -->
 

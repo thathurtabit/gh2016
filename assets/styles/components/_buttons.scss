@@ -36,17 +36,100 @@ a, a:link, a:visited, a:active, a:hover {
 .-size-x-large {
 	@extend .btn-lg;
     @include square(300px);
+    @include rotate(45deg);
+    @include shadow-pulse();
 	padding: 0!important;
-    font-size: 30px;
-    border-radius: 100%;
-    line-height: 300px;
-	box-shadow: 0 0 0 15px $white;
+    font-size: 40px;
+    font-family: $font-family-serif;
+    text-transform: none;
+    line-height: 260px;
+	border: 20px solid $white;
+	span {
+		@include square(300px);
+	    @include rotate(-45deg);
+		padding: 0!important;  
+	    line-height: 260px;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -135px;
+	    margin-top: -135px;
+	}
+	svg {
+		@include rotate(-90deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+        z-index: -1;
+	}
+
+	svg .__rectangle {
+		@include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+		@include opacity(0);
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;            
+		fill: transparent;
+		stroke: $gray;
+		stroke-dasharray: 140;
+		stroke-dashoffset: -400;
+		stroke-width: 10px;
+	}
+
+	// BEFORE & AFTER
+	&:before,
+	&:after {
+		display: none;
+	}
+	&:before {
+		@include square(270px);
+		@include animate-spin();
+		@include gradient-striped();
+		content: "";
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		border-radius: 100%;
+		z-index: 7;
+	}
+	&:after {
+		@include square(270px);
+		@include animate-spin-anti();
+		@include gradient-striped();
+		content: "";
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		border-radius: 100%;
+		z-index: 7;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-transform: none;
+		color: $gray-dark;
+		svg .__rectangle {
+			@include opacity(1);
+			stroke-width: 10px;
+			stroke-dashoffset: 0;
+			stroke-dasharray: 200;
+        }
+	}
 
 	// FROM MEDIUM 
 	@media (min-width: $screen-md-min) {
 	    padding: 40px 60px;
-	    font-size: 30px;
-	    box-shadow: 0 0 0 20px $white;
+	    font-size: 50px;
+	    border: 20px solid $white;
+	    &:hover {
+	    	border: 20px solid $white;
+	    	line-height: 265px;
+	    }
 	}	
 }
 
