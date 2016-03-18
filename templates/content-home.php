@@ -160,11 +160,11 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="--screen-v-height  scrollme"><!-- BUT HOW? -->
+<section id="but-how" class="--screen-v-height scrollme"><!-- BUT HOW? -->
 
 <h2 class="section-heading --icon-question">Lovely websites you say, b-but how?</h2>
 
-<ul class="large-ul-blocks --diamond animateme" data-when="enter" data-crop="true" data-from="0.2" data-to="0" data-opacity="0" data-translatey="400">
+<ul class="large-ul-blocks --diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
 	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
 	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
 	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
@@ -179,11 +179,11 @@
 
 </section><!-- / BUT HOW? -->
 
-<section id="but-what" class="--screen-v-height"><!-- BUT WHAT -->
+<section id="but-what" class="--screen-v-height scrollme"><!-- BUT WHAT -->
 
 <h2 class="section-heading --icon-code">But like, what do you DO?</h2>
 
-<ul class="large-ul-blocks --circle animateme" data-when="enter" data-crop="true" data-from="0.5" data-to="0" data-opacity="0" data-translatey="400">
+<ul class="large-ul-blocks --circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
 	<li><span>Digital Design / UI</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
 	<li><span>Logos</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
 	<li><span>HTML5 / CSS3</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
@@ -199,7 +199,7 @@
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
-<section id="latest-split" class="--position-relative --background-purple">
+<section id="latest-split" class="--position-relative --background-purple scrollme">
 <h2 class="section-heading  --icon-bolt --position-absolute">Latest stuff</h2>
 
 <div class="row --position-relative">
@@ -224,7 +224,7 @@
 		>
 		</div>
 
-		<section class="split-bg-content --background-purple">
+		<section class="split-bg-content --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
 			<h2 class="sub-heading --icon-news">News<span></span></h2>
 			 <?php
 		// NEWS Custom Loop Args
@@ -310,7 +310,7 @@
 		>
 		</div>
 
-		<section class="split-bg-content --bg-right --background-purple">
+		<section class="split-bg-content --bg-right --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
 			<h2 class="sub-heading  --icon-cog">Production Diary<span></span></h2>
 			
 			<?php

@@ -10,7 +10,8 @@
 .eyeright {
   position: absolute;
   background: $white;
-  overflow: hidden;
+  overflow: hidden;  
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.2);
   border-radius: 50%;
 }
 

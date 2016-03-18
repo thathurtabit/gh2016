@@ -18,6 +18,27 @@
 
 */
 
+body {
+    overflow: hidden;
+}
+
+.--screen-v-height {
+    min-height: 600px;
+     // FROM BREAKPOINT
+    @media (min-width: $grid-float-breakpoint) {
+    }
+
+    // FROM MEDIUM 
+    @media (min-width: $screen-md-min) {
+    }
+
+    // FROM LARGE 
+    @media (min-width: $screen-lg-min) {
+        height: 100vh;
+    }
+}
+
+
 .--spacing {
     margin: 12.5%;
     // FROM BREAKPOINT
@@ -101,10 +122,6 @@
     border-top: none;
 }
 
-.--screen-v-height {
-    min-height: 600px;
-    height: 100vh;
-}
 
 // BACKGROUND COLOURS
 .--background-purple {
@@ -236,7 +253,9 @@ img {
     #make-really .item {
         font-family: $font-family-serif-alt;
         font-weight: normal;
-
+        font-size: 23px;
+        line-height: 29px;
+        padding-top: 5px;
     }
     #adjective-carousel, #make-really, #object-carousel, #person-carousel {
         height: 38px;
@@ -261,6 +280,10 @@ img {
         font-size: 36px;
         line-height: 36px;
     }
+    #home-intro-text #make-really .item {
+        font-size: 31px;
+        line-height: 34px;
+    }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
             height: 40px;
@@ -277,6 +300,10 @@ img {
     #home-intro-text .item {
         font-size: 40px;
         line-height: 40px;
+    }
+    #home-intro-text #make-really .item {
+        font-size: 35px;
+        line-height: 38px;
     }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
@@ -295,6 +322,10 @@ img {
         font-size: 45px;
         line-height: 45px;
     }
+    #home-intro-text #make-really .item {
+        font-size: 39px;
+        line-height: 42px;
+    }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
             height: 48px;
@@ -311,6 +342,10 @@ img {
     #home-intro-text .item {
         font-size: 50px;
         line-height: 50px;
+    }
+    #home-intro-text #make-really .item {
+        font-size: 45px;
+        line-height: 48px;
     }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
@@ -329,6 +364,10 @@ img {
         font-size: 48px;
         line-height: 48px;
     }
+    #home-intro-text #make-really .item {
+        font-size: 43px;
+        line-height: 46px;
+    }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
             height: 53px;
@@ -346,6 +385,10 @@ img {
         font-size: 52px;
         line-height: 52px;
     }
+    #home-intro-text #make-really .item {
+        font-size: 47px;
+        line-height: 50px;
+    }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
             height: 58px;
@@ -362,6 +405,10 @@ img {
     #home-intro-text .item {
         font-size: 60px;
         line-height: 60px;
+    }
+    #home-intro-text #make-really .item {
+        font-size: 55px;
+        line-height: 58px;
     }
     #home-intro-text {
         #adjective-carousel, #make-really, #object-carousel, #person-carousel {
@@ -548,11 +595,10 @@ img {
 }
 
 
-#float-illustrations-1,
-#float-illustrations-2 {
+#float-illustrations-1{
 	
 	position: absolute;
-	z-index: 10;
+	z-index: 1;
 	
     margin-left: 0;
     margin-bottom: 0;
@@ -586,19 +632,6 @@ img {
 	height: 100vh;
 	&.slick-active span {
     	left: -10%;
-    }
-}
-
-#float-illustrations-1 {
-    z-index: 31;
-}
-#float-illustrations-2 {
-	top: 50%;
-	margin-top: 0%;
-	z-index: 32;
-	.item {
-    	font-size: 50px;
-    	height: 50vh;
     }
 }
 

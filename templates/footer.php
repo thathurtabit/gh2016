@@ -1,7 +1,7 @@
-<footer id="main-footer" class="content-info --position-relative --border-white">
+<footer id="main-footer" class="content-info --position-relative --border-white scrollme">
 	<h2 class="section-heading  --icon-ellipsis-h">Footer stuff</h2>
   <div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
 			<h2 class="sub-heading --icon-bars">Links<span></span></h2>
 			<!-- FOOTER COL -->
 			<section class="footer-col">
@@ -14,7 +14,7 @@
 			<!-- / FOOTER COL -->
 		</div>
 		
-		<div class="col-md-6">
+		<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
 			<h2 class="sub-heading --icon-globe">Social<span></span></h2>
 			<!-- FOOTER COL -->
 			<section class="footer-col">

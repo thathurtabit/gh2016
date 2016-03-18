@@ -47,6 +47,152 @@
 // end SPIN ANTI
 
 
+// FLIP SPIN Y
+@mixin flip-spin-y() {
+  @include animation-name(flip-spin-y);
+  @include animation-duration(2s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes flip-spin-y {
+    from { -moz-transform: rotateY(0deg); }
+    to { -moz-transform: rotateY(360deg); }
+}
+@-webkit-keyframes flip-spin-y {
+    from { -webkit-transform: rotateY(0deg); }
+    to { -webkit-transform: rotateY(360deg); }
+}
+@keyframes flip-spin-y {
+    from {transform:rotateY(0deg);}
+    to {transform:rotateY(360deg);}
+}
+// end FLIP SPIN Y
+
+
+
+/// =============================================
+
+
+
+// FLIP SPIN X
+@mixin flip-spin-x() {
+  @include animation-name(flip-spin-x);
+  @include animation-duration(2s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes flip-spin-x {
+    from { -moz-transform: rotateX(0deg); }
+    to { -moz-transform: rotateX(360deg); }
+}
+@-webkit-keyframes flip-spin-x {
+    from { -webkit-transform: rotateX(0deg); }
+    to { -webkit-transform: rotateX(360deg); }
+}
+@keyframes flip-spin-x {
+    from {transform:rotateX(0deg);}
+    to {transform:rotateX(360deg);}
+}
+// end FLIP SPIN X
+
+
+
+// FLIP SPIN X + BG COLOUR
+@mixin flip-spin-x-bg-color() {
+  @include animation-name(flip-spin-x-bg-color);
+  @include animation-duration(2s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes flip-spin-x-bg-color{
+    0% {
+        -moz-transform: rotateX(0deg);
+          background-color: $brand-blue;
+      }
+      16% {
+          background-color: $brand-green;
+      }
+      32% {
+          background-color: $brand-red;
+      }
+      48% {
+          background-color: $brand-yellow;
+      }
+      64% {
+          background-color: $brand-purple;
+      }
+      80% {
+          background-color: $brand-pink;
+      }
+      100% {
+          background-color:$brand-blue;
+          -moz-transform: rotateX(360deg)
+      }
+}
+@-webkit-keyframes flip-spin-x-bg-color {
+    0% {
+        -webkit-transform: rotateX(0deg);
+          background-color: $brand-blue;
+      }
+      16% {
+          background-color: $brand-green;
+      }
+      32% {
+          background-color: $brand-red;
+      }
+      48% {
+          background-color: $brand-yellow;
+      }
+      64% {
+          background-color: $brand-purple;
+      }
+      80% {
+          background-color: $brand-pink;
+      }
+      100% {
+          background-color:$brand-blue;
+          -webkit-transform: rotateX(360deg)
+      }
+}
+@keyframes flip-spin-x-bg-color {
+    0% {
+        transform: rotateX(0deg);
+          background-color: $brand-blue;
+      }
+      16% {
+          background-color: $brand-green;
+      }
+      32% {
+          background-color: $brand-red;
+      }
+      48% {
+          background-color: $brand-yellow;
+      }
+      64% {
+          background-color: $brand-purple;
+      }
+      80% {
+          background-color: $brand-pink;
+      }
+      100% {
+          background-color:$brand-blue;
+          transform: rotateX(360deg)
+      }
+}
+// end FLIP SPIN X + BG COLOUR
+
+
+
+
 // Background white flash
 @mixin white-flash() {
   @include animation-name(white-flash);
