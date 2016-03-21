@@ -18,11 +18,12 @@
 // Left / Right
 .slick-prev,
 .slick-next {
-    border-radius: 100%;
+    border-radius: 100%;    
     &:before {
         font-family: "FontAwesome";
         position: relative;
         z-index: 2;
+        color: $gray;
     }
 }
 

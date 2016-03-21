@@ -4,23 +4,61 @@
   position: relative;
   background: $black;
   border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
+  // FROM SMALL
+  @media (min-width: $screen-sm-min) {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.25);
+    &#pupil-left--dt {
+      box-shadow: 0 0 0 3px rgba(255,0,0,0.25);
+    }
+  }
+
+  // FROM MEDIUM 
+  @media (min-width: $screen-md-min) {
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.25);
+    &#pupil-left--dt {
+      box-shadow: 0 0 0 4px rgba(255,0,0,0.25);
+    }
+  }
+
+  // FROM LARGE 
+  @media (min-width: $screen-lg-min) {
+     box-shadow: 0 0 0 5px rgba(0,0,0,0.25);
+     &#pupil-left--dt {
+      box-shadow: 0 0 0 5px rgba(255,0,0,0.25);
+    }
+  }
 }
 
 .eyeleft,
 .eyeright {
   position: absolute;
   background: $white;
-  overflow: hidden;  
-  box-shadow: 0 0 0 5px rgba(0,0,0,0.2);
+  overflow: hidden;   
   border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+  // FROM SMALL
+  @media (min-width: $screen-sm-min) {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.75);
+  }
+
+  // FROM MEDIUM 
+  @media (min-width: $screen-md-min) {
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.75);
+  }
+
+  // FROM LARGE 
+  @media (min-width: $screen-lg-min) {
+     box-shadow: 0 0 0 5px rgba(0,0,0,0.75);
+  }
 }
 
 
 
 .eyeleft,
 .eyeright {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     width: 28px;
@@ -42,8 +80,8 @@
 
 .pupilleft,
 .pupilright {  
-  width: 13px;
-  height: 13px;
+  width: 8px;
+  height: 8px;
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     width: 14px;

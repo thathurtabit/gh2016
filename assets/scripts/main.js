@@ -214,7 +214,6 @@ function doGooglyEyes() {
 
 
 
-
 // On before slide change
 $('#person-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
   // Do function

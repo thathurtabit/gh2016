@@ -1,7 +1,7 @@
-<section id="home-intro" class="--screen-v-height"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="--screen-v-height scrollme"><!-- HOME INTRO CAROUSEL -->
 
 
-<h1 id="home-intro-text">
+<h1 id="home-intro-text" class="animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
 	<div class="sr-only">Ghost Horses Makes Really Excellent Websites</div>
 	<!--googleoff: all-->
 	<div id="person-carousel">
@@ -12,7 +12,7 @@
 		<div class="item">Ryan Giggs</div>
 		<div class="item">Rosa Parks</div>
 	</div>
-	<div id="make-really"><div class="item">Makes Really</div></div>
+	<div id="make-really"><div class="item"><span>Makes Really</span></div></div>
 	<div id="adjective-carousel">
 		<div class="item">Excellent</div>
 		<div class="item">Disappointing</div>
@@ -31,11 +31,11 @@
 	</div>
 	<!--googleon: all-->
 	<p>
-		<a href="#but-how" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">Learn more</a>
+		<a href="#but-how" class="btn -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
 	</p>
 </h1>
 
-<section id="float-illustrations-1">
+<section id="float-illustrations-1" class="animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
 	<div class="item"><span>
 
 		<!-- EYEBALLS -->
@@ -177,6 +177,18 @@
 		<a href="#but-what" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">Learn more</a>
 	</div>
 
+	<div class="animated-lines">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
 </section><!-- / BUT HOW? -->
 
 <section id="but-what" class="--screen-v-height scrollme"><!-- BUT WHAT -->
@@ -226,6 +238,27 @@
 
 		<section class="split-bg-content --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
 			<h2 class="sub-heading --icon-news">News<span></span></h2>
+
+			<!-- ASIDE FEATURED IMG -->
+	      	<aside class="featured-img --flat">
+	    		<?php
+	      		// check if the post has a Post Thumbnail assigned to it.
+				if ( has_post_thumbnail() ) {
+					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"
+					<?php
+
+	if (has_post_thumbnail( $post->ID ) ): ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"						
+	
+	<?php endif; ?>
+	></a>
+				<?php } else { ?>
+					<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
+				<?php }	?>
+	      	</aside>
+	      	<!-- / ASIDE FEATURED IMG -->
+
+
 			 <?php
 		// NEWS Custom Loop Args
 		$news_args = array('post_type' => 'post','showposts' => '1' );
@@ -233,20 +266,11 @@
 		$news_loop = new WP_Query( $news_args );		  
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 				<!-- NEWS ARTICLE -->
-			    <article class="--white">
+			    <article class="--split --white">
+
 			    	
 			       <header class="row">
-			      	<!-- ASIDE FEATURED IMG -->
-			      	<aside class="featured-img">
-			    		<?php
-			      		// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail() ) {
-							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
-						<?php }	?>
-			      	</aside>
-			      	<!-- / ASIDE FEATURED IMG -->
+			      	
 
 			      	<!-- SECTION TITLE & TIME -->
 		      		<section class="__section-title-time">
@@ -312,6 +336,25 @@
 
 		<section class="split-bg-content --bg-right --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
 			<h2 class="sub-heading  --icon-cog">Production Diary<span></span></h2>
+
+			<!-- ASIDE FEATURED IMG -->
+	      	<aside class="featured-img --flat">
+	    		<?php
+	      		// check if the post has a Post Thumbnail assigned to it.
+				if ( has_post_thumbnail() ) {
+					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"
+					<?php
+
+	if (has_post_thumbnail( $post->ID ) ): ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"						
+	
+	<?php endif; ?>
+	></a>
+				<?php } else { ?>
+					<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
+				<?php }	?>
+	      	</aside>
+	      	<!-- / ASIDE FEATURED IMG -->
 			
 			<?php
 			// PRODUCTION DIARY Custom Loop Args
@@ -320,20 +363,12 @@
 			$prod_loop = new WP_Query( $prod_args );		  
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 				<!--PRODUCTION ARTICLE -->
-			    <article class="--white">
+			    <article class="--split --white">
+
+
 			     
 			      <header class="row">
-			      	<!-- ASIDE FEATURED IMG -->
-			      	<aside class="featured-img">
-			    		<?php
-			      		// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail() ) {
-							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
-						<?php }	?>
-			      	</aside>
-			      	<!-- / ASIDE FEATURED IMG -->
+			      	
 
 			      	<!-- SECTION TITLE & TIME -->
 		      		<section class="__section-title-time">
