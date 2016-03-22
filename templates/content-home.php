@@ -224,13 +224,7 @@
 		// my loop
 		$news_loop = new WP_Query( $news_args );		  
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
-		<?php
-
-  		if (has_post_thumbnail( $post->ID ) ): ?>
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"						
 		
-		<?php endif; ?>
-
 		<?php } } ?>
 
 		>
@@ -244,20 +238,20 @@
 	    		<?php
 	      		// check if the post has a Post Thumbnail assigned to it.
 				if ( has_post_thumbnail() ) {
-					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"
+					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"></a>
+					<span class="--flat-thumb"
 					<?php
 
 	if (has_post_thumbnail( $post->ID ) ): ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"						
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
 	
 	<?php endif; ?>
-	></a>
+	
 				<?php } else { ?>
 					<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
 				<?php }	?>
 	      	</aside>
 	      	<!-- / ASIDE FEATURED IMG -->
-
 
 			 <?php
 		// NEWS Custom Loop Args
@@ -266,7 +260,7 @@
 		$news_loop = new WP_Query( $news_args );		  
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 				<!-- NEWS ARTICLE -->
-			    <article class="--split --white">
+			    <article class="--split --white --background-purple">
 
 			    	
 			       <header class="row">
@@ -301,12 +295,26 @@
 						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
-				  <!-- / CONTENT -->
-			      
+				  <!-- / CONTENT -->	      
 
 			    </article>
     			<!--/ NEWS ARTICLE -->
     			
+    			<!-- POST TAGS -->
+				  <?php
+				  // IF THERE'S TAGS, GO GET 'EM
+					$posttags = get_the_tags();
+					if ($posttags) { ?>
+					<div class="split-tags --top-border --white">
+					<?php
+					  //foreach($posttags as $tag) {
+					  //  echo $tag->name . ' '; 
+					 the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); 
+					 // } ?>
+					</div>
+					<?php }
+					?>
+				<!-- / POST TAGS -->
 
 			<?php } } ?>
 		</section>
@@ -323,13 +331,7 @@
 			$prod_loop = new WP_Query( $prod_args );		  
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 		<?php
-
-		if (has_post_thumbnail( $post->ID ) ): ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"						
-		
-		<?php endif; ?>
-
-		<?php } } ?>
+		 } } ?>
 
 		>
 		</div>
@@ -342,14 +344,15 @@
 	    		<?php
 	      		// check if the post has a Post Thumbnail assigned to it.
 				if ( has_post_thumbnail() ) {
-					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"
+					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"></a>
+					<span class="--flat-thumb"
 					<?php
 
 	if (has_post_thumbnail( $post->ID ) ): ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"						
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
 	
 	<?php endif; ?>
-	></a>
+	
 				<?php } else { ?>
 					<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
 				<?php }	?>
@@ -363,7 +366,7 @@
 			$prod_loop = new WP_Query( $prod_args );		  
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 				<!--PRODUCTION ARTICLE -->
-			    <article class="--split --white">
+			    <article class="--split --white  --background-purple">
 
 
 			     
@@ -401,10 +404,24 @@
 				  </section>
 				  <!-- / CONTENT -->
 			      
-			     
-
 			    </article>
     			<!--/ PRODUCTION ARTICLE -->
+
+    			<!-- POST TAGS -->
+				  <?php
+				  // IF THERE'S TAGS, GO GET 'EM
+					$posttags = get_the_tags();
+					if ($posttags) { ?>
+					<div class="split-tags --top-border --white">
+					<?php
+					  //foreach($posttags as $tag) {
+					  //  echo $tag->name . ' '; 
+					 the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); 
+					 // } ?>
+					</div>
+					<?php }
+					?>
+				<!-- / POST TAGS -->
 
 			<?php } } ?>
 			

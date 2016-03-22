@@ -1,0 +1,17 @@
+// MY MIXINS
+
+
+@mixin filter ($filter){
+	-webkit-filter: $filter;
+	-moz-filter: $filter;
+	-o-filter: $filter;
+	-ms-filter: $filter;	
+	filter: $filter;
+}
+
+@mixin rotateZ($degrees) {
+  -webkit-transform: rotateZ($degrees);
+      -ms-transform: rotateZ($degrees); // IE9 only
+       -o-transform: rotateZ($degrees);
+          transform: rotateZ($degrees);
+}

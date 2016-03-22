@@ -21,6 +21,9 @@ use Roots\Sage\Wrapper;
         <div class="gh-cube4 gh-cube"></div>
         <div class="gh-cube3 gh-cube"></div>
       </div>
+      <div class="preloader-horse">
+        <?php get_template_part('dist/images/inline', 'horse.svg');?>
+      </div>
     </div>
     <?php
       do_action('get_header');

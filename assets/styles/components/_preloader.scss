@@ -4,21 +4,47 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ff6347;
+  background-color: $brand-blue;
   z-index: 999999;
 }
 
-
-.gh-folding-cube {
-  width: 40px;
-  height: 40px;
+.preloader-horse {
+  @include square(60px);
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -20px;
-  margin-top: -20px;
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+  margin-left: -30px;
+  margin-top: -30px;
+  svg {    
+  @include flip-spin-y();
+    position: relative;
+    top: 5px;
+  }
+  &:before {
+    position: absolute;
+    @include square(60px);
+    @include rotate(45deg);
+    @include animate-spin();
+    @include animation-duration(1s);
+    margin-left: -30px;
+    margin-top: -30px;
+    left: 50%;
+    top: 50%;
+    content: "";
+    border: 2px solid $white;
+  }
+}
+
+.gh-folding-cube {
+  @include square(60px);
+  @include rotateZ(45deg);
+  @include animate-spin();
+  @include animation-duration(1.25s);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .gh-folding-cube .gh-cube {
@@ -37,7 +63,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: $gray-dark;
   -webkit-animation: gh-foldCubeAngle 2.4s infinite linear both;
           animation: gh-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
