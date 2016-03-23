@@ -1,8 +1,8 @@
-<section id="home-intro" class="--screen-v-height scrollme"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="--screen-v-height"><!-- HOME INTRO CAROUSEL -->
 
 
-<h1 id="home-intro-text" class="animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
-	<div class="sr-only">Ghost Horses Makes Really Excellent Websites</div>
+<div id="home-intro-text">
+	<h1 class="sr-only">Ghost Horses Makes Really Excellent Websites</h1>
 	<!--googleoff: all-->
 	<div id="person-carousel">
 		<div class="item">Ghost Horses</div>
@@ -33,10 +33,12 @@
 	<p>
 		<a href="#but-how" class="btn -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
 	</p>
-</h1>
+</div>
 
-<section id="float-illustrations-1" class="animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
-	<div class="item"><span>
+
+<section id="float-illustrations-1">
+	<div class="item">
+		<span>
 
 		<!-- EYEBALLS -->
 		<div id="eyeleft--gh" class="eyeleft">
@@ -48,8 +50,14 @@
 		<!-- / EYEBALLS -->
 
 
-		<img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-man.png" alt="Ghost Horses" /></span><span><img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-comp.png" alt="Website Design" />
-		
+		<img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-man.png" alt="Ghost Horses" />
+		<!-- SPEECH BUBBLE -->
+		<a href="#contact-finger-wrap" class="speech-bubble hidden-xs hidden-sm --scrollto"><span></span></a>
+		<!-- SPEECH BUBBLE -->
+	</span>
+
+		<span>
+			<img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-comp.png" alt="Website Design" />
 	</span>
 
 </div>
@@ -160,7 +168,7 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="--screen-v-height scrollme"><!-- BUT HOW? -->
+<section id="but-how" class="--screen-v-height --position-relative scrollme"><!-- BUT HOW? -->
 
 <h2 class="section-heading --icon-question">Lovely websites you say, b-but how?</h2>
 
@@ -177,17 +185,14 @@
 		<a href="#but-what" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">Learn more</a>
 	</div>
 
+	<!--
 	<div class="animated-lines">
 		<span></span>
 		<span></span>
 		<span></span>
 		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
 	</div>
+	-->
 
 </section><!-- / BUT HOW? -->
 

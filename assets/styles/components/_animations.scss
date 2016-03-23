@@ -192,6 +192,52 @@
 
 
 
+// Floaty bounce
+@mixin floaty-bounce() {
+  @include animation-name(floaty-bounce);
+  @include animation-duration(4s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes floaty-bounce {
+    0% {
+        @include translate(0,0);
+      }
+      50% {
+          @include translate(0,-20px);
+      }
+      100% {
+          @include translate(0,0);
+      }
+}
+@-webkit-keyframes floaty-bounce {
+    0% {
+        @include translate(0,0);
+      }
+      50% {
+          @include translate(0,-20px);
+      }
+      100% {
+          @include translate(0,0);
+      }
+}
+@keyframes floaty-bounce {
+    0% {
+        @include translate(0,0);
+      }
+      50% {
+          @include translate(0,-20px);
+      }
+      100% {
+          @include translate(0,0);
+      }
+}
+// end Background white flash
+
+
 
 // Background white flash
 @mixin white-flash() {
@@ -456,3 +502,86 @@
       }
 }
 // end Animate bg colours
+
+
+
+// Animate bg colours FILL
+@mixin animate-color() {
+    @include animation-name(animate-color);
+    @include animation-duration(1s);
+    @include transform-origin(50% 50%);
+    @include animation-timing-function(ease-in-out);
+    @include animation-iteration-count(infinite);
+}
+
+// Animate=spin spin keyframes
+@-moz-keyframes animate-color {
+    0% {
+          color: $brand-blue;
+      }
+      16% {
+          color: $brand-green;
+      }
+      32% {
+          color: $brand-red;
+      }
+      48% {
+          color: $brand-yellow;
+      }
+      64% {
+          color: $brand-purple;
+      }
+      80% {
+          color: $brand-pink;
+      }
+      100% {
+          color:$brand-blue;
+      }
+}
+@-webkit-keyframes animate-color {
+    0% {
+          color: $brand-blue;
+      }
+      16% {
+          color: $brand-green;
+      }
+      32% {
+          color: $brand-red;
+      }
+      48% {
+          color: $brand-yellow;
+      }
+      64% {
+          color: $brand-purple;
+      }
+      80% {
+          color: $brand-pink;
+      }
+      100% {
+          color:$brand-blue;
+      }
+}
+@keyframes animate-color {
+    0% {
+          color: $brand-blue;
+      }
+      16% {
+          color: $brand-green;
+      }
+      32% {
+          color: $brand-red;
+      }
+      48% {
+          color: $brand-yellow;
+      }
+      64% {
+          color: $brand-purple;
+      }
+      80% {
+          color: $brand-pink;
+      }
+      100% {
+          color:$brand-blue;
+      }
+}
+// end Animate colour

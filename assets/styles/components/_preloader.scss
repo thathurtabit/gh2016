@@ -20,7 +20,8 @@
     position: relative;
     top: 5px;
   }
-  &:before {
+  &:before,
+  &:after {
     position: absolute;
     @include square(60px);
     @include rotate(45deg);
@@ -32,6 +33,9 @@
     top: 50%;
     content: "";
     border: 2px solid $white;
+  }
+  &:after {
+    
   }
 }
 
