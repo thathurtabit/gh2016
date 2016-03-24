@@ -42,7 +42,6 @@
 .gh-folding-cube {
   @include square(60px);
   @include rotateZ(45deg);
-  @include animate-spin();
   @include animation-duration(1.25s);
   position: absolute;
   left: 50%;

@@ -101,7 +101,7 @@
   // Fix navbar on scroll
   // http://getbootstrap.com/javascript/#affix
 
-  $('.home #nav-banner').affix({
+  $('.home #nav-banner-center').affix({
     offset: {
       top: 80,
       bottom: function () {
@@ -133,7 +133,7 @@
     speed: 250
   });
   $('#bg-carousel').slick({
-      //fade: true,
+      fade: true,
       arrows: false
   });
   $('#float-illustrations-1').slick({
@@ -234,7 +234,7 @@ $('#person-carousel').on('afterChange', function(event, slick, currentSlide, nex
   });
 
 
-  
+
 
 
 

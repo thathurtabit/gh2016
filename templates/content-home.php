@@ -1,38 +1,45 @@
 <section id="home-intro" class="--screen-v-height"><!-- HOME INTRO CAROUSEL -->
 
-
-<div id="home-intro-text">
-	<h1 class="sr-only">Ghost Horses Makes Really Excellent Websites</h1>
-	<!--googleoff: all-->
-	<div id="person-carousel">
-		<div class="item">Ghost Horses</div>
-		<div class="item">Donald Trump</div>
-		<div class="item">Khal Drogo</div>
-		<div class="item">Björk</div>
-		<div class="item">Ryan Giggs</div>
-		<div class="item">Rosa Parks</div>
+<div id="home-intro-text-wrap">
+	<div id="home-intro-text">
+		<h1 class="sr-only">Ghost Horses Makes Really Excellent Websites</h1>
+		<!--googleoff: all-->
+		<div id="person-carousel">
+			<div class="item">Ghost Horses</div>
+			<div class="item">Donald Trump</div>
+			<div class="item">Khal Drogo</div>
+			<div class="item">Björk</div>
+			<div class="item">Ryan Giggs</div>
+			<div class="item">Rosa Parks</div>
+		</div>
+		<div id="make-really"><div class="item"><span>Makes Really</span></div></div>
+		<div id="adjective-carousel">
+			<div class="item">Excellent</div>
+			<div class="item">Disappointing</div>
+			<div class="item">Lovely</div>
+			<div class="item">Alarming</div>
+			<div class="item">Awful</div>
+			<div class="item">Mediocre</div>
+		</div>
+		<div id="object-carousel">
+			<div class="item">Websites</div>
+			<div class="item">Hummus</div>
+			<div class="item">Life Descisions</div>
+			<div class="item">Birthday Cards</div>
+			<div class="item">Shoes</div>
+			<div class="item">Stir Fry</div>
+		</div>
+		<!--googleon: all-->
+		<p>
+			<a href="#but-how" class="btn -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
+		</p>
 	</div>
-	<div id="make-really"><div class="item"><span>Makes Really</span></div></div>
-	<div id="adjective-carousel">
-		<div class="item">Excellent</div>
-		<div class="item">Disappointing</div>
-		<div class="item">Lovely</div>
-		<div class="item">Alarming</div>
-		<div class="item">Awful</div>
-		<div class="item">Mediocre</div>
+	<div class="animated-lines --quarter-vertical">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
 	</div>
-	<div id="object-carousel">
-		<div class="item">Websites</div>
-		<div class="item">Hummus</div>
-		<div class="item">Life Descisions</div>
-		<div class="item">Birthday Cards</div>
-		<div class="item">Shoes</div>
-		<div class="item">Stir Fry</div>
-	</div>
-	<!--googleon: all-->
-	<p>
-		<a href="#but-how" class="btn -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
-	</p>
 </div>
 
 
@@ -165,6 +172,13 @@
 
 <svg height="100%" width="100%"><rect height="100%" width="100%" class="splash-rectangle" /></svg>
 
+<div class="animated-lines --quarter-vertical">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
@@ -172,7 +186,8 @@
 
 <h2 class="section-heading --icon-question">Lovely websites you say, b-but how?</h2>
 
-<ul class="large-ul-blocks --diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
+<!--<ul class="large-ul-blocks --diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
+<ul class="large-ul-blocks --diamond">
 	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
 	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
 	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
@@ -186,7 +201,7 @@
 	</div>
 
 	<!--
-	<div class="animated-lines">
+	<div class="animated-lines --quarter-squares">
 		<span></span>
 		<span></span>
 		<span></span>
@@ -200,7 +215,8 @@
 
 <h2 class="section-heading --icon-code">But like, what do you DO?</h2>
 
-<ul class="large-ul-blocks --circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
+<!--<ul class="large-ul-blocks --circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
+<ul class="large-ul-blocks --circle">
 	<li><span>Digital Design / UI</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
 	<li><span>Logos</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
 	<li><span>HTML5 / CSS3</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
@@ -235,7 +251,8 @@
 		>
 		</div>
 
-		<section class="split-bg-content --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
+		<!--<section class="split-bg-content --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
+		<section class="split-bg-content --background-purple">
 			<h2 class="sub-heading --icon-news">News<span></span></h2>
 
 			<!-- ASIDE FEATURED IMG -->
@@ -341,7 +358,8 @@
 		>
 		</div>
 
-		<section class="split-bg-content --bg-right --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
+		<!--<section class="split-bg-content --bg-right --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
+		<section class="split-bg-content --bg-right --background-purple">
 			<h2 class="sub-heading  --icon-cog">Production Diary<span></span></h2>
 
 			<!-- ASIDE FEATURED IMG -->
@@ -446,20 +464,22 @@
 </section><!-- / LATEST STUFF -->
 
 <section id="contact-finger-wrap" class="--screen-v-height --border-white scrollme"><!-- GHOST HORSES SVG -->
-<div id="finger-slider" class="animateme" data-when="enter"
+<!--<div id="finger-slider" class="animateme" data-when="enter"
         data-from="1"
         data-to="0.5"
         data-opacity="1"
-        data-translatex="-900">
+        data-translatex="-900">-->
+<div id="finger-slider">
 	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
 <span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
 </div>
 
-<div id="contact-slider" data-when="enter"
+<!--<div id="contact-slider" data-when="enter"
         data-from="1"
         data-to="0.5"
         data-opacity="1"
-       data-translatex="900" class="animateme">
+       data-translatex="900" class="animateme">-->
+<div id="contact-slider" class="animateme">
 	<a href="contact" class="btn -color-white -size-x-large -bgcolor-spin --background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></a>
 </div>
 </section><!-- / GHOST HORSES SVG -->

@@ -9,6 +9,25 @@
 .block--modifier {
 }
 
+
+
+
+// FROM BREAKPOINT
+@media (min-width: $grid-float-breakpoint) {
+}
+
+// FROM SMALL
+@media (min-width: $screen-sm-min) {
+}
+
+// FROM MEDIUM 
+@media (min-width: $screen-md-min) {
+}
+
+// FROM LARGE 
+@media (min-width: $screen-lg-min) {
+}
+
 */
 
 // Only AFFIX on larger screens
@@ -16,12 +35,208 @@
     position: relative;
 }
 
+// ==================
+// NAV BANNER CENTER
+
+#nav-banner-center {
+	@include transition(background-color 0.25s ease-in-out, padding-top 0.25s ease-in-out);
+	position: fixed;
+	top: 0;
+	left: 20px;
+    right: 20px;
+	padding-top: 20px;
+	z-index: $zindex-navbar;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+	// WHEN AFFIXED
+	&.affix {
+		padding-top: 0;
+		background-color: rgba(255,255,255,.8);
+		// AFFIX HORSE
+		.navbar-brand #horse #outline .whitelogo {
+			fill: $brand-blue;
+			@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
+		}
+		.navbar .navbar-collapse a,
+		.btn-search {
+			position: relative;
+			color: $gray-light;
+			text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+		}
+		.btn-search {
+			position: absolute;
+		}
+
+	}
+	// BEFORE BLUR
+	&:before {
+		//@include filter(blur(3px));
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	// ======================
+	// BRAND
+	.navbar-brand {
+		@include square(70px);
+		@include transition(.25s ease-in-out all);
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -35px;
+		margin-top: 15px;
+		padding: 0;
+		z-index: 1001;
+		padding-left: 0;
+		border-radius: 100%;
+		background-color: rgba(255,255,255,.2);
+		#horse {		
+			@include transition(.25s ease-in-out all);
+			@include square(50px);
+			margin: 10px auto 0;
+			display: block;
+			position: relative;
+			left: -2px;
+			#outline .whitelogo {
+				@include transition(.25s ease-in-out all);
+				@include translate(-10px, 0);
+				fill: $white;
+				@include filter(drop-shadow(0 2px 0 rgba(0,0,0,0.1)));
+			}
+		}
+		&:hover {
+			@include white-flash();
+		}
+		&:hover #horse #outline .whitelogo {
+	    	@include animate-bgcolor-fill();
+		}
+
+		// RESPONSIVE
+		// FROM SMALL
+		@media (min-width: $screen-sm-min) {
+		}
+
+		// FROM MEDIUM 
+		@media (min-width: $screen-md-min) {
+		}
+
+		// FROM LARGE 
+		@media (min-width: $screen-lg-min) {
+		}
+	}
+	// /end BRAND
+	// ======================
+
+	// ======================
+	// NAVBAR
+	.navbar .navbar-collapse {
+		@include transition(.25s ease-in-out all);
+		
+		a {
+			position: relative;
+			color: $white;
+			text-shadow: 0 2px 0 rgba(0,0,0,0.1);
+
+			&:after {
+				@include square(50px);
+				@include scale(0,0);
+				@include transition(.25s ease-in-out all);					
+				border-radius: 100%;
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -25px;
+				margin-left: -25px;
+				background-color: rgba(255,255,255,0);
+				z-index: -1; // make sure the text sits above the ::after
+			}
+			&:hover:after {
+				@include scale(1,1);
+				background-color: rgba(255,255,255,0.25);
+			}
+		}
+	}
+	// NAVBAR NAV
+	.nav.navbar-nav {
+		// RESPONSIVE
+		// FROM SMALL
+		@media (min-width: $screen-sm-min) {
+			float: none; // override default styles
+			>li {
+				float: none; // override default styles
+				margin: 0 10px;
+				&:nth-child(2) {
+					margin-right: 60px;
+				}
+				&:nth-child(3) {
+					margin-left: 60px;
+				}
+			}
+		}
+
+		// FROM MEDIUM 
+		@media (min-width: $screen-md-min) {
+			text-align: center;
+		}
+
+		// FROM LARGE 
+		@media (min-width: $screen-lg-min) {
+		}
+	}
+
+	// NAVBAR COLOURS
+	.navbar .navbar-collapse li.menu-item {
+		@include transition(.25s ease-in-out all);
+		a:hover:after {
+			background-color: rgba(255,255,255,0.2);
+		}
+		// RESPONSIVE
+		// FROM SMALL
+		@media (min-width: $screen-sm-min) {
+		}
+
+		// FROM MEDIUM 
+		@media (min-width: $screen-md-min) {
+			display: inline-block;
+		}
+
+		// FROM LARGE 
+		@media (min-width: $screen-lg-min) {
+		}
+	}
+	// / end NAVBAR
+	// ======================
+	
+	.navbar {
+		margin: 0;
+	}
+
+
+	// BTN SEARCH
+	.btn-search {
+		position: absolute;
+		right: 60px;
+    	top: 32px;
+	}
+}
 
 
 
 
-// CORE #NAV-BANNER
-#nav-banner {
+
+
+
+
+
+// NAV BANNER CENTER
+// ==================
+
+// CORE #NAV-BANNER VERSION 1
+#nav-banner-v1 {
 	@include transition(.25s ease-in-out all);
 	z-index: 35;
 	background-color: $white;
@@ -73,7 +288,7 @@
 
 // FROM BREAKPOINT #NAV-BANNER
 @media (min-width: $grid-float-breakpoint) {
-	#nav-banner {
+	#nav-banner-v1 {
 		left: 0;
 		right: 0;
 		.container-fluid {
@@ -120,7 +335,7 @@
 
 // FROM MEDIUM #NAV-BANNER
 @media (min-width: $screen-md-min) {
-	.home #nav-banner {
+	.home #nav-banner-v1 {
 		width: 620px;
 		left: auto;
 		.container-fluid {
@@ -132,7 +347,7 @@
 
 // FROM LARGE #NAV-BANNER
 @media (min-width: $screen-lg-min) {
-	.home #nav-banner {
+	.home #nav-banner-v1 {
 		width: 620px;
 		left: auto;
 		.container-fluid {
@@ -145,14 +360,14 @@
 
 // HOMEPAGE NAV, ON LARGEST SCREENS ONLY
 @media (min-width: $screen-lg-min) {
-	.home #nav-banner {
+	.home #nav-banner-v1 {
 		left: auto;
 		min-width: 800px;
 	}
 }
 
 
-#nav-banner .navbar {
+#nav-banner-v1 .navbar {
 	@include transition(.25s ease-in-out all);
 	padding-left: 0;
 	padding-right: 0;
@@ -174,7 +389,7 @@
 .navbar.navbar-default {
 	position: relative;
     min-height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     border: none;
     background-color: transparent;
     border-color: transparent;
@@ -182,12 +397,12 @@
 }
 
 // DEFAULT NAVBAR (NOT HOMEPAGE)
-body:not(.home) #nav-banner {
+body:not(.home) #nav-banner-v1 {
 	background-color: $white;		
 }
 
 // DEFAULT NAVBAR (NOT HOMEPAGE)
-body:not(.home) #nav-banner .navbar .navbar-collapse li.menu-item {
+body:not(.home) #nav-banner-v1 .navbar .navbar-collapse li.menu-item {
 	@include transition(.25s ease-in-out all);
 	&:nth-child(1) a:hover {
 		color: $brand-green;
@@ -221,7 +436,7 @@ body:not(.home) #nav-banner .navbar .navbar-collapse li.menu-item {
 
 
 // DEFAULT NAVBAR (NOT HOMEPAGE)
-body:not(.home) #nav-banner .navbar .navbar-collapse {
+body:not(.home) #nav-banner-v1 .navbar .navbar-collapse {
 	@include transition(.25s ease-in-out all);
 	padding-left: 20px;
 	padding-right: 20px;	
@@ -239,7 +454,7 @@ body:not(.home) #nav-banner .navbar .navbar-collapse {
 }
 
 // DEFAULT NAVBAR BRAND (NOT HOMEPAGE)
-body:not(.home) #nav-banner .navbar .navbar-brand {
+body:not(.home) #nav-banner-v1 .navbar .navbar-brand {
 	width: 100px;
 	padding-left: 0;
 	margin-right: 20px;
@@ -268,16 +483,16 @@ body:not(.home) #nav-banner .navbar .navbar-brand {
 // HOMEPAGE NAV, ON LARGER SCREENS ONLY
 @media (min-width: $grid-float-breakpoint) {
 
-	.home .navbar-header {
+	.home #nav-banner-v1 .navbar-header {
 		float: right;
 	}
 
-	.navbar-nav {
+	#nav-banner-v1 .navbar-nav {
 		margin-right: 20px;
 	}
 
 	// HOMEPAGE NAV BANNER
-	.home #nav-banner {
+	.home #nav-banner-v1 {
 		//@include transition(.25s ease-in-out all);
 		position: absolute;
 		//left: 0;
@@ -294,7 +509,7 @@ body:not(.home) #nav-banner .navbar .navbar-brand {
 @media (min-width: $grid-float-breakpoint) {
 
 	// HOMEPAGE NAVBAR ON DEFAULT
-	#nav-banner {
+	#nav-banner-v1 {
 		@include transition(.25s ease-in-out all);
 		background-color: rgba(255,255,255,0);
 
@@ -347,7 +562,7 @@ body:not(.home) #nav-banner .navbar .navbar-brand {
 @media (min-width: $screen-desktop) {
 	
 	// HOMEPAGE NAV BANNER ON AFFIX
-	#nav-banner.affix {
+	#nav-banner-v1.affix {
 		background-color: rgba(255,255,255,1);
 		min-width: 600px;
 		left: auto;
@@ -436,7 +651,7 @@ body:not(.home) #nav-banner .navbar .navbar-brand {
 
 @media (min-width: $screen-md-min) {
 	// WHEN AT SCROLLED 'FIXED'
-	.home #nav-banner.affix { 
+	.home #nav-banner-v1.affix { 
 		position: fixed;
 		margin-top: 20px;
 		//top: 0;
