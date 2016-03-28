@@ -30,10 +30,11 @@
 			<div class="item">Stir Fry</div>
 		</div>
 		<!--googleon: all-->
-		<p>
-			<a href="#but-how" class="btn -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
-		</p>
+		
 	</div>
+	<p class="--position-bottom-center --position-absolute">
+		<a href="#but-how" class="btn --display-inline-block -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
+	</p>
 	<div class="animated-lines --quarter-vertical">
 		<span></span>
 		<span></span>

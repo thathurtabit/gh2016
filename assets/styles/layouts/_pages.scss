@@ -63,6 +63,18 @@ body {
     }
 }
 
+.--position-bottom-center {
+    bottom: 70px;
+    z-index: 10;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.--display-inline-block {
+    display: inline-block;
+}
+
 
 .--margin-top {
     margin-top: 200px;
@@ -93,17 +105,15 @@ body {
 }
 
 
-
-
 .the-divider {
     @extend .visible-lg-block;
     position: absolute;
-    width: 6px;
-    background: $white;
-    top: 36%;
-    bottom: 49%;
+    width: 1px;
+    background: rgba(255,255,255,.1);
+    top: 0;
+    bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    margin-left: 0;
 }
 
 .--spacing-center {
@@ -299,6 +309,7 @@ img {
     padding-bottom: 20px;
     margin-top: -10%;
     color: $white;
+    border: 1px solid rgba(255,255,255,.3);
 
     // when everything has loaded
     .pageloaded & {
@@ -339,10 +350,10 @@ img {
     // FROM LARGE 
     @media (min-width: $screen-lg-min) {
         top: 50%;
-        right: 5%;
-        left: auto;       
-        padding: 30px;
-        width: 40%; 
+        right: 33.33%;
+        left: 33.33%;    
+        padding: 30px 0;
+        width: 33.33%; 
 
         position: absolute;
         z-index: 33;     
@@ -358,6 +369,25 @@ img {
         //top: 500px;
         //right: 10%;
         // width: 30%;
+        /*
+        &:before,
+        &:after {
+            content: "";
+            border: 1px solid rgba(255,255,255,.2);
+            width: 40px;
+            position: absolute;
+        }
+        &:before {
+            top: 0;
+            left: -15px;
+            bottom: 0;
+        }
+        &:after {
+            top: 0;
+            right: -15px;
+            bottom: 0;
+        }
+        */
     }
 
     // FROM LARGEST
@@ -370,6 +400,7 @@ img {
 
     // ===========================
     // BEFORE - DIVIDERS
+    /*
     &:before {            
         // FROM LARGE 
         @media (min-width: $screen-lg-min) {
@@ -402,6 +433,7 @@ img {
             z-index: -1;
         }
     }
+    */
 
     .item {
         @include transition(left 0.75s cubic-bezier(.87,-.41,.19,1.44));
@@ -409,6 +441,7 @@ img {
         font-weight: normal;
         font-size: 29px;
         line-height: 29px;
+        text-align: center;
     }
     #make-really .item {
         font-family: $font-family-serif-alt;
@@ -919,11 +952,10 @@ img {
 }
 
 article.--split {
-    margin-top: 100px;
+    margin-top: 240px;
     position: relative;
     z-index: 3;
-    padding: 13% 10% 5%;
-    border-top: 3px solid $white;
+    padding: 13% 0 5%;
 }
 
 .featured-img.--flat {

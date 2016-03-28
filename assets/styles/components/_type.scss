@@ -180,15 +180,13 @@ article {
     //padding: 0 10% 10%;
     //background: rgba(255,255,255,0.2);
     header {
-        max-height: 125px;
         overflow: hidden;
     }
     header h1 {        
         font-family: $font-family-serif;
         line-height: 1;
         font-size: 35px;
-        position: relative;        
-        max-height: 70px;
+        position: relative;
         text-overflow: ellipsis;
         &:before {
             content: "";
@@ -239,7 +237,7 @@ article {
 }
 
 .__section-title-time {
-    min-height: 100px;
+    //min-height: 100px;
 }
 
 

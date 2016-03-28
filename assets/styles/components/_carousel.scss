@@ -18,9 +18,13 @@
 // Left / Right
 .slick-prev,
 .slick-next {
-    border-radius: 100%;    
+    border-radius: 100%;
+    //border: 1px solid rgba(255,255,255,.2);
+    z-index: 10;
+
     &:before {
         @include transition(color 0.25s ease-in-out);
+        
         font-family: "FontAwesome";
         position: relative;
         z-index: 2;
@@ -51,27 +55,29 @@
 }
 
 .slick-prev {
-    left: -35px;
+    left: -12px;
 }
 
 .slick-next {
-    right: -35px;
+    right: -10px;
 }
 
 .slick-prev:after,
 .slick-next:after {
     @include transition(opacity 0.25s ease-in-out);
-    @include opacity(0);
-    @include square(24px);
-    border-radius: 100%;
-    border: 3px solid $white;
+    @include opacity(.2);
+    @include rotate(45deg);
+    @include square(24px);    
+    border-radius: 0;
+    background: rgba(255,255,255,.3);
+    border: 1px solid $white;
     content: "";
     top: 50%;
     left: 50%;
     margin-left: -11px;
     margin-top: -13px;
     background: transparent;
-    //box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+    box-shadow: 2px 2px 0 0 $white;
     position: absolute;
     z-index: 1;
 }
@@ -85,7 +91,8 @@
 .slick-next:hover:after {
     @include opacity(0.75);
     @include flip-spin-y();
-    @include animation-duration(1s);
+    background: rgba(255,255,255,.1);
+    @include animation-duration(1s);    
     color: $white;
 }
 
