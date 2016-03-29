@@ -191,9 +191,12 @@ img {
 
 	@include transition(.25s ease-in-out background-color);
     background: $brand-blue;
-    background-image: url(https://codyhouse.co/demo/parallax-hero-image/img/cd-img-1.jpg);
+    //background-image: url(https://codyhouse.co/demo/parallax-hero-image/img/cd-img-1.jpg);
+    //background-image: url(../images/bg-gradients.jpg);
+    //background-attachment: fixed;
+    
 
-    svg {
+    /*svg {
         @include rotate(45deg);
         position: absolute;
         top: -50%;
@@ -204,29 +207,35 @@ img {
         z-index: 0;
         border-radius: 0;
     }
-    .splash-rectangle {            
-        @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+    */
+    .svg-triangle {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -50px;
         left: 0;
+        right: 0;
         bottom: 0;
-        stroke-dasharray: 140;
-        stroke-dashoffset: -400;
-        stroke-width: 0;
-        fill: transparent;
-        stroke: rgba(255,255,255,0.5);
+         polygon {            
+            @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            stroke-dasharray: 2;
+            stroke-dashoffset: -50;
+            stroke-width: .2px;
+            fill: rgba(0,0,0,.05);
+            //stroke: rgba(255,255,255,0.5);
+        }        
     }
     &:hover {
-        .splash-rectangle { 
-            border-radius: 100%;
-            stroke-width: 10px;
+        .svg-triangle polygon {
+            stroke-width: .2px;
             stroke-dashoffset: 0;
-            stroke-dasharray: 200;
-            stroke: rgba(255,255,255,0.5);
+            stroke-dasharray: 10;
+            //stroke: rgba(255,255,255,0.5);
         }
     }
-
 }
 
 
@@ -287,13 +296,44 @@ img {
 
 #home-intro-text-wrap {
     position: absolute;
-    background: rgba(81,188,232,.8);
     top: 100px;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 2;
 }
+
+
+#home-intro-text svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    .intro-rectangle {
+        @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        fill: transparent;
+        stroke: rgba(255,255,255,.5);
+        stroke-dasharray: 5;
+        stroke-dashoffset: -200;
+        stroke-width: 2px;
+        &:hover {
+            stroke: rgba(255,255,255,.5);
+            stroke-dasharray: 5;
+            stroke-dashoffset: 400;
+            stroke-width: 3px;
+        }
+    }
+}
+
 
 
 // INTRO CAROUSEL TEXT
@@ -309,7 +349,7 @@ img {
     padding-bottom: 20px;
     margin-top: -10%;
     color: $white;
-    border: 1px solid rgba(255,255,255,.3);
+    //border: 1px solid rgba(255,255,255,.3);
 
     // when everything has loaded
     .pageloaded & {
@@ -1308,7 +1348,7 @@ article.--split {
     }
     // VERTICAL SQUARES
     &.--quarter-vertical {
-        span {
+        span.vert {
             @include transition(top 0.5s ease-in-out, bottom 0.5s ease-in-out);
             @include transition-delay(0.5s);
             position: absolute;
@@ -1321,7 +1361,7 @@ article.--split {
                 top: 0;
                 bottom: 0;
             }
-            &:nth-child(2) {
+            &:nth-child(1) {
                 @include transition-delay(0.75s);
                 top: 100%;
                 bottom: 0;
@@ -1333,7 +1373,7 @@ article.--split {
                     bottom: 0;
                 }
             }
-            &:nth-child(3) {
+            &:nth-child(2) {
                 @include transition-delay(0.1s);
                 top: 0;
                 bottom: 100%;
@@ -1345,7 +1385,7 @@ article.--split {
                     bottom: 0;
                 }
             }
-            &:nth-child(4) {
+            &:nth-child(3) {
                 @include transition-delay(1.25s);
                 top: 100%;
                 bottom: 0;

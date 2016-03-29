@@ -122,20 +122,29 @@
 
   // slick carousel http://kenwheeler.github.io/slick/
   $('#person-carousel').slick({
-    asNavFor: '#bg-carousel, #float-illustrations-1',
+    asNavFor: '#bg-carousel, #float-illustrations-1, #vert-carousel',
+    //asNavFor: '#bg-carousel, #float-illustrations-1, #vert-carousel',
     speed: 250
   });
   $('#adjective-carousel').slick({
     speed: 250
+  });
+  $('#vert-carousel').slick({
+    arrows: false,
+    fade: true,
+    touchMove: false,
+    swipe: false
   });
   $('#object-carousel').slick({
     asNavFor: '#float-illustrations-2',
     speed: 250
   });
   $('#bg-carousel').slick({
-      fade: true,
-      arrows: false
-  });
+    arrows: false,
+    fade: true,
+    touchMove: false,
+    swipe: false
+  }); 
   $('#float-illustrations-1').slick({
     arrows: false,
     fade: true,

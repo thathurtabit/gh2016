@@ -30,16 +30,49 @@
 			<div class="item">Stir Fry</div>
 		</div>
 		<!--googleon: all-->
-		
+		<svg height="100%" width="100%"><rect height="100%" width="100%" class="intro-rectangle" /></svg>
 	</div>
 	<p class="--position-bottom-center --position-absolute">
 		<a href="#but-how" class="btn --display-inline-block -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
 	</p>
-	<div class="animated-lines --quarter-vertical">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
+	<div id="vert-carousel" class="animated-lines --quarter-vertical">
+		<div class="item">
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+		</div>
+		<div class="item">
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+		</div>
+		<div class="item">
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+		</div>
+		<div class="item">
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+		</div>
+		<div class="item">
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+		</div>
+		<div class="item">
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+			<span class="vert"></span>
+		</div>
+	
 	</div>
 </div>
 
@@ -168,10 +201,13 @@
 	<div class="item"></div>
 	<div class="item"></div>
 	<div class="item"></div>
-	<div class="item"></div>
 </div>
 
-<svg height="100%" width="100%"><rect height="100%" width="100%" class="splash-rectangle" /></svg>
+
+<!--<svg height="200" width="200"><path d="M 50 50 L 150 50 L 100 150 z"></path></svg>-->
+<svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-triangle">
+  <polygon points="0,0 100,0 50,100"/>
+</svg>
 
 <div class="animated-lines --quarter-vertical">
 		<span></span>
