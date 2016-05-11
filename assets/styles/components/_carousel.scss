@@ -1,15 +1,15 @@
-/*
 
-!! REMEMBER TO BEM !!
 
-.block {
-}
-.block__element {
-}
-.block--modifier {
-}
+// !! REMEMBER TO BEM !!
 
-*/
+// .block {
+// }
+// .block__element {
+// }
+// .block--modifier {
+// }
+
+
 
 .slick-slider {
 	margin-bottom: 0;
@@ -22,17 +22,19 @@
     //border: 1px solid rgba(255,255,255,.2);
     z-index: 10;
 
-    &:before {
+    &::before {
         @include transition(color 0.25s ease-in-out);
         
-        font-family: "FontAwesome";
+        font-family: 'FontAwesome';
         position: relative;
         z-index: 2;
         color: $gray;
     }
-    &:hover:before {
+
+    &:hover::before {
         color: $white;
     }
+
 }
 
 .slick-slide,
@@ -42,13 +44,13 @@
     outline: none;
 }
 
-.slick-prev:before {
+.slick-prev::before {
     //content: $fa-var-chevron-left;
     //content: $fa-var-long-arrow-left;
     content: $fa-var-arrow-left;
 }
 
-.slick-next:before {
+.slick-next::before {
     //content: $fa-var-chevron-right;
     //content: $fa-var-long-arrow-right;
     content: $fa-var-arrow-right;
@@ -62,16 +64,15 @@
     right: -10px;
 }
 
-.slick-prev:after,
-.slick-next:after {
+.slick-prev::after,
+.slick-next::after {
     @include transition(opacity 0.25s ease-in-out);
     @include opacity(.2);
     @include rotate(45deg);
     @include square(24px);    
     border-radius: 0;
-    background: rgba(255,255,255,.3);
     border: 1px solid $white;
-    content: "";
+    content: '';
     top: 50%;
     left: 50%;
     margin-left: -11px;
@@ -82,26 +83,28 @@
     z-index: 1;
 }
 
-.slick-next:after {
+.slick-next::after {
     margin-top: -13px;
     margin-left: -12px;
 }
 
-.slick-prev:hover:after,
-.slick-next:hover:after {
+.slick-prev:hover::after,
+.slick-next:hover::after {
     @include opacity(0.75);
     @include flip-spin-y();
-    background: rgba(255,255,255,.1);
     @include animation-duration(1s);    
+    background: rgba(255,255,255,.1);
     color: $white;
 }
 
 #bg-carousel {
     //position: relative;
 	height: 100vh;
+
     // FROM MEDIUM 
     @media (min-width: $screen-md-min) {
         min-height: 800px;
+        
         .slick-slide {
             min-height: 800px;
         }
@@ -114,9 +117,11 @@
     right: 0;
     left: 0;
     bottom: 0;
+
     .slick-slide {
         height: 100vh;
         //min-height: 800px;
+
         &.item {
             //transition-property: opacity, box-shadow;
             @include transition(.25s ease-in-out box-shadow);

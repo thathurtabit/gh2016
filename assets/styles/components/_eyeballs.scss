@@ -1,13 +1,19 @@
 
 .pupilleft,
 .pupilright {
+  width: 8px;
+  height: 8px;
   position: relative;
   background: $black;
   border-radius: 50%;
   box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     box-shadow: 0 0 0 3px rgba(0,0,0,0.25);
+    width: 14px;
+    height: 14px;
+
     &#pupil-left--dt {
       box-shadow: 0 0 0 3px rgba(255,0,0,0.25);
     }
@@ -16,6 +22,9 @@
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     box-shadow: 0 0 0 4px rgba(0,0,0,0.25);
+    width: 16px;
+    height: 16px;
+
     &#pupil-left--dt {
       box-shadow: 0 0 0 4px rgba(255,0,0,0.25);
     }
@@ -24,82 +33,49 @@
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
      box-shadow: 0 0 0 5px rgba(0,0,0,0.25);
+    width: 18px;
+    height: 18px;
+
      &#pupil-left--dt {
       box-shadow: 0 0 0 5px rgba(255,0,0,0.25);
     }
   }
 }
 
-.eyeleft,
-.eyeright {
-  position: absolute;
-  background: $white;
-  overflow: hidden;   
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
-  // FROM SMALL
-  @media (min-width: $screen-sm-min) {
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.75);
-  }
-
-  // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
-    box-shadow: 0 0 0 4px rgba(0,0,0,0.75);
-  }
-
-  // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
-     box-shadow: 0 0 0 5px rgba(0,0,0,0.75);
-  }
-}
-
-
 
 .eyeleft,
 .eyeright {
   width: 20px;
   height: 20px;
+  position: absolute;
+  background: $white;
+  overflow: hidden;   
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.75);
     width: 28px;
     height: 28px;
   }
 
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.75);
     width: 32px;
     height: 32px;
   }
 
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
+     box-shadow: 0 0 0 5px rgba(0,0,0,0.75);
     width: 35px;
     height: 35px;
   }
 }
 
-.pupilleft,
-.pupilright {  
-  width: 8px;
-  height: 8px;
-  // FROM SMALL
-  @media (min-width: $screen-sm-min) {
-    width: 14px;
-    height: 14px;
-  }
 
-  // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
-    width: 16px;
-    height: 16px;
-  }
-
-  // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
-    width: 18px;
-    height: 18px;
-  }
-}
 
 
 // ==================
@@ -108,16 +84,19 @@
 #eyeleft--gh {
   top: 32%;
   left: 31%;
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 32%;
     left: 31%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 32%;
     left: 31%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 32%;
@@ -128,16 +107,19 @@
 #eyeright--gh {
   top: 34%;
   left: 41%;
+
     // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 34%;
     left: 41%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 34%;
     left: 41%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 34%;
@@ -153,16 +135,19 @@
 #eyeleft--dt {
     top: 36%;
     left: 71%;
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 36%;
     left: 71%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 36%;
     left: 71%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 36%;
@@ -173,16 +158,19 @@
 #eyeright--dt {
     top: 41%;
     left: 82%;
+
     // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 41%;
     left: 82%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 41%;
     left: 82%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 41%;
@@ -198,16 +186,19 @@
 #eyeleft--kd {
     top: 41%;
     left: 35%;
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 41%;
     left: 35%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 41%;
     left: 35%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 41%;
@@ -218,16 +209,19 @@
 #eyeright--kd {
     top: 41.5%;
     left: 47.5%;
+
     // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 41.5%;
     left: 47.5%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 41.5%;
     left: 47.5%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 41.5%;
@@ -242,16 +236,19 @@
 #eyeleft--bj {
     top: 44%;
     left: 41%;
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 44%;
     left: 41%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 44%;
     left: 41%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 44%;
@@ -262,16 +259,19 @@
 #eyeright--bj {
     top: 45%;
     left: 53.5%;
+
     // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 45%;
     left: 53.5%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 45%;
     left: 53.5%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 45%;
@@ -286,16 +286,19 @@
 #eyeleft--rg {
     top: 38.5%;
     left: 32%;
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 38.5%;
     left: 32%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 38.5%;
     left: 32%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 38.5%;
@@ -306,16 +309,19 @@
 #eyeright--rg {
     top: 40.5%;
     left: 43.5%;
+
     // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 40.5%;
     left: 43.5%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 40.5%;
     left: 43.5%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 40.5%;
@@ -331,16 +337,19 @@
 #eyeleft--rp {
     top: 45%;
     left: 28%;
+
   // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 45%;
     left: 28%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 45%;
     left: 28%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 45%;
@@ -351,16 +360,19 @@
 #eyeright--rp {
     top: 46.5%;
     left: 46%;
+
     // FROM SMALL
   @media (min-width: $screen-sm-min) {
     top: 46.5%;
     left: 46%;
   }
+
   // FROM MEDIUM 
   @media (min-width: $screen-md-min) {
     top: 46.5%;
     left: 46%;
   }
+
   // FROM LARGE 
   @media (min-width: $screen-lg-min) {
     top: 46.5%;

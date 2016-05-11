@@ -1,33 +1,37 @@
-/*
-// DEFAULT
 
-.myclass {
-}
+// // DEFAULT
 
-// FROM BREAKPOINT
-@media (min-width: $grid-float-breakpoint) {
-}
+// .myclass {
+// }
 
-// FROM MEDIUM 
-@media (min-width: $screen-md-min) {
-}
+// // FROM BREAKPOINT
+// @media (min-width: $grid-float-breakpoint) {
+// }
 
-// FROM LARGE 
-@media (min-width: $screen-lg-min) {
-}
+// // FROM MEDIUM 
+// @media (min-width: $screen-md-min) {
+// }
 
-*/
+// // FROM LARGE 
+// @media (min-width: $screen-lg-min) {
+// }
+
+
 
 
 body {
    font-size: 18px;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
    line-height: 1.45;
 }
-
-
 
 .section-heading {
 	display: block;
@@ -47,7 +51,7 @@ h1,h2,h3,h4,h5,h6,p {
         font-size: 30px;
     }
 
-    &.--position-absolute {
+    &.block--position-absolute {
         left: 50%;
         width: 400px;
         margin-left: -200px;
@@ -55,10 +59,11 @@ h1,h2,h3,h4,h5,h6,p {
    
 
     // Make icon appear above
-    &:before, &:after {
+    &::before,
+    &::after {
     	@include square(70px);    	
-    	font-family: "FontAwesome";
-        content: "";
+    	font-family: 'FontAwesome';
+        content: '';
     	line-height: 70px;
     	text-align: center;
     	top: -48px;
@@ -67,19 +72,21 @@ h1,h2,h3,h4,h5,h6,p {
     	position: absolute;
     	z-index: 31;
     }
-    &:before {
+
+    &::before {
     	background: $white;
     	border-radius: 100%;
     }
-    &:after {
+
+    &::after {
         @include transition(all 0.25s ease-in-out);
     	color: $gray;        
-        font-family: "FontAwesome";
+        font-family: 'FontAwesome';
     	content: $fa-var-gear;
     	font-size: 20px;
     }
 
-    &:hover:after {
+    &:hover::after {
         @include tada();
         @include scale(1.5);
         @include backface-visibility(visible);
@@ -93,6 +100,7 @@ h1,h2,h3,h4,h5,h6,p {
     font-size: 20px;
     margin: 10px;
     padding: 40px;
+
     span {
         @include transition(all 0.3s ease-in-out); 
         @include rotateY(0deg);
@@ -101,30 +109,36 @@ h1,h2,h3,h4,h5,h6,p {
         left: 50%;
         margin-left: -25px;
         position: absolute;
-        &:before {      
+
+        &::before {      
             @include rotate(45deg);
             @include square(100%);
-            content: "";
+            content: '';
             margin-left: -25px;
             position: absolute;
             background-color: transparent;
             border: 3px solid $white;
             border-radius: 0;
-        }        
+        }
+
     }
-    &:before {
+
+    &::before {
         background: transparent;
         border-radius: 0;
     }
-    &:after {
+
+    &::after {
         @include square(70px);
         margin-left: -35px;
         margin-top: -9px;
         color: $white;
     }
+
     &:hover span {
        @include rotateY(180deg);
     }
+
 }
 
 // SUB HEADING UNDER SPLIT SECTION
@@ -136,64 +150,78 @@ h1,h2,h3,h4,h5,h6,p {
     margin: 0;
     padding-top: 50px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+
     span,
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         top: -25px;
     }
+
 }
 
 
 // ICON CHANGES
 .sub-heading,
 .section-heading {
+
     // ICON CHANGES
-    &.--icon-bolt:after {
+    &.--icon-bolt::after {
         content: $fa-var-bolt;
     }
-    &.--icon-news:after {
+
+    &.--icon-news::after {
         content: $fa-var-newspaper-o;
     }
-    &.--icon-code:after {
+
+    &.--icon-code::after {
         content: $fa-var-code;
     }
-    &.--icon-cog:after {
+
+    &.--icon-cog::after {
         content: $fa-var-cog;
     }
-    &.--icon-question:after {
+
+    &.--icon-question::after {
         font-family: $font-family-sans-serif;
-        content: "?";
+        content: '?';
     }
-    &.--icon-ellipsis-h:after {
+
+    &.--icon-ellipsis-h::after {
         content: $fa-var-ellipsis-h;
     }
-    &.--icon-globe:after {
+
+    &.--icon-globe::after {
         content: $fa-var-globe;
     }
-    &.--icon-bars:after {
+
+    &.--icon-bars::after {
         content: $fa-var-bars;
     }
+
 }
 
 
 article {
-    //padding: 0 10% 10%;
-    //background: rgba(255,255,255,0.2);
+    position: relative;
+    min-height: 300px;
+
     header {
         overflow: hidden;
-    }
-    header h1 {        
-        font-family: $font-family-serif;
-        line-height: 1;
-        font-size: 35px;
-        position: relative;
-        text-overflow: ellipsis;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 50px;
-            top: -20px;
-            border-top: 1px solid $brand-blue;
+
+        h1 {        
+            font-family: $font-family-serif;
+            line-height: 1;
+            font-size: 35px;
+            position: relative;
+            text-overflow: ellipsis;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 50px;
+                top: -20px;
+                border-top: 1px solid $brand-blue;
+            }
         }
     }
 
@@ -202,21 +230,22 @@ article {
         text-transform: uppercase;
         letter-spacing: 3px;
         position: relative;
-        &:after {
-            font-family: "FontAwesome";
+
+        &::after {
+            font-family: 'FontAwesome';
             content: $fa-var-ellipsis-h;
             font-size: 30px;
             text-align: left;
             position: absolute;
-            bottom: -20px;
             width: 50px;
             bottom: -46px;
             left: 0;
         }
+
     }
 
     .__content {
-        margin: 10px 0 20px 0;
+        margin: 10px 0 20px;
         font-size: 19px;
         min-height: 150px;
     }
@@ -224,27 +253,28 @@ article {
     // MAKE THE TEXT WHITE
     &.--white {
         color: $white;
-        a, a:link, a:visited, a:active {
+
+        a,
+        a:link,
+        a:visited,
+        a:active {
             color: $white;
         }
+
         a:hover {
             color: $gray-dark;
         }
-        header h1:before {
+
+        header h1::before {
             border-top-color: $white;
         }
+
     }
+
 }
 
 .__section-title-time {
     //min-height: 100px;
-}
-
-
-article {
-    position: relative;
-    min-height: 300px;
-    
 }
 
 
@@ -253,16 +283,18 @@ article {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
     li {
         position: relative;
         display: inline-block;        
         text-transform: uppercase;
         font-size: 20px;
         letter-spacing: 2px;
-        &:after {
+
+        &::after {
             @include transition(all 0.2s ease-in-out);
             @include square(50px);
-            content: "";
+            content: '';
             box-shadow: 0 0 0 0 rgba(255,255,255,0.1);
             background-color: rgba(255,255,255,0.05);
             border-radius: 100%;
@@ -273,6 +305,7 @@ article {
             margin-top: -25px;
             z-index: 0;
         }
+
         // Link 
         a {
             margin: 20px;
@@ -281,13 +314,18 @@ article {
             padding: 35px 0;
             display: block;
             color: $white;
+
             &:hover {
                 color: $brand-blue;
             }      
+
         }
+
         // LI:HOVER
-        &:hover:after {
+        &:hover::after {
             box-shadow: 0 0 0 5px rgba(255,255,255,0.1);
         }
+
     }
+
 }

@@ -1,34 +1,34 @@
-/*
-
-!! REMEMBER TO BEM !!
-
-.block {
-}
-.block__element {
-}
-.block--modifier {
-}
 
 
+// !! REMEMBER TO BEM !!
+
+// .block {
+// }
+// .block__element {
+// }
+// .block--modifier {
+// }
 
 
-// FROM BREAKPOINT
-@media (min-width: $grid-float-breakpoint) {
-}
 
-// FROM SMALL
-@media (min-width: $screen-sm-min) {
-}
 
-// FROM MEDIUM 
-@media (min-width: $screen-md-min) {
-}
+// // FROM BREAKPOINT
+// @media (min-width: $grid-float-breakpoint) {
+// }
 
-// FROM LARGE 
-@media (min-width: $screen-lg-min) {
-}
+// // FROM SMALL
+// @media (min-width: $screen-sm-min) {
+// }
 
-*/
+// // FROM MEDIUM 
+// @media (min-width: $screen-md-min) {
+// }
+
+// // FROM LARGE 
+// @media (min-width: $screen-lg-min) {
+// }
+
+
 
 // Only AFFIX on larger screens
 .affix {
@@ -48,36 +48,42 @@
 	z-index: $zindex-navbar;
 	overflow: hidden;
 	border-bottom: 1px solid rgba(255,255,255,.5);
+
 	// WHEN AFFIXED
 	&.affix {
 		padding-top: 0;
 		background-color: rgba(255,255,255,.8);
+
 		// AFFIX HORSE
-		.navbar-brand #horse #outline .whitelogo {
-			fill: $brand-blue;
+		.whitelogo {
 			@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
+			fill: $brand-blue;
 		}
-		.navbar .navbar-collapse a,
+
+		.navbar-collapse a,
 		.btn-search {
 			position: relative;
 			color: $gray-light;
 			text-shadow: 0 2px 0 rgba(255,255,255,0.4);
 		}
+
 		.btn-search {
 			position: absolute;
 		}
 
 	}
+
 	// BEFORE BLUR
-	&:before {
+	&::before {
 		//@include filter(blur(3px));
-		content: "";
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
 	}
+
 	// ======================
 	// BRAND
 	.navbar-brand {
@@ -93,6 +99,7 @@
 		padding-left: 0;
 		border-radius: 100%;
 		background-color: rgba(255,255,255,.2);
+
 		#horse {		
 			@include transition(.25s ease-in-out all);
 			@include square(50px);
@@ -100,18 +107,22 @@
 			display: block;
 			position: relative;
 			left: -2px;
-			#outline .whitelogo {
+
+			.whitelogo {
 				@include transition(.25s ease-in-out all);
 				@include translate(-10px, 0);
-				fill: $white;
 				@include filter(drop-shadow(0 2px 0 rgba(0,0,0,0.1)));
+				fill: $white;
 			}
+
 		}
+
 		&:hover {
 			@include white-flash();
-		}
-		&:hover #horse #outline .whitelogo {
-	    	@include animate-bgcolor-fill();
+
+			.whitelogo {
+	    		@include animate-bgcolor-fill();
+			}
 		}
 
 		// RESPONSIVE
@@ -126,13 +137,14 @@
 		// FROM LARGE 
 		@media (min-width: $screen-lg-min) {
 		}
+
 	}
 	// /end BRAND
 	// ======================
 
 	// ======================
 	// NAVBAR
-	.navbar .navbar-collapse {
+	.navbar-collapse {
 		@include transition(.25s ease-in-out all);
 		
 		a {
@@ -140,42 +152,51 @@
 			color: $white;
 			text-shadow: 0 2px 0 rgba(0,0,0,0.1);
 
-			&:after {
+			&::after {
 				@include square(50px);
 				@include scale(0,0);
 				@include transition(.25s ease-in-out all);					
 				border-radius: 100%;
-				content: "";
+				content: '';
 				position: absolute;
 				left: 50%;
 				top: 50%;
 				margin-top: -25px;
 				margin-left: -25px;
 				background-color: rgba(255,255,255,0);
-				z-index: -1; // make sure the text sits above the ::after
+				z-index: -1; // make sure the text sits above the :::after
 			}
-			&:hover:after {
+
+			&:hover::after {
 				@include scale(1,1);
 				background-color: rgba(255,255,255,0.25);
 			}
+
 		}
+
 	}
+
 	// NAVBAR NAV
 	.nav.navbar-nav {
 		// RESPONSIVE
 		// FROM SMALL
 		@media (min-width: $screen-sm-min) {
 			float: none; // override default styles
+
 			>li {
 				float: none; // override default styles
 				margin: 0 10px;
+
 				&:nth-child(2) {
 					margin-right: 60px;
 				}
+
 				&:nth-child(3) {
 					margin-left: 60px;
 				}
+
 			}
+
 		}
 
 		// FROM MEDIUM 
@@ -186,14 +207,17 @@
 		// FROM LARGE 
 		@media (min-width: $screen-lg-min) {
 		}
+
 	}
 
 	// NAVBAR COLOURS
-	.navbar .navbar-collapse li.menu-item {
+	.menu-item {
 		@include transition(.25s ease-in-out all);
-		a:hover:after {
+
+		a:hover::after {
 			background-color: rgba(255,255,255,0.2);
 		}
+
 		// RESPONSIVE
 		// FROM SMALL
 		@media (min-width: $screen-sm-min) {
@@ -207,6 +231,7 @@
 		// FROM LARGE 
 		@media (min-width: $screen-lg-min) {
 		}
+
 	}
 	// / end NAVBAR
 	// ======================
@@ -222,6 +247,7 @@
 		right: 60px;
     	top: 32px;
 	}
+
 }
 
 
@@ -235,154 +261,175 @@
 // NAV BANNER CENTER
 // ==================
 
-// CORE #NAV-BANNER VERSION 1
-#nav-banner-v1 {
-	@include transition(.25s ease-in-out all);
-	z-index: 35;
-	background-color: $white;
-	.navbar-brand {
-		display: block;
-		position: relative;
-		max-width: 100%;
-		margin-left: 20px;
-		padding: 0;
-		width: 75px;
-		z-index: 1001;
-		padding-left: 0;
-		#horse {		
-			@include transition(.25s ease-in-out all);
-		    height: 60px;
-		    width: 60px;
-		    display: block;
-		    margin: 20px auto 0;
-			#outline .whitelogo {
-				@include transition(.25s ease-in-out all);
-				@include translate(-10px, 0);
-				fill: $brand-blue;
-			}
-		}
-	}
-	.navbar-default .navbar-nav>li>a {
-		text-align: center;
-	}
-	.navbar-toggle {
-		@include transition(all 0.2s ease-in-out);
-		margin: 26px 20px 0 0;
-		border-radius: 100%;
-		height: 50px;
-		width: 50px;
-		border: none;
-		.icon-bar {
-			width: 30px;
-		    height: 5px;
-		    border-radius: 0px;
-		}
-		&:hover, &:focus {
-			background-color: $brand-blue;
-			.icon-bar {
-				background-color: $white;
-			}
-		}
-	}
-}
+// // CORE #NAV-BANNER VERSION 1
+// #nav-banner-v1 {
+// 	@include transition(.25s ease-in-out all);
+// 	z-index: 35;
+// 	background-color: $white;
 
-// FROM BREAKPOINT #NAV-BANNER
-@media (min-width: $grid-float-breakpoint) {
-	#nav-banner-v1 {
-		left: 0;
-		right: 0;
-		.container-fluid {
-			// HOME
-			.home & {
-				padding-left: 5%;
-				padding-right: 13%;
-			}
-			padding-left: 0;
-			padding-right: 0;
-		}
-		.navbar-brand {
-			@include transition(.25s ease-in-out all);
-			display: block;
-			position: relative;
-			max-width: 100%;
-			padding: 0;
-			width: 100px;
-			z-index: 1001;
-			padding-left: 0;
-			border-radius: 100%;
-			background-color: rgba(255,255,255,.2);
-			#horse {		
-				@include transition(.25s ease-in-out all);
-			    height: 60px;
-			    width: 60px;
-			    display: block;
-			    margin: 20px auto 0;
-				#outline .whitelogo {
-					@include transition(.25s ease-in-out all);
-					@include translate(-10px, 0);
-					fill: $white;
-				}
-			}
-			&:hover {
-				@include white-flash();
-			}
-			&:hover #horse #outline .whitelogo {
-		    	@include animate-bgcolor-fill();
-			}
-		}
-	}
-}
+// 	.navbar-brand {
+// 		display: block;
+// 		position: relative;
+// 		max-width: 100%;
+// 		margin-left: 20px;
+// 		padding: 0;
+// 		width: 75px;
+// 		z-index: 1001;
+// 		padding-left: 0;
 
-// FROM MEDIUM #NAV-BANNER
-@media (min-width: $screen-md-min) {
-	.home #nav-banner-v1 {
-		width: 620px;
-		left: auto;
-		.container-fluid {
-			padding-left: 0;
-			padding-right: 10%;
-		}
-	}
-}
+// 		#horse {		
+// 			@include transition(.25s ease-in-out all);
+// 		    height: 60px;
+// 		    width: 60px;
+// 		    display: block;
+// 		    margin: 20px auto 0;
 
-// FROM LARGE #NAV-BANNER
-@media (min-width: $screen-lg-min) {
-	.home #nav-banner-v1 {
-		width: 620px;
-		left: auto;
-		.container-fluid {
-			padding-left: 0;
-			padding-right: 20%;
-		}
-	}
-}
+// 			.whitelogo {
+// 				@include transition(.25s ease-in-out all);
+// 				@include translate(-10px, 0);
+// 				fill: $brand-blue;
+// 			}
+
+// 		}
+
+// 	}
+
+// 	.navbar-default .navbar-nav>li>a {
+// 		text-align: center;
+// 	}
+
+// 	.navbar-toggle {
+// 		@include transition(all 0.2s ease-in-out);
+// 		margin: 26px 20px 0 0;
+// 		border-radius: 100%;
+// 		height: 50px;
+// 		width: 50px;
+// 		border: 0;
+
+// 		.icon-bar {
+// 			width: 30px;
+// 		    height: 5px;
+// 		    border-radius: 0px;
+// 		}
+
+// 		&:hover, &:focus {
+// 			background-color: $brand-blue;
+
+// 			.icon-bar {
+// 				background-color: $white;
+// 			}
+
+// 		}
+
+// 	}
+
+// }
+
+// // FROM BREAKPOINT #NAV-BANNER
+// @media (min-width: $grid-float-breakpoint) {
+// 	#nav-banner-v1 {
+// 		left: 0;
+// 		right: 0;
+
+// 		.container-fluid {
+// 			// HOME
+// 			.home & {
+// 				padding-left: 5%;
+// 				padding-right: 13%;
+// 			}
+
+// 			padding-left: 0;
+// 			padding-right: 0;
+// 		}
+
+// 		.navbar-brand {
+// 			@include transition(.25s ease-in-out all);
+// 			display: block;
+// 			position: relative;
+// 			max-width: 100%;
+// 			padding: 0;
+// 			width: 100px;
+// 			z-index: 1001;
+// 			padding-left: 0;
+// 			border-radius: 100%;
+// 			background-color: rgba(255,255,255,.2);
+
+// 			#horse {		
+// 				@include transition(.25s ease-in-out all);
+// 			    height: 60px;
+// 			    width: 60px;
+// 			    display: block;
+// 			    margin: 20px auto 0;
+
+// 				.whitelogo {
+// 					@include transition(.25s ease-in-out all);
+// 					@include translate(-10px, 0);
+// 					fill: $white;
+// 				}
+
+// 			}
+
+// 			&:hover {
+// 				@include white-flash();
+// 			}
+
+// 			&:hover .whitelogo {
+// 		    	@include animate-bgcolor-fill();
+// 			}
+// 		}
+// 	}
+// }
+
+// // FROM MEDIUM #NAV-BANNER
+// @media (min-width: $screen-md-min) {
+
+// 	.home #nav-banner-v1 {
+// 		width: 620px;
+// 		left: auto;
+
+// 		.container-fluid {
+// 			padding-left: 0;
+// 			padding-right: 10%;
+// 		}
+
+// 	}
+
+// }
+
+// // FROM LARGE #NAV-BANNER
+// @media (min-width: $screen-lg-min) {
+
+// 	.home #nav-banner-v1 {
+// 		width: 620px;
+// 		left: auto;
+
+// 		.container-fluid {
+// 			padding-left: 0;
+// 			padding-right: 20%;
+// 		}
+
+// 	}
+
+// }
 
 
-// HOMEPAGE NAV, ON LARGEST SCREENS ONLY
-@media (min-width: $screen-lg-min) {
-	.home #nav-banner-v1 {
-		left: auto;
-		min-width: 800px;
-	}
-}
+// // HOMEPAGE NAV, ON LARGEST SCREENS ONLY
+// @media (min-width: $screen-lg-min) {
+
+// 	.home #nav-banner-v1 {
+// 		left: auto;
+// 		min-width: 800px;
+// 	}
+
+// }
 
 
-#nav-banner-v1 .navbar {
-	@include transition(.25s ease-in-out all);
-	padding-left: 0;
-	padding-right: 0;
-	margin: 0;
-}
-
-
-
-.navbar .navbar-collapse {
-	position: relative;
-	z-index: 1000;
-	font-size: 20px;
-	font-weight: 700; 
-	text-transform: uppercase;
-}
+// #nav-banner-v1 .navbar {
+// 	@include transition(.25s ease-in-out all);
+// 	padding-left: 0;
+// 	padding-right: 0;
+// 	margin: 0;
+// }
 
 
 // DEFAULT NAVBAR
@@ -390,270 +437,328 @@
 	position: relative;
     min-height: 50px;
     margin-bottom: 0;
-    border: none;
-    background-color: transparent;
+    border: 0;
     border-color: transparent;
     border-radius: 0;
+	background-color: rgba(255,255,255,0);
+
+	.navbar-collapse {
+		position: relative;
+		z-index: 1000;
+		font-size: 20px;
+		font-weight: 700; 
+		text-transform: uppercase;
+	}
 }
 
 // DEFAULT NAVBAR (NOT HOMEPAGE)
-body:not(.home) #nav-banner-v1 {
-	background-color: $white;		
-}
+// body:not(.home) #nav-banner-v1 {
+// 	background-color: $white;		
+// }
 
 // DEFAULT NAVBAR (NOT HOMEPAGE)
-body:not(.home) #nav-banner-v1 .navbar .navbar-collapse li.menu-item {
-	@include transition(.25s ease-in-out all);
-	&:nth-child(1) a:hover {
-		color: $brand-green;
-		&:after {
-			opacity: 1;
-			background-color: rgba(0,0,0,0.05);
-		}
-	}
-	&:nth-child(2) a:hover {
-		color: $brand-red;
-		&:after {
-			opacity: 1;
-			background-color: rgba(0,0,0,0.05);
-		}
-	}
-	&:nth-child(3) a:hover {
-		color: $brand-purple;
-		&:after {
-			opacity: 1;
-			background-color: rgba(0,0,0,0.05);
-		}
-	}
-	&:nth-child(4) a:hover {
-		color: $brand-orange;
-		&:after {
-			opacity: 1;
-			background-color: rgba(0,0,0,0.05);
-		}
-	}
-}
+// body:not(.home) #nav-banner-v1 li.menu-item {
+// 	@include transition(.25s ease-in-out all);
+
+// 	&:nth-child(1) a:hover {
+// 		color: $brand-green;
+
+// 		&::after {
+// 			opacity: 1;
+// 			background-color: rgba(0,0,0,0.05);
+// 		}
+
+// 	}
+
+// 	&:nth-child(2) a:hover {
+// 		color: $brand-red;
+
+// 		&::after {
+// 			opacity: 1;
+// 			background-color: rgba(0,0,0,0.05);
+// 		}
+
+// 	}
+
+// 	&:nth-child(3) a:hover {
+// 		color: $brand-purple;
+
+// 		&::after {
+// 			opacity: 1;
+// 			background-color: rgba(0,0,0,0.05);
+// 		}
+
+// 	}
+
+// 	&:nth-child(4) a:hover {
+// 		color: $brand-orange;
+
+// 		&::after {
+// 			opacity: 1;
+// 			background-color: rgba(0,0,0,0.05);
+// 		}
+
+// 	}
+
+// }
 
 
 // DEFAULT NAVBAR (NOT HOMEPAGE)
-body:not(.home) #nav-banner-v1 .navbar .navbar-collapse {
-	@include transition(.25s ease-in-out all);
-	padding-left: 20px;
-	padding-right: 20px;	
-	a {
-		@include transition(.25s ease-in-out all);
-		color: $gray;
-		&:after {					
-			background-color: rgba(0,0,0,0);
-		}
-		&:hover:after {
-			background-color: rgba(0,0,0,0.05);
-		}
-	}
+// body:not(.home) #nav-banner-v1 .navbar-collapse {
+// 	@include transition(.25s ease-in-out all);
+// 	padding-left: 20px;
+// 	padding-right: 20px;
+
+// 	a {
+// 		@include transition(.25s ease-in-out all);
+// 		color: $gray;
+
+// 		&::after {					
+// 			background-color: rgba(0,0,0,0);
+// 		}
+
+// 		&:hover::after {
+// 			background-color: rgba(0,0,0,0.05);
+// 		}
+
+// 	}
 	
-}
+// }
 
 // DEFAULT NAVBAR BRAND (NOT HOMEPAGE)
-body:not(.home) #nav-banner-v1 .navbar .navbar-brand {
-	width: 100px;
-	padding-left: 0;
-	margin-right: 20px;
-	#horse {
-	    height: 50px;
-	    margin: 25px auto 0;
-	}
-	#horse #outline .whitelogo {
-		fill: $brand-blue;
-	}
-	&:hover {
-		#horse #outline .whitelogo {
+// body:not(.home) #nav-banner-v1 .navbar-brand {
+// 	width: 100px;
+// 	padding-left: 0;
+// 	margin-right: 20px;
 
-		}
-	}
-}
+// 	#horse {
+// 	    height: 50px;
+// 	    margin: 25px auto 0;
+// 	}
+
+// 	.whitelogo {
+// 		fill: $brand-blue;
+// 	}
+
+// 	&:hover {
+// 		.whitelogo {
+
+// 		}
+// 	}
+// }
 
 
-
-// HOMEPAGE NAVBAR
-.navbar {
-	background-color: rgba(255,255,255,0);
-}
 
 
 // HOMEPAGE NAV, ON LARGER SCREENS ONLY
-@media (min-width: $grid-float-breakpoint) {
+// @media (min-width: $grid-float-breakpoint) {
 
-	.home #nav-banner-v1 .navbar-header {
-		float: right;
-	}
+// 	.home #nav-banner-v1 .navbar-header {
+// 		float: right;
+// 	}
 
-	#nav-banner-v1 .navbar-nav {
-		margin-right: 20px;
-	}
+// 	#nav-banner-v1 .navbar-nav {
+// 		margin-right: 20px;
+// 	}
 
-	// HOMEPAGE NAV BANNER
-	.home #nav-banner-v1 {
-		//@include transition(.25s ease-in-out all);
-		position: absolute;
-		//left: 0;
-		right: 0;
-		//top: 100px;			
-		margin-top: 100px;	
+// 	// HOMEPAGE NAV BANNER
+// 	.home #nav-banner-v1 {
+// 		//@include transition(.25s ease-in-out all);
+// 		position: absolute;
+// 		//left: 0;
+// 		right: 0;
+// 		//top: 100px;			
+// 		margin-top: 100px;	
 		
-	}
+// 	}
 
-}
+// }
 
 
 // HOMEPAGE NAV, ON LARGER SCREENS ONLY
-@media (min-width: $grid-float-breakpoint) {
+// @media (min-width: $grid-float-breakpoint) {
 
-	// HOMEPAGE NAVBAR ON DEFAULT
-	#nav-banner-v1 {
-		@include transition(.25s ease-in-out all);
-		background-color: rgba(255,255,255,0);
+// 	// HOMEPAGE NAVBAR ON DEFAULT
+// 	#nav-banner-v1 {
+// 		@include transition(.25s ease-in-out all);
+// 		background-color: rgba(255,255,255,0);
 
-		.container-fluid {
-			.home & {
-				@include transition(.25s ease-in-out all);
-				//padding-left: 20%;
-				//padding-right: 20%;
-			}
-		}
-		.navbar .navbar-collapse {
-			@include transition(.25s ease-in-out all);
+// 		.container-fluid {
+
+// 			.home & {
+// 				@include transition(.25s ease-in-out all);
+// 				//padding-left: 20%;
+// 				//padding-right: 20%;
+// 			}
+// 		}
+
+// 		.navbar-collapse {
+// 			@include transition(.25s ease-in-out all);
 			
-			a {
-				position: relative;
-				color: $white;
+// 			a {
+// 				position: relative;
+// 				color: $white;
 
-				&:after {
-					@include square(50px);
-					@include scale(0,0);
-					@include transition(.25s ease-in-out all);					
-					border-radius: 100%;
-					content: "";
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					margin-top: -25px;
-					margin-left: -25px;
-					background-color: rgba(255,255,255,0);
-					z-index: -1; // make sure the text sits above the ::after
-				}
-				&:hover:after {
-					@include scale(1,1);
-					background-color: rgba(255,255,255,0.25);
-				}
-			}
-		}
-		// NAVBAR COLOURS
-		.navbar .navbar-collapse li.menu-item {
-			@include transition(.25s ease-in-out all);
-			a:hover:after {
-				background-color: rgba(255,255,255,0.2);
-			}
-		}
-	}
+// 				&::after {
+// 					@include square(50px);
+// 					@include scale(0,0);
+// 					@include transition(.25s ease-in-out all);					
+// 					border-radius: 100%;
+// 					content: ';
+// 					position: absolute;
+// 					left: 50%;
+// 					top: 50%;
+// 					margin-top: -25px;
+// 					margin-left: -25px;
+// 					background-color: rgba(255,255,255,0);
+// 					z-index: -1; // make sure the text sits above the :::after
+// 				}
 
-}
+// 				&:hover::after {
+// 					@include scale(1,1);
+// 					background-color: rgba(255,255,255,0.25);
+// 				}
+
+// 			}
+
+// 		}
+
+// 		// NAVBAR COLOURS
+// 		li.menu-item {
+// 			@include transition(.25s ease-in-out all);
+
+// 			a:hover::after {
+// 				background-color: rgba(255,255,255,0.2);
+// 			}
+
+// 		}
+
+// 	}
+
+// }
 
 // HOMEPAGE NAV, ON LARGER SCREENS ONLY
-@media (min-width: $screen-desktop) {
+// @media (min-width: $screen-desktop) {
 	
-	// HOMEPAGE NAV BANNER ON AFFIX
-	#nav-banner-v1.affix {
-		background-color: rgba(255,255,255,1);
-		min-width: 600px;
-		left: auto;
-		border-radius: ($navbar-height/2) 0 0 ($navbar-height/2);
-		/* &:after {
-			content: "";
-			position: absolute;
-			right: 20px;
-			top: 0;
-			border-left: 1px solid $border-color;
-		}
-		*/
+// 	// HOMEPAGE NAV BANNER ON AFFIX
+// 	#nav-banner-v1.affix {
+// 		background-color: rgba(255,255,255,1);
+// 		min-width: 600px;
+// 		left: auto;
+// 		border-radius: ($navbar-height/2) 0 0 ($navbar-height/2);
+// 		/* &::after {
+// 			content: ';
+// 			position: absolute;
+// 			right: 20px;
+// 			top: 0;
+// 			border-left: 1px solid $border-color;
+// 		}
+// 		*/
 
-		.container-fluid {
-			padding-left: 0;
-			padding-right: 0;
-		}
-		.navbar .navbar-collapse {
-			@include transition(.25s ease-in-out all);
-			padding-left: 20px;
-			padding-right: 20px;	
-			a {
-				@include transition(.25s ease-in-out all);
-				color: $gray;
-				&:after {					
-					background-color: rgba(0,0,0,0);
-				}
-				&:hover:after {
-					background-color: rgba(0,0,0,0.05);
-				}
-			}
+// 		.container-fluid {
+// 			padding-left: 0;
+// 			padding-right: 0;
+// 		}
+
+// 		.navbar-collapse {
+// 			@include transition(.25s ease-in-out all);
+// 			padding-left: 20px;
+// 			padding-right: 20px;
+
+// 			a {
+// 				@include transition(.25s ease-in-out all);
+// 				color: $gray;
+
+// 				&::after {					
+// 					background-color: rgba(0,0,0,0);
+// 				}
+
+// 				&:hover::after {
+// 					background-color: rgba(0,0,0,0.05);
+// 				}
+
+// 			}
 			
-		}
-		.navbar-brand {
-				width: 100px;
-				padding-left: 0;
-				margin-right: 20px;
-				#horse {
-				    height: 50px;
-				    margin: 25px auto 0;
-				}
-				#horse #outline .whitelogo {
-					fill: $brand-blue;
-				}
-				&:hover {
-					#horse #outline .whitelogo {
+// 		}
+// 		.navbar-brand {
+// 			width: 100px;
+// 			padding-left: 0;
+// 			margin-right: 20px;
 
-					}
-				}
-			}
-		// NAVBAR COLOURS
-		.navbar .navbar-collapse li.menu-item {
-			@include transition(.25s ease-in-out all);
-			&:nth-child(1) a:hover {
-				color: $brand-green;
-				&:after {
-					opacity: 1;
-					background-color: rgba(0,0,0,0.05);
-				}
-			}
-			&:nth-child(2) a:hover {
-				color: $brand-red;
-				&:after {
-					opacity: 1;
-					background-color: rgba(0,0,0,0.05);
-				}
-			}
-			&:nth-child(3) a:hover {
-				color: $brand-purple;
-				&:after {
-					opacity: 1;
-					background-color: rgba(0,0,0,0.05);
-				}
-			}
-			&:nth-child(4) a:hover {
-				color: $brand-orange;
-				&:after {
-					opacity: 1;
-					background-color: rgba(0,0,0,0.05);
-				}
-			}
-		}
-	}
-}
+// 			#horse {
+// 			    height: 50px;
+// 			    margin: 25px auto 0;
+// 			}
+
+// 			.whitelogo {
+// 				fill: $brand-blue;
+// 			}
+
+// 			&:hover {
+// 				.whitelogo {
+
+// 				}
+// 			}
+// 		}
+
+// 		// NAVBAR COLOURS
+// 		li.menu-item {
+// 			@include transition(.25s ease-in-out all);
+
+// 			&:nth-child(1) a:hover {
+// 				color: $brand-green;
+
+// 				&::after {
+// 					opacity: 1;
+// 					background-color: rgba(0,0,0,0.05);
+// 				}
+
+// 			}
+
+// 			&:nth-child(2) a:hover {
+// 				color: $brand-red;
+
+// 				&::after {
+// 					opacity: 1;
+// 					background-color: rgba(0,0,0,0.05);
+// 				}
+
+// 			}
+
+// 			&:nth-child(3) a:hover {
+// 				color: $brand-purple;
+
+// 				&::after {
+// 					opacity: 1;
+// 					background-color: rgba(0,0,0,0.05);
+// 				}
+
+// 			}
+
+// 			&:nth-child(4) a:hover {
+// 				color: $brand-orange;
+
+// 				&::after {
+// 					opacity: 1;
+// 					background-color: rgba(0,0,0,0.05);
+// 				}
+
+// 			}
+
+// 		}
+
+// 	}
+
+// }
 
 
-@media (min-width: $screen-md-min) {
-	// WHEN AT SCROLLED 'FIXED'
-	.home #nav-banner-v1.affix { 
-		position: fixed;
-		margin-top: 20px;
-		//top: 0;
-	}
-}
+// @media (min-width: $screen-md-min) {
+
+// 	// WHEN AT SCROLLED 'FIXED'
+// 	.home #nav-banner-v1.affix { 
+// 		position: fixed;
+// 		margin-top: 20px;
+// 		//top: 0;
+// 	}
+
+// }

@@ -15,27 +15,26 @@
   top: 50%;
   margin-left: -30px;
   margin-top: -30px;
+
   svg {    
   @include flip-spin-y();
     position: relative;
     top: 5px;
   }
-  &:before,
-  &:after {
-    position: absolute;
+
+  &::before,
+  &::after {
     @include square(60px);
     @include rotate(45deg);
     @include animate-spin();
     @include animation-duration(1s);
+    position: absolute;
     margin-left: -30px;
     margin-top: -30px;
     left: 50%;
     top: 50%;
-    content: "";
+    content: '';
     border: 2px solid $white;
-  }
-  &:after {
-    
   }
 }
 
@@ -48,83 +47,69 @@
   top: 50%;
   margin-left: -30px;
   margin-top: -30px;
+
+  .gh-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    transform: scale(1.1); 
+  }
+
+  .gh-cube::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gray-dark;
+    animation: gh-foldCubeAngle 2.4s infinite linear both;
+    transform-origin: 100% 100%;
+  }
+
+  .gh-cube2 {
+    transform: scale(1.1) rotateZ(90deg);
+  }
+
+  .gh-cube3 {
+    transform: scale(1.1) rotateZ(180deg);
+  }
+
+  .gh-cube4 {
+    transform: scale(1.1) rotateZ(270deg);
+  }
+
+  .gh-cube2::before {
+    animation-delay: 0.3s;
+  }
+
+  .gh-cube3::before {
+    animation-delay: 0.6s; 
+  }
+
+  .gh-cube4::before {
+    animation-delay: 0.9s;
+  }
+
 }
 
-.gh-folding-cube .gh-cube {
-  float: left;
-  width: 50%;
-  height: 50%;
-  position: relative;
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1); 
-}
-.gh-folding-cube .gh-cube:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $gray-dark;
-  -webkit-animation: gh-foldCubeAngle 2.4s infinite linear both;
-          animation: gh-foldCubeAngle 2.4s infinite linear both;
-  -webkit-transform-origin: 100% 100%;
-      -ms-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
-}
-.gh-folding-cube .gh-cube2 {
-  -webkit-transform: scale(1.1) rotateZ(90deg);
-          transform: scale(1.1) rotateZ(90deg);
-}
-.gh-folding-cube .gh-cube3 {
-  -webkit-transform: scale(1.1) rotateZ(180deg);
-          transform: scale(1.1) rotateZ(180deg);
-}
-.gh-folding-cube .gh-cube4 {
-  -webkit-transform: scale(1.1) rotateZ(270deg);
-          transform: scale(1.1) rotateZ(270deg);
-}
-.gh-folding-cube .gh-cube2:before {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-.gh-folding-cube .gh-cube3:before {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s; 
-}
-.gh-folding-cube .gh-cube4:before {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-@-webkit-keyframes gh-foldCubeAngle {
-  0%, 10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
-            transform: perspective(140px) rotateX(-180deg);
-    opacity: 0; 
-  } 25%, 75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
-            transform: perspective(140px) rotateX(0deg);
-    opacity: 1; 
-  } 90%, 100% {
-    -webkit-transform: perspective(140px) rotateY(180deg);
-            transform: perspective(140px) rotateY(180deg);
-    opacity: 0; 
-  } 
-}
 
 @keyframes gh-foldCubeAngle {
+
   0%, 10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
-            transform: perspective(140px) rotateX(-180deg);
-    opacity: 0; 
-  } 25%, 75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
-            transform: perspective(140px) rotateX(0deg);
-    opacity: 1; 
-  } 90%, 100% {
-    -webkit-transform: perspective(140px) rotateY(180deg);
-            transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateX(-180deg);
     opacity: 0; 
   }
+
+  25%, 75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  }
+
+  90%, 100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+
 }

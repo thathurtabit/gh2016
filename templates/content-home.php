@@ -1,4 +1,4 @@
-<section id="home-intro" class="--screen-v-height"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="section--height-full-vh"><!-- HOME INTRO CAROUSEL -->
 
 <div id="home-intro-text-wrap">
 	<div id="home-intro-text">
@@ -32,9 +32,9 @@
 		<!--googleon: all-->
 		<svg height="100%" width="100%"><rect height="100%" width="100%" class="intro-rectangle" /></svg>
 	</div>
-	<p class="--position-bottom-center --position-absolute">
-		<a href="#but-how" class="btn --display-inline-block -color-white -arrow-down -bgcolor-spin --scrollto">Learn more</a>
-	</p>
+	<div class="block--position-bottom block--position-bottom-center block--position-absolute">
+		<a href="#but-how" class="btn block--display-inline-block btn--color-white btn--arrow-down btn--bgcolor-spin --scrollto">Learn more</a>
+	</div>
 	<div id="vert-carousel" class="animated-lines --quarter-vertical">
 		<div class="item">
 			<span class="vert"></span>
@@ -225,16 +225,16 @@
 
 <!--<ul class="large-ul-blocks --diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
 <ul class="large-ul-blocks --diamond">
-	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
-	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
-	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
-	<li><span>Perspiration</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
-	<li><span>Magic</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
-	<li><span>Good-Looks</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></li>
+	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
+	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
+	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
+	<li><span>Perspiration</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
+	<li><span>Magic</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
+	<li><span>Good-Looks</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
 </ul>
 
 	<div class="row --spacing-center">
-		<a href="#but-what" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">Learn more</a>
+		<a href="#but-what" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin --scrollto">Learn more</a>
 	</div>
 
 	<!--
@@ -263,19 +263,19 @@
 </ul>
 
 	<div class="row --spacing-center">
-		<a href="#latest-split" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">Learn more</a>
+		<a href="#latest-split" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin --scrollto">Learn more</a>
 	</div>
 
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
 <section id="latest-split" class="--position-relative --background-purple scrollme">
-<h2 class="section-heading  --icon-bolt --position-absolute">Latest stuff</h2>
+<h2 class="section-heading  --icon-bolt block--position-absolute">Latest stuff</h2>
 
 <div class="row --position-relative">
 	<div class="col-md-6">
 
-	<div class="--fade-bg --position-absolute"
+	<div class="--fade-bg block--position-absolute"
 	<?php
 		// NEWS Custom Loop Args
 		$news_args = array('post_type' => 'post','showposts' => '1' );
@@ -351,7 +351,7 @@
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white -size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      
@@ -381,7 +381,7 @@
 
 	<div class="col-md-6">
 
-	<div class="--position-absolute --fade-bg" 
+	<div class="block--position-absolute --fade-bg" 
 
 	<?php
 			// PRODUCTION DIARY Custom Loop Args
@@ -459,7 +459,7 @@
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn -color-white -size-medium -arrow-right -bgcolor-spin">Learn more</a>
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white -size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->
@@ -492,8 +492,8 @@
 
 </div>
 
-	<div class="row --spacing-center --position-bottom --position-absolute">
-		<a href="#contact-finger-wrap" class="btn -color-white -size-large -arrow-down -bgcolor-spin --scrollto">More</a>
+	<div class="row --spacing-center block--position-bottom block--position-absolute">
+		<a href="#contact-finger-wrap" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin --scrollto">More</a>
 	</div>
 
 <div class="the-divider"></div>
@@ -517,10 +517,7 @@
         data-opacity="1"
        data-translatex="900" class="animateme">-->
 <div id="contact-slider" class="animateme">
-	<a href="contact" class="btn -color-white -size-x-large -bgcolor-spin --background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="__rectangle" /></svg></a>
+	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin --background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
 </div>
 </section><!-- / GHOST HORSES SVG -->
-
-
-
 

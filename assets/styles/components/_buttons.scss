@@ -1,4 +1,8 @@
-a, a:link, a:visited, a:active, a:hover {
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
 	@include transition(all 0.2s ease-in-out);
 	text-decoration: none;
 }
@@ -11,52 +15,59 @@ a, a:link, a:visited, a:active, a:hover {
 	outline: none;
 	border-radius: 0;
 	padding: 7px 14px;
-	border: none;
 	font-weight: 700;
 	border: 3px solid $white;
-	padding-right: 46px;	
-	&:before {
+	padding-right: 46px;
+
+	&::before {
 		position: absolute;
-		content: "";
+		content: '';
 		top: 0;
 		right: 30px;
 		bottom: 0;
 		width: 3px;
 		background: $white;
 	}
-	&:after {
+
+	&::after {
 		line-height: 20px;
 		top: 7px;
 		right: 6px;
 	}
+
 	&:hover {
 		padding-right: 56px;
 	}
+
 	// FROM MEDIUM 
 	@media (min-width: $screen-md-min) {
-		&:after {
+
+		&::after {
 			top: 7px;
 		}
+
 	}
+
 }
 
-.-size-large {
+.btn--size-large {
 	@extend .btn-lg;
 	font-size: 18px;
 	padding: 8px 20px;
 	border-radius: 0;
-
 	padding-right: 60px;
-	&:before {
+
+	&::before {
 		position: absolute;
-		content: "";
+		content: '';
 		top: 0;
 		right: 40px;
 		bottom: 0;
 		width: 3px;
 		background: $white;
 	}
-	&:after {		
+
+	&::after {		
 		line-height: 20px;
 		top: 10px;
 		right: 10px;
@@ -76,21 +87,22 @@ a, a:link, a:visited, a:active, a:hover {
 
 }
 
-.-size-x-large {
+.btn--size-x-large {
 	@extend .btn-lg;
     @include square(300px);
     @include rotate(45deg);
     @include shadow-pulse();
-	padding: 0!important;
+	padding: 0 !important;
     font-size: 40px;
     font-family: $font-family-serif;
     text-transform: none;
     line-height: 260px;
 	border: 20px solid $white;
+
 	span {
 		@include square(300px);
 	    @include rotate(-45deg);
-		padding: 0!important;  
+		padding: 0 !important;  
 	    line-height: 260px;
 	    position: absolute;
 	    left: 50%;
@@ -98,6 +110,7 @@ a, a:link, a:visited, a:active, a:hover {
 	    margin-left: -135px;
 	    margin-top: -135px;
 	}
+
 	svg {
 		@include rotate(-90deg);
         position: absolute;
@@ -106,44 +119,47 @@ a, a:link, a:visited, a:active, a:hover {
         margin-top: -25px;
         margin-left: -25px;
         z-index: -1;
+
+        .btn__rectangle {
+			@include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+			@include opacity(0);
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;            
+			fill: transparent;
+			stroke: $gray;
+			stroke-dasharray: 140;
+			stroke-dashoffset: -400;
+			stroke-width: 10px;
+		}
 	}
 
-	svg .__rectangle {
-		@include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
-		@include opacity(0);
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;            
-		fill: transparent;
-		stroke: $gray;
-		stroke-dasharray: 140;
-		stroke-dashoffset: -400;
-		stroke-width: 10px;
-	}
 
-	// BEFORE & AFTER
-	&:before,
-	&:after {
+	// BEFORE & :AFTER
+	&::before,
+	&::after {
 		display: none;
 	}
-	&:before {
+
+	&::before {
 		@include square(270px);
 		@include animate-spin();
 		@include gradient-striped();
-		content: "";
+		content: '';
 		position: absolute;
 		top: -5px;
 		left: -5px;
 		border-radius: 100%;
 		z-index: 7;
 	}
-	&:after {
+
+	&::after {
 		@include square(270px);
 		@include animate-spin-anti();
 		@include gradient-striped();
-		content: "";
+		content: '';
 		position: absolute;
 		top: -5px;
 		left: -5px;
@@ -156,12 +172,14 @@ a, a:link, a:visited, a:active, a:hover {
 	&:active {
 		text-transform: none;
 		color: $gray-dark;
-		svg .__rectangle {
+
+		svg .btn__rectangle {
 			@include opacity(1);
 			stroke-width: 10px;
 			stroke-dashoffset: 0;
 			stroke-dasharray: 200;
         }
+
 	}
 
 	// FROM MEDIUM 
@@ -169,54 +187,66 @@ a, a:link, a:visited, a:active, a:hover {
 	    padding: 40px 60px;
 	    font-size: 50px;
 	    border: 20px solid $white;
+
 	    &:hover {
 	    	border: 20px solid $white;
 	    	line-height: 265px;
 	    }
+
 	}	
+
 }
 
-.-color-white {
+.btn--color-white {
 	@extend .btn;
 	color: $white;
 	border-color: $white;
+
 	&:hover,
 	&:focus {
-		color: $white!important;
+		color: $white !important;
 	}
+
 }
 
-.-arrow-down {	
-	&:after {
+.btn--arrow-down {	
+
+	&::after {
 		@include square(20px);		
-		font-family: "FontAwesome";
-		content: $fa-var-arrow-circle-down;
+		font-family: 'FontAwesome';
+		content: '$fa-var-arrow-circle-down';
 		position: absolute;
 		float: right;
 		text-align: center;
 	}
+
 	&:hover,
 	&:active,
 	&:focus {
-		&:after {
+
+		&::after {
 			@include flip-spin-y();
 			@include animation-duration(.75s);
 		}
+
 	}
+
 }
 
-.-arrow-right {	
-	&:after {
+.btn--arrow-right {	
+
+	&::after {
 		@include square(20px);		
-		font-family: "FontAwesome";
-		content: $fa-var-arrow-circle-right;
+		font-family: 'FontAwesome';
+		content: '$fa-var-arrow-circle-right';
 		position: absolute;
 		float: right;		
 		text-align: center;
 	}
 	
-	&:hover {		
-		&:after {
+	&:hover {	
+
+		&::after {
 			@include flip-spin-x();
 			@include animation-duration(.75s);
 		}
@@ -224,19 +254,24 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 
-.-bgcolor-spin {
+.btn--bgcolor-spin {
+
 	@extend .btn;
+
 	&:hover {
 		@include animate-bgcolor();
 	}
+
 }
 
 
-.btn-white-bg-slide {
+.btn--bg-white-slide {
+
 	@include transition(all 0.15s ease-in-out);
     @include gradient-vertical(rgba(255,255,255,0),rgba(255,255,255,0.1), 50%, 50%);
     background-size: 200%;
     background-position: 0 0;
+
     &:hover {
         background-position: 0 100%;
     }    
@@ -245,6 +280,7 @@ a, a:link, a:visited, a:active, a:hover {
 
 .btn-search {
 	background: transparent;
-	border: none;
+	border: 0;
 	color: $white;
 }
+
