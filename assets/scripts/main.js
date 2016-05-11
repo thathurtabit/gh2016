@@ -91,7 +91,7 @@
   });
 
   // Smooth scroll to #target
-  $(".--scrollto").click(function(e){   
+  $(".btn--scrollto").click(function(e){   
   e.preventDefault();
     $('html,body').animate({scrollTop:$(this.hash).offset().top},
     { duration:800, easing:'swing'});

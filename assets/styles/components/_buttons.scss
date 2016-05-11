@@ -214,7 +214,7 @@ a:hover {
 	&::after {
 		@include square(20px);		
 		font-family: 'FontAwesome';
-		content: '$fa-var-arrow-circle-down';
+		content: $fa-var-arrow-circle-down;
 		position: absolute;
 		float: right;
 		text-align: center;
@@ -238,7 +238,7 @@ a:hover {
 	&::after {
 		@include square(20px);		
 		font-family: 'FontAwesome';
-		content: '$fa-var-arrow-circle-right';
+		content: $fa-var-arrow-circle-right;
 		position: absolute;
 		float: right;		
 		text-align: center;

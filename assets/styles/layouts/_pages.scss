@@ -92,7 +92,7 @@ body {
     position: absolute;
 }
 
-.--fade-bg {
+.block--fade-bg {
     @include transition(background-position 0.25s ease-in-out);
     @include opacity(.05);
     background-size: cover;
@@ -121,7 +121,7 @@ body {
     margin-left: 0;
 }
 
-.--spacing-center {
+.block--spacing-center {
     text-align: center;
     padding: 20px;
     clear: both;
@@ -132,46 +132,42 @@ body {
 
 }
 
-.--no-top-padding {
-    padding-top: 0;
-}
-
-.--border-white {
+.section--border-white {
     border: 20px solid $white;
     border-top: 0;
 }
 
 
 // BACKGROUND COLOURS
-.--background-purple {
+.section--background-purple {
     background-color: $brand-purple;
 }
 
-.--background-blue {
+.section--background-blue {
     background-color: $brand-blue;
 }
 
-.--background-green {
+.section--background-green {
     background-color: $brand-green;
 }
 
-.--background-red {
+.section--background-red {
     background-color: $brand-red;
 }
 
-.--background-pink {
+.section--background-pink {
     background-color: $brand-pink;
 }
 
-.--background-orange {
+.section--background-orange {
     background-color: $brand-orange;
 }
 
-.--background-gray-dark {
+.section--background-gray-dark {
     background-color: $gray-dark;
 }
 
-.--background-white {
+.section--background-white {
     background-color: $white;
     color: $gray;
 }
@@ -940,7 +936,7 @@ img {
     margin: 20px;
 
     // DIAMOND
-    &.--diamond svg {
+    &.blocks--diamond svg {
         @include rotate(45deg);
         position: absolute;
         top: 50%;
@@ -950,7 +946,7 @@ img {
         z-index: -1;
     }
 
-    &.--circle svg {
+    &.blocks--circle svg {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -959,7 +955,7 @@ img {
         z-index: -1;
     }
 
-    &.--square svg {
+    &.blocks--square svg {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1002,9 +998,9 @@ img {
             }
         }
 
-        .__rectangle,
-        .__circle,
-        .__square {            
+        .block__diamond,
+        .block__circle,
+        .block__square {            
             @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
             position: absolute;
             top: 0;
@@ -1015,19 +1011,19 @@ img {
             stroke: $gray;
         }
 
-        .__rectangle {
+        .block__rectangle {
             stroke-dasharray: 140;
             stroke-dashoffset: -400;
             stroke-width: 10px;
         }
 
-        .__square { 
+        .block__square { 
             stroke-dasharray: 55;
             stroke-dashoffset: 0;
             stroke-width: 71px;
         }
 
-        .__circle { 
+        .block__circle { 
             stroke-dasharray: 5;
             stroke-dashoffset: 0;
             stroke-width: 5px;
@@ -1045,19 +1041,19 @@ img {
             background-color: rgba(255,255,255,0.2);
         }
 
-        .__rectangle {
+        .block__rectangle {
            stroke-width: 10px;
           stroke-dashoffset: 0;
           stroke-dasharray: 200;
         }
 
-        .__circle {
+        .block__circle {
             stroke-width: 5px;
             stroke-dashoffset: 0;
             stroke-dasharray: 221;
         }
 
-        .__square {
+        .block__square {
             stroke-width: 60px;
             stroke-dashoffset: 0;
             stroke-dasharray: 220;
@@ -1121,14 +1117,14 @@ img {
     border-top: 0;
 }
 
-.--split {
+.article--split {
     margin-top: 240px;
     position: relative;
     z-index: 3;
     padding: 13% 0 5%;
 }
 
-.featured-img.--flat {
+.featured-img.featured-img--flat {
 
     @include transition(all 0.25s ease-in-out);
     position: absolute;
@@ -1140,7 +1136,7 @@ img {
     background-color: $gray-dark;
 
     a,
-    .--flat-thumb {
+    .featured-img--flat-thumb {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -1152,7 +1148,7 @@ img {
 
         &:hover {
 
-            .--flat-thumb {
+            .featured-img--flat-thumb {
                 @include scale(1.2);
             }
 
@@ -1180,7 +1176,7 @@ img {
 
     }
 
-    .--flat-thumb {        
+    .featured-img--flat-thumb {        
         @include filter(blur(0) grayscale(1) opacity(1));
         @include transition(all 0.2s ease-in-out);
         @include scale(1);
@@ -1249,7 +1245,7 @@ img {
     }
 
     // HOVER
-    &:hover .--flat-thumb {
+    &:hover .featured-img--flat-thumb {
         @include scale(1.1);
        //@include opacity(.25);
         @include filter(blur(3px) grayscale(0) opacity(0.2));
@@ -1275,116 +1271,101 @@ img {
     }
 }
 
-// FEATURED IMAGE CIRCLE
-.featured-img.--circle {
-    @include transition(all 0.25s ease-in-out);
-    @include square(100px);
-    border-radius: 100%;
-    overflow: hidden;
-    position: relative;
-    left: 6px;
-    top: 9px;
-    box-shadow: 0 0 0 5px $white;
+// // FEATURED IMAGE CIRCLE
+// .featured-img.--circle {
+//     @include transition(all 0.25s ease-in-out);
+//     @include square(100px);
+//     border-radius: 100%;
+//     overflow: hidden;
+//     position: relative;
+//     left: 6px;
+//     top: 9px;
+//     box-shadow: 0 0 0 5px $white;
     
-    img,
-    a {
-        @include transition(all 0.25s ease-in-out);
-        @include square(100px);
-        overflow: hidden;
-        position: relative;
-        border-radius: 100%;
-    }
+//     img,
+//     a {
+//         @include transition(all 0.25s ease-in-out);
+//         @include square(100px);
+//         overflow: hidden;
+//         position: relative;
+//         border-radius: 100%;
+//     }
 
-    a {
-        display: block;
-        z-index: 1;        
-        background-color: $gray-dark;
-    }
+//     a {
+//         display: block;
+//         z-index: 1;        
+//         background-color: $gray-dark;
+//     }
 
-    // IMG
-    img {
-        z-index: 2;
-    }
-
-
-    a::after,
-    a::before {
-        @include transition(all 0.25s ease-in-out);
-        @include square(100px);
-        text-align: center;
-        line-height: 100px;
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 5;
-        overflow: hidden;
-        border-radius: 100%; 
-    }
-
-    a::after {
-        @include scale(0);
-        color: $white;
-        font-family: ''FontAwesome'';
-        content: $fa-var-arrow-circle-o-right;
-        font-size: 30px;
-    }
-
-    a::before {
-        @include animate-spin();
-        @include transform-origin(300% -300%);
-        @include animation-duration(1.5s);
-        @include square(7px);
-        content: '';
-        border-radius: 100%;
-        position: absolute;
-        background-color: rgba(255,255,255,0);
-        left: 30%;
-        top: 70%;
-    }
-
-    // HOVER
-    a:hover img {
-          @include scale(1.2);
-          @include opacity(.25);
-    }
-
-    a:hover::after {
-        @include scale(1);
-    }
-
-    a:hover::before {
-
-        background-color: rgba(255,255,255,1);
-    }
-
-    // RESPONSIVE
-    // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
-        float: left;
-        margin: 0 30px 25px 0;
-        position: relative;
-        min-height: 70px;
-    }
-
-}
+//     // IMG
+//     img {
+//         z-index: 2;
+//     }
 
 
+//     a::after,
+//     a::before {
+//         @include transition(all 0.25s ease-in-out);
+//         @include square(100px);
+//         text-align: center;
+//         line-height: 100px;
+//         content: '';
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         z-index: 5;
+//         overflow: hidden;
+//         border-radius: 100%; 
+//     }
 
+//     a::after {
+//         @include scale(0);
+//         color: $white;
+//         font-family: ''FontAwesome'';
+//         content: $fa-var-arrow-circle-o-right;
+//         font-size: 30px;
+//     }
 
+//     a::before {
+//         @include animate-spin();
+//         @include transform-origin(300% -300%);
+//         @include animation-duration(1.5s);
+//         @include square(7px);
+//         content: '';
+//         border-radius: 100%;
+//         position: absolute;
+//         background-color: rgba(255,255,255,0);
+//         left: 30%;
+//         top: 70%;
+//     }
 
-// FROM BREAKPOINT
-@media (min-width: $grid-float-breakpoint) {
-}
+//     // HOVER
+//     a:hover img {
+//           @include scale(1.2);
+//           @include opacity(.25);
+//     }
 
+//     a:hover::after {
+//         @include scale(1);
+//     }
 
+//     a:hover::before {
 
-// FROM LARGE 
-@media (min-width: $screen-lg-min) {
-}
+//         background-color: rgba(255,255,255,1);
+//     }
 
+//     // RESPONSIVE
+//     // FROM MEDIUM 
+//     @media (min-width: $screen-md-min) {
+//         float: left;
+//         margin: 0 30px 25px 0;
+//         position: relative;
+//         min-height: 70px;
+//     }
+
+// }
 
 
 #ghost-horses-svg {
@@ -1476,40 +1457,40 @@ img {
     height: 100%;
 
     // QUARTER SQUARES
-    &.--quarter-squares {
+    // &.--quarter-squares {
 
-        span {
-            position: absolute;
-            background: rgba(255,255,255,1);
-            width: 50%;
-            height: 50%;
-            top: 0;
-            left: 0;
+    //     span {
+    //         position: absolute;
+    //         background: rgba(255,255,255,1);
+    //         width: 50%;
+    //         height: 50%;
+    //         top: 0;
+    //         left: 0;
 
-            &:nth-child(2) {
-                top: 0;
-                left: 50%;
-                background: rgba(255,255,255,0.75);
-            }
+    //         &:nth-child(2) {
+    //             top: 0;
+    //             left: 50%;
+    //             background: rgba(255,255,255,0.75);
+    //         }
 
-            &:nth-child(3) {
-                top: 50%;
-                left: 0;
-                background: rgba(255,255,255,0.5);
-            }
+    //         &:nth-child(3) {
+    //             top: 50%;
+    //             left: 0;
+    //             background: rgba(255,255,255,0.5);
+    //         }
 
-            &:nth-child(4) {
-                top: 50%;
-                left: 50%;
-                background: rgba(255,255,255,0.25);
-            }
+    //         &:nth-child(4) {
+    //             top: 50%;
+    //             left: 50%;
+    //             background: rgba(255,255,255,0.25);
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
 
     // VERTICAL SQUARES
-    &.--quarter-vertical {
+    &.animated-lines--quarter-vertical {
 
         .vert {
             @include transition(top 0.5s ease-in-out, bottom 0.5s ease-in-out);
@@ -1620,7 +1601,7 @@ img {
 
     }
 
-    &.--white ul li a {
+    &.split-tags--white ul li a {
         color: $white;
 
         &:hover {
@@ -1629,7 +1610,7 @@ img {
 
     }
 
-    &.--top-border {
+    &.split-tags--top-border {
         border-top: 1px solid rgba(255,255,255,0.1);
     }
 }

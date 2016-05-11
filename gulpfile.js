@@ -20,6 +20,7 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 var scsslint     = require('gulp-scss-lint');
+var cache        = require('gulp-cached');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -236,6 +237,7 @@ gulp.task('jshint', function() {
 // https://www.npmjs.com/package/gulp-scss-lint
 gulp.task('scss-lint', function() {
   return gulp.src([path.source + 'styles/**/*.scss', '!' + path.source + 'styles/**/_animations.scss'])
+    .pipe(cache('scsslint'))
     .pipe(scsslint({
       'config': 'scss-lint.yml',
       'maxBuffer': 587200

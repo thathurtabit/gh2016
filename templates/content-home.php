@@ -33,9 +33,9 @@
 		<svg height="100%" width="100%"><rect height="100%" width="100%" class="intro-rectangle" /></svg>
 	</div>
 	<div class="block--position-bottom block--position-bottom-center block--position-absolute">
-		<a href="#but-how" class="btn block--display-inline-block btn--color-white btn--arrow-down btn--bgcolor-spin --scrollto">Learn more</a>
+		<a href="#but-how" class="btn block--display-inline-block btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
-	<div id="vert-carousel" class="animated-lines --quarter-vertical">
+	<div id="vert-carousel" class="animated-lines animated-lines--quarter-vertical">
 		<div class="item">
 			<span class="vert"></span>
 			<span class="vert"></span>
@@ -93,7 +93,7 @@
 
 		<img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-man.png" alt="Ghost Horses" />
 		<!-- SPEECH BUBBLE -->
-		<a href="#contact-finger-wrap" class="speech-bubble hidden-xs hidden-sm --scrollto"><span></span></a>
+		<a href="#contact-finger-wrap" class="speech-bubble hidden-xs hidden-sm btn--scrollto"><span></span></a>
 		<!-- SPEECH BUBBLE -->
 	</span>
 
@@ -209,7 +209,7 @@
   <polygon points="0,0 100,0 50,100"/>
 </svg>
 
-<div class="animated-lines --quarter-vertical">
+<div class="animated-lines animated-lines--quarter-vertical">
 		<span></span>
 		<span></span>
 		<span></span>
@@ -219,22 +219,22 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="--screen-v-height --position-relative scrollme"><!-- BUT HOW? -->
+<section id="but-how" class="section--height-full-vh block--position-relative scrollme"><!-- BUT HOW? -->
 
-<h2 class="section-heading --icon-question">Lovely websites you say, b-but how?</h2>
+<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how?</h2>
 
 <!--<ul class="large-ul-blocks --diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
-<ul class="large-ul-blocks --diamond">
-	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
-	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
-	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
-	<li><span>Perspiration</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
-	<li><span>Magic</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
-	<li><span>Good-Looks</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></li>
+<ul class="large-ul-blocks blocks--diamond">
+	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span>Perspiration</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span>Magic</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span>Good-Looks</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
 </ul>
 
-	<div class="row --spacing-center">
-		<a href="#but-what" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin --scrollto">Learn more</a>
+	<div class="row block--spacing-center">
+		<a href="#but-what" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 
 	<!--
@@ -248,34 +248,34 @@
 
 </section><!-- / BUT HOW? -->
 
-<section id="but-what" class="--screen-v-height scrollme"><!-- BUT WHAT -->
+<section id="but-what" class="section--height-full-vh scrollme"><!-- BUT WHAT -->
 
-<h2 class="section-heading --icon-code">But like, what do you DO?</h2>
+<h2 class="section-heading heading--icon-code">But like, what do you DO?</h2>
 
 <!--<ul class="large-ul-blocks --circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
-<ul class="large-ul-blocks --circle">
-	<li><span>Digital Design / UI</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>Logos</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>HTML5 / CSS3</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>SASS / LESS</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>Responsive</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>WordPress</span><svg height="74" width="74"><circle class="__circle" cx="37" cy="37" r="35" /></svg></li>	
+<ul class="large-ul-blocks blocks--circle">
+	<li><span>Digital Design / UI</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>Logos</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>HTML5 / CSS3</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>SASS / LESS</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>Responsive</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span>WordPress</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>	
 </ul>
 
-	<div class="row --spacing-center">
-		<a href="#latest-split" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin --scrollto">Learn more</a>
+	<div class="row block--spacing-center">
+		<a href="#latest-split" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
-<section id="latest-split" class="--position-relative --background-purple scrollme">
-<h2 class="section-heading  --icon-bolt block--position-absolute">Latest stuff</h2>
+<section id="latest-split" class="block--position-relative section--background-purple scrollme">
+<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff</h2>
 
-<div class="row --position-relative">
+<div class="row block--position-relative">
 	<div class="col-md-6">
 
-	<div class="--fade-bg block--position-absolute"
+	<div class="block--fade-bg block--position-absolute"
 	<?php
 		// NEWS Custom Loop Args
 		$news_args = array('post_type' => 'post','showposts' => '1' );
@@ -288,17 +288,17 @@
 		>
 		</div>
 
-		<!--<section class="split-bg-content --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
-		<section class="split-bg-content --background-purple">
-			<h2 class="sub-heading --icon-news">News<span></span></h2>
+		<!--<section class="split-bg-content section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
+		<section class="split-bg-content section--background-purple">
+			<h2 class="sub-heading heading--icon-news">News<span></span></h2>
 
 			<!-- ASIDE FEATURED IMG -->
-	      	<aside class="featured-img --flat">
+	      	<aside class="featured-img featured-img--flat">
 	    		<?php
 	      		// check if the post has a Post Thumbnail assigned to it.
 				if ( has_post_thumbnail() ) {
 					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"></a>
-					<span class="--flat-thumb"
+					<span class="featured-img--flat-thumb"
 					<?php
 
 	if (has_post_thumbnail( $post->ID ) ): ?>
@@ -319,14 +319,14 @@
 		$news_loop = new WP_Query( $news_args );		  
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 				<!-- NEWS ARTICLE -->
-			    <article class="--split --white --background-purple">
+			    <article class="article--split article--white section--background-purple">
 
 			    	
 			       <header class="row">
 			      	
 
 			      	<!-- SECTION TITLE & TIME -->
-		      		<section class="__section-title-time">
+		      		<section class="article__section-title-time">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
 				        </a></h1>
@@ -344,14 +344,14 @@
 
 			       <!-- CONTENT -->
 			       <section class="row">
-				        <p class="__content ">
+				        <p class="article__content ">
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white -size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn-size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      
@@ -364,7 +364,7 @@
 				  // IF THERE'S TAGS, GO GET 'EM
 					$posttags = get_the_tags();
 					if ($posttags) { ?>
-					<div class="split-tags --top-border --white">
+					<div class="split-tags --top-border split-tags--white">
 					<?php
 					  //foreach($posttags as $tag) {
 					  //  echo $tag->name . ' '; 
@@ -381,7 +381,7 @@
 
 	<div class="col-md-6">
 
-	<div class="block--position-absolute --fade-bg" 
+	<div class="block--position-absolute block--fade-bg" 
 
 	<?php
 			// PRODUCTION DIARY Custom Loop Args
@@ -395,17 +395,17 @@
 		>
 		</div>
 
-		<!--<section class="split-bg-content --bg-right --background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
-		<section class="split-bg-content --bg-right --background-purple">
-			<h2 class="sub-heading  --icon-cog">Production Diary<span></span></h2>
+		<!--<section class="split-bg-content --bg-right section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
+		<section class="split-bg-content --bg-right section--background-purple">
+			<h2 class="sub-heading  heading--icon-cog">Production Diary<span></span></h2>
 
 			<!-- ASIDE FEATURED IMG -->
-	      	<aside class="featured-img --flat">
+	      	<aside class="featured-img featured-img--flat">
 	    		<?php
 	      		// check if the post has a Post Thumbnail assigned to it.
 				if ( has_post_thumbnail() ) {
 					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"></a>
-					<span class="--flat-thumb"
+					<span class="featured-img--flat-thumb"
 					<?php
 
 	if (has_post_thumbnail( $post->ID ) ): ?>
@@ -426,7 +426,7 @@
 			$prod_loop = new WP_Query( $prod_args );		  
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 				<!--PRODUCTION ARTICLE -->
-			    <article class="--split --white  --background-purple">
+			    <article class="article--split article--white  section--background-purple">
 
 
 			     
@@ -434,7 +434,7 @@
 			      	
 
 			      	<!-- SECTION TITLE & TIME -->
-		      		<section class="__section-title-time">
+		      		<section class="article__section-title-time">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
 				        </a></h1>
@@ -452,14 +452,14 @@
 
 			     <!-- CONTENT -->
 			       <section class="row">
-				        <p class="__content ">
+				        <p class="article__content ">
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white -size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn-size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->
@@ -472,7 +472,7 @@
 				  // IF THERE'S TAGS, GO GET 'EM
 					$posttags = get_the_tags();
 					if ($posttags) { ?>
-					<div class="split-tags --top-border --white">
+					<div class="split-tags split-tags--top-border split-tags--white">
 					<?php
 					  //foreach($posttags as $tag) {
 					  //  echo $tag->name . ' '; 
@@ -492,15 +492,15 @@
 
 </div>
 
-	<div class="row --spacing-center block--position-bottom block--position-absolute">
-		<a href="#contact-finger-wrap" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin --scrollto">More</a>
+	<div class="row block--spacing-center block--position-bottom block--position-absolute">
+		<a href="#contact-finger-wrap" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">More</a>
 	</div>
 
 <div class="the-divider"></div>
 
 </section><!-- / LATEST STUFF -->
 
-<section id="contact-finger-wrap" class="--screen-v-height --border-white scrollme"><!-- GHOST HORSES SVG -->
+<section id="contact-finger-wrap" class="section--height-full-vh section--border-white scrollme"><!-- GHOST HORSES SVG -->
 <!--<div id="finger-slider" class="animateme" data-when="enter"
         data-from="1"
         data-to="0.5"
@@ -517,7 +517,7 @@
         data-opacity="1"
        data-translatex="900" class="animateme">-->
 <div id="contact-slider" class="animateme">
-	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin --background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
+	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
 </div>
 </section><!-- / GHOST HORSES SVG -->
 
