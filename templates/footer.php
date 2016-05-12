@@ -1,9 +1,30 @@
-<footer id="main-footer" class="content-info --position-relative --border-white scrollme">
-	<h2 class="section-heading  --icon-ellipsis-h">Footer stuff</h2>
+<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white scrollme"><!-- GHOST HORSES SVG -->
+<!--<div id="finger-slider" class="animateme" data-when="enter"
+        data-from="1"
+        data-to="0.5"
+        data-opacity="1"
+        data-translatex="-900">-->
+<div id="finger-slider">
+	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
+<span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
+</div>
+
+<!--<div id="contact-slider" data-when="enter"
+        data-from="1"
+        data-to="0.5"
+        data-opacity="1"
+       data-translatex="900" class="animateme">-->
+<div id="contact-slider" class="animateme">
+	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
+</div>
+</section><!-- / GHOST HORSES SVG -->
+
+<footer id="main-footer" class="content-info block--position-relative section--border-sides-white-only scrollme">
+	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff</h2>
   <div class="row">
 		<!--<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
 		<div class="col-md-6">
-			<h2 class="sub-heading --icon-bars">Links<span></span></h2>
+			<h2 class="sub-heading heading--icon-bars">Links<span></span></h2>
 			<!-- FOOTER COL -->
 			<section class="footer-col">
 			 <?php
@@ -17,7 +38,7 @@
 		
 		<!--<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
 		<div class="col-md-6">
-			<h2 class="sub-heading --icon-globe">Social<span></span></h2>
+			<h2 class="sub-heading heading--icon-globe">Social<span></span></h2>
 			<!-- FOOTER COL -->
 			<section class="footer-col">
 				<ul class="footer-social-icons list-center">
@@ -35,7 +56,7 @@
 	</div>
 	<!--<div class="the-divider"></div>-->
 </footer>
-<div id="footer-meta" class="container-fluid --background-white">
+<div id="footer-meta" class="container-fluid section--background-white">
 	<div class="row">
 		<div class="col-md-6">
 			<small>This website is best viewed whilst looking directly at it.</small>
@@ -45,13 +66,14 @@
 		</div>
 
 	</div>
-</div>
-
-<section id="ghost-horses-svg" class="container-fluid --background-white"><!-- GHOST HORSES SVG -->
-<span class="horses" data-when="enter"
+	<section id="ghost-horses-svg" class="container-fluid"><!-- GHOST HORSES SVG -->
+		<span class="horses" data-when="enter"
         data-from="1"
         data-to="0.5"
         data-opacity="1"
         data-translatex="1000"><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span" class="horses"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
 
     </section>
+</div>
+
+

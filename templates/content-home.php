@@ -1,4 +1,4 @@
-<section id="home-intro" class="section--height-full-vh"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="section--height-full-vh section--border-white-all"><!-- HOME INTRO CAROUSEL -->
 
 <div id="home-intro-text-wrap">
 	<div id="home-intro-text">
@@ -32,7 +32,7 @@
 		<!--googleon: all-->
 		<svg height="100%" width="100%"><rect height="100%" width="100%" class="intro-rectangle" /></svg>
 	</div>
-	<div class="block--position-bottom block--position-bottom-center block--position-absolute">
+	<div class="block--position-bottom-center block--position-absolute">
 		<a href="#but-how" class="btn block--display-inline-block btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 	<div id="vert-carousel" class="animated-lines animated-lines--quarter-vertical">
@@ -219,7 +219,7 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="section--height-full-vh block--position-relative scrollme"><!-- BUT HOW? -->
+<section id="but-how" class="section--height-full-vh section--border-white block--position-relative scrollme"><!-- BUT HOW? -->
 
 <h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how?</h2>
 
@@ -248,7 +248,7 @@
 
 </section><!-- / BUT HOW? -->
 
-<section id="but-what" class="section--height-full-vh scrollme"><!-- BUT WHAT -->
+<section id="but-what" class="section--height-full-vh section--border-white scrollme"><!-- BUT WHAT -->
 
 <h2 class="section-heading heading--icon-code">But like, what do you DO?</h2>
 
@@ -269,7 +269,7 @@
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
-<section id="latest-split" class="block--position-relative section--background-purple scrollme">
+<section id="latest-split" class="block--position-relative section--border-white section--background-purple scrollme">
 <h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff</h2>
 
 <div class="row block--position-relative">
@@ -364,7 +364,7 @@
 				  // IF THERE'S TAGS, GO GET 'EM
 					$posttags = get_the_tags();
 					if ($posttags) { ?>
-					<div class="split-tags --top-border split-tags--white">
+					<div class="split-tags split-tags--top-border split-tags--white">
 					<?php
 					  //foreach($posttags as $tag) {
 					  //  echo $tag->name . ' '; 
@@ -499,25 +499,4 @@
 <div class="the-divider"></div>
 
 </section><!-- / LATEST STUFF -->
-
-<section id="contact-finger-wrap" class="section--height-full-vh section--border-white scrollme"><!-- GHOST HORSES SVG -->
-<!--<div id="finger-slider" class="animateme" data-when="enter"
-        data-from="1"
-        data-to="0.5"
-        data-opacity="1"
-        data-translatex="-900">-->
-<div id="finger-slider">
-	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
-<span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
-</div>
-
-<!--<div id="contact-slider" data-when="enter"
-        data-from="1"
-        data-to="0.5"
-        data-opacity="1"
-       data-translatex="900" class="animateme">-->
-<div id="contact-slider" class="animateme">
-	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
-</div>
-</section><!-- / GHOST HORSES SVG -->
 

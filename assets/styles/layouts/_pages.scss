@@ -132,9 +132,36 @@ body {
 
 }
 
+
+// WHITE BORDERS
+.section--border-white-all {
+    border: 10px solid $white;
+}
+
 .section--border-white {
-    border: 20px solid $white;
+    border: 10px solid $white;
     border-top: 0;
+}
+
+.section--border-sides-white-only {
+    border-left: 10px solid $white;
+    border-right: 10px solid $white;
+}
+
+// WHITE BORDERS - RESPONSIVE
+.section--border-white-all,
+.section--border-white,
+.section--border-sides-white-only {
+
+    // FROM BREAKPOINT
+    @media (min-width: $grid-float-breakpoint) {
+        border-width: 15px;
+    }
+
+    // FROM MEDIUM 
+    @media (min-width: $screen-md-min) {
+        border-width: 20px;
+    }
 }
 
 
@@ -189,7 +216,7 @@ img {
 #home-intro {
     @include transition(.25s ease-in-out background-color);
     // CSS declarations for `.block`
-    border: 20px solid $white;
+    
     position: relative;
     overflow: hidden;
     background: $brand-blue;
@@ -293,6 +320,7 @@ img {
         &::after {
             content: 'Am I available?';
             color: $gray;
+            left: -25px;
             font-size: 30px;
             text-align: center;
             line-height: 1;
@@ -470,75 +498,8 @@ img {
 
     }
 
-    // FROM LARGER
-    @media (min-width: 1500px) {
-        //top: 500px;
-        //right: 10%;
-        // width: 30%;
-        
-        // &::before,
-        // &::after {
-        //     content: '';
-        //     border: 1px solid rgba(255,255,255,.2);
-        //     width: 40px;
-        //     position: absolute;
-        // }
-        // &::before {
-        //     top: 0;
-        //     left: -15px;
-        //     bottom: 0;
-        // }
-        // &::after {
-        //     top: 0;
-        //     right: -15px;
-        //     bottom: 0;
-        // }
-        
-    }
-
-    // FROM LARGEST
-    @media (min-width: 1800px) {
-        //top: 500px;
-        //right: 10%;
-        // width: 27.5%;
-    }
 
 
-    // ===========================
-    // BEFORE - DIVIDERS
-    
-    // &::before {            
-    //     // FROM LARGE 
-    //     @media (min-width: $screen-lg-min) {
-    //         //content: '';
-    //         position: absolute;
-    //         z-index: 0;
-    //         top: 40%;
-    //         bottom: 40%;
-    //         left: 10%;
-    //         width: 50px;   
-    //         border-bottom: 2px solid $gray;
-    //         border-top: 2px solid $gray;
-    //     }
-    // }
-
-    // // ===========================
-    // // WHITE SCREEN
-    // &::after {
-    //     // FROM LARGE 
-    //     @media (min-width: $screen-lg-min) {
-    //         //@include filter(blur(3px));
-    //         overflow: hidden;
-    //         content: '';
-    //         //background: rgba(255,255,255,.1);
-    //         position: absolute;
-    //         top: 0;
-    //         right: 0;
-    //         left: 0;
-    //         bottom: 0;
-    //         z-index: -1;
-    //     }
-    // }
 
 
     // FROM iPhone 6
@@ -745,13 +706,7 @@ img {
 
     }
     
-
-
 }
-
-
-
-
 
 
 
@@ -802,9 +757,7 @@ img {
 
     }
 
-    img {
-        max-width: 280px;
-    }
+
 
     #horse-white-bg-span {
         //@extend .animated;
@@ -837,97 +790,94 @@ img {
 
 
 
+    // img {
+    //     max-width: 280px;
+    // }
 
+    // // FROM iPhone 6
+    // @media (min-width: 374px) {
 
-    // FROM iPhone 6
-    @media (min-width: 374px) {
+    //     img {
+    //         max-width: 335px;
+    //     }
 
-        img {
-            max-width: 335px;
-        }
+    // }
 
-    }
+    // // FROM iPhone 6+
+    // @media (min-width: 414px) {
 
-    // FROM iPhone 6+
-    @media (min-width: 414px) {
+    //     img {
+    //         max-width: 374px;
+    //     }
 
-        img {
-            max-width: 374px;
-        }
+    // }
 
-    }
+    // // FROM iPhone 6+ (bigger)
+    // @media (min-width: 500px) {
 
-    // FROM iPhone 6+ (bigger)
-    @media (min-width: 500px) {
+    //     img {
+    //         max-width: 450px;
+    //     }
 
-        img {
-            max-width: 450px;
-        }
+    // }
 
-    }
+    // // FROM iPhone 6+ (bigger still)
+    // @media (min-width: 600px) {
 
-    // FROM iPhone 6+ (bigger still)
-    @media (min-width: 600px) {
+    //     img {
+    //         max-width: 500px;
+    //     }
 
-        img {
-            max-width: 500px;
-        }
+    // }
 
-    }
+    // // FROM LARGE 
+    // @media (min-width: $screen-sm-min) {
 
-    // FROM LARGE 
-    @media (min-width: $screen-sm-min) {
+    //     img {
+    //        max-width: 580px;
+    //     }
 
-        img {
-           max-width: 580px;
-        }
+    // }
 
-    }
+    // // FROM LARGE 
+    // @media (min-width: $screen-md-min) {
 
-    // FROM LARGE 
-    @media (min-width: $screen-md-min) {
+    //     img {
+    //         max-width: 575px;
+    //     }
 
-        img {
-            max-width: 575px;
-        }
+    // }
 
-    }
+    // // FROM LARGE 
+    // @media (min-width: $screen-lg-min) {
 
-    // FROM LARGE 
-    @media (min-width: $screen-lg-min) {
+    //     img {
+    //         max-width: 700px;
+    //     }
 
-        img {
-            max-width: 700px;
-        }
+    // }
 
-    }
+    // // FROM LARGER 
+    // @media (min-width: 1500px) {
 
-    // FROM LARGER 
-    @media (min-width: 1500px) {
+    //     img {
+    //         max-width: 1000px;
+    //     }
 
-        img {
-            max-width: 1000px;
-        }
-
-    }
+    // }
 }
 
 
 
-#but-how {
+#but-how,
+#but-what {
     min-height: 800px;
-    background-color: $brand-orange;    
-    border: 20px solid $white;
-    border-top: 0;
+    background-color: $brand-orange;
     color: $white;
 }
 
 #but-what {
-    min-height: 800px;
-    background-color: $brand-red;    
-    border: 20px solid $white;
-    border-top: 0;
-    color: $white;
+    background-color: $brand-red;
 }
 
 .large-ul-blocks {
@@ -1011,7 +961,7 @@ img {
             stroke: $gray;
         }
 
-        .block__rectangle {
+        .block__diamond {
             stroke-dasharray: 140;
             stroke-dashoffset: -400;
             stroke-width: 10px;
@@ -1041,7 +991,7 @@ img {
             background-color: rgba(255,255,255,0.2);
         }
 
-        .block__rectangle {
+        .block__diamond {
            stroke-width: 10px;
           stroke-dashoffset: 0;
           stroke-dasharray: 200;
@@ -1111,14 +1061,8 @@ img {
 }
 
 
-
-#latest-split {
-    border: 20px solid $white;
-    border-top: 0;
-}
-
 .article--split {
-    margin-top: 240px;
+    margin-top: 201px;
     position: relative;
     z-index: 3;
     padding: 13% 0 5%;
@@ -1152,14 +1096,7 @@ img {
                 @include scale(1.2);
             }
 
-        }
-        // http://stackoverflow.com/questions/16340159/greyscale-background-css-images
-        
-        // -moz-filter: url(''data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale'');
-        //  -o-filter: url(''data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale'');
-        //  -webkit-filter: grayscale(100%);
-        //  filter: gray;
-        //  filter: url(''data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale'');
+        }    
          
     }
 
@@ -1180,7 +1117,6 @@ img {
         @include filter(blur(0) grayscale(1) opacity(1));
         @include transition(all 0.2s ease-in-out);
         @include scale(1);
-        //@include opacity(.5);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -1224,7 +1160,7 @@ img {
     a::after {
         @include scale(0);
         color: $white;
-        font-family: ''FontAwesome'';
+        font-family: 'FontAwesome';
         content: $fa-var-arrow-circle-o-right;
         font-size: 30px;
     }
@@ -1232,7 +1168,6 @@ img {
     a::before {
         @include animate-spin();
         @include square(50px);
-        //@include transform-origin(300% -300%);
         @include transform-origin(700% 700%);
         @include animation-duration(1.5s);
         @include square(7px);
@@ -1240,14 +1175,11 @@ img {
         border-radius: 100%;
         position: absolute;
         background-color: rgba(255,255,255,0);
-        //left: 30%;
-        //top: 70%;
     }
 
     // HOVER
     &:hover .featured-img--flat-thumb {
         @include scale(1.1);
-       //@include opacity(.25);
         @include filter(blur(3px) grayscale(0) opacity(0.2));
         // SHADOW PULSE
         &::before {
@@ -1271,101 +1203,6 @@ img {
     }
 }
 
-// // FEATURED IMAGE CIRCLE
-// .featured-img.--circle {
-//     @include transition(all 0.25s ease-in-out);
-//     @include square(100px);
-//     border-radius: 100%;
-//     overflow: hidden;
-//     position: relative;
-//     left: 6px;
-//     top: 9px;
-//     box-shadow: 0 0 0 5px $white;
-    
-//     img,
-//     a {
-//         @include transition(all 0.25s ease-in-out);
-//         @include square(100px);
-//         overflow: hidden;
-//         position: relative;
-//         border-radius: 100%;
-//     }
-
-//     a {
-//         display: block;
-//         z-index: 1;        
-//         background-color: $gray-dark;
-//     }
-
-//     // IMG
-//     img {
-//         z-index: 2;
-//     }
-
-
-//     a::after,
-//     a::before {
-//         @include transition(all 0.25s ease-in-out);
-//         @include square(100px);
-//         text-align: center;
-//         line-height: 100px;
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         z-index: 5;
-//         overflow: hidden;
-//         border-radius: 100%; 
-//     }
-
-//     a::after {
-//         @include scale(0);
-//         color: $white;
-//         font-family: ''FontAwesome'';
-//         content: $fa-var-arrow-circle-o-right;
-//         font-size: 30px;
-//     }
-
-//     a::before {
-//         @include animate-spin();
-//         @include transform-origin(300% -300%);
-//         @include animation-duration(1.5s);
-//         @include square(7px);
-//         content: '';
-//         border-radius: 100%;
-//         position: absolute;
-//         background-color: rgba(255,255,255,0);
-//         left: 30%;
-//         top: 70%;
-//     }
-
-//     // HOVER
-//     a:hover img {
-//           @include scale(1.2);
-//           @include opacity(.25);
-//     }
-
-//     a:hover::after {
-//         @include scale(1);
-//     }
-
-//     a:hover::before {
-
-//         background-color: rgba(255,255,255,1);
-//     }
-
-//     // RESPONSIVE
-//     // FROM MEDIUM 
-//     @media (min-width: $screen-md-min) {
-//         float: left;
-//         margin: 0 30px 25px 0;
-//         position: relative;
-//         min-height: 70px;
-//     }
-
-// }
 
 
 #ghost-horses-svg {
@@ -1373,7 +1210,6 @@ img {
     background-attachment: fixed;
     position: relative;
     padding: 10%;
-    border: 20px solid $white;
     border-top: 0;
     min-height: 600px;
     overflow: hidden;
@@ -1456,38 +1292,7 @@ img {
     width: 100%;
     height: 100%;
 
-    // QUARTER SQUARES
-    // &.--quarter-squares {
-
-    //     span {
-    //         position: absolute;
-    //         background: rgba(255,255,255,1);
-    //         width: 50%;
-    //         height: 50%;
-    //         top: 0;
-    //         left: 0;
-
-    //         &:nth-child(2) {
-    //             top: 0;
-    //             left: 50%;
-    //             background: rgba(255,255,255,0.75);
-    //         }
-
-    //         &:nth-child(3) {
-    //             top: 50%;
-    //             left: 0;
-    //             background: rgba(255,255,255,0.5);
-    //         }
-
-    //         &:nth-child(4) {
-    //             top: 50%;
-    //             left: 50%;
-    //             background: rgba(255,255,255,0.25);
-    //         }
-
-    //     }
-
-    // }
+ 
 
     // VERTICAL SQUARES
     &.animated-lines--quarter-vertical {

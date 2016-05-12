@@ -9,12 +9,12 @@
 }
 
 .preloader-horse {
-  @include square(60px);
+  @include square(40px);
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-left: -20px;
+  margin-top: -20px;
 
   svg {    
   @include flip-spin-y();
@@ -24,13 +24,13 @@
 
   &::before,
   &::after {
-    @include square(60px);
+    @include square(40px);
     @include rotate(45deg);
     @include animate-spin();
     @include animation-duration(1s);
     position: absolute;
-    margin-left: -30px;
-    margin-top: -30px;
+    margin-left: -20px;
+    margin-top: -20px;
     left: 50%;
     top: 50%;
     content: '';
@@ -39,14 +39,14 @@
 }
 
 .gh-folding-cube {
-  @include square(60px);
+  @include square(40px);
   @include rotateZ(45deg);
   @include animation-duration(1.25s);
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-left: -20px;
+  margin-top: -20px;
 
   .gh-cube {
     float: left;
@@ -63,7 +63,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $gray-dark;
+    background-color: rgba(255,255,255,.2);
     animation: gh-foldCubeAngle 2.4s infinite linear both;
     transform-origin: 100% 100%;
   }

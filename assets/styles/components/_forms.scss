@@ -1,3 +1,16 @@
+// // FROM BREAKPOINT
+// @media (min-width: $grid-float-breakpoint) {
+// }
+
+// // FROM MEDIUM 
+// @media (min-width: $screen-md-min) {
+// }
+
+// // FROM LARGE 
+// @media (min-width: $screen-lg-min) {
+// }
+
+
 // Search form
 .search-form {
   @extend .form-inline;
@@ -14,5 +27,149 @@
 	.search-submit {
 	  @extend .btn;
 	  @extend .btn-default;
+	}
+}
+
+.comment-form [type=email],
+.comment-form [type=text],
+.comment-form [type=url],
+.comment-form textarea,
+.form-control,
+.search-form .search-field {
+	@include transition(all 0.25s ease-in-out);
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555;
+	background-color: transparent;
+	background-image: none;
+	border: 0;
+	border-radius: 0;
+	box-shadow: 0;
+}
+
+
+// MAIN NAV SEARCH WRAP
+#search-wrap {
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+
+	// When collapsed is open
+	&.in .form-inline .form-control {
+		box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(255,255,255,.5);
+		
+
+		// FROM BREAKPOINT
+		@media (min-width: $grid-float-breakpoint) {
+			box-shadow: inset 0 0 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(255,255,255,.5);
+		}
+	}
+
+	.form-inline {
+
+		.form-group {
+			margin-bottom: 0;
+			display: block;
+		}
+
+		.form-control {
+			background-color: rgba(255,255,255,.05);
+			box-shadow: none;
+			display: block;
+			height: 60px;
+			line-height: 60px;
+			width: 100%;
+			font-size: 22px;
+			text-align: center;
+			color: $gray-light;
+			font-weight: 700;
+			text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+			letter-spacing: 1px;
+			text-transform: uppercase;
+
+			// scss-lint:disable all
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: $gray-light;
+			  font-weight: normal;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+			  color: $gray-light;
+			  font-weight: normal;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+			  color: $gray-light;
+			  font-weight: normal;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+			  color: $gray-light;
+			  font-weight: normal;
+			}
+			// scss-lint:enable all
+
+			.affix & {
+				color: $gray-light;
+				text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+
+				// scss-lint:disable all
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				  color: $gray-light;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+				  color: $gray-light;
+				}
+				&:-ms-input-placeholder { /* IE 10+ */
+				  color: $gray-light;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+				  color: $gray-light;
+				}
+				// scss-lint:enable all
+				}
+
+			&:focus {
+				background-color: rgba(255,255,255,.1);
+			}
+
+
+			// FROM BREAKPOINT
+			@media (min-width: $grid-float-breakpoint) {
+				color: $white;
+				text-shadow: 0 2px 0 rgba(0,0,0,0.1);
+
+				// scss-lint:disable all
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				  color: $white;
+				  font-weight: normal;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+				  color: $white;
+				  font-weight: normal;
+				}
+				&:-ms-input-placeholder { /* IE 10+ */
+				  color: $white;
+				  font-weight: normal;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+				  color: $white;
+				  font-weight: normal;
+				}
+				// scss-lint:enable all
+			}
+
+			// FROM MEDIUM 
+			@media (min-width: $screen-md-min) {
+			}
+
+			// FROM LARGE 
+			@media (min-width: $screen-lg-min) {
+			}
+
+		} // End .form-control
+
 	}
 }
