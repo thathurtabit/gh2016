@@ -1,10 +1,13 @@
-<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white scrollme"><!-- GHOST HORSES SVG -->
-<!--<div id="finger-slider" class="animateme" data-when="enter"
+<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white scrollme">
+	<h2 class="sub-heading  heading--icon-cog">Don't Be Shy<span></span></h2>
+
+	<!-- GHOST HORSES SVG -->
+<div id="finger-slider" class="animateme" data-when="enter"
         data-from="1"
         data-to="0.5"
         data-opacity="1"
-        data-translatex="-900">-->
-<div id="finger-slider">
+        data-translatex="-900">
+<!--<div id="finger-slider">-->
 	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
 <span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
 </div>
@@ -20,7 +23,7 @@
 </section><!-- / GHOST HORSES SVG -->
 
 <footer id="main-footer" class="content-info block--position-relative section--border-sides-white-only scrollme">
-	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff</h2>
+	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></h2>
   <div class="row">
 		<!--<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
 		<div class="col-md-6">

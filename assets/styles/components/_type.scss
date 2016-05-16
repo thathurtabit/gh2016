@@ -46,6 +46,8 @@ p {
     font-weight: 700;
     z-index: 5;
 
+
+
     // FROM MEDIUM 
     @media (min-width: $screen-md-min) {
         font-size: 30px;
@@ -90,6 +92,22 @@ p {
         @include tada();
         @include scale(1.5);
         @include backface-visibility(visible);
+    }
+
+    // ZIGZAG
+    .zigzag {
+        position: absolute;
+        width: 50px;
+        margin-left: -25px;
+        bottom: -20px;
+        left: 50%;
+
+        #zigzag #zigzag-2 {
+            fill: none;
+            stroke: $white;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+        }
     }
 
 }
@@ -211,38 +229,37 @@ article {
         h1 {        
             font-family: $font-family-serif;
             line-height: 1;
-            font-size: 35px;
-            position: relative;
+            font-size: 40px;
+            height: 88px;
             text-overflow: ellipsis;
+            overflow: hidden;
 
-            &::before {
-                content: '';
-                position: absolute;
-                width: 50px;
-                top: -20px;
-                border-top: 1px solid $brand-blue;
+            a {
+                display: block;
+                position: relative;
+
+                &::after {
+                    font-family: 'FontAwesome';
+                    content: '';
+                    position: absolute;
+                    bottom: -25px;
+                    left: 0;
+                    width: 50px;
+                    border-bottom: 2px dotted $white;
+                }
             }
+
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 50px;
+            //     top: -20px;
+            //     border-top: 1px solid $brand-blue;
+            // }
         }
     }
 
-    time {
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        position: relative;
 
-        &::after {
-            font-family: 'FontAwesome';
-            content: $fa-var-ellipsis-h;
-            font-size: 30px;
-            text-align: left;
-            position: absolute;
-            width: 50px;
-            bottom: -46px;
-            left: 0;
-        }
-
-    }
 
     .article__content {
         margin: 10px 0 20px;

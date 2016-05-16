@@ -91,10 +91,13 @@
   });
 
   // Smooth scroll to #target
-  $(".btn--scrollto").click(function(e){   
-  e.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top},
-    { duration:800, easing:'swing'});
+  $(".btn--scrollto").click(function(){  
+    // $('html,body').animate({scrollTop:$(this.hash).offset().top},
+    // { duration:800, easing:'swing'});
+
+    var targetOffset = $(this.hash).offset().top;
+    $('html,body').animate({scrollTop: targetOffset - 120}, 800);
+    return false;
   });
 
 

@@ -221,10 +221,10 @@
 
 <section id="but-how" class="section--height-full-vh section--border-white block--position-relative scrollme"><!-- BUT HOW? -->
 
-<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how?</h2>
+<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
-<!--<ul class="large-ul-blocks --diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
-<ul class="large-ul-blocks blocks--diamond">
+<ul class="large-ul-blocks blocks--diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
+<!--<ul class="large-ul-blocks blocks--diamond">-->
 	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
 	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
 	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
@@ -250,10 +250,10 @@
 
 <section id="but-what" class="section--height-full-vh section--border-white scrollme"><!-- BUT WHAT -->
 
-<h2 class="section-heading heading--icon-code">But like, what do you DO?</h2>
+<h2 class="section-heading heading--icon-code">But like, what do you DO? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
-<!--<ul class="large-ul-blocks --circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
-<ul class="large-ul-blocks blocks--circle">
+<ul class="large-ul-blocks blocks--circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
+<!--<ul class="large-ul-blocks blocks--circle">-->
 	<li><span>Digital Design / UI</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
 	<li><span>Logos</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
 	<li><span>HTML5 / CSS3</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
@@ -270,7 +270,7 @@
 
 <!-- LATEST STUFF -->
 <section id="latest-split" class="block--position-relative section--border-white section--background-purple scrollme">
-<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff</h2>
+<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
 <div class="row block--position-relative">
 	<div class="col-md-6">
@@ -292,25 +292,7 @@
 		<section class="split-bg-content section--background-purple">
 			<h2 class="sub-heading heading--icon-news">News<span></span></h2>
 
-			<!-- ASIDE FEATURED IMG -->
-	      	<aside class="featured-img featured-img--flat">
-	    		<?php
-	      		// check if the post has a Post Thumbnail assigned to it.
-				if ( has_post_thumbnail() ) {
-					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"></a>
-					<span class="featured-img--flat-thumb"
-					<?php
 
-	if (has_post_thumbnail( $post->ID ) ): ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
-	
-	<?php endif; ?>
-	
-				<?php } else { ?>
-					<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
-				<?php }	?>
-	      	</aside>
-	      	<!-- / ASIDE FEATURED IMG -->
 
 			 <?php
 		// NEWS Custom Loop Args
@@ -320,27 +302,64 @@
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 				<!-- NEWS ARTICLE -->
 			    <article class="article--split article--white section--background-purple">
-
 			    	
 			       <header class="row">
 			      	
-
 			      	<!-- SECTION TITLE & TIME -->
-		      		<section class="article__section-title-time">
+		      		<section class="article__section-title">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
 				        </a></h1>
 
-				        <time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+				        
+				    </section>
+				    <!-- / SECTION TITLE & TIME -->
+			       </header>
+
+			       <!-- ASIDE FEATURED IMG -->
+			      	<aside class="featured-img featured-img--flat">
+
+			      		
+
+			    		<?php
+			      		// check if the post has a Post Thumbnail assigned to it.
+						if ( has_post_thumbnail() ) {
+							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+
+							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+			      			<i class="fa fa-calendar-o"></i>
 				        <?php the_time('jS'); ?>
 				        <span>
 				        <?php the_time('M'); ?>
 				        </span>
 				        <?php the_time('Y'); ?>
 				        </span></time>
-				    </section>
-				    <!-- / SECTION TITLE & TIME -->
-			       </header>
+
+						</a>
+							<span class="featured-img--flat-thumb"
+							<?php
+
+			if (has_post_thumbnail( $post->ID ) ): ?>
+		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
+			
+			<?php endif; ?>
+			
+						<?php } else { ?>
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?>
+
+								<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+					      			<i class="fa fa-calendar-o"></i>
+						        <?php the_time('jS'); ?>
+						        <span>
+						        <?php the_time('M'); ?>
+						        </span>
+						        <?php the_time('Y'); ?>
+						        </span></time>
+
+							</a>
+						<?php }	?>
+			      	</aside>
+			      	<!-- / ASIDE FEATURED IMG -->
 
 			       <!-- CONTENT -->
 			       <section class="row">
@@ -399,25 +418,7 @@
 		<section class="split-bg-content --bg-right section--background-purple">
 			<h2 class="sub-heading  heading--icon-cog">Production Diary<span></span></h2>
 
-			<!-- ASIDE FEATURED IMG -->
-	      	<aside class="featured-img featured-img--flat">
-	    		<?php
-	      		// check if the post has a Post Thumbnail assigned to it.
-				if ( has_post_thumbnail() ) {
-					?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"></a>
-					<span class="featured-img--flat-thumb"
-					<?php
-
-	if (has_post_thumbnail( $post->ID ) ): ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
-	
-	<?php endif; ?>
-	
-				<?php } else { ?>
-					<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
-				<?php }	?>
-	      	</aside>
-	      	<!-- / ASIDE FEATURED IMG -->
+			
 			
 			<?php
 			// PRODUCTION DIARY Custom Loop Args
@@ -434,21 +435,62 @@
 			      	
 
 			      	<!-- SECTION TITLE & TIME -->
-		      		<section class="article__section-title-time">
+		      		<section class="article__section-title">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
 				        </a></h1>
+				    </section>
+				    <!-- / SECTION TITLE & TIME -->
+			       </header>
 
-				        <time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+
+					<!-- ASIDE FEATURED IMG -->
+			      	<aside class="featured-img featured-img--flat">
+			      		
+
+
+			    		<?php
+			      		// check if the post has a Post Thumbnail assigned to it.
+						if ( has_post_thumbnail() ) {
+							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+							
+							<!--TIME -->
+				      		<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+				      			<i class="fa fa-calendar-o"></i>
+					        <?php the_time('jS'); ?>
+					        <span>
+					        <?php the_time('M'); ?>
+					        </span>
+					        <?php the_time('Y'); ?>
+					        </span></time>
+					        <!-- / TIME -->
+					    	
+					    	</a>
+
+							<span class="featured-img--flat-thumb"
+							<?php
+
+			if (has_post_thumbnail( $post->ID ) ): ?>
+		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
+			
+			<?php endif; ?>
+			
+						<?php } else { ?>
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+								<!--TIME -->
+			      		<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+			      			<i class="fa fa-calendar-o"></i>
 				        <?php the_time('jS'); ?>
 				        <span>
 				        <?php the_time('M'); ?>
 				        </span>
 				        <?php the_time('Y'); ?>
 				        </span></time>
-				    </section>
-				    <!-- / SECTION TITLE & TIME -->
-			       </header>
+				        <!-- / TIME -->
+								<?php get_template_part('dist/images/inline', 'horse.svg');?></a>
+						<?php }	?>
+			      	</aside>
+			      	<!-- / ASIDE FEATURED IMG -->
 
 			     <!-- CONTENT -->
 			       <section class="row">
@@ -496,7 +538,7 @@
 		<a href="#contact-finger-wrap" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">More</a>
 	</div>
 
-<div class="the-divider"></div>
+
 
 </section><!-- / LATEST STUFF -->
 
