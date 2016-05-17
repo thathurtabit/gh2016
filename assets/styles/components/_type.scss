@@ -96,17 +96,31 @@ p {
 
     // ZIGZAG
     .zigzag {
+        @include transition(all .5s ease-in-out);
+        @include transition-delay(.2s);
         position: absolute;
-        width: 50px;
-        margin-left: -25px;
+        width: 0;
+        margin-left: 0;
         bottom: -20px;
         left: 50%;
+        overflow: hidden;
 
-        #zigzag #zigzag-2 {
+        #zigzag {            
+            width: 50px;
+        }
+
+        #zigzag-2 {
             fill: none;
             stroke: $white;
             stroke-miterlimit: 10;
             stroke-width: 2px;
+            width: 50px;
+        }
+
+        // WHEN SECTION IS VISIBLE - ANIMATE
+        .waypoint-active & {
+            width: 50px;
+            margin-left: -25px;
         }
     }
 
@@ -214,6 +228,10 @@ p {
 
     &.heading--icon-bars::after {
         content: $fa-var-bars;
+    }
+
+    &.heading--icon-meh::after {
+        content: $fa-var-meh-o;
     }
 
 }

@@ -63,10 +63,10 @@
 
       $('.waypoints').each(function() {
         $(this).waypoint(function() {
-          $('.waypoints').removeClass('waypoint-active');
+          //$('.waypoints').removeClass('waypoint-active');
           $(this.element).addClass('waypoint-active');
         },
-         { offset: '80%'});
+         { offset: '20%'});
       });
              
 

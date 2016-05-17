@@ -225,12 +225,12 @@
 
 <ul class="large-ul-blocks blocks--diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
 <!--<ul class="large-ul-blocks blocks--diamond">-->
-	<li><span>Creativity</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span>Smarts</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span>Love</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span>Perspiration</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span>Magic</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span>Good-Looks</span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span><b>Creativity</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span><b>Smarts</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span><b>Love</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span><b>Perspiration</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span><b>Magic</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span><b>Good-Looks</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
 </ul>
 
 	<div class="row block--spacing-center">
@@ -254,12 +254,12 @@
 
 <ul class="large-ul-blocks blocks--circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
 <!--<ul class="large-ul-blocks blocks--circle">-->
-	<li><span>Digital Design / UI</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>Logos</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>HTML5 / CSS3</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>SASS / LESS</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>Responsive</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span>WordPress</span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>	
+	<li><span><b>Digital Design / UI</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span><b>Logos</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span><b>HTML5 / CSS3</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span><b>SASS / LESS</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span><b>Responsive</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
+	<li><span><b>WordPress</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>	
 </ul>
 
 	<div class="row block--spacing-center">
@@ -270,7 +270,7 @@
 
 <!-- LATEST STUFF -->
 <section id="latest-split" class="block--position-relative section--border-white section--background-purple scrollme waypoints">
-<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
+<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
 <div class="row block--position-relative">
 	<div class="col-md-6">

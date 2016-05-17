@@ -1,5 +1,5 @@
 <section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white scrollme waypoints">
-	<h2 class="sub-heading  heading--icon-cog">Don't Be Shy<span></span></h2>
+	<h2 class="sub-heading  heading--icon-meh">Don't Be Shy<span></span></h2>
 
 	<!-- GHOST HORSES SVG -->
 <div id="finger-slider" class="animateme" data-when="enter"
