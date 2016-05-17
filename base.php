@@ -46,5 +46,6 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/footer');
       wp_footer();
     ?>
+   
   </body>
 </html>

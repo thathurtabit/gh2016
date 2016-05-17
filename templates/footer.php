@@ -1,4 +1,4 @@
-<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white scrollme">
+<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white scrollme waypoints">
 	<h2 class="sub-heading  heading--icon-cog">Don't Be Shy<span></span></h2>
 
 	<!-- GHOST HORSES SVG -->
@@ -22,7 +22,7 @@
 </div>
 </section><!-- / GHOST HORSES SVG -->
 
-<footer id="main-footer" class="content-info block--position-relative section--border-sides-white-only scrollme">
+<footer id="main-footer" class="content-info block--position-relative section--border-sides-white-only scrollme waypoints">
 	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></h2>
   <div class="row">
 		<!--<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->

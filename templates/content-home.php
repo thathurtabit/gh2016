@@ -1,4 +1,4 @@
-<section id="home-intro" class="section--height-full-vh section--border-white-all"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="section--height-full-vh section--border-white-all waypoints"><!-- HOME INTRO CAROUSEL -->
 
 <div id="home-intro-text-wrap">
 	<div id="home-intro-text">
@@ -219,7 +219,7 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="section--height-full-vh section--border-white block--position-relative scrollme"><!-- BUT HOW? -->
+<section id="but-how" class="section--height-full-vh section--border-white block--position-relative scrollme waypoints"><!-- BUT HOW? -->
 
 <h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
@@ -248,7 +248,7 @@
 
 </section><!-- / BUT HOW? -->
 
-<section id="but-what" class="section--height-full-vh section--border-white scrollme"><!-- BUT WHAT -->
+<section id="but-what" class="section--height-full-vh section--border-white scrollme waypoints"><!-- BUT WHAT -->
 
 <h2 class="section-heading heading--icon-code">But like, what do you DO? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
@@ -269,7 +269,7 @@
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
-<section id="latest-split" class="block--position-relative section--border-white section--background-purple scrollme">
+<section id="latest-split" class="block--position-relative section--border-white section--background-purple scrollme waypoints">
 <h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
 <div class="row block--position-relative">
