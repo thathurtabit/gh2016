@@ -243,41 +243,37 @@ article {
 
     header {
         overflow: hidden;
-
-        h1 {        
-            font-family: $font-family-serif;
-            line-height: 1;
-            font-size: 40px;
-            height: 88px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-
-            a {
-                display: block;
-                position: relative;
-
-                &::after {
-                    font-family: 'FontAwesome';
-                    content: '';
-                    position: absolute;
-                    bottom: -25px;
-                    left: 0;
-                    width: 50px;
-                    border-bottom: 2px dotted $white;
-                }
-            }
-
-            // &::before {
-            //     content: '';
-            //     position: absolute;
-            //     width: 50px;
-            //     top: -20px;
-            //     border-top: 1px solid $brand-blue;
-            // }
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
+    .article__section-title {
+        z-index: 10;
+        margin: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        h1 {
+            margin: 0;
+            font-family: $font-family-serif;
+            line-height: 1;
+            font-size: 35px;
+
+            a {
+                display: inline-block;
+                color: $gray-dark !important;
+                padding: 10px 20px;
+                background-color: rgba(255,255,255,.9);
+
+                &:hover {
+                    color: $brand-purple;
+                }
+            }
+        }
+    }
 
     .article__content {
         margin: 10px 0 20px;
@@ -299,11 +295,25 @@ article {
             color: $gray-dark;
         }
 
-        header h1::before {
-            border-top-color: $white;
-        }
-
     }
+
+}
+
+
+// TIME
+.side-date {
+    @include transition(all 0.25s ease-in-out);
+    @include opacity(1);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: absolute;
+    z-index: 20;
+    color: $white;
+    padding: 5px 10px;
+    top: 20px;
+    left: 20px;
+
 
 }
 

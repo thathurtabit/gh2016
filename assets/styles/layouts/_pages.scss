@@ -1118,8 +1118,12 @@ img {
     right: 0;
     overflow: hidden;
     background-color: $gray-dark;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    a,
+    a.thumb-click,
     .featured-img--flat-thumb {
         position: absolute;
         top: 0;
@@ -1140,52 +1144,19 @@ img {
          
     }
 
-    a {
+    a.thumb-click {
         @include gradient-vertical(rgba(255, 255, 255, 0),rgba(255, 255, 255, .05), 50%, 50%);
         box-shadow: inset 0 0 0 3px $white;
         background-position: 0 0;
         z-index: 2;
 
-        // TIME
-        time {
-            @include transition(all 0.25s ease-in-out);
-            @include scale(.85);
-            @include opacity(0);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            position: absolute;
-            z-index: 20;
-            color: $white;
-            padding: 5px 10px;
-            top: 20px;
-            left: 20px;
-
-            &::after {
-                @include transition(all 0.25s ease-in-out);
-                @include transition-delay(0.5s);
-                content: '';
-                position: absolute;
-                border-top: 1px solid rgba(255,255,255,.3);
-                left: 100%;
-                top: 50%;
-                width: 0%;
-            }
-        }
+        
 
         &:hover {
             background-position: 100% 0;
             box-shadow: inset 0 0 0 5px $white;
 
-            // TIME HOVER
-            time {
-                @include scale(1);
-                @include opacity(1);
-
-                &::after {
-                    width: 300%;
-                }
-            }
+            
         }
 
     }
@@ -1218,8 +1189,8 @@ img {
 
     }
 
-    a::after,
-    a::before {
+    a.thumb-click::after,
+    a.thumb-click::before {
         @include transition(all 0.25s ease-in-out);
         @include square(100px);
         @include opacity(1);
@@ -1236,7 +1207,7 @@ img {
         border-radius: 100%; 
     }
 
-    a::after {
+    a.thumb-click::after {
         @include scale(0);
         color: $white;
         font-family: 'FontAwesome';
@@ -1244,7 +1215,7 @@ img {
         font-size: 30px;
     }
 
-    a::before {
+    a.thumb-click::before {
         @include animate-spin();
         @include square(50px);
         @include transform-origin(700% 700%);
@@ -1266,21 +1237,23 @@ img {
         }
     }
 
-    a:hover img {
+    a.thumb-click:hover img {
           @include scale(1.2);
           @include opacity(.25);
     }
 
-    a:hover::after {
+    a.thumb-click:hover::after {
         @include scale(1);        
         @include flip-spin-x();
         @include animation-duration(.75s);
     }
 
-    a:hover::before {
+    a.thumb-click:hover::before {
         background-color: rgba(255,255,255,1);
     }
 }
+
+
 
 
 
@@ -1471,7 +1444,7 @@ img {
             margin: 0;
 
             a {
-                @extend .btn-white-bg-slide;
+                @extend .btn--bg-white-slide;
                 padding: 5px 10px;
                 padding-left: 12px;
                 text-transform: uppercase;

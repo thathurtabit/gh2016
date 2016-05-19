@@ -303,37 +303,30 @@
 				<!-- NEWS ARTICLE -->
 			    <article class="article--split article--white section--background-purple">
 			    	
-			       <header class="row">
+
 			      	
-			      	<!-- SECTION TITLE & TIME -->
+
+			       <!-- section FEATURED IMG -->
+			      	<section class="featured-img featured-img--flat">
+
+			      	<!-- SECTION TITLE -->
+			       <header class="row">			      	
 		      		<section class="article__section-title">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
-				        </a></h1>
-
-				        
-				    </section>
-				    <!-- / SECTION TITLE & TIME -->
+				        </a></h1>				        
+				    </section>				    
 			       </header>
-
-			       <!-- ASIDE FEATURED IMG -->
-			      	<aside class="featured-img featured-img--flat">
+			       <!-- / SECTION TITLE -->
 
 			      		
 
 			    		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
 						if ( has_post_thumbnail() ) {
-							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+							?> <a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 
-							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
-			      			<i class="fa fa-calendar-o"></i>
-				        <?php the_time('jS'); ?>
-				        <span>
-				        <?php the_time('M'); ?>
-				        </span>
-				        <?php the_time('Y'); ?>
-				        </span></time>
+
 
 						</a>
 							<span class="featured-img--flat-thumb"
@@ -345,9 +338,9 @@
 			<?php endif; ?>
 			
 						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?>
+							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?>
 
-								<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+								<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
 					      			<i class="fa fa-calendar-o"></i>
 						        <?php the_time('jS'); ?>
 						        <span>
@@ -358,11 +351,23 @@
 
 							</a>
 						<?php }	?>
-			      	</aside>
-			      	<!-- / ASIDE FEATURED IMG -->
+			      	</section>
+			      	<!-- / section FEATURED IMG -->
 
 			       <!-- CONTENT -->
 			       <section class="row">
+
+			       		<!-- DATE -->
+							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
+			      			<i class="fa fa-calendar-o"></i>
+				        <?php the_time('jS'); ?>
+				        <span>
+				        <?php the_time('M'); ?>
+				        </span>
+				        <?php the_time('Y'); ?>
+				        </span></time>
+				        <!-- / DATE -->
+
 				        <p class="article__content ">
 					      	<?php
 					      	// GET THE CONTENT
@@ -427,46 +432,34 @@
 			$prod_loop = new WP_Query( $prod_args );		  
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 				<!--PRODUCTION ARTICLE -->
-			    <article class="article--split article--white  section--background-purple">
+			     <article class="article--split article--white section--background-purple">
+			    	
 
-
-			     
-			      <header class="row">
 			      	
 
-			      	<!-- SECTION TITLE & TIME -->
+			       <!-- section FEATURED IMG -->
+			      	<section class="featured-img featured-img--flat">
+
+			      	<!-- SECTION TITLE -->
+			       <header class="row">			      	
 		      		<section class="article__section-title">
 				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				        <?php the_title(); ?>
-				        </a></h1>
-				    </section>
-				    <!-- / SECTION TITLE & TIME -->
+				        </a></h1>				        
+				    </section>				    
 			       </header>
+			       <!-- / SECTION TITLE -->
 
-
-					<!-- ASIDE FEATURED IMG -->
-			      	<aside class="featured-img featured-img--flat">
 			      		
-
 
 			    		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
 						if ( has_post_thumbnail() ) {
-							?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-							
-							<!--TIME -->
-				      		<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
-				      			<i class="fa fa-calendar-o"></i>
-					        <?php the_time('jS'); ?>
-					        <span>
-					        <?php the_time('M'); ?>
-					        </span>
-					        <?php the_time('Y'); ?>
-					        </span></time>
-					        <!-- / TIME -->
-					    	
-					    	</a>
+							?> <a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 
+
+
+						</a>
 							<span class="featured-img--flat-thumb"
 							<?php
 
@@ -476,9 +469,27 @@
 			<?php endif; ?>
 			
 						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-								<!--TIME -->
-			      		<time datetime="<?php echo the_time('Y-m-j'); ?>" class="date" pubdate><span class="padding">
+							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?>
+
+								<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
+					      			<i class="fa fa-calendar-o"></i>
+						        <?php the_time('jS'); ?>
+						        <span>
+						        <?php the_time('M'); ?>
+						        </span>
+						        <?php the_time('Y'); ?>
+						        </span></time>
+
+							</a>
+						<?php }	?>
+			      	</section>
+			      	<!-- / section FEATURED IMG -->
+
+			       <!-- CONTENT -->
+			       <section class="row">
+
+			       		<!-- DATE -->
+							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
 			      			<i class="fa fa-calendar-o"></i>
 				        <?php the_time('jS'); ?>
 				        <span>
@@ -486,14 +497,8 @@
 				        </span>
 				        <?php the_time('Y'); ?>
 				        </span></time>
-				        <!-- / TIME -->
-								<?php get_template_part('dist/images/inline', 'horse.svg');?></a>
-						<?php }	?>
-			      	</aside>
-			      	<!-- / ASIDE FEATURED IMG -->
+				        <!-- / DATE -->
 
-			     <!-- CONTENT -->
-			       <section class="row">
 				        <p class="article__content ">
 					      	<?php
 					      	// GET THE CONTENT
@@ -504,8 +509,8 @@
 						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn-size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
-				  <!-- / CONTENT -->
-			      
+				  <!-- / CONTENT -->	      
+
 			    </article>
     			<!--/ PRODUCTION ARTICLE -->
 
