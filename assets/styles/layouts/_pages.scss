@@ -957,9 +957,16 @@ img {
             }
         }
 
+        // Span loop for transition delay
+        @for $i from 1 to 7 {
+          &:nth-child(#{$i}) span {
+             @include transition-delay(0s + ($i / 8));
+          }
+        }
+
         span {
             @include transition(all 0.25s ease-in-out);    
-            background-color: rgba(255,255,255,0.1); 
+            background-color: rgba(255,255,255,0); 
             display: block;
             margin: 20px;
             height: 150px;
@@ -967,6 +974,12 @@ img {
             font-size: 33px;
             line-height: 1;
             padding-top: 59px;
+
+            
+
+            .waypoint-active & {
+                background-color: rgba(255,255,255,0.1); 
+            }
             
 
             // FROM BREAKPOINT
@@ -1120,12 +1133,11 @@ img {
         position: absolute;
         top: 0;
         display: block;
-        background-position: 50% 50%;
-        background-size: cover;
     }
 
     .thumb-click {
         z-index: 2;
+        background-color: lighten($black, 20%);
     }
 
     
@@ -1135,6 +1147,8 @@ img {
         @include scale(1);
         display: block;
         z-index: 1;
+        background-position: 50% 50%;
+        background-size: cover;
 
         &::before {
             @include square(30px);

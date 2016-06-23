@@ -288,8 +288,7 @@
 		>
 		</div>
 
-		<!--<section class="split-bg-content section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
-		<section class="split-bg-content section--background-purple">
+		<section class="split-bg-content section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
 			<h2 class="sub-heading heading--icon-news">News<span></span></h2>
 
 
@@ -339,18 +338,16 @@
 			      	<!-- / section FEATURED IMG -->
 
 			       <!-- CONTENT -->
-			       <section class="row">
+			       <section class="article__content-wrap">
 
-
-				       	<!-- SECTION TITLE -->
-				       <header class="row">			      	
-			      		<section class="article__section-title">
-					      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+				      	<!-- SECTION TITLE -->
+				       <header class="article__section-title">			      	
+			      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 					        <?php the_title(); ?>
-					        </a></h1>				        
-					    </section>				    
+					        </a></h1>				    
 				       </header>
 				       <!-- / SECTION TITLE -->
+			       
 
 			       		<!-- DATE -->
 							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
@@ -373,7 +370,7 @@
 						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
-				  <!-- / CONTENT -->	      
+				  <!-- / CONTENT -->	      	      
 
 			    </article>
     			<!--/ NEWS ARTICLE -->
@@ -414,8 +411,7 @@
 		>
 		</div>
 
-		<!--<section class="split-bg-content --bg-right section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
-		<section class="split-bg-content --bg-right section--background-purple">
+		<section class="split-bg-content --bg-right section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
 			<h2 class="sub-heading  heading--icon-cog">Production Diary<span></span></h2>
 
 			
@@ -465,19 +461,19 @@
 			      	<!-- / section FEATURED IMG -->
 
 
-			      	<!-- SECTION TITLE -->
-			       <header class="row">			      	
-		      		<section class="article__section-title">
-				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-				        <?php the_title(); ?>
-				        </a></h1>				        
-				    </section>				    
-			       </header>
-			       <!-- / SECTION TITLE -->
+			      	<!-- CONTENT -->
+			       <section class="article__content-wrap">
+
+				      	<!-- SECTION TITLE -->
+				       <header class="article__section-title">			      	
+			      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+					        <?php the_title(); ?>
+					        </a></h1>				    
+				       </header>
+				       <!-- / SECTION TITLE -->
 
 
-			       <!-- CONTENT -->
-			       <section class="row">
+			       
 
 			       		<!-- DATE -->
 							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
@@ -489,6 +485,8 @@
 				        <?php the_time('Y'); ?>
 				        </span></time>
 				        <!-- / DATE -->
+
+
 
 				        <p class="article__content ">
 					      	<?php

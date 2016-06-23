@@ -241,42 +241,39 @@ article {
     position: relative;
     min-height: 300px;
 
-    header {
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
     .article__section-title {
         z-index: 10;
-        margin: 0;
-        overflow: hidden;
-        display: flex;
-        max-width: 75%;
+        margin: 30px 0 10px;
 
         h1 {
             margin: 0;
             font-family: $font-family-serif;
             line-height: 1;
             font-size: 35px;
+            position: relative;
+
+            &::before {
+                content: '';
+                border-top: 2px solid $white;
+                width: 30px;
+                top: -20px;
+                position: absolute;
+            }
 
             a {
                 display: inline-block;
-                color: $gray-dark !important;
-                padding: 10px 20px 10px 50px;
-                background-color: rgba(255,255,255,1);
-
-                &:hover {
-                    color: $brand-purple;
-                }
+                padding: 10px 0;
             }
         }
     }
 
-    .article__content {
+    .article__content-wrap {
         margin: 10px 0 20px 50px;
-        font-size: 19px;
+    }
+
+    .article__content {
+        font-size: 18px;
+        margin-bottom: 20px;
 
     }
 
