@@ -7,18 +7,17 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6",
     "font-awesome": "fontawesome#^4.5.0",
     "slick-carousel": "^1.5.9",
     "vivus": "^0.3.0",
     "animatewithsass": "^3.2.2",
     "scrollme": "^1.1.0",
-    "waypoints": "^4.0.0"
+    "waypoints": "^4.0.0",
+    "bootstrap-sass": "^3.3.6"
   },
   "overrides": {
     "bootstrap-sass": {
       "main": [
-        "./assets/stylesheets/_bootstrap.scss",
         "./assets/javascripts/bootstrap/transition.js",
         "./assets/javascripts/bootstrap/alert.js",
         "./assets/javascripts/bootstrap/button.js",
@@ -30,19 +29,20 @@
         "./assets/javascripts/bootstrap/popover.js",
         "./assets/javascripts/bootstrap/scrollspy.js",
         "./assets/javascripts/bootstrap/tab.js",
-        "./assets/javascripts/bootstrap/affix.js",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+        "./assets/javascripts/bootstrap/affix.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
       ]
     },
     "waypoints": {
-       "main": [
-         "./lib/jquery.waypoints.js"
-       ]
-      }
+      "main": [
+        "./lib/jquery.waypoints.js"
+      ]
+    }
   },
   "devDependencies": {}
 }

@@ -309,45 +309,29 @@
 			       <!-- section FEATURED IMG -->
 			      	<section class="featured-img featured-img--flat">
 
-			      	<!-- SECTION TITLE -->
-			       <header class="row">			      	
-		      		<section class="article__section-title">
-				      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-				        <?php the_title(); ?>
-				        </a></h1>				        
-				    </section>				    
-			       </header>
-			       <!-- / SECTION TITLE -->
-
-			      		
-
+			      	
 			    		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
 						if ( has_post_thumbnail() ) {
 							?> <a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 
-
+							<!-- BG IMG -->
+							<span class="featured-img--flat-thumb"
+							<?php if (has_post_thumbnail( $post->ID ) ): ?>
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
 
 						</a>
-							<span class="featured-img--flat-thumb"
-							<?php
-
-			if (has_post_thumbnail( $post->ID ) ): ?>
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
+													
 			
-			<?php endif; ?>
+						<?php endif; ?>
 			
 						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?>
+							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 
-								<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
-					      			<i class="fa fa-calendar-o"></i>
-						        <?php the_time('jS'); ?>
-						        <span>
-						        <?php the_time('M'); ?>
-						        </span>
-						        <?php the_time('Y'); ?>
-						        </span></time>
+								<!-- BG IMG -->
+							<span class="featured-img--flat-thumb"
+								<?php get_template_part('dist/images/inline', 'horse.svg');?>
+								</span><!-- / END BG IMG -->
 
 							</a>
 						<?php }	?>
@@ -356,6 +340,17 @@
 
 			       <!-- CONTENT -->
 			       <section class="row">
+
+
+				       	<!-- SECTION TITLE -->
+				       <header class="row">			      	
+			      		<section class="article__section-title">
+					      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+					        <?php the_title(); ?>
+					        </a></h1>				        
+					    </section>				    
+				       </header>
+				       <!-- / SECTION TITLE -->
 
 			       		<!-- DATE -->
 							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
@@ -375,7 +370,7 @@
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn-size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      
@@ -437,8 +432,38 @@
 
 			      	
 
-			       <!-- section FEATURED IMG -->
+			      <!-- section FEATURED IMG -->
 			      	<section class="featured-img featured-img--flat">
+
+			      	
+			    		<?php
+			      		// check if the post has a Post Thumbnail assigned to it.
+						if ( has_post_thumbnail() ) {
+							?> <a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+
+							<!-- BG IMG -->
+							<span class="featured-img--flat-thumb"
+							<?php if (has_post_thumbnail( $post->ID ) ): ?>
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
+
+						</a>
+													
+			
+						<?php endif; ?>
+			
+						<?php } else { ?>
+							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+
+								<!-- BG IMG -->
+							<span class="featured-img--flat-thumb"
+								<?php get_template_part('dist/images/inline', 'horse.svg');?>
+								</span><!-- / END BG IMG -->
+
+							</a>
+						<?php }	?>
+			      	</section>
+			      	<!-- / section FEATURED IMG -->
+
 
 			      	<!-- SECTION TITLE -->
 			       <header class="row">			      	
@@ -450,40 +475,6 @@
 			       </header>
 			       <!-- / SECTION TITLE -->
 
-			      		
-
-			    		<?php
-			      		// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail() ) {
-							?> <a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-
-
-
-						</a>
-							<span class="featured-img--flat-thumb"
-							<?php
-
-			if (has_post_thumbnail( $post->ID ) ): ?>
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span>						
-			
-			<?php endif; ?>
-			
-						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>"><?php get_template_part('dist/images/inline', 'horse.svg');?>
-
-								<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
-					      			<i class="fa fa-calendar-o"></i>
-						        <?php the_time('jS'); ?>
-						        <span>
-						        <?php the_time('M'); ?>
-						        </span>
-						        <?php the_time('Y'); ?>
-						        </span></time>
-
-							</a>
-						<?php }	?>
-			      	</section>
-			      	<!-- / section FEATURED IMG -->
 
 			       <!-- CONTENT -->
 			       <section class="row">
@@ -506,7 +497,7 @@
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn-size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      

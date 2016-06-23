@@ -47,9 +47,32 @@ a:hover {
 		}
 
 	}
-
 }
 
+
+// BTN SIZE MEDIUM
+.btn--size-medium {
+	padding: 7px 13px;
+	padding-right: 45px;
+	font-size: 13px;
+
+	// HOVER
+	&:hover,
+	&:active,
+	&:focus {
+		padding-right: 50px;
+	}
+
+
+	&.btn--arrow-right {	
+
+		&::after {
+			top: 5px;
+		}
+	}
+}
+
+// BTN SIZE LARGE
 .btn--size-large {
 	@extend .btn-lg;
 	font-size: 18px;
@@ -84,9 +107,9 @@ a:hover {
 	&:focus {
 		padding-right: 70px;
 	}
-
 }
 
+// BTN SIZE X-LARGE
 .btn--size-x-large {
 	@extend .btn-lg;
     @include square(300px);
