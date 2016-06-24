@@ -219,7 +219,7 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="section--height-full-vh section--border-white block--position-relative scrollme waypoints"><!-- BUT HOW? -->
+<section id="but-how" class="section--border-white block--position-relative scrollme waypoints"><!-- BUT HOW? -->
 
 <h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
@@ -248,7 +248,7 @@
 
 </section><!-- / BUT HOW? -->
 
-<section id="but-what" class="section--height-full-vh section--border-white scrollme waypoints"><!-- BUT WHAT -->
+<section id="but-what" class="section--border-white scrollme waypoints"><!-- BUT WHAT -->
 
 <h2 class="section-heading heading--icon-code">But like, what do you DO? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
@@ -274,40 +274,33 @@
 
 <div class="row block--position-relative">
 	<div class="col-md-6">
-
-	<div class="block--fade-bg block--position-absolute"
-	<?php
+	
+		<?php
 		// NEWS Custom Loop Args
 		$news_args = array('post_type' => 'post','showposts' => '1' );
 		// my loop
 		$news_loop = new WP_Query( $news_args );		  
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
-		
-		<?php } } ?>
 
-		>
-		</div>
+		<section class="split-bg-content first">
+			<h2 class="sub-heading heading--icon-news">News<span></span>
 
-		<section class="split-bg-content section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
-			<h2 class="sub-heading heading--icon-news">News<span></span></h2>
+				<!-- DATE -->
+				<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
+      			<i class="fa fa-calendar-o"></i>
+		        <?php the_time('jS'); ?>		    
+		        <?php the_time('M'); ?>		        
+		        <?php the_time('Y'); ?>
+		        </time>
+		        <!-- / DATE -->
+			</h2>
 
-
-
-			 <?php
-		// NEWS Custom Loop Args
-		$news_args = array('post_type' => 'post','showposts' => '1' );
-		// my loop
-		$news_loop = new WP_Query( $news_args );		  
-		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 				<!-- NEWS ARTICLE -->
-			    <article class="article--split article--white section--background-purple">
-			    	
-
-			      	
+			    <article class="article--split article--white">
+		    	
 
 			       <!-- section FEATURED IMG -->
 			      	<section class="featured-img featured-img--flat">
-
 			      	
 			    		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
@@ -337,28 +330,19 @@
 			      	</section>
 			      	<!-- / section FEATURED IMG -->
 
+
+			      	<!-- SECTION TITLE -->
+			       <header class="article__section-title">			      	
+		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+				        <?php the_title(); ?>
+				        </a></h1>				    
+			       </header>
+			       <!-- / SECTION TITLE -->
+
+
 			       <!-- CONTENT -->
 			       <section class="article__content-wrap">
-
-				      	<!-- SECTION TITLE -->
-				       <header class="article__section-title">			      	
-			      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-					        <?php the_title(); ?>
-					        </a></h1>				    
-				       </header>
-				       <!-- / SECTION TITLE -->
-			       
-
-			       		<!-- DATE -->
-							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
-			      			<i class="fa fa-calendar-o"></i>
-				        <?php the_time('jS'); ?>
-				        <span>
-				        <?php the_time('M'); ?>
-				        </span>
-				        <?php the_time('Y'); ?>
-				        </span></time>
-				        <!-- / DATE -->
+				      	
 
 				        <p class="article__content ">
 					      	<?php
@@ -391,42 +375,35 @@
 					?>
 				<!-- / POST TAGS -->
 
-			<?php } } ?>
+			
 		</section>
+		<?php } } ?>
 	</div>
 
 	<div class="col-md-6">
-
-	<div class="block--position-absolute block--fade-bg" 
-
-	<?php
-			// PRODUCTION DIARY Custom Loop Args
-			$prod_args = array('post_type' => 'production-diary','showposts' => '1' );
-			// my loop
-			$prod_loop = new WP_Query( $prod_args );		  
-			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
+		
 		<?php
-		 } } ?>
-
-		>
-		</div>
-
-		<section class="split-bg-content --bg-right section--background-purple animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
-			<h2 class="sub-heading  heading--icon-cog">Production Diary<span></span></h2>
-
-			
-			
-			<?php
 			// PRODUCTION DIARY Custom Loop Args
 			$prod_args = array('post_type' => 'production-diary','showposts' => '1' );
 			// my loop
 			$prod_loop = new WP_Query( $prod_args );		  
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
-				<!--PRODUCTION ARTICLE -->
-			     <article class="article--split article--white section--background-purple">
-			    	
 
-			      	
+		<section class="split-bg-content">
+			<h2 class="sub-heading  heading--icon-cog">Production Diary<span></span>
+				<!-- DATE -->
+				<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
+	      		<i class="fa fa-calendar-o"></i>
+		        <?php the_time('jS'); ?>				        
+		        <?php the_time('M'); ?>				        
+		        <?php the_time('Y'); ?>
+		        </time>
+		        <!-- / DATE -->
+			</h2>
+
+				<!--PRODUCTION ARTICLE -->
+			     <article class="article--split article--white">
+			    	
 
 			      <!-- section FEATURED IMG -->
 			      	<section class="featured-img featured-img--flat">
@@ -461,32 +438,18 @@
 			      	<!-- / section FEATURED IMG -->
 
 
+			      	<!-- SECTION TITLE -->
+			       <header class="article__section-title">			      	
+		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+				        <?php the_title(); ?>
+				        </a></h1>				    
+			       </header>
+			       <!-- / SECTION TITLE -->
+
+
 			      	<!-- CONTENT -->
 			       <section class="article__content-wrap">
-
-				      	<!-- SECTION TITLE -->
-				       <header class="article__section-title">			      	
-			      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-					        <?php the_title(); ?>
-					        </a></h1>				    
-				       </header>
-				       <!-- / SECTION TITLE -->
-
-
-			       
-
-			       		<!-- DATE -->
-							<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate><span class="padding">
-			      			<i class="fa fa-calendar-o"></i>
-				        <?php the_time('jS'); ?>
-				        <span>
-				        <?php the_time('M'); ?>
-				        </span>
-				        <?php the_time('Y'); ?>
-				        </span></time>
-				        <!-- / DATE -->
-
-
+				      	
 
 				        <p class="article__content ">
 					      	<?php
@@ -519,16 +482,16 @@
 					?>
 				<!-- / POST TAGS -->
 
-			<?php } } ?>
-			
 			
 			</section>
+
+			<?php } } ?>
 	
 	</div>
 
 </div>
 
-	<div class="row block--spacing-center block--position-bottom block--position-absolute">
+	<div class="row block--spacing-center block--position-bottom">
 		<a href="#contact-finger-wrap" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">More</a>
 	</div>
 

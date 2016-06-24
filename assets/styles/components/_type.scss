@@ -170,15 +170,11 @@ p {
     &:hover span {
        @include rotateY(180deg);
     }
-
 }
 
 // SUB HEADING UNDER SPLIT SECTION
 .split-bg-content .sub-heading {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     margin: 0;
     padding-top: 50px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -187,6 +183,19 @@ p {
     &::before,
     &::after {
         top: -25px;
+    }
+
+    // FROM BREAKPOINT
+    @media (min-width: $grid-float-breakpoint) {
+        
+    }
+
+    // FROM MEDIUM 
+    @media (min-width: $screen-md-min) {
+    }
+
+    // FROM LARGE 
+    @media (min-width: $screen-lg-min) {
     }
 
 }
@@ -243,7 +252,7 @@ article {
 
     .article__section-title {
         z-index: 10;
-        margin: 30px 0 10px;
+        margin: 20px 10% 0;
 
         h1 {
             margin: 0;
@@ -251,14 +260,15 @@ article {
             line-height: 1;
             font-size: 35px;
             position: relative;
+            text-align: center;
 
-            &::before {
-                content: '';
-                border-top: 2px solid $white;
-                width: 30px;
-                top: -20px;
-                position: absolute;
+            // FROM BREAKPOINT
+            // FROM MEDIUM 
+            @media (min-width: $screen-md-min) {
+                margin: 20px 0 0;
+                text-align: left;
             }
+
 
             a {
                 display: inline-block;
@@ -268,7 +278,20 @@ article {
     }
 
     .article__content-wrap {
-        margin: 10px 0 20px 50px;
+        margin: 20px;
+
+       // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+        }
+
+        // FROM MEDIUM 
+        @media (min-width: $screen-md-min) {
+            margin: 10px 10% 20px;
+        }
+
+        // FROM LARGE 
+        @media (min-width: $screen-lg-min) {
+        }
     }
 
     .article__content {
@@ -305,10 +328,11 @@ article {
     text-transform: uppercase;
     letter-spacing: 3px;
     position: absolute;
+    font-weight: normal;
     z-index: 20;
     color: $white;
     padding: 5px 10px;
-    top: -37px;
+    bottom: 12px;
     left: 50%;
     margin-left: -80px;
     width: 160px;

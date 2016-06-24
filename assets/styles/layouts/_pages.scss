@@ -1292,16 +1292,29 @@ img {
 
 .split-bg-content {
     position: relative;
-    padding: 19% 8% 10%;
-    margin: 20px;
-    margin-top: 20%;
+    padding: 19% 3% 90px;
+    margin: 30px 20px 20px;
+
+    &.first {
+        margin-top: 140px;
+        border-bottom: 1px solid $white;
+    }
 
     // RESPONSIVE
     // FROM SMALL
     @media (min-width: $screen-sm-min) {
-        margin: 12.5%;
+        padding: 19% 4% 10%;
     }
-
+    // FROM MEDIUM
+    @media (min-width: $screen-md-min) {
+        padding: 15% 8% 10%;
+        margin-top: 0;
+        
+        &.first {
+            margin-top: 0;
+            border-bottom: none;
+        }
+    }
 }
 
 .animated-lines {
