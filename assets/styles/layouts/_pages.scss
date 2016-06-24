@@ -24,6 +24,7 @@ body {
 
 .section--height-full-vh {
     min-height: 600px;
+    padding-bottom: 80px;
 
      // FROM BREAKPOINT
     @media (min-width: $grid-float-breakpoint) {
@@ -36,6 +37,7 @@ body {
     // FROM LARGE 
     @media (min-width: $screen-lg-min) {
         height: 100vh;
+        min-height: 800px;
     }
 }
 
@@ -884,6 +886,9 @@ img {
     list-style-type: none;
     padding: 0;
     margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 
     svg {
         transition: opacity 0.25s ease-in-out;
@@ -896,9 +901,14 @@ img {
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -25px;
+        margin-top: -15px;
         margin-left: -25px;
         z-index: -1;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            margin-top: -25px;
+        }
     }
 
     // CIRCLE
@@ -906,9 +916,14 @@ img {
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -37px;
+        margin-top: -27px;
         margin-left: -37px;
         z-index: -1;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            margin-top: -37px;
+        }
     }
 
     // SQUARE
@@ -916,9 +931,14 @@ img {
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -37px;
+        margin-top: -27px;
         margin-left: -37px;
         z-index: -1;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            margin-top: -37px;
+        }
     }
 
     li {
@@ -927,6 +947,23 @@ img {
         position: relative;
         text-align: center;
         font-family: $font-family-serif;
+        flex: 1 100%;
+        align-items: center;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            flex: 1 50%;
+        }
+
+        // FROM MEDIUM 
+        @media (min-width: $screen-md-min) {
+            flex: 1 33.33%;
+        }
+
+        // FROM LARGE 
+        @media (min-width: $screen-lg-min) {
+        }
+
 
 
         // On hover, make the SVGs appear
@@ -967,15 +1004,13 @@ img {
         span {
             @include transition(all 0.25s ease-in-out);    
             background-color: rgba(255,255,255,0); 
-            display: block;
-            margin: 20px;
-            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0 0;
+            height: 100px;
             overflow: hidden;
             font-size: 33px;
-            line-height: 1;
-            padding-top: 59px;
-
-            
 
             .waypoint-active & {
                 background-color: rgba(255,255,255,0.1); 
@@ -984,17 +1019,18 @@ img {
 
             // FROM BREAKPOINT
             @media (min-width: $grid-float-breakpoint) {
+                margin: 20px;
+                height: 150px;
             }
-
             // FROM MEDIUM 
             @media (min-width: $screen-md-min) {
                 font-size: 50px;
-                line-height: 1;
-                padding-top: 94px;
+                height: 200px;
             }
 
             // FROM LARGE 
             @media (min-width: $screen-lg-min) {
+                height: 240px;
             }
         }
 
@@ -1037,7 +1073,6 @@ img {
         @include scale(1.05);
 
         span {
-            margin: 20px;
             background-color: rgba(255,255,255,0.2);
         }
 
@@ -1061,54 +1096,6 @@ img {
     }
 }
 
-// FROM BREAKPOINT
-@media (min-width: $grid-float-breakpoint) {
-}
-
-// FROM LARGE 
-@media (min-width: $screen-sm-min) {
-
-    .large-ul-blocks {
-        margin: 40px;
-
-        li {
-            float: left;
-            width: 50%;
-            font-size: 30px;
-
-            span {
-                height: 250px;
-                line-height: 1;
-                padding-top: 94px;
-            }
-
-        }
-
-    }
-
-}
-
-// FROM LARGE 
-@media (min-width: $screen-md-min) {
-
-    .large-ul-blocks {
-
-        li {
-            float: left;
-            width: 33.33%;
-            font-size: 30px;
-
-            span {
-                height: 250px;
-                line-height: 1;
-                padding-top: 94px;
-            }
-
-        }
-
-    }
-
-}
 
 
 .article--split {

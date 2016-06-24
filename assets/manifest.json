@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "/gh2016"
+    "devUrl": "localhost:3000/gh2016"
   }
 }
