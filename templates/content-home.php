@@ -233,7 +233,7 @@
 	<li><span><b>Good-Looks</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
 </ul>
 
-	<div class="row block--spacing-center">
+	<div class="row block--spacing-center block--position-bottom">
 		<a href="#but-what" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 
@@ -262,7 +262,7 @@
 	<li><span><b>WordPress</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>	
 </ul>
 
-	<div class="row block--spacing-center">
+	<div class="row block--spacing-center block--position-bottom">
 		<a href="#latest-split" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 
