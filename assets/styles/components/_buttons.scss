@@ -297,7 +297,13 @@ a:hover {
 
     &:hover {
         background-position: 0 100%;
-    }    
+    }
+
+    // And white
+    &.white,
+    &.white:hover {
+    	color: $white;
+    }
 }
 
 

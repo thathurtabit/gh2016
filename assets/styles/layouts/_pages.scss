@@ -706,7 +706,7 @@ img {
 
 
 
-// DEFAULT
+// PEOPLE ILLUSTRATIONS
 #float-illustrations-1 {
     width: 88%;
     top: 0;
@@ -784,85 +784,54 @@ img {
         width: 55%;
     }
 
-
-
-    // img {
-    //     max-width: 280px;
-    // }
-
-    // // FROM iPhone 6
-    // @media (min-width: 374px) {
-
-    //     img {
-    //         max-width: 335px;
-    //     }
-
-    // }
-
-    // // FROM iPhone 6+
-    // @media (min-width: 414px) {
-
-    //     img {
-    //         max-width: 374px;
-    //     }
-
-    // }
-
-    // // FROM iPhone 6+ (bigger)
-    // @media (min-width: 500px) {
-
-    //     img {
-    //         max-width: 450px;
-    //     }
-
-    // }
-
-    // // FROM iPhone 6+ (bigger still)
-    // @media (min-width: 600px) {
-
-    //     img {
-    //         max-width: 500px;
-    //     }
-
-    // }
-
-    // // FROM LARGE 
-    // @media (min-width: $screen-sm-min) {
-
-    //     img {
-    //        max-width: 580px;
-    //     }
-
-    // }
-
-    // // FROM LARGE 
-    // @media (min-width: $screen-md-min) {
-
-    //     img {
-    //         max-width: 575px;
-    //     }
-
-    // }
-
-    // // FROM LARGE 
-    // @media (min-width: $screen-lg-min) {
-
-    //     img {
-    //         max-width: 700px;
-    //     }
-
-    // }
-
-    // // FROM LARGER 
-    // @media (min-width: 1500px) {
-
-    //     img {
-    //         max-width: 1000px;
-    //     }
-
-    // }
 }
 
+
+#float-illustrations-2 {
+    display: none;
+
+    // FROM MEDIUM 
+    @media (min-width: $screen-md-min) {
+        display: block;
+        width: 30%;
+        top: 0;
+        bottom: 20px;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+        margin-left: 0;
+        margin-bottom: 0;
+        color: $white;
+
+        .item {
+            height: 100vh;
+            font-size: 80px;
+            overflow: hidden;
+
+            span {
+                @include transition(right 0.75s cubic-bezier(.87,-.41,.19,1.44));
+                @include transition-delay(0.25s);
+                position: absolute;
+                right: -500px;
+                bottom: 20px;
+                display: block;
+                width: 100%;
+
+            }
+
+            &.slick-active span {
+                right: -10%;
+                
+                .pageloaded & {
+                    right: 0;
+                    bottom: 20px;
+                }
+
+            }
+
+        }
+    }
+}
 
 
 #but-how,
@@ -1095,22 +1064,26 @@ img {
 .article--split {
     position: relative;
     z-index: 3;
+    max-width: 600px;
+    margin: 40px auto;
+    margin-right: auto;
 }
 
 .featured-img.featured-img--flat {
     @include transition(all 0.25s ease-in-out);
-    @include square(250px);
+    @include square(200px);
     position: relative;
     left: 50%;
-    margin: 20px 0 20px -125px;
+    margin: 20px 0 40px -100px;
     overflow: hidden;
+    box-shadow: inset 0 0 3px $white;
     clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 
 
     .thumb-click,
     .featured-img--flat-thumb {
         @include transition(all 0.25s ease-in-out);
-        @include square(250px);
+        @include square(200px);
         position: absolute;
         top: 0;
         display: block;
@@ -1286,7 +1259,7 @@ img {
 
 .split-bg-content {
     position: relative;
-    padding: 19% 3% 90px;
+    padding: 50px 3% 90px;
     margin: 30px 20px 20px;
 
     &.first {
@@ -1297,16 +1270,16 @@ img {
     // RESPONSIVE
     // FROM SMALL
     @media (min-width: $screen-sm-min) {
-        padding: 19% 4% 10%;
+       
     }
     // FROM MEDIUM
     @media (min-width: $screen-md-min) {
-        padding: 15% 10% 10%;
+        padding: 170px 3% 20px;
         margin-top: 0;
         
         &.first {
             margin-top: 0;
-            border-bottom: none;
+            border-bottom: 0;
         }
     }
 }
@@ -1439,5 +1412,60 @@ img {
 
     &.split-tags--top-border {
         border-top: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+
+// ANIMATIONS FOR LATEST SPLIT
+#latest-split {
+
+    // Default
+    .sub-heading,
+    .featured-img.featured-img--flat,
+    .article__section-title,
+    .article__content,
+    .article__btn-wrap,
+    .split-tags {
+        transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+        opacity: 0;
+        transform: translate(0, 30px);
+    }
+
+    // When scroll hits
+    &.waypoint-active {
+        .sub-heading,
+        .featured-img.featured-img--flat,
+        .article__section-title,
+        .article__content,
+        .article__btn-wrap,
+        .split-tags {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        // Delays
+        .sub-heading {
+            transition-delay: 0.1s;
+        }
+
+        .featured-img.featured-img--flat {
+            transition-delay: 0.3s;
+        }
+
+        .article__section-title {
+            transition-delay: 0.5s;
+        }
+
+        .article__content {
+            transition-delay: 0.7s;
+        }
+
+        .article__btn-wrap {
+            transition-delay: 0.9s;
+        }
+
+        .split-tags {
+            transition-delay: 1.1s;
+        }
     }
 }

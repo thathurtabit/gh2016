@@ -97,9 +97,7 @@
 		<!-- SPEECH BUBBLE -->
 	</span>
 
-		<span>
-			<img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-comp.png" alt="Website Design" />
-	</span>
+		
 
 </div>
 	<div class="item">
@@ -183,16 +181,40 @@
 	</div>
 </section>
  
-<!--
+
 <section id="float-illustrations-2">
-	<div class="item"><span>Websites<span></div>
-	<div class="item"><span>Hummus<span></div>
-	<div class="item"><span>Life Descisions<span></div>
-	<div class="item"><span>Birthday Cards<span></div>
-	<div class="item"><span>Shoes<span></div>
-	<div class="item"><span>Stir Fry<span></div>
+	<div class="item">
+		<span>
+			<img src="<?php bloginfo('template_url'); ?>/dist/images/person-gh-comp.png" alt="Website Design" />
+		</span>
+	</div>
+	<div class="item">
+		<span>
+			<img src="<?php bloginfo('template_url'); ?>/dist/images/hummus.png" alt="Hummus" />
+		</span>
+	</div>
+	<div class="item">
+		<span>
+			<img src="<?php bloginfo('template_url'); ?>/dist/images/boat.png" alt="Life Decisions" />
+		</span>
+	</div>
+	<div class="item">
+		<span>
+			<img src="<?php bloginfo('template_url'); ?>/dist/images/birthday-card.png" alt="Birthday Card" />
+		</span>
+	</div>
+	<div class="item">
+		<span>
+			<img src="<?php bloginfo('template_url'); ?>/dist/images/shoes.png" alt="Shoes" />
+		</span>
+	</div>
+	<div class="item">
+		<span>
+			<img src="<?php bloginfo('template_url'); ?>/dist/images/stir-fry.png" alt="Stir Fry" />
+		</span>
+	</div>
 </section>
--->
+
 
 <div id="bg-carousel">
 	<div class="item"></div>
@@ -283,7 +305,7 @@
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 
 		<section class="split-bg-content first">
-			<h2 class="sub-heading heading--icon-news">News<span></span>
+			<h2 class="sub-heading heading--icon-news"><a href="<?php bloginfo('url'); ?>/news" class="btn--bg-white-slide white">News<span></span></a>
 
 				<!-- DATE -->
 				<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
@@ -333,7 +355,7 @@
 
 			      	<!-- SECTION TITLE -->
 			       <header class="article__section-title">			      	
-		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>" class="btn--bg-white-slide">
 				        <?php the_title(); ?>
 				        </a></h1>				    
 			       </header>
@@ -344,14 +366,14 @@
 			       <section class="article__content-wrap">
 				      	
 
-				        <p class="article__content ">
+				        <p class="article__content blockquote">
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
-							echo wp_trim_words( $content , '38' ); ?>
+							echo wp_trim_words( $content , '48' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      	      
@@ -390,7 +412,7 @@
 			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
 
 		<section class="split-bg-content">
-			<h2 class="sub-heading  heading--icon-cog">Production Diary<span></span>
+			<h2 class="sub-heading  heading--icon-cog"><a href="<?php bloginfo('url'); ?>/production-diary" class="btn--bg-white-slide white">Production Diary<span></span></a>
 				<!-- DATE -->
 				<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
 	      		<i class="fa fa-calendar-o"></i>
@@ -440,7 +462,7 @@
 
 			      	<!-- SECTION TITLE -->
 			       <header class="article__section-title">			      	
-		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>" class="btn--bg-white-slide">
 				        <?php the_title(); ?>
 				        </a></h1>				    
 			       </header>
@@ -451,14 +473,14 @@
 			       <section class="article__content-wrap">
 				      	
 
-				        <p class="article__content ">
+				        <p class="article__content blockquote">
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      

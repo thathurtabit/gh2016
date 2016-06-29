@@ -255,24 +255,24 @@ article {
         margin: 20px 10% 0;
 
         h1 {
-            margin: 0;
+            margin: 20px 0 10px;
             font-family: $font-family-serif;
             line-height: 1;
             font-size: 35px;
             position: relative;
-            text-align: center;
+            display: block;
 
             // FROM BREAKPOINT
             // FROM MEDIUM 
             @media (min-width: $screen-md-min) {
                 margin: 20px 0 0;
-                text-align: left;
             }
 
 
             a {
-                display: inline-block;
-                padding: 10px 0;
+                display: inline;
+                padding: 0;
+                line-height: 1;
             }
         }
     }
@@ -297,8 +297,10 @@ article {
     .article__content {
         font-size: 18px;
         margin-bottom: 20px;
-
+        margin-top: 20px;
     }
+
+
 
     // MAKE THE TEXT WHITE
     &.article--white {
@@ -311,12 +313,24 @@ article {
             color: $white;
         }
 
-        a:hover {
-            color: $gray-dark;
-        }
-
     }
 
+}
+
+
+// BLOCKQUOTE
+blockquote,
+.blockquote {
+    position: relative;
+
+    &::before {
+        content: '\201C';
+        font-family: $font-family-serif;
+        position: absolute;
+        left: -30px;
+        top: -10px;
+        font-size: 40px;
+    }
 }
 
 

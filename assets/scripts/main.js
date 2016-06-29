@@ -113,8 +113,14 @@
           touchMove: false,
           swipe: false
         });
+        $('#float-illustrations-2').slick({
+          arrows: false,
+          fade: true,
+          touchMove: false,
+          swipe: false
+        });
 
-                // GOOGLEY EYES
+          // GOOGLEY EYES
           // If you use this code, please link to this pen (cdpn.io/rkcjt). Thanks :)
 
         function doGooglyEyes() {
