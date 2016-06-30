@@ -138,6 +138,7 @@
             margin: 20px 0 0;
             height: 100px;
             overflow: hidden;
+            line-height: 1;
             font-size: 27px;
 
             .waypoint-active & {
@@ -149,17 +150,19 @@
             @media (min-width: $grid-float-breakpoint) {
                 margin: 20px;
                 height: 150px;
-                font-size: 33px;
+                font-size: 30px;
             }
             // FROM MEDIUM 
             @media (min-width: $screen-md-min) {
-                font-size: 50px;
+                font-size: 40px;
                 height: 200px;
+                font-size: 33px;
             }
 
             // FROM LARGE 
             @media (min-width: $screen-lg-min) {
                 height: 240px;
+                font-size: 50px;
             }
         }
 

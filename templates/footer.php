@@ -1,22 +1,12 @@
-<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white scrollme waypoints">
+<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white waypoints">
 	<h2 class="sub-heading  heading--icon-meh">Don't Be Shy<span></span></h2>
 
 	<!-- GHOST HORSES SVG -->
-<div id="finger-slider" class="animateme" data-when="enter"
-        data-from="1"
-        data-to="0.5"
-        data-opacity="1"
-        data-translatex="-900">
-<!--<div id="finger-slider">-->
+<div id="finger-slider">
 	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
 <span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
 </div>
 
-<!--<div id="contact-slider" data-when="enter"
-        data-from="1"
-        data-to="0.5"
-        data-opacity="1"
-       data-translatex="900" class="animateme">-->
 <div id="contact-slider" class="animateme">
 	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
 </div>
@@ -24,9 +14,9 @@
 
 <footer id="main-footer" class="content-info block--position-relative section--border-sides-white-only scrollme waypoints">
 	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></h2>
-  <div class="row">
-		<!--<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">-->
-		<div class="col-md-6">
+  <div class="row footer-split-links">
+		
+		<div class="col-md-6 first">
 			<h2 class="sub-heading heading--icon-bars">Links<span></span></h2>
 			<!-- FOOTER COL -->
 			<section class="footer-col">
@@ -39,7 +29,7 @@
 			<!-- / FOOTER COL -->
 		</div>
 		
-		<!--<div class="col-md-6 animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">-->
+		
 		<div class="col-md-6">
 			<h2 class="sub-heading heading--icon-globe">Social<span></span></h2>
 			<!-- FOOTER COL -->
@@ -64,7 +54,7 @@
 		<div class="col-md-6">
 			<small>This website is best viewed whilst looking directly at it.</small>
 		</div>
-		<div class="col-md-6 pull-right">
+		<div class="col-md-6">
 			<small>&copy; Ghost Horses Ltd 2005 - <?php echo date("Y") ?> | Reg No: 08556760</small>
 		</div>
 

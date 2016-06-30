@@ -1,3 +1,16 @@
+// // FROM BREAKPOINT
+// @media (min-width: $grid-float-breakpoint) {
+// }
+
+// // FROM MEDIUM 
+// @media (min-width: $screen-md-min) {
+// }
+
+// // FROM LARGE 
+// @media (min-width: $screen-lg-min) {
+// }
+
+
 #main-footer {
 	background-color: $gray-dark;
 	color: $white;
@@ -5,7 +18,7 @@
 
 	// FROM MEDIUM 
 	@media (min-width: $screen-md-min) {
-		margin-bottom: 681px;
+		margin-bottom: 721px;
 	}
 }
 
@@ -14,7 +27,11 @@
 }
 
 .footer-col {
-	padding: 30px;
+	padding: 0 30px 30px;
+
+	@media (min-width: $screen-md-min) {
+		padding-top: 30px;
+	}
 
 	h3 {
 		text-transform: uppercase;
@@ -41,7 +58,6 @@
 	font-size: 15px;
     letter-spacing: 4px;
     padding: 40px;
-    padding-top: 20px;
 
 	// RESPONSIVE
 
@@ -83,4 +99,21 @@
         margin-top: -15%;
     }
 
+}
+
+
+.footer-split-links {
+	margin-top: 100px;
+
+	.first {
+		margin-bottom: 100px;
+	}
+
+
+	// FROM MEDIUM 
+	@media (min-width: $screen-md-min) {
+		.first {
+			margin-bottom: 0;
+		}
+	}
 }

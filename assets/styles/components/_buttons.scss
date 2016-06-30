@@ -207,14 +207,16 @@ a:hover {
 
 	// FROM MEDIUM 
 	@media (min-width: $screen-md-min) {
-	    @include square(300px);
+	    @include square(250px);
 	    padding: 40px 60px;
 	    font-size: 50px;
 	    border: 20px solid $white;
 
 	    span {
-	    	@include square(300px);
-	    	line-height: 300px;
+	    	@include square(250px);
+	    	line-height: 250px;
+	    	margin-top: -125px;
+	    	margin-left: -125px;
 	    }
 
 	    svg .btn__rectangle {
@@ -223,7 +225,7 @@ a:hover {
 
 	    &:hover {
 	    	border: 20px solid $white;
-	    	line-height: 265px;
+	    	line-height: 240px;
 	    }
 
 	}	

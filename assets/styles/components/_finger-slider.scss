@@ -27,7 +27,7 @@
     overflow: hidden;
 
     // FROM MEDIUM
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-md) {
         padding: 10%;    
     }
 }
@@ -35,40 +35,57 @@
 
 #finger-slider {
     position: absolute;
-    left: 20px;
+    left: 0;
     top: 0;
     bottom: 0;
-    right: 40%;
+    width: 62%;
+    overflow: hidden;
 }
 
 
 #finger-point-wrap {
     display: none;   
-    // FROM MEDIUM
-    @media (min-width: $screen-lg-min) {
+    // FROM LARGE
+    @media (min-width: $screen-lg) {
+        width: 100%;
+        transition: left 0.5s ease-in-out;
         display: block;
         position: absolute;
         top: 50%;
         bottom: 0;
         right: 0;
-        left: -60px;
+        left: -110%;
         margin-top: -9%;
+
+        .waypoint-active & {
+            left: -60px;
+        }
     }
 }
 
+// TEXT
 #finger-get-in-touch {
     display: none;
-     // FROM MEDIUM
+     // FROM LARGE
     @media (min-width: $screen-lg-min) {
+        transition: opacity 0.5s ease-in-out, translate 0.7s ease-in-out;
+        transition-delay: 0.7s;
+        opacity: 0;
+        transform: translate(0,20px);
         display: block;
         position: absolute;
         z-index: 4;
         top: 48%;
-        left: 25%;
+        left: 10%;
         text-align: center;
         font-size: 60px;
         font-family: $font-family-serif-alt;
         color: $gray-dark;
+
+        .waypoint-active & {
+            opacity: 1;
+            transform: translate(0,0);
+        }
     }
 }
 
@@ -78,11 +95,17 @@
     width: 150px;
 
     // FROM MEDIUM
-    @media (min-width: $screen-lg-min) {
+    @media (min-width: $screen-md) {
+        width: 250px;
+    }
+
+    // FROM LARGE
+    @media (min-width: $screen-lg) {
+        width: 250px;
         position: absolute;
         right: 10%;
         top: 50%;
-        margin-top: -150px;
+        margin-top: -125px;
         font-size: 80px;
     }
 }
