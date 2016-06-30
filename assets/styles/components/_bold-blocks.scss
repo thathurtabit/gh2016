@@ -1,0 +1,225 @@
+
+#but-how,
+#but-what {
+    min-height: 800px;
+    background-color: $brand-orange;
+    color: $white;
+}
+
+#but-what {
+    background-color: $brand-red;
+}
+
+.large-ul-blocks {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    svg {
+        transition: opacity 0.25s ease-in-out;
+        opacity: 0;
+    }
+
+    // DIAMOND
+    &.blocks--diamond svg {
+        @include rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -15px;
+        margin-left: -25px;
+        z-index: -1;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            margin-top: -25px;
+        }
+    }
+
+    // CIRCLE
+    &.blocks--circle svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -27px;
+        margin-left: -37px;
+        z-index: -1;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            margin-top: -37px;
+        }
+    }
+
+    // SQUARE
+    &.blocks--square svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -27px;
+        margin-left: -37px;
+        z-index: -1;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            margin-top: -37px;
+        }
+    }
+
+    li {
+        @include transition(all 0.25s ease-in-out);
+        @include scale(1);
+        position: relative;
+        text-align: center;
+        font-family: $font-family-serif;
+        flex: 1 100%;
+        align-items: center;
+
+        // FROM BREAKPOINT
+        @media (min-width: $grid-float-breakpoint) {
+            flex: 1 50%;
+        }
+
+        // FROM MEDIUM 
+        @media (min-width: $screen-md-min) {
+            flex: 1 33.33%;
+        }
+
+        // FROM LARGE 
+        @media (min-width: $screen-lg-min) {
+        }
+
+
+
+        // On hover, make the SVGs appear
+        &:hover svg {
+            opacity: 1;
+        }
+
+        // Bold for loop for transition delay
+        @for $i from 1 to 7 {
+          &:nth-child(#{$i}) b {
+             @include transition-delay(0s + ($i / 6));
+          }
+        }
+
+        // Bold
+        b {
+            @include transition(all 0.25s ease-in-out);
+            @include scale(0.5);
+            @include opacity(0);
+            @include translate(0,10px);
+            font-weight: normal;
+            display: block;
+
+            .waypoint-active & {
+                @include scale(1);
+                @include opacity(1);
+                @include translate(0,0);
+            }
+        }
+
+        // Span loop for transition delay
+        @for $i from 1 to 7 {
+          &:nth-child(#{$i}) span {
+             @include transition-delay(0s + ($i / 8));
+          }
+        }
+
+        span {
+            @include transition(all 0.25s ease-in-out);    
+            background-color: rgba(255,255,255,0); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0 0;
+            height: 100px;
+            overflow: hidden;
+            font-size: 33px;
+
+            .waypoint-active & {
+                background-color: rgba(255,255,255,0.1); 
+            }
+            
+
+            // FROM BREAKPOINT
+            @media (min-width: $grid-float-breakpoint) {
+                margin: 20px;
+                height: 150px;
+            }
+            // FROM MEDIUM 
+            @media (min-width: $screen-md-min) {
+                font-size: 50px;
+                height: 200px;
+            }
+
+            // FROM LARGE 
+            @media (min-width: $screen-lg-min) {
+                height: 240px;
+            }
+        }
+
+        .block__diamond,
+        .block__circle,
+        .block__square {            
+            @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            fill: transparent;
+            stroke: $gray;
+        }
+
+        .block__diamond {
+            stroke-dasharray: 140;
+            stroke-dashoffset: -400;
+            stroke-width: 10px;
+        }
+
+        .block__square { 
+            stroke-dasharray: 55;
+            stroke-dashoffset: 0;
+            stroke-width: 71px;
+        }
+
+        .block__circle { 
+            stroke-dasharray: 5;
+            stroke-dashoffset: 0;
+            stroke-width: 5px;
+        }
+
+    }
+
+    // HOVER BLOCK
+    li:hover {
+
+        @include scale(1.05);
+
+        span {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .block__diamond {
+           stroke-width: 10px;
+          stroke-dashoffset: 0;
+          stroke-dasharray: 200;
+        }
+
+        .block__circle {
+            stroke-width: 5px;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 221;
+        }
+
+        .block__square {
+            stroke-width: 60px;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 220;
+        }
+    }
+}

@@ -241,11 +241,11 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="section--border-white block--position-relative scrollme waypoints"><!-- BUT HOW? -->
+<section id="but-how" class="section--border-white block--position-relative waypoints"><!-- BUT HOW? -->
 
 <h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
-<ul class="large-ul-blocks blocks--diamond animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="-800">
+<ul class="large-ul-blocks blocks--diamond">
 <!--<ul class="large-ul-blocks blocks--diamond">-->
 	<li><span><b>Creativity</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
 	<li><span><b>Smarts</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
@@ -258,23 +258,14 @@
 	<div class="row block--spacing-center block--position-bottom">
 		<a href="#but-what" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
-
-	<!--
-	<div class="animated-lines --quarter-squares">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
-	-->
-
+	
 </section><!-- / BUT HOW? -->
 
-<section id="but-what" class="section--border-white scrollme waypoints"><!-- BUT WHAT -->
+<section id="but-what" class="section--border-white waypoints"><!-- BUT WHAT -->
 
 <h2 class="section-heading heading--icon-code">But like, what do you DO? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
-<ul class="large-ul-blocks blocks--circle animateme" data-when="enter" data-crop="true" data-from="0.7" data-to="0" data-opacity="0" data-translatex="800">
+<ul class="large-ul-blocks blocks--circle">
 <!--<ul class="large-ul-blocks blocks--circle">-->
 	<li><span><b>Digital Design / UI</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
 	<li><span><b>Logos</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
@@ -291,7 +282,7 @@
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
-<section id="latest-split" class="block--position-relative section--border-white section--background-purple scrollme waypoints">
+<section id="latest-split" class="block--position-relative section--border-white section--background-purple waypoints">
 <h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
 <div class="row block--position-relative">

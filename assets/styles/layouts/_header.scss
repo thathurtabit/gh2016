@@ -32,7 +32,7 @@
 
 // Only AFFIX on larger screens
 .affix {
-    position: relative;
+    position: fixed;
 }
 
 // ==================
@@ -72,7 +72,7 @@
 	// WHEN AFFIXED
 	&.affix {
 		padding-top: 0;
-		background-color: rgba(255,255,255,.8);
+		background-color: rgba(255,255,255,.9);
 
 		// AFFIX HORSE
 		.whitelogo {
@@ -115,10 +115,7 @@
 		@include square(70px);
 		@include transition(.25s ease-in-out all);
 		display: block;
-		position: absolute;
-		left: 50%;
-		margin-left: -35px;
-		margin-top: 15px;
+		margin-left: 20px;
 		padding: 0;
 		z-index: 1001;
 		padding-left: 0;
@@ -153,6 +150,11 @@
 		// RESPONSIVE
 		// FROM SMALL
 		@media (min-width: $screen-sm-min) {
+			position: absolute;
+			left: 50%;
+			margin-left: -35px;
+			margin-top: 15px;
+
 			#horse {		
 				@include transition(.25s ease-in-out all);
 				@include square(50px);
@@ -173,6 +175,7 @@
 
 		// FROM MEDIUM 
 		@media (min-width: $screen-md-min) {
+
 		}
 
 		// FROM LARGE 
@@ -342,10 +345,8 @@
 	@include transition(all 0.25s ease-in-out);
     position: relative;
     float: right;
-    margin-right: 20px;
+    margin: 10px 20px;
     padding: 0 9px;
-    margin-top: 33px;
-    margin-bottom: 33px;
     background-color: rgba(255,255,255,0);
     background-image: none;
     border: 0;
@@ -363,12 +364,18 @@
 	&:active {
 		background-color: rgba(255,255,255,.8);
 	}
+
+	// RESPONSIVE
+	// FROM SMALL
+	@media (min-width: $screen-sm-min) {
+		display: none;
+	}
 }
 
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-	border-color: rgba(255,255,255,.5);
+	border-color: $white;
 }
 
 
