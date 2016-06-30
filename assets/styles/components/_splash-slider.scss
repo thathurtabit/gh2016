@@ -1,5 +1,17 @@
 // SPLASH FLEXI SLIDER
 
+// // FROM BREAKPOINT
+// @media (min-width: $grid-float-breakpoint) {
+// }
+
+// // FROM MEDIUM 
+// @media (min-width: $screen-md-min) {
+// }
+
+// // FROM LARGE 
+// @media (min-width: $screen-lg-min) {
+// }
+
 
 #home-intro-text-wrap {
     position: absolute;
@@ -8,6 +20,11 @@
     right: 0;
     bottom: 0;
     z-index: 2;
+
+    // FROM BREAKPOINT
+	@media (min-width: $grid-float-breakpoint) {
+		top: 100px;
+	}
 }
 
 
@@ -379,9 +396,9 @@
 #float-illustrations-1 {
     width: 88%;
     top: 0;
-    bottom: 20px;
     left: 0;
     right: 20px;
+    bottom: 0;
     position: absolute;
     z-index: 1;
     margin-left: 0;
@@ -398,7 +415,7 @@
             @include transition-delay(0.25s);
             position: absolute;
             left: -500px;
-            bottom: 20px;
+            bottom: 0;
             display: block;
             width: 100%;
             // target next span
@@ -415,7 +432,7 @@
             
             .pageloaded & {
                 left: 0;
-                bottom: 20px;
+                bottom: 0;
             }
 
         }
@@ -434,7 +451,8 @@
 
     // FROM BREAKPOINT
     @media (min-width: $grid-float-breakpoint) {
-        width: 75%; 
+        width: 75%;
+    	bottom: 20px;
     }
 
     // FROM MEDIUM 

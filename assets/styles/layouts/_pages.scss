@@ -1,132 +1,5 @@
 
-// DEFAULT
 
-// .myclass {
-// }
-
-// // FROM BREAKPOINT
-// @media (min-width: $grid-float-breakpoint) {
-// }
-
-// // FROM MEDIUM 
-// @media (min-width: $screen-md-min) {
-// }
-
-// // FROM LARGE 
-// @media (min-width: $screen-lg-min) {
-// }
-
-
-
-body {
-    overflow-x: hidden;
-}
-
-.section--height-full-vh {
-    min-height: 600px;
-    padding-bottom: 80px;
-
-     // FROM BREAKPOINT
-    @media (min-width: $grid-float-breakpoint) {
-    }
-
-    // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
-    }
-
-    // FROM LARGE 
-    @media (min-width: $screen-lg-min) {
-        height: 100vh;
-        min-height: 800px;
-    }
-}
-
-
-.block--margin {
-    margin: 12.5%;
-
-    // FROM BREAKPOINT
-    @media (min-width: $grid-float-breakpoint) {
-    }
-
-    // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
-    }
-
-    // FROM LARGE 
-    @media (min-width: $screen-lg-min) {
-    }
-}
-
-.block--position-bottom {
-    margin-bottom: 60px;
-    z-index: 5;
-}
-
-.block--position-bottom-center {
-    bottom: 70px;
-    z-index: 10;
-    text-align: center;
-    left: 0;
-    right: 0;
-}
-
-.block--display-inline-block {
-    display: inline-block;
-}
-
-
-.block--margin-top {
-    margin-top: 200px;
-}
-
-.block--position-relative {
-    position: relative;
-}
-
-.block--position-absolute {
-    position: absolute;
-}
-
-.block--fade-bg {
-    @include transition(background-position 0.25s ease-in-out);
-    @include opacity(.05);
-    background-size: cover;
-    background-attachment: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-top: 100px;
-
-    &:hover {
-        background-position: 52% 50%;
-    }
-
-}
-
-
-.the-divider {
-    @extend .visible-lg-block;
-    position: absolute;
-    width: 1px;
-    background: rgba(255,255,255,.1);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: 0;
-}
-
-.block--spacing-center {
-    text-align: center;
-    padding: 20px;
-    clear: both;
-
-    .btn {
-        display: inline-block;
-    }
-
-}
 
 
 // WHITE BORDERS
@@ -216,42 +89,32 @@ img {
     position: relative;
     overflow: hidden;
     background: $brand-blue;
-    //background-image: url(https://codyhouse.co/demo/parallax-hero-image/img/cd-img-1.jpg);
-    //background-image: url(../images/bg-gradients.jpg);
-    //background-attachment: fixed;
-    
 
-    // svg {
-    //     @include rotate(45deg);
-    //     position: absolute;
-    //     top: -50%;
-    //     //left: -50%;
-    //     margin-top: -25px;
-    //     margin-left: -25px;
-    //     overflow: hidden;
-    //     z-index: 0;
-    //     border-radius: 0;
-    // }
     
     .svg-triangle {
-        position: absolute;
-        top: -50px;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        display: none;
 
-        polygon {            
-            @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+        // FROM LARGE 
+        @media (min-width: $screen-lg-min) {
+            display: block;
             position: absolute;
-            top: 0;
-            right: 0;
+            top: -50px;
             left: 0;
+            right: 0;
             bottom: 0;
-            stroke-dasharray: 2;
-            stroke-dashoffset: -50;
-            stroke-width: .2px;
-            fill: rgba(0,0,0,.05);
-            //stroke: rgba(255,255,255,0.5);
+
+            polygon {            
+                @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                stroke-dasharray: 2;
+                stroke-dashoffset: -50;
+                stroke-width: .2px;
+                fill: rgba(0,0,0,.05);
+            }
         }
 
     }
@@ -262,7 +125,6 @@ img {
             stroke-width: .2px;
             stroke-dashoffset: 0;
             stroke-dasharray: 10;
-            //stroke: rgba(255,255,255,0.5);
         }
 
     }
