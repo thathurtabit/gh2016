@@ -129,3 +129,114 @@ body {
     }
 
 }
+
+
+
+.split-tags {
+    margin: 30px 0;
+    padding: 10px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-align: center;
+
+        &::before {
+            font-family: 'FontAwesome';
+            content: $fa-var-tag;
+            font-size: 13px;
+            margin-right: 10px;
+            padding-right: 15px;
+            border-right: 1px dotted rgba(255,255,255,0.2);
+        }
+
+        li {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+
+            a {
+                @extend .btn--bg-white-slide;
+                padding: 5px 10px;
+                padding-left: 12px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: 13px;
+                display: block;
+                
+            }
+
+        }
+
+    }
+
+    &.split-tags--white ul li a {
+        color: $white;
+
+        &:hover {
+            color: darken($white, 5%);
+        }
+
+    }
+
+    &.split-tags--top-border {
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+
+// ANIMATIONS FOR LATEST SPLIT
+#latest-split {
+
+    // Default
+    .sub-heading,
+    .featured-img.featured-img--flat,
+    .article__section-title,
+    .article__content,
+    .article__btn-wrap,
+    .split-tags {
+        transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+        opacity: 0;
+        transform: translate(0, 30px);
+    }
+
+    // When scroll hits
+    &.waypoint-active {
+        .sub-heading,
+        .featured-img.featured-img--flat,
+        .article__section-title,
+        .article__content,
+        .article__btn-wrap,
+        .split-tags {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        // Delays
+        .sub-heading {
+            transition-delay: 0.1s;
+        }
+
+        .featured-img.featured-img--flat {
+            transition-delay: 0.3s;
+        }
+
+        .article__section-title {
+            transition-delay: 0.5s;
+        }
+
+        .article__content {
+            transition-delay: 0.7s;
+        }
+
+        .article__btn-wrap {
+            transition-delay: 0.9s;
+        }
+
+        .split-tags {
+            transition-delay: 1.1s;
+        }
+    }
+}

@@ -112,26 +112,26 @@ a:hover {
 // BTN SIZE X-LARGE
 .btn--size-x-large {
 	@extend .btn-lg;
-    @include square(200px);
+    @include square(150px);
     @include rotate(45deg);
     @include shadow-pulse();
 	padding: 0 !important;
-    font-size: 40px;
+    font-size: 30px;
     font-family: $font-family-serif;
     text-transform: none;
-    line-height: 260px;
-	border: 20px solid $white;
+    line-height: 150px;
+	border: 10px solid $white;
 
 	span {
-		@include square(300px);
+		@include square(150px);
 	    @include rotate(-45deg);
 		padding: 0 !important;  
-	    line-height: 260px;
+	    line-height: 150px;
 	    position: absolute;
 	    left: 50%;
 	    top: 50%;
-	    margin-left: -135px;
-	    margin-top: -135px;
+	    margin-left: -75px;
+	    margin-top: -75px;
 	}
 
 	svg {
@@ -155,7 +155,7 @@ a:hover {
 			stroke: $gray;
 			stroke-dasharray: 140;
 			stroke-dashoffset: -400;
-			stroke-width: 10px;
+			stroke-width: 5px;
 		}
 	}
 
@@ -211,6 +211,15 @@ a:hover {
 	    padding: 40px 60px;
 	    font-size: 50px;
 	    border: 20px solid $white;
+
+	    span {
+	    	@include square(300px);
+	    	line-height: 300px;
+	    }
+
+	    svg .btn__rectangle {
+			stroke-width: 10px;
+	    }
 
 	    &:hover {
 	    	border: 20px solid $white;

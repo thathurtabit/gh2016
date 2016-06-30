@@ -1,0 +1,88 @@
+// GENERAL LAYOUT STUFFS
+
+// DEFAULT
+
+// .myclass {
+// }
+
+// // FROM BREAKPOINT
+// @media (min-width: $grid-float-breakpoint) {
+// }
+
+// // FROM MEDIUM 
+// @media (min-width: $screen-md-min) {
+// }
+
+// // FROM LARGE 
+// @media (min-width: $screen-lg-min) {
+// }
+
+
+// FINGER SLIDER
+
+
+#contact-finger-wrap {
+    position: relative;
+    padding: 100px 10%;    
+    overflow: hidden;
+
+    // FROM MEDIUM
+    @media (min-width: $screen-md-min) {
+        padding: 10%;    
+    }
+}
+
+
+#finger-slider {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    right: 40%;
+}
+
+
+#finger-point-wrap {
+    display: none;   
+    // FROM MEDIUM
+    @media (min-width: $screen-lg-min) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        right: 0;
+        left: -60px;
+        margin-top: -9%;
+    }
+}
+
+#finger-get-in-touch {
+    display: none;
+     // FROM MEDIUM
+    @media (min-width: $screen-lg-min) {
+        display: block;
+        position: absolute;
+        z-index: 4;
+        top: 48%;
+        left: 25%;
+        text-align: center;
+        font-size: 60px;
+        font-family: $font-family-serif-alt;
+        color: $gray-dark;
+    }
+}
+
+
+#contact-slider {
+    margin: 50px auto;
+    width: 150px;
+
+    // FROM MEDIUM
+    @media (min-width: $screen-lg-min) {
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        margin-top: -150px;
+        font-size: 80px;
+    }
+}
