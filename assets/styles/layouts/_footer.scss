@@ -18,9 +18,12 @@
 
 	// FROM MEDIUM 
 	@media (min-width: $screen-md-min) {
-		margin-bottom: 721px;
+		margin-bottom: 701px;
 	}
 }
+
+
+
 
 .the-divider {
 	width: 20px;
@@ -70,9 +73,16 @@
 		right: 0;
 		z-index: -1;
 	}
+}
 
-	// FROM LARGE 
-	@media (min-width: $screen-lg-min) {
+#footer-meta small {
+	font-size: 12px;
+	margin-bottom: 20px;
+	display: block;
+
+	// FROM MEDIUM 
+	@media (min-width: $screen-md-min) {
+		font-size: 15px;
 	}
 }
 
