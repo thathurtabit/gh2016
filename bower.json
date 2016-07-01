@@ -12,7 +12,8 @@
     "vivus": "^0.3.0",
     "animatewithsass": "^3.2.2",
     "waypoints": "^4.0.0",
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "^3.3.6",
+    "parallax.js": "^1.4.2"
   },
   "overrides": {
     "bootstrap-sass": {

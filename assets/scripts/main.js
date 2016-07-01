@@ -45,7 +45,7 @@
         // Fix navbar on scroll
         // http://getbootstrap.com/javascript/#affix
 
-        $('.home #nav-banner-center').affix({
+        $('#nav-banner-center').affix({
           offset: {
             top: 80,
             bottom: function () {
