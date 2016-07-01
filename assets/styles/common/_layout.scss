@@ -142,12 +142,6 @@ body {
         padding: 0;
         position: relative;
 
-        // FROM MEDIUM 
-        @media (min-width: $screen-md-min) {
-            margin-left: 10%;
-            margin-right: 10%;
-        }
-
         &::before {
             font-family: 'FontAwesome';
             content: $fa-var-tag;

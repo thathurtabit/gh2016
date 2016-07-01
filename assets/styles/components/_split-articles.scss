@@ -158,6 +158,15 @@
 // ANIMATIONS FOR LATEST SPLIT
 #latest-split {
 
+    // SET WIDTHS
+    .sub-heading,
+    .article--split,
+    .split-tags {
+        max-width: 600px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
     // Default
     .sub-heading,
     .featured-img.featured-img--flat,
@@ -208,3 +217,4 @@
         }
     }
 }
+
