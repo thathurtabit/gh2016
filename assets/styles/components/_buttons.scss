@@ -50,6 +50,33 @@ a:hover {
 }
 
 
+// BTN SIZE SMALL
+.btn--size-small {
+	padding: 4px 8px;
+	padding-right: 38px;
+	font-size: 13px;
+
+	// HOVER
+	&:hover,
+	&:active,
+	&:focus {
+		padding: 4px 8px;
+		padding-right: 45px !important;
+	}
+
+	&::before {
+		right: 25px !important;
+	}
+
+	&.btn--arrow-right,
+	&.btn--arrow-down {	
+		&::after {
+			top: 4px;
+			right: 3px;
+		}
+	}
+}
+
 // BTN SIZE MEDIUM
 .btn--size-medium {
 	padding: 7px 13px;
@@ -63,11 +90,10 @@ a:hover {
 		padding-right: 50px;
 	}
 
-
 	&.btn--arrow-right {	
-
 		&::after {
-			top: 5px;
+			top: 6px;
+			right: 5px;
 		}
 	}
 }

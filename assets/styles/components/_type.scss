@@ -263,6 +263,22 @@ article {
             position: relative;
             display: block;
 
+            &::before {
+                transition: width 0.8s ease-in-out;
+                transition-delay: 1.3s;
+                content: '';
+                position: absolute;
+                top: -20px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: rgba(255,255,255,0.3);
+
+                .waypoint-active & {
+                    width: 30px;
+                }
+            }
+
             // FROM BREAKPOINT
             // FROM MEDIUM 
             @media (min-width: $screen-md-min) {
@@ -274,6 +290,7 @@ article {
                 display: inline;
                 padding: 0;
                 line-height: 1;
+
             }
         }
     }

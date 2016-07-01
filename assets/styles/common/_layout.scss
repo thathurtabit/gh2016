@@ -141,7 +141,12 @@ body {
         margin: 0;
         padding: 0;
         position: relative;
-        text-align: center;
+
+        // FROM MEDIUM 
+        @media (min-width: $screen-md-min) {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
 
         &::before {
             font-family: 'FontAwesome';
@@ -187,56 +192,3 @@ body {
 }
 
 
-// ANIMATIONS FOR LATEST SPLIT
-#latest-split {
-
-    // Default
-    .sub-heading,
-    .featured-img.featured-img--flat,
-    .article__section-title,
-    .article__content,
-    .article__btn-wrap,
-    .split-tags {
-        transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
-        opacity: 0;
-        transform: translate(0, 30px);
-    }
-
-    // When scroll hits
-    &.waypoint-active {
-        .sub-heading,
-        .featured-img.featured-img--flat,
-        .article__section-title,
-        .article__content,
-        .article__btn-wrap,
-        .split-tags {
-            opacity: 1;
-            transform: translate(0, 0);
-        }
-
-        // Delays
-        .sub-heading {
-            transition-delay: 0.1s;
-        }
-
-        .featured-img.featured-img--flat {
-            transition-delay: 0.3s;
-        }
-
-        .article__section-title {
-            transition-delay: 0.5s;
-        }
-
-        .article__content {
-            transition-delay: 0.7s;
-        }
-
-        .article__btn-wrap {
-            transition-delay: 0.9s;
-        }
-
-        .split-tags {
-            transition-delay: 1.1s;
-        }
-    }
-}

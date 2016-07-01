@@ -1,4 +1,4 @@
-<section id="home-intro" class="section--height-full-vh section--border-white-all waypoints"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="section--height-full-vh section--border-white-all"><!-- HOME INTRO CAROUSEL -->
 
 <div id="home-intro-text-wrap">
 	<div id="home-intro-text">
@@ -364,7 +364,7 @@
 							echo wp_trim_words( $content , '48' ); ?>
 						</p>
 
-						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      	      
@@ -471,7 +471,7 @@
 							echo wp_trim_words( $content , '38' ); ?>
 						</p>
 
-						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-medium btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>
 				      </p>
 				  </section>
 				  <!-- / CONTENT -->	      
