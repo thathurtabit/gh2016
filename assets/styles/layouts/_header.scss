@@ -50,8 +50,8 @@
 	@include respond-to(screen-sm) {
 		background-color: rgba(255,255,255,0);
 		left: 15px;
-    	right: 15px;
-    	padding-top: 15px;
+		right: 15px;
+		padding-top: 15px;
 	}
 
 	// FROM MEDIUM 
@@ -66,8 +66,15 @@
 		padding-top: 0;
 		background-color: rgba(255,255,255,.9);
 
+		// FROM SMALL
+		@include respond-to(screen-sm) {
+			.navbar-collapse .btn-search {
+				position: absolute !important;
+			}
+		}
+
 		// AFFIX HORSE
-		.whitelogo {
+		.navbar-brand #horse .whitelogo {
 			@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
 			fill: $brand-blue !important;
 		}
@@ -78,21 +85,11 @@
 			color: $gray-light;
 			text-shadow: 0 2px 0 rgba(255,255,255,0.4);
 		}
-
-		// FROM SMALL
-		@include respond-to(screen-sm) {
-			.navbar-collapse .btn-search {
-				position: absolute;
-			}
-		}
-
 	}
 
-	
 
 	// BEFORE BLUR
 	&::before {
-		//@include filter(blur(3px));
 		content: '';
 		position: absolute;
 		top: 0;
@@ -113,6 +110,32 @@
 		padding-left: 0;
 		border-radius: 100%;
 		background-color: rgba(255,255,255,.2);
+
+		// RESPONSIVE
+		// FROM SMALL
+		@include respond-to(screen-sm) {
+			position: absolute;
+			left: 50%;
+			margin-left: -35px;
+			margin-top: 15px;
+
+			#horse {		
+				@include transition(.25s ease-in-out all);
+				@include square(50px);
+				margin: 10px auto 0;
+				display: block;
+				position: relative;
+				left: -2px;
+
+				.whitelogo {
+					@include transition(.25s ease-in-out all);
+					@include translate(-10px, 0);
+					@include filter(drop-shadow(0 2px 0 rgba(0,0,0,0.1)));
+					fill: $white !important;
+				}
+
+			}
+		}
 
 		#horse {		
 			@include transition(.25s ease-in-out all);
@@ -138,32 +161,6 @@
 	    		@include animate-bgcolor-fill();
 			}
 		}
-
-		// RESPONSIVE
-		// FROM SMALL
-		@include respond-to(screen-sm) {
-			position: absolute;
-			left: 50%;
-			margin-left: -35px;
-			margin-top: 15px;
-
-			#horse {		
-				@include transition(.25s ease-in-out all);
-				@include square(50px);
-				margin: 10px auto 0;
-				display: block;
-				position: relative;
-				left: -2px;
-
-				.whitelogo {
-					@include transition(.25s ease-in-out all);
-					@include translate(-10px, 0);
-					@include filter(drop-shadow(0 2px 0 rgba(0,0,0,0.1)));
-					fill: $white;
-				}
-
-			}
-		}
 	}
 	// /end BRAND
 	// ======================
@@ -179,6 +176,13 @@
 			text-align: center;
 			color: $gray-light;
 			text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+
+			// FROM BREAKPOINT
+			@include respond-to(screen-sm) {
+				text-align: left;
+				color: $white;
+				text-shadow: 0 2px 0 rgba(0,0,0,0.1);
+			}
 			
 			&::after {
 				@include square(50px);
@@ -204,15 +208,6 @@
 				@include scale(1,1);
 				background-color: rgba(255,255,255,0.25);
 			}
-
-
-			// FROM BREAKPOINT
-			@include respond-to(screen-sm) {
-				text-align: left;
-				color: $white;
-				text-shadow: 0 2px 0 rgba(0,0,0,0.1);
-			}
-
 		}
 
 		// BUTTON SEARCH
@@ -274,14 +269,14 @@
 	.menu-item {
 		@include transition(.25s ease-in-out all);
 
-		a:hover::after {
-			background-color: rgba(255,255,255,0.2);
-		}
-
 		// RESPONSIVE
 		// FROM SMALL
 		@include respond-to(screen-sm) {
 			display: inline-block;
+		}
+
+		a:hover::after {
+			background-color: rgba(255,255,255,0.2);
 		}
 	}
 	// / end NAVBAR
@@ -307,6 +302,12 @@
     height: 40px;
     width: 40px;
 
+    // RESPONSIVE
+	// FROM SMALL
+	@include respond-to(screen-sm) {
+		display: none;
+	}
+
 	.icon-bar {
 		background-color: $brand-blue;
 		height: 3px;
@@ -316,12 +317,6 @@
 	&:hover,
 	&:active {
 		background-color: rgba(255,255,255,.8);
-	}
-
-	// RESPONSIVE
-	// FROM SMALL
-	@include respond-to(screen-sm) {
-		display: none;
 	}
 }
 

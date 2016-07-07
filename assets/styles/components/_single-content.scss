@@ -19,8 +19,11 @@
 
 .article-img-bg {
 	background-size: cover;
+	background: transparent;
 	width: 100%;
 	height: 200px;
+	display: flex;
+	align-items: flex-end;
 
 	// RESPONSIVE
 	@include respond-to(screen-sm) {
@@ -34,4 +37,9 @@
 	@include respond-to(screen-lg) {
 		height: 600px;
 	}
+}
+
+.article-img-bg__wrap {
+	margin-left: 10%;
+	margin-right: 10%;
 }

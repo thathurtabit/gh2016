@@ -39,6 +39,129 @@
     padding: 20px 0;
     color: $white;
 
+    
+
+    // ==============================
+    // CHILDREN
+    .item {
+        transition: left 0.75s cubic-bezier(.87,-.41,.19,1.44), transform 0.8s ease-in-out, opacity 0.75s ease-in-out;
+        transform: translate(0, 40px);
+        transition-delay: 0.5s;
+        opacity: 0;
+        font-family: $font-family-serif;
+        font-weight: normal;
+        font-size: 29px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    #make-really .item {
+        font-family: $font-family-serif-alt;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 29px;
+        padding-top: 5px;
+        color: $gray;
+
+        // SPAN TEXT
+        span {
+            @include tada();
+        }
+    }
+
+    #adjective-carousel,
+    #make-really,
+    #object-carousel,
+    #person-carousel {        
+        height: 38px;
+        line-height: 38px;
+
+        .slick-track {
+            height: 38px;
+        }
+    }
+
+
+    // STAGGER THE TRANSITIONS
+    .pageloaded & {
+        opacity: 1;
+
+        // ALL SHARE
+        #adjective-carousel .item,
+        #make-really .item,
+        #object-carousel .item,
+        #person-carousel .item {
+            opacity: 1;
+            transform: translate(0,0);
+        }
+        
+        // STAGGER DELAY
+        #person-carousel .item {
+            transition-delay: 0.5s;
+        }
+
+        #make-really .item {
+            transition-delay: 0.6s;
+        }
+
+        #adjective-carousel .item {
+            transition-delay: 0.7s;
+        }
+        
+        #object-carousel .item {
+            transition-delay: 0.8s;
+        }
+        
+    }
+
+
+    
+
+    .slick-next::before,
+    .slick-prev::before {
+        font-size: 14px;
+        line-height: inherit;
+    }
+
+    // Learn more button p wrapper
+    p {
+        margin-top: 20px;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        .intro-rectangle {
+            transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+
+            fill: transparent;
+            stroke: rgba(255,255,255,.5);
+            stroke-dasharray: 5;
+            stroke-dashoffset: -200;
+            stroke-width: 2px;
+
+            &:hover {
+                stroke: rgba(255,255,255,.5);
+                stroke-dasharray: 5;
+                stroke-dashoffset: 400;
+                stroke-width: 3px;
+            }
+        }
+    }
+
+
+
     // HOME INTRO TEXT RESPONSIVE
     // FROM Small Screens up
     @include respond-to(screen-xs) {
@@ -289,125 +412,6 @@
 
         }
 
-    }
-
-    // ==============================
-    // CHILDREN
-    .item {
-        transition: left 0.75s cubic-bezier(.87,-.41,.19,1.44), transform 0.8s ease-in-out, opacity 0.75s ease-in-out;
-        transform: translate(0, 40px);
-        transition-delay: 0.5s;
-        opacity: 0;
-        font-family: $font-family-serif;
-        font-weight: normal;
-        font-size: 29px;
-        line-height: 29px;
-        text-align: center;
-    }
-
-    #make-really .item {
-        font-family: $font-family-serif-alt;
-        font-weight: normal;
-        font-size: 23px;
-        line-height: 29px;
-        padding-top: 5px;
-        color: $gray;
-
-        // SPAN TEXT
-        span {
-            @include tada();
-        }
-    }
-
-    #adjective-carousel,
-    #make-really,
-    #object-carousel,
-    #person-carousel {        
-        height: 38px;
-        line-height: 38px;
-
-        .slick-track {
-            height: 38px;
-        }
-    }
-
-
-    // STAGGER THE TRANSITIONS
-    .pageloaded & {
-        opacity: 1;
-
-        // ALL SHARE
-        #adjective-carousel .item,
-        #make-really .item,
-        #object-carousel .item,
-        #person-carousel .item {
-            opacity: 1;
-            transform: translate(0,0);
-        }
-        
-        // STAGGER DELAY
-        #person-carousel .item {
-            transition-delay: 0.5s;
-        }
-
-        #make-really .item {
-            transition-delay: 0.6s;
-        }
-
-        #adjective-carousel .item {
-            transition-delay: 0.7s;
-        }
-        
-        #object-carousel .item {
-            transition-delay: 0.8s;
-        }
-        
-    }
-
-
-    
-
-    .slick-next::before,
-    .slick-prev::before {
-        font-size: 14px;
-        line-height: inherit;
-    }
-
-    // Learn more button p wrapper
-    p {
-        margin-top: 20px;
-    }
-
-    svg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1;
-
-        .intro-rectangle {
-            transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 1;
-
-            fill: transparent;
-            stroke: rgba(255,255,255,.5);
-            stroke-dasharray: 5;
-            stroke-dashoffset: -200;
-            stroke-width: 2px;
-
-            &:hover {
-                stroke: rgba(255,255,255,.5);
-                stroke-dasharray: 5;
-                stroke-dashoffset: 400;
-                stroke-width: 3px;
-            }
-        }
     }
 
 
