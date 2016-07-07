@@ -5,40 +5,48 @@
 // If it's a single page, add the featured image
  if (is_single() && has_post_thumbnail()) { ?>
     <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php the_post_thumbnail_url( 'full' ); ?>">
-    <div class="article-img-bg__wrap container">
-    <header class="article-img-bg__header">
-      <h1><?php the_title(); ?></h1>
-          <?php if(function_exists('yoast_breadcrumb')) 
-    {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
-    </header>
-    </div>
+      <div class="article-img-bg__wrap row">
+        <div class="col-md-2 content-border-side-col">
+          Location
+        </div>
+        <header class="article-img-bg__header content-border-main-col col-md-7">
+          <h1><?php the_title(); ?></h1>
+              <?php if(function_exists('yoast_breadcrumb')) 
+        {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
+        </header>
+        <div class="col-md-3 content-border-side-col">
+          Something else
+        </div>
+      </div>
     </div>
   <?php } elseif (is_single()) { ?>
-    <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php bloginfo('template_url'); ?>/dist/images/unshackled-fallback-large.jpg">
-    <div class="article-img-bg__wrap container">
-    <header class="article-img-bg__header">
-      <h1><?php the_title(); ?></h1>
-          <?php if(function_exists('yoast_breadcrumb')) 
-    {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
-    </header>
+    <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php bloginfo('template_url'); ?>/dist/images/fallback-large.jpg">
+
+    <div class="article-img-bg__wrap">
+      <header class="article-img-bg__header">
+        <h1><?php the_title(); ?></h1>
+            <?php if(function_exists('yoast_breadcrumb')) 
+      {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
+      </header>
     </div>
+
     </div>
   <?php } ?>
 
     <!-- ARTICLE ROW -->
-    <div class="article-row row  section--background-blue">
+    <div class="article-row row section--background-white">
 
-      <div class="col-sm-2">
+      <div class="col-md-2 content-border-side-col">
         Social stuff
       </div>
 
-      <div class="col-sm-8">
+      <div class="col-md-7 content-border-main-col">
         <div class="entry-content">
           <?php the_content(); ?>
         </div>
       </div>
 
-      <div class="col-sm-2">
+      <div class="col-md-3 content-border-side-col">
           <aside class="sidebar">
             <?php dynamic_sidebar('sidebar-primary'); ?>
           </aside><!-- /.sidebar -->

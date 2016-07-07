@@ -13,6 +13,18 @@
 // @include respond-to(screen-lg) {
 // }
 
+
+.article-row {
+	padding: 0;
+}
+
+// TEXT COLOUR
+.article-row,
+.article-img-bg__wrap {
+    color: $gray;
+}
+
+
 .page-article {
 	padding-top: 0;
 }
@@ -40,6 +52,7 @@
 }
 
 .article-img-bg__wrap {
-	margin-left: 10%;
-	margin-right: 10%;
+	border-bottom: 1px solid $border-color;
+	background-color: $white-rgba;
+	flex: 1;
 }

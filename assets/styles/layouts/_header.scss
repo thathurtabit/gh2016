@@ -62,6 +62,7 @@
 	}
 
 	// WHEN AFFIXED
+
 	&.affix {
 		padding-top: 0;
 		background-color: rgba(255,255,255,.9);
@@ -286,6 +287,31 @@
 		margin: 0;
 	}
 
+}
+
+// WHEN IT'S NOT THE HOMEPAGE, CHANGE THE STYLE
+body:not(.home) #nav-banner-center {
+	background-color: rgba(255,255,255,.9);
+
+	// FROM SMALL
+	@include respond-to(screen-sm) {
+		.navbar-collapse .btn-search {
+			position: absolute !important;
+		}
+	}
+
+	// AFFIX HORSE
+	.navbar-brand #horse .whitelogo {
+		@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
+		fill: $brand-blue !important;
+	}
+
+	.navbar-collapse a,
+	.navbar-collapse .btn-search {
+		position: relative;
+		color: $gray-light;
+		text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+	}
 }
 
 // NAVBAR TOGGLE

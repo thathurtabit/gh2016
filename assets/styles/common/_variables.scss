@@ -24,9 +24,11 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white:           		 #fff;
+$white-rgba:			rgba(255,255,255,.75);
 
 $brand-green:			#74C390 !default;
 $brand-blue:			#51BCE8 !default; // rgb(81,188,232)
+$brand-blue-rgba:		rgba(81,188,232, 0.8);
 $brand-red:				#E46653 !default;
 $brand-orange:			#fcae50 !default;
 $brand-yellow:			#ded869 !default;
@@ -90,7 +92,7 @@ $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
-$border-color:            #ddd !default;
+$border-color:            rgba(0,0,0,0.09) !default;
 
 
 //== Iconography

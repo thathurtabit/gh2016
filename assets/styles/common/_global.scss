@@ -1,3 +1,71 @@
-.article-row {
-	padding: 100px 10%;
+// WHITE BORDERS
+.section--border-white-all {
+    border: 10px solid $white;
+}
+
+.section--border-white {
+    border: 10px solid $white;
+    border-top: 0;
+}
+
+.section--border-sides-white-only {
+    border-left: 10px solid $white;
+    border-right: 10px solid $white;
+}
+
+// WHITE BORDERS - RESPONSIVE
+.section--border-white-all,
+.section--border-white,
+.section--border-sides-white-only {
+
+    // FROM BREAKPOINT
+    @include respond-to(screen-sm) {
+        border-width: 15px;
+    }
+
+    // FROM MEDIUM 
+    @include respond-to(screen-md) {
+        border-width: 20px;
+    }
+}
+
+
+// BACKGROUND COLOURS
+.section--background-purple {
+    background-color: $brand-purple;
+}
+
+.section--background-blue {
+    background-color: $brand-blue;
+}
+
+.section--background-green {
+    background-color: $brand-green;
+}
+
+.section--background-red {
+    background-color: $brand-red;
+}
+
+.section--background-pink {
+    background-color: $brand-pink;
+}
+
+.section--background-orange {
+    background-color: $brand-orange;
+}
+
+.section--background-gray-dark {
+    background-color: $gray-dark;
+}
+
+.section--background-white {
+    background-color: $white;
+    color: $gray;
+}
+
+
+// Make all images responsive
+img {
+    @include img-responsive;
 }

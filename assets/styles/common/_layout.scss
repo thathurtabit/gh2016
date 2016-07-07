@@ -173,3 +173,23 @@ body {
 }
 
 
+// CONTENT BORDERS
+
+.content-border-main-col {
+    padding: 20px;
+    
+    @include respond-to(screen-md) {
+        padding-left: 5%;
+        padding-right: 5%;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+    }
+}
+
+.content-border-side-col {
+    padding: 20px;
+    
+    @include respond-to(screen-md) {
+        padding: 30px;
+    }
+}
