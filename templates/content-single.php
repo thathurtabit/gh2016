@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class('page-article section--border-white-all'); ?>>
+  <article <?php post_class('page-article section--border-white-sides-top'); ?>>
 
     <?php
 // If it's a single page, add the featured image
@@ -7,7 +7,7 @@
     <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php the_post_thumbnail_url( 'full' ); ?>">
       <div class="article-img-bg__wrap row">
         <div class="col-md-2 content-border-side-col">
-          Location
+          <h3>Location</h3>
         </div>
         <header class="article-img-bg__header content-border-main-col col-md-7">
           <h1><?php the_title(); ?></h1>
@@ -37,26 +37,31 @@
     <div class="article-row row section--background-white">
 
       <div class="col-md-2 content-border-side-col">
-        Social stuff
+        <h3>Social stuff</h3>
       </div>
 
-      <div class="col-md-7 content-border-main-col">
-        <div class="entry-content">
+      <div class="col-md-7">
+        <div class="entry-content content-border-main-col">
           <?php the_content(); ?>
         </div>
+
+        <footer class="content-border-main-col content-border-top">
+          <h4>The Tags:</h4> <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+        </footer>
+        
+        <div class="content-border-main-col comments-wrap content-border-top">
+          <?php comments_template('/templates/comments.php'); ?>
+        </div>
+
       </div>
 
-      <div class="col-md-3 content-border-side-col">
+      <div class="col-md-3">
           <aside class="sidebar">
             <?php dynamic_sidebar('sidebar-primary'); ?>
           </aside><!-- /.sidebar -->
       </div>
 
-
     </div><!-- / ARTICLE ROW -->
-    <footer>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
+    
   </article>
 <?php endwhile; ?>

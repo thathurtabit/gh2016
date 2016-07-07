@@ -1,0 +1,13 @@
+.sidebar h3 {
+	margin-top: 0;
+}
+
+.sidebar .widget {
+	@extend .content-border-side-col;
+
+	border-bottom: 1px solid $border-color;
+
+	&:last-of-type {
+		border-bottom: 0;
+	}
+}

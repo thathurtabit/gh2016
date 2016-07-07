@@ -177,10 +177,9 @@ body {
 
 .content-border-main-col {
     padding: 20px;
-    
+
     @include respond-to(screen-md) {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding: 25px 50px;
         border-left: 1px solid $border-color;
         border-right: 1px solid $border-color;
     }
@@ -192,4 +191,15 @@ body {
     @include respond-to(screen-md) {
         padding: 30px;
     }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-top: 0;
+    }
+}
+
+.content-border-top {
+    border-top: 1px solid $border-color;
 }

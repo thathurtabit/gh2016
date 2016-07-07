@@ -15,6 +15,7 @@
 
 
 .article-row {
+	display: flex;
 	padding: 0;
 }
 
@@ -55,4 +56,46 @@
 	border-bottom: 1px solid $border-color;
 	background-color: $white-rgba;
 	flex: 1;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin: 0;
+	}
+}
+
+.article-img-bg__header h1 {
+	display: inline;
+	background-color: $brand-blue;
+	color: $white;
+	padding: 5px 10px;
+	margin: 0;
+}
+
+
+.entry-content > p:first-of-type {
+	font-size: 20px;
+	position: relative;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+
+	&::first-letter {
+		font-size: 40px;
+		float: left;
+		width: 100px;
+		height: 50px;
+		line-height: 1;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		content: '';
+		width: 30px;
+		border-bottom: 2px solid $brand-blue;
+	}
 }

@@ -145,7 +145,7 @@
 				  color: $gray-light;
 				}
 				// scss-lint:enable all
-				}
+			}
 
 			&:focus {
 				background-color: rgba(255,255,255,.2);
@@ -176,16 +176,27 @@
 				}
 				// scss-lint:enable all
 			}
-
-			// FROM MEDIUM 
-			@media (min-width: $screen-md-min) {
-			}
-
-			// FROM LARGE 
-			@media (min-width: $screen-lg-min) {
-			}
-
 		} // End .form-control
-
 	}
+}
+
+// WHEN IT'S NOT THE HOMEPAGE, CHANGE THE STYLE
+body:not(.home) #search-wrap .form-inline .form-control  {
+	color: $gray-light;
+	text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+
+	// scss-lint:disable all
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $gray-light;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  color: $gray-light;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  color: $gray-light;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: $gray-light;
+	}
+	// scss-lint:enable all
 }

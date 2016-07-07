@@ -13,10 +13,17 @@
     border-right: 10px solid $white;
 }
 
+.section--border-white-sides-top {
+    border-left: 10px solid $white;
+    border-right: 10px solid $white;
+    border-top: 10px solid $white;
+}
+
 // WHITE BORDERS - RESPONSIVE
 .section--border-white-all,
 .section--border-white,
-.section--border-sides-white-only {
+.section--border-sides-white-only,
+.section--border-white-sides-top {
 
     // FROM BREAKPOINT
     @include respond-to(screen-sm) {

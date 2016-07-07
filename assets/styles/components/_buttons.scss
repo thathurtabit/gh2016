@@ -366,3 +366,34 @@ a:hover {
 	color: $white;
 }
 
+
+// THIS BUTTON WILL EXTEND STUFF
+.btn-blue,
+.comment-form [type=submit] {
+	@extend .btn;
+	@extend .btn--color-white;
+	@extend .btn--arrow-right;
+	@extend .btn--bgcolor-spin;
+	border-color: $brand-blue;
+	color: $brand-blue;
+	background-color: $white;
+
+	&::before {
+		background-color: $brand-blue;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {	
+		border-color: $brand-blue;
+		color: $brand-blue;
+	}
+}
+
+.comment-form [type=submit],
+.comment-form [type=submit]:hover,
+.comment-form [type=submit]:focus,
+.comment-form [type=submit]:active {
+	padding-right: 14px;
+}
+
