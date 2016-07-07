@@ -5,15 +5,18 @@
 // }
 
 // // FROM BREAKPOINT
-// @media (min-width: $grid-float-breakpoint) {
+// @include respond-to(screen-xs) {
+// }
+
+// @include respond-to(screen-sm) {
 // }
 
 // // FROM MEDIUM 
-// @media (min-width: $screen-md-min) {
+// @include respond-to(screen-md) {
 // }
 
 // // FROM LARGE 
-// @media (min-width: $screen-lg-min) {
+// @include respond-to(screen-lg) {
 // }
 
 
@@ -49,7 +52,7 @@ p {
 
 
     // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
+    @include respond-to(screen-md) {
         font-size: 30px;
     }
 
@@ -186,19 +189,6 @@ p {
         top: -25px;
     }
 
-    // FROM BREAKPOINT
-    @media (min-width: $grid-float-breakpoint) {
-        
-    }
-
-    // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
-    }
-
-    // FROM LARGE 
-    @media (min-width: $screen-lg-min) {
-    }
-
 }
 
 
@@ -281,7 +271,7 @@ article {
 
             // FROM BREAKPOINT
             // FROM MEDIUM 
-            @media (min-width: $screen-md-min) {
+            @include respond-to(screen-md) {
                 margin: 20px 0 0;
             }
 
@@ -299,16 +289,12 @@ article {
         margin: 20px;
 
        // FROM BREAKPOINT
-        @media (min-width: $grid-float-breakpoint) {
+        @include respond-to(screen-sm) {
         }
 
         // FROM MEDIUM 
-        @media (min-width: $screen-md-min) {
+        @include respond-to(screen-md) {
             margin: 10px 0 20px;
-        }
-
-        // FROM LARGE 
-        @media (min-width: $screen-lg-min) {
         }
     }
 

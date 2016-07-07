@@ -1,3 +1,25 @@
+// RESPONSIVE MIXINS
+@mixin respond-to($breakpoint) {
+  
+  @if $breakpoint == 'screen-xs' {
+    @media (min-width: $screen-xs) {
+      @content;
+    }
+  } @else if $breakpoint == 'screen-sm' {
+    @media (min-width: $screen-sm) {
+      @content;
+    }
+  } @else if $breakpoint == 'screen-md' {
+    @media (min-width: $screen-md) {
+      @content;
+    }
+  } @else if $breakpoint == 'screen-lg' {
+    @media (min-width: $screen-lg) {
+      @content;
+    }
+  }
+}
+
 // MY MIXINS
 
 
@@ -8,3 +30,4 @@
 @mixin rotateZ($degrees) {
 	transform: rotateZ($degrees);
 }
+

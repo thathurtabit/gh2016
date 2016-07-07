@@ -6,15 +6,18 @@
 // }
 
 // // FROM BREAKPOINT
-// @media (min-width: $grid-float-breakpoint) {
+// @include respond-to(screen-xs) {
+// }
+
+// @include respond-to(screen-sm) {
 // }
 
 // // FROM MEDIUM 
-// @media (min-width: $screen-md-min) {
+// @include respond-to(screen-md) {
 // }
 
 // // FROM LARGE 
-// @media (min-width: $screen-lg-min) {
+// @include respond-to(screen-lg) {
 // }
 
 
@@ -27,16 +30,12 @@ body {
     
 
      // FROM BREAKPOINT
-    @media (min-width: $grid-float-breakpoint) {
+    @include respond-to(screen-sm) {
     	min-height: 600px;
     }
 
-    // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
-    }
-
     // FROM LARGE 
-    @media (min-width: $screen-lg-min) {
+    @include respond-to(screen-lg) {
         height: 100vh;
         min-height: 800px;
     	padding-bottom: 80px;
@@ -46,18 +45,6 @@ body {
 
 .block--margin {
     margin: 12.5%;
-
-    // FROM BREAKPOINT
-    @media (min-width: $grid-float-breakpoint) {
-    }
-
-    // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
-    }
-
-    // FROM LARGE 
-    @media (min-width: $screen-lg-min) {
-    }
 }
 
 .block--position-bottom {

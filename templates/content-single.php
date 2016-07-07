@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class('page-article section--border-white-all section--background-blue'); ?>>
+  <article <?php post_class('page-article section--border-white-all'); ?>>
 
     <?php
 // If it's a single page, add the featured image
@@ -25,13 +25,8 @@
     </div>
   <?php } ?>
 
-    <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
-    </header>
-
     <!-- ARTICLE ROW -->
-    <div class="article-row row">
+    <div class="article-row row  section--background-blue">
 
       <div class="col-sm-2">
         Social stuff

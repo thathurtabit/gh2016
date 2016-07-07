@@ -6,15 +6,18 @@
 // }
 
 // // FROM BREAKPOINT
-// @media (min-width: $grid-float-breakpoint) {
+// @include respond-to(screen-xs) {
+// }
+
+// @include respond-to(screen-sm) {
 // }
 
 // // FROM MEDIUM 
-// @media (min-width: $screen-md-min) {
+// @include respond-to(screen-md) {
 // }
 
 // // FROM LARGE 
-// @media (min-width: $screen-lg-min) {
+// @include respond-to(screen-lg) {
 // }
 
 
@@ -41,12 +44,12 @@
 .section--border-sides-white-only {
 
     // FROM BREAKPOINT
-    @media (min-width: $grid-float-breakpoint) {
+    @include respond-to(screen-sm) {
         border-width: 15px;
     }
 
     // FROM MEDIUM 
-    @media (min-width: $screen-md-min) {
+    @include respond-to(screen-md) {
         border-width: 20px;
     }
 }
@@ -113,7 +116,7 @@ img {
         display: none;
 
         // FROM LARGE 
-        @media (min-width: $screen-lg-min) {
+        @include respond-to(screen-lg) {
             display: block;
             position: absolute;
             top: -50px;
@@ -166,7 +169,7 @@ img {
         @include fadeIn();
     }
     
-    // FROM LARGE 
+    // FROM CUSTOM LARGE 
     @media (min-width: 1800px) {
         top: 15%;
         right: 20%;

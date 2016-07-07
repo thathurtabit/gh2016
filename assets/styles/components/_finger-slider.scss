@@ -6,17 +6,19 @@
 // }
 
 // // FROM BREAKPOINT
-// @media (min-width: $grid-float-breakpoint) {
+// @include respond-to(screen-xs) {
+// }
+
+// @include respond-to(screen-sm) {
 // }
 
 // // FROM MEDIUM 
-// @media (min-width: $screen-md-min) {
+// @include respond-to(screen-md) {
 // }
 
 // // FROM LARGE 
-// @media (min-width: $screen-lg-min) {
+// @include respond-to(screen-lg) {
 // }
-
 
 // FINGER SLIDER
 
@@ -27,7 +29,7 @@
     overflow: hidden;
 
     // FROM MEDIUM
-    @media (min-width: $screen-md) {
+    @include respond-to(screen-md) {
         padding: 10%;    
     }
 }
@@ -46,7 +48,7 @@
 #finger-point-wrap {
     display: none;   
     // FROM LARGE
-    @media (min-width: $screen-lg) {
+    @include respond-to(screen-lg) {
         width: 100%;
         transition: left 0.5s ease-in-out;
         display: block;
@@ -67,7 +69,7 @@
 #finger-get-in-touch {
     display: none;
      // FROM LARGE
-    @media (min-width: $screen-lg-min) {
+    @include respond-to(screen-lg) {
         transition: opacity 0.5s ease-in-out, translate 0.7s ease-in-out;
         transition-delay: 0.7s;
         opacity: 0;
@@ -95,12 +97,12 @@
     width: 150px;
 
     // FROM MEDIUM
-    @media (min-width: $screen-md) {
+    @include respond-to(screen-md) {
         width: 250px;
     }
 
     // FROM LARGE
-    @media (min-width: $screen-lg) {
+    @include respond-to(screen-lg) {
         width: 250px;
         position: absolute;
         right: 10%;

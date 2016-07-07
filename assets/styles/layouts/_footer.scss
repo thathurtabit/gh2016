@@ -1,15 +1,17 @@
 // // FROM BREAKPOINT
-// @media (min-width: $grid-float-breakpoint) {
+// @include respond-to(screen-xs) {
+// }
+
+// @include respond-to(screen-sm) {
 // }
 
 // // FROM MEDIUM 
-// @media (min-width: $screen-md-min) {
+// @include respond-to(screen-md) {
 // }
 
 // // FROM LARGE 
-// @media (min-width: $screen-lg-min) {
+// @include respond-to(screen-lg) {
 // }
-
 
 #main-footer {
 	background-color: $gray-dark;
@@ -72,7 +74,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		z-index: -1;
+		z-index: -102;
 	}
 }
 

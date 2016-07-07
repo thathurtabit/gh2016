@@ -1,5 +1,20 @@
 // SPLIT CONTENT
 
+// // FROM BREAKPOINT
+// @include respond-to(screen-xs) {
+// }
+
+// @include respond-to(screen-sm) {
+// }
+
+// // FROM MEDIUM 
+// @include respond-to(screen-md) {
+// }
+
+// // FROM LARGE 
+// @include respond-to(screen-lg) {
+// }
+
 
 .article--split {
     position: relative;
@@ -138,12 +153,8 @@
     }
 
     // RESPONSIVE
-    // FROM SMALL
-    @media (min-width: $screen-sm-min) {
-       
-    }
     // FROM MEDIUM
-    @media (min-width: $screen-md-min) {
+    @include respond-to(screen-md) {
         padding: 30px 3% 20px;
         margin-top: 0;
         

@@ -10,22 +10,19 @@
 // }
 
 
-
-
 // // FROM BREAKPOINT
-// @media (min-width: $grid-float-breakpoint) {
+// @include respond-to(screen-xs) {
 // }
 
-// // FROM SMALL
-// @media (min-width: $screen-sm-min) {
+// @include respond-to(screen-sm) {
 // }
 
 // // FROM MEDIUM 
-// @media (min-width: $screen-md-min) {
+// @include respond-to(screen-md) {
 // }
 
 // // FROM LARGE 
-// @media (min-width: $screen-lg-min) {
+// @include respond-to(screen-lg) {
 // }
 
 
@@ -50,7 +47,7 @@
 	overflow: hidden;
 
 	// FROM SMALL
-	@media (min-width: $screen-sm-min) {
+	@include respond-to(screen-sm) {
 		background-color: rgba(255,255,255,0);
 		left: 15px;
     	right: 15px;
@@ -58,16 +55,11 @@
 	}
 
 	// FROM MEDIUM 
-	@media (min-width: $screen-md-min) {
+	@include respond-to(screen-md) {
 		left: 20px;
     	right: 20px;
     	padding-top: 20px;
 	}
-
-	// FROM LARGE 
-	@media (min-width: $screen-lg-min) {
-	}
-
 
 	// WHEN AFFIXED
 	&.affix {
@@ -88,7 +80,7 @@
 		}
 
 		// FROM SMALL
-		@media (min-width: $screen-sm-min) {
+		@include respond-to(screen-sm) {
 			.navbar-collapse .btn-search {
 				position: absolute;
 			}
@@ -149,7 +141,7 @@
 
 		// RESPONSIVE
 		// FROM SMALL
-		@media (min-width: $screen-sm-min) {
+		@include respond-to(screen-sm) {
 			position: absolute;
 			left: 50%;
 			margin-left: -35px;
@@ -172,16 +164,6 @@
 
 			}
 		}
-
-		// FROM MEDIUM 
-		@media (min-width: $screen-md-min) {
-
-		}
-
-		// FROM LARGE 
-		@media (min-width: $screen-lg-min) {
-		}
-
 	}
 	// /end BRAND
 	// ======================
@@ -225,20 +207,11 @@
 
 
 			// FROM BREAKPOINT
-			@media (min-width: $grid-float-breakpoint) {
+			@include respond-to(screen-sm) {
 				text-align: left;
 				color: $white;
 				text-shadow: 0 2px 0 rgba(0,0,0,0.1);
 			}
-
-			// FROM MEDIUM 
-			@media (min-width: $screen-md-min) {
-			}
-
-			// FROM LARGE 
-			@media (min-width: $screen-lg-min) {
-			}
-
 
 		}
 
@@ -250,7 +223,7 @@
 
 	    	// RESPONSIVE
 			// FROM SMALL
-			@media (min-width: $screen-sm-min) {
+			@include respond-to(screen-sm) {
 				display: inline-block;
 				position: absolute;
 				right: 30px;
@@ -258,12 +231,12 @@
 			}
 
 			// FROM MEDIUM 
-			@media (min-width: $screen-md-min) {
+			@include respond-to(screen-md) {
 				right: 50px;
 			}
 
 			// FROM LARGE 
-			@media (min-width: $screen-lg-min) {
+			@include respond-to(screen-lg) {
 				right: 60px;
 			}
 		}
@@ -275,7 +248,7 @@
 		
 		// RESPONSIVE
 		// FROM SMALL
-		@media (min-width: $screen-sm-min) {
+		@include respond-to(screen-sm) {
 			float: none; // override default styles
 			text-align: center;
 			border-bottom: 1px solid rgba(255,255,255,.5);
@@ -295,16 +268,6 @@
 			}
 
 		}
-
-		// FROM MEDIUM 
-		@media (min-width: $screen-md-min) {
-			
-		}
-
-		// FROM LARGE 
-		@media (min-width: $screen-lg-min) {
-		}
-
 	}
 
 	// NAVBAR COLOURS
@@ -317,19 +280,9 @@
 
 		// RESPONSIVE
 		// FROM SMALL
-		@media (min-width: $screen-sm-min) {
+		@include respond-to(screen-sm) {
 			display: inline-block;
 		}
-
-		// FROM MEDIUM 
-		@media (min-width: $screen-md-min) {
-			
-		}
-
-		// FROM LARGE 
-		@media (min-width: $screen-lg-min) {
-		}
-
 	}
 	// / end NAVBAR
 	// ======================
@@ -367,7 +320,7 @@
 
 	// RESPONSIVE
 	// FROM SMALL
-	@media (min-width: $screen-sm-min) {
+	@include respond-to(screen-sm) {
 		display: none;
 	}
 }
