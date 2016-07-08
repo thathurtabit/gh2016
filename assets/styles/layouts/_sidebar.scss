@@ -11,3 +11,27 @@
 		border-bottom: 0;
 	}
 }
+
+.widget_recent_entries ul li,
+.widget_recent_comments ul li {
+	position: relative;
+	list-style-type: none;
+
+	&::before {
+		font-family: 'FontAwesome';
+		color: $gray;
+		position: absolute;
+	    left: -20px;
+	    font-size: 14px;
+	    top: 3px;
+	}
+}
+
+.widget_recent_entries ul li::before {
+	content: $fa-var-file-text-o;
+}
+
+.widget_recent_comments ul li::before {
+	content: $fa-var-comment-o;
+}
+

@@ -22,7 +22,9 @@
 
 
         // When the document is ready, remove preloader
-        $(document).ready(function($) {  
+        $(document).ready(function($) {
+
+          $('body').addClass('pageloaded');
 
           // site preloader -- also uncomment the div in the header and the css style for #preloader
           $(window).load(function(){
@@ -59,7 +61,7 @@
         //$(window).load(function(){
           new Vivus('logo-svg', {duration: 300});
         //});
-  
+ 
 
       $('.waypoints').each(function() {
         $(this).waypoint(function() {

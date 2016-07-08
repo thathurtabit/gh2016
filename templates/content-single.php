@@ -17,10 +17,12 @@
         <div class="col-md-3 content-border-side-col">
           Something else
         </div>
-      </div>
+      </div>      
     </div>
+
   <?php } elseif (is_single()) { ?>
-    <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php bloginfo('template_url'); ?>/dist/images/fallback-large.jpg">
+
+    <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png">
 
     <div class="article-img-bg__wrap">
       <header class="article-img-bg__header">
@@ -29,7 +31,6 @@
       {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
       </header>
     </div>
-
     </div>
   <?php } ?>
 
@@ -47,9 +48,18 @@
           </div>
         </div>
 
-        <footer class="content-border-main-col content-border-top">
-          <h4>The Tags:</h4> <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
-        </footer>
+        <?php 
+        // IF THE POST HAS TAGS
+        $post_tags = wp_get_post_tags($post->ID);
+        if(!empty($post_tags)) { ?>
+          <footer class="content-border-main-col content-border-top">
+            <h4><i class="fa fa-tags"></i> The Tags:</h4>
+            <div class="post-tags">
+              <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+            </div>
+          </footer>
+        <?php } ?>
+        
         
         <div class="content-border-main-col comments-wrap content-border-top">
           <h2 class="sub-heading heading--icon-comment on-white">Comments<span></span></h2>

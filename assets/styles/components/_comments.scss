@@ -46,10 +46,10 @@
 		li {
 			border-left: 5px solid $brand-blue;
 			position: relative;
-    		margin-left: 30px;
+    		margin-left: 20px;
     		margin-bottom: 0;
     		padding: 20px 20px 20px 40px;
-    		background-color: darken($white, 3%);
+    		background-color: darken($white, 2%);
 
 			&:last-of-type {
 				border-bottom: 0;
@@ -61,7 +61,7 @@
 				color: $brand-blue;
 				position: absolute;
 				top: 0;
-				left: -50px;
+				left: -40px;
 			}
 
 			.comment-content {
@@ -77,7 +77,7 @@
 
 	.reply {
 		position: absolute;
-		right: 20px;
+		right: 0;
 		bottom: 10px;
 
 		a {
