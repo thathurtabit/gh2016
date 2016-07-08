@@ -11,44 +11,54 @@
 // }
 
 
-// Search form
-.search-form {
-  @extend .form-inline;
 
-  	label {
-	  @extend .form-group;
-	  font-weight: normal;
-	}
 
-	.search-field {
-		@extend .form-control;
-	}
-
-	.search-submit {
-	  @extend .btn;
-	  @extend .btn-default;
-	}
-}
-
-.comment-form [type=email],
-.comment-form [type=text],
-.comment-form [type=url],
-.comment-form textarea,
-.form-control,
-.search-form .search-field {
+// Shared Input Styles
+%form-input {
 	@include transition(all 0.25s ease-in-out);
 	display: block;
 	width: 100%;
 	height: 34px;
 	padding: 6px 12px;
+	font-family: $font-family-serif;
+	font-weight: 300;
 	font-size: 14px;
 	line-height: 1.428571429;
 	color: #555;
 	background-color: transparent;
 	background-image: none;
-	border: 0;
 	border-radius: 0;
-	box-shadow: 0;
+	box-shadow: none;
+
+	&:focus {
+		background-color: darken($white, 2%);
+	}
+}
+
+// Search Form Only
+.search-form .search-field {
+	@extend %form-input;
+	border: 0;
+}
+
+// Form Inputs
+.comment-form [type=email],
+.comment-form [type=text],
+.comment-form [type=url],
+.form-control {
+	@extend %form-input;
+	border: 1px solid $border-color;
+	padding: 25px;
+    font-size: 18px;
+}
+
+// Textara Input
+
+.comment-form textarea {
+	@extend %form-input;
+	min-height: 200px;
+	font-size: 22px;
+	color: $brand-blue;
 }
 
 

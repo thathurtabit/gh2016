@@ -42,7 +42,9 @@
 
       <div class="col-md-7">
         <div class="entry-content content-border-main-col">
-          <?php the_content(); ?>
+          <div class="entry-content-inner">
+            <?php the_content(); ?>
+          </div>
         </div>
 
         <footer class="content-border-main-col content-border-top">
@@ -50,6 +52,8 @@
         </footer>
         
         <div class="content-border-main-col comments-wrap content-border-top">
+          <h2 class="sub-heading heading--icon-comment on-white">Comments<span></span></h2>
+
           <?php comments_template('/templates/comments.php'); ?>
         </div>
 

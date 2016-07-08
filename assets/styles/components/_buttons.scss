@@ -27,6 +27,7 @@ a:hover {
 	@include transition(all 0.2s ease-in-out);
 	position: relative;
 	text-transform: uppercase;
+	font-family: $font-family-sans-serif;
 	outline: none;
 	border-radius: 0;
 	padding: 7px 14px;
@@ -159,6 +160,7 @@ a:hover {
 	padding: 0 !important;
     font-size: 30px;
     font-family: $font-family-serif;
+    font-weight: 400;
     text-transform: none;
     line-height: 150px;
 	border: 10px solid $white;
@@ -236,6 +238,8 @@ a:hover {
 	&:active {
 		text-transform: none;
 		color: $gray-dark;
+		font-family: $font-family-serif;
+    	font-weight: 400;
 
 		svg .btn__rectangle {
 			@include opacity(1);
@@ -396,4 +400,21 @@ a:hover {
 .comment-form [type=submit]:active {
 	padding-right: 14px;
 }
+
+// small blue block
+.btn--blue-block,
+%btn--blue-block {	
+	background-color: $brand-blue;
+	font-family: $font-family-sans-serif;
+	color: $white;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 2px 7px;
+
+	&:hover {
+		background-color: $white;
+		color: $brand-blue;
+	}
+}
+
 

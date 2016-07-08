@@ -1,10 +1,4 @@
-.comment-list {
-  @include list-unstyled;
 
-  	ol {
-  		list-style: none;
-	}
-}
 
 .comment-form p {
   @extend .form-group;
@@ -21,3 +15,96 @@
   @extend .btn;
   @extend .btn-primary;
 }
+
+#comments article {
+	min-height: auto;
+	padding-bottom: 30px;
+}
+
+#comments h2 {
+	@extend %h4;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+
+.comment-list {
+  @include list-unstyled;
+
+  	ol {
+  		list-style: none;
+	}
+
+	li {
+		border-bottom: 1px dotted $border-color;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+	}
+
+	.children {
+
+		li {
+			border-left: 5px solid $brand-blue;
+			position: relative;
+    		margin-left: 30px;
+    		margin-bottom: 0;
+    		padding: 20px 20px 20px 40px;
+    		background-color: darken($white, 3%);
+
+			&:last-of-type {
+				border-bottom: 0;
+			}
+
+			&::before {
+				font-family: 'FontAwesome';
+				content: $fa-var-commenting-o;
+				color: $brand-blue;
+				position: absolute;
+				top: 0;
+				left: -50px;
+			}
+
+			.comment-content {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+
+.comment {
+	position: relative;
+
+	.reply {
+		position: absolute;
+		right: 20px;
+		bottom: 10px;
+
+		a {
+			@extend %btn--blue-block;
+		}
+	}
+}
+
+.comment-content {
+	@extend %blockquote;
+	font-family: $font-family-serif;
+	font-weight: 300;
+	font-size: 18px;
+    margin: 20px;
+
+	&::before {
+		color: $brand-blue !important;
+	}
+}
+
+.comment-meta {
+	font-size: 12px;
+
+	.comment-author img {
+		border-radius: 100%;
+		float: left;
+		margin-right: 20px;
+	}
+}
+

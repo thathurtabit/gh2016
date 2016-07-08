@@ -46,21 +46,40 @@ h6 {
    font-weight: 700;
 }
 
-h1 {
+h1,
+.h1,
+%h1 {
     font-size: 30px;
 }
 
-h2 {
+h2,
+.h2,
+%h2 {
     font-size: 22px;
 }
 
-h3 {
+h3,
+.h3,
+%h3 {
     font-size: 17px;
 }
 
-h4 {
+h4,
+.h4,
+%h4 {
     font-size: 16px;
     font-weight: 500;
+}
+
+ul,
+ol {
+    margin-bottom: 20px;
+    padding: 0 0 0 20px;
+}
+
+p,
+li {
+    margin-bottom: 10px;
 }
 
 .section-heading {
@@ -183,6 +202,18 @@ h4 {
             border: 3px solid $white;
             border-radius: 0;
         }
+    }
+
+    &.on-white {
+        margin-top: 65px;
+
+        &::after {
+            color: $gray;
+        }
+
+        span::before {
+            border-color: $brand-blue;
+        }
 
     }
 
@@ -261,6 +292,10 @@ h4 {
         content: $fa-var-meh-o;
     }
 
+    &.heading--icon-comment::after {
+        content: $fa-var-comment-o;
+    }
+
 }
 
 
@@ -279,6 +314,8 @@ article {
             font-size: 35px;
             position: relative;
             display: block;
+            text-transform: none;
+            font-weight: 400;
 
             &::before {
                 transition: width 0.8s ease-in-out;
@@ -351,7 +388,8 @@ article {
 
 // BLOCKQUOTE
 blockquote,
-.blockquote {
+.blockquote,
+%blockquote {
     position: relative;
 
     &::before {
