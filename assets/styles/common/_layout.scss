@@ -204,13 +204,16 @@ body {
     border-top: 1px solid $border-color;
 }
 
-.archive {
+// ARTICLE DIVIDERS
+.archive,
+.blog {
 
     .content-border-main-col {
         padding: 0;
 
         article {
             padding: 20px;
+            max-width: 600px;
 
             @include respond-to(screen-md) {
                 padding: 25px 50px;
@@ -219,10 +222,14 @@ body {
 
         .article-divider {            
             border-bottom: 1px solid $border-color;
+            
+            &:last-child {
+                border-bottom: 0;
+            }
         }
     }
 
     .entry-content-inner {
-        max-width: auto;
+        max-width: inherit;
     }
 }

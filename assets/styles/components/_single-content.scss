@@ -151,6 +151,15 @@
 		color: $brand-red;
 		background-color: darken($white, 2%);
 	}
+
+	time {
+		font-size: 10px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: block;
+		color: lighten($gray, 10%);
+	}
 }
 
 

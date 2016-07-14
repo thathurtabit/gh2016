@@ -68,7 +68,7 @@
           //$('.waypoints').removeClass('waypoint-active');
           $(this.element).addClass('waypoint-active');
         },
-         { offset: '20%'});
+         { offset: '40%'});
       });
              
 

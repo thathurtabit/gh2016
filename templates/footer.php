@@ -1,4 +1,4 @@
-<section id="contact-finger-wrap" class="section--height-full-vh section--background-blue section--border-white waypoints">
+<section id="contact-finger-wrap" class="section--background-blue section--border-white waypoints">
 	<h2 class="sub-heading  heading--icon-meh">Don't Be Shy<span></span></h2>
 
 	<!-- GHOST HORSES SVG -->
