@@ -94,6 +94,8 @@ function display_sidebar() {
   return apply_filters('sage/display_sidebar', $display);
 }
 
+
+
 /**
  * Theme assets
  */
@@ -106,4 +108,7 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
+
+
+
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

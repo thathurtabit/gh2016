@@ -24,6 +24,13 @@ function body_class($classes) {
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
 
+
+// Simply remove anything that looks like an archive title prefix ("Archive:", "Foo:", "Bar:").
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('/^\w+: /', '', $title);
+});
+
+
 /**
  * Clean up the_excerpt()
  */

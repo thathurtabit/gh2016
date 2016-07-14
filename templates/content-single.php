@@ -38,7 +38,9 @@
     <div class="article-row row section--background-white">
 
       <div class="col-md-2 content-border-side-col">
-        <h3>Social stuff</h3>
+        <!-- DEFAULT HEADER -->
+        <?php include( TEMPLATEPATH . '/templates/includes/side-col-1.inc.php' ); ?>
+        <!-- / DEFAULT HEADER -->
       </div>
 
       <div class="col-md-7">

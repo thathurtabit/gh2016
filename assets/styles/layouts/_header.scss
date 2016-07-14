@@ -207,7 +207,7 @@
 
 			&:hover::after {
 				@include scale(1,1);
-				background-color: rgba(255,255,255,0.25);
+				background-color: rgba(255,255,255,1);
 			}
 		}
 
@@ -236,6 +236,7 @@
 				right: 60px;
 			}
 		}
+
 
 	}
 
@@ -276,8 +277,13 @@
 			display: inline-block;
 		}
 
+		&.current-menu-item a::after,
 		a:hover::after {
 			background-color: rgba(255,255,255,0.2);
+		}
+
+		&.current-menu-item a::after {
+			@include scale(1,1);
 		}
 	}
 	// / end NAVBAR
@@ -312,7 +318,36 @@ body:not(.home) #nav-banner-center {
 		color: $gray-light;
 		text-shadow: 0 2px 0 rgba(255,255,255,0.4);
 	}
+
+	// ACTIVE MENU ITEM
+	.current-menu-item a,
+	.current-menu-item a:hover,
+	.current-page-parent a,
+	.current-page-parent a:hover {
+		color: $brand-blue !important;
+
+		a::after {
+			@include scale(1,1);
+		}
+	}
 }
+	
+// ACTIVE MENU ITEM (based on body class)
+.single-portfolio .work a,
+.single-portfolio .work a:hover,
+.single-format-standard .latest a,
+.single-format-standard .latest a:hover,
+.single-production-diary .latest a,
+.single-production-diary .latest a:hover,
+.post-type-archive-production-diary .latest a,
+.post-type-archive-production-diary .latest a:hover {
+	color: $brand-blue !important;
+
+	a::after {
+		@include scale(1,1);
+	}
+}
+
 
 
 // NAVBAR TOGGLE

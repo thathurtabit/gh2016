@@ -203,3 +203,26 @@ body {
 .content-border-top {
     border-top: 1px solid $border-color;
 }
+
+.archive {
+
+    .content-border-main-col {
+        padding: 0;
+
+        article {
+            padding: 20px;
+
+            @include respond-to(screen-md) {
+                padding: 25px 50px;
+            }
+        }
+
+        .article-divider {            
+            border-bottom: 1px solid $border-color;
+        }
+    }
+
+    .entry-content-inner {
+        max-width: auto;
+    }
+}

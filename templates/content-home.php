@@ -296,7 +296,7 @@
 		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 
 		<section class="split-bg-content first">
-			<h2 class="sub-heading heading--icon-news"><a href="<?php bloginfo('url'); ?>/news" class="btn--bg-white-slide white">News<span></span></a>
+			<h2 class="sub-heading heading--icon-news"><a href="<?php bloginfo('url'); ?>/latest" class="btn--bg-white-slide white">Latest<span></span></a>
 
 				<!-- DATE -->
 				<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
