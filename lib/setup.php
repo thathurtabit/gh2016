@@ -95,7 +95,6 @@ function display_sidebar() {
 }
 
 
-
 /**
  * Theme assets
  */

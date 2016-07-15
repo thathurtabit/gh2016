@@ -65,6 +65,33 @@ a:hover {
 	}
 }
 
+// BTN SIZE TINY
+.btn--size-tiny {
+	margin: 1rem 0;
+	padding: 4px 0;
+	padding-right: 38px;
+	font-size: 13px;
+
+	// HOVER
+	&:hover,
+	&:active,
+	&:focus {
+		padding: 4px 4px 4px 15px;
+		padding-right: 45px !important;
+	}
+
+	&::before {
+		right: 25px !important;
+	}
+
+	&.btn--arrow-right,
+	&.btn--arrow-down {	
+		&::after {
+			top: 3px;
+			right: 3px;
+		}
+	}
+}
 
 // BTN SIZE SMALL
 .btn--size-small {
@@ -286,7 +313,18 @@ a:hover {
 	&:focus {
 		color: $white !important;
 	}
+}
 
+.btn--color-blue {
+	@extend .btn;
+	color: $brand-blue;
+	border: 0;
+
+	&:hover,
+	&:focus {
+		background-color: $brand-blue;
+		color: $white !important;
+	}
 }
 
 .btn--arrow-down {	
@@ -308,9 +346,7 @@ a:hover {
 			@include flip-spin-y();
 			@include animation-duration(.75s);
 		}
-
 	}
-
 }
 
 .btn--arrow-right {	

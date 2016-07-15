@@ -57,7 +57,7 @@
         <!-- / DEFAULT HEADER -->
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-7 main-content-col">
         <div class="entry-content content-border-main-col">
           <div class="entry-content-inner">
             <?php the_content(); ?>

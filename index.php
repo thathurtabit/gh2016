@@ -11,20 +11,25 @@
         <?php include( TEMPLATEPATH . '/templates/includes/side-col-1.inc.php' ); ?>
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-7 main-content-col">
         <div class="entry-content content-border-main-col">
           <div class="entry-content-inner">
             <?php if (!have_posts()) : ?>
-			  <div class="alert alert-warning">
-			    <?php _e('Sorry, no results were found.', 'sage'); ?>
-			  </div>
-			<?php endif; ?>
-
-
+    			  <div class="entry-content-inner">
+              <article>
+      			    <?php _e('Sorry, no results were found.', 'sage'); ?>
+              </article>
+    			  </div>
+    			<?php endif; ?>
 
 			<?php while (have_posts()) : the_post(); ?>
 			  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 			<?php endwhile; ?>
+      
+      <!-- PREV / NEXT -->
+        <?php include( TEMPLATEPATH . '/templates/includes/prev-next-links.inc.php' ); ?>
+      <!-- / PREV / NEXT  -->
+
           </div>
         </div>
                

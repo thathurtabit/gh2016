@@ -25,6 +25,11 @@
     color: $gray;
 }
 
+.article-row--blocks {
+	@extend .article-row;
+	flex-wrap: wrap;
+}
+
 
 .page-article {
 	padding-top: 0;
