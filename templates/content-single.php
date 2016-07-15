@@ -7,7 +7,9 @@
     <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php the_post_thumbnail_url( 'full' ); ?>">
       <div class="article-img-bg__wrap row">
         <div class="col-md-2 content-border-side-col">
-          <h3>Location</h3>
+          <!-- TITLE TOP RIGHT -->
+          <?php include( TEMPLATEPATH . '/templates/includes/single-results-tl.inc.php' ); ?>
+          <!-- / TITLE TOP RIGHT -->
         </div>
         <header class="article-img-bg__header content-border-main-col col-md-7">
           <h1><?php the_title(); ?></h1>
@@ -15,7 +17,9 @@
         {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
         </header>
         <div class="col-md-3 content-border-side-col">
-          Something else
+          <!-- TITLE TOP RIGHT -->
+          <?php include( TEMPLATEPATH . '/templates/includes/single-results-tr.inc.php' ); ?>
+          <!-- / TITLE TOP RIGHT -->
         </div>
       </div>      
     </div>
@@ -24,13 +28,23 @@
 
     <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png">
 
-    <div class="article-img-bg__wrap">
-      <header class="article-img-bg__header">
-        <h1><?php the_title(); ?></h1>
-            <?php if(function_exists('yoast_breadcrumb')) 
-      {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
-      </header>
-    </div>
+    <div class="article-img-bg__wrap row">
+        <div class="col-md-2 content-border-side-col">
+          <!-- TITLE TOP RIGHT -->
+          <?php include( TEMPLATEPATH . '/templates/includes/single-results-tl.inc.php' ); ?>
+          <!-- / TITLE TOP RIGHT -->
+        </div>
+        <header class="article-img-bg__header content-border-main-col col-md-7">
+          <h1><?php the_title(); ?></h1>
+              <?php if(function_exists('yoast_breadcrumb')) 
+        {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
+        </header>
+        <div class="col-md-3 content-border-side-col">
+          <!-- TITLE TOP RIGHT -->
+          <?php include( TEMPLATEPATH . '/templates/includes/single-results-tr.inc.php' ); ?>
+          <!-- / TITLE TOP RIGHT -->
+        </div>
+      </div>  
     </div>
   <?php } ?>
 

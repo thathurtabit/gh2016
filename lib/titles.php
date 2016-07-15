@@ -17,7 +17,7 @@ function title() {
   } elseif (is_archive() && !is_post_type_archive('portfolio')) {
     return get_the_archive_title();
   } elseif (is_search()) {
-    return sprintf(__('Search Results for %s', 'sage'), get_search_query());
+    return __('Search', 'sage');
   } elseif (is_404()) {
     return __('Not Found', 'sage');
   } else {

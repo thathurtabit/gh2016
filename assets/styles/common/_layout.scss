@@ -206,14 +206,14 @@ body {
 
 // ARTICLE DIVIDERS
 .archive,
-.blog {
+.blog,
+.search {
 
-    .content-border-main-col {
+    .entry-content.content-border-main-col {
         padding: 0;
 
         article {
             padding: 20px;
-            max-width: 600px;
 
             @include respond-to(screen-md) {
                 padding: 25px 50px;

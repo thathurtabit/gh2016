@@ -319,6 +319,10 @@ body:not(.home) #nav-banner-center {
 		text-shadow: 0 2px 0 rgba(255,255,255,0.4);
 	}
 
+	.menu-item a:hover::after {
+		background-color: rgba(255,255,255,1);
+	}
+
 	// ACTIVE MENU ITEM
 	.current-menu-item a,
 	.current-menu-item a:hover,
