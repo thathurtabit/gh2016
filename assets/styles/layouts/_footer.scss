@@ -19,23 +19,16 @@
 	position: relative;
 
 	// FROM MEDIUM 
-	@media (min-width: $screen-md-min) {
+	@include respond-to(screen-md) {
 		margin-bottom: 701px;
 		padding: 0 0 200px;
 	}
 }
 
-
-
-
-.the-divider {
-	width: 20px;
-}
-
 .footer-col {
 	padding: 0 30px 30px;
 
-	@media (min-width: $screen-md-min) {
+	@include respond-to(screen-md) {
 		padding-top: 30px;
 	}
 
@@ -65,11 +58,20 @@
     letter-spacing: 4px;
     padding: 40px;
 
+    small {
+		font-size: 12px;
+		margin-bottom: 20px;
+		display: block;
+
+		// FROM MEDIUM 
+		@include respond-to(screen-md) {
+			font-size: 15px;
+		}
+	}
+
 	// RESPONSIVE
-
-
 	// FROM MEDIUM 
-	@media (min-width: $screen-md-min) {
+	@include respond-to(screen-md) {
 		position: fixed;
 		bottom: 0;
 		left: 0;
@@ -78,16 +80,6 @@
 	}
 }
 
-#footer-meta small {
-	font-size: 12px;
-	margin-bottom: 20px;
-	display: block;
-
-	// FROM MEDIUM 
-	@media (min-width: $screen-md-min) {
-		font-size: 15px;
-	}
-}
 
 #ghost-horses-svg {
     //background: url(../images/code.png);
@@ -98,7 +90,7 @@
     overflow: hidden;
 
     	// FROM SMALL
-	@media (min-width: $screen-sm-min) {
+	@include respond-to(screen-md) {
     	min-height: 600px;
 	}
 
@@ -124,7 +116,7 @@
 
 
 	// FROM MEDIUM 
-	@media (min-width: $screen-md-min) {
+	@include respond-to(screen-md) {
 		.first {
 			margin-bottom: 0;
 		}
