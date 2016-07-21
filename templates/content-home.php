@@ -502,6 +502,8 @@
 	
 	</div>
 
+	<div class="the-divider"></div>
+
 </div>
 
 	<div class="row block--spacing-center block--position-bottom">
