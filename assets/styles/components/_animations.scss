@@ -171,16 +171,71 @@
 // Animate=spin spin keyframes
 @keyframes shadow-pulse {
     0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
   }
   70% {
-      -webkit-box-shadow: 0 0 0 80px rgba(255,255,255, 0);
+      box-shadow: 0 0 0 80px rgba(255,255,255, 0);
   }
   100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+      box-shadow: 0 0 0 0 rgba(255,255,255, 0);
   }
 }
 // end Background shadow pulse
+
+
+
+// Background shadow pulse small
+@mixin shadow-pulse-small() {
+  @include animation-name(shadow-pulse-small);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@keyframes shadow-pulse-small {
+    0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
+  70% {
+      box-shadow: 0 0 0 7px rgba(255,255,255, 0.3);
+  }
+  100% {
+      box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+  }
+}
+// end Background shadow pulse small
+
+
+// Background shadow pulse small
+@mixin shadow-pulse-small-spin() {
+  @include animation-name(shadow-pulse-small-spin);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@keyframes shadow-pulse-small-spin {
+    0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+    transform: rotate(0deg);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255,255,255, 0.1);
+    transform: rotate(180deg);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(255,255,255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+    transform: rotate(360deg);
+  }
+}
+// end Background shadow pulse small
 
 
 // Animate bg colours FILL

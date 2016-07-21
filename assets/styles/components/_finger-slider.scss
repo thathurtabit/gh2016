@@ -32,7 +32,13 @@
     // FROM MEDIUM
     @include respond-to(screen-md) {
         padding: 100px 10%;
-        min-height: 650px;
+        min-height: 750px;
+    }
+
+    // FROM MEDIUM
+    @include respond-to(screen-lg) {
+        padding: 100px 10%;
+        min-height: 850px;
     }
 }
 

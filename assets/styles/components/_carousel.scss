@@ -45,19 +45,15 @@
 }
 
 .slick-prev::before {
-    //content: $fa-var-chevron-left;
-    //content: $fa-var-long-arrow-left;
     content: $fa-var-arrow-left;
 }
 
 .slick-next::before {
-    //content: $fa-var-chevron-right;
-    //content: $fa-var-long-arrow-right;
     content: $fa-var-arrow-right;
 }
 
 .slick-prev {
-    left: -12px;
+    left: -10px;
 }
 
 .slick-next {
@@ -66,19 +62,19 @@
 
 .slick-prev::after,
 .slick-next::after {
-    @include transition(opacity 0.25s ease-in-out);
-    @include opacity(.2);
-    @include rotate(45deg);
-    @include square(24px);    
+    @include square(24px);
+    @include shadow-pulse-small();
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0.5;
+    transform: rotate(45deg); 
     border-radius: 0;
-    border: 1px solid $white;
+    border: 2px solid $white;
     content: '';
     top: 50%;
     left: 50%;
     margin-left: -11px;
     margin-top: -13px;
     background: transparent;
-    box-shadow: 2px 2px 0 0 $white;
     position: absolute;
     z-index: 1;
 }
@@ -90,9 +86,9 @@
 
 .slick-prev:hover::after,
 .slick-next:hover::after {
-    @include opacity(0.75);
-    @include flip-spin-y();
-    @include animation-duration(1s);    
+    @include shadow-pulse-small-spin();
+    opacity: 0.75;
+    animation-duration: 1s;    
     background: rgba(255,255,255,.1);
     color: $white;
 }
@@ -123,20 +119,16 @@
         //min-height: 800px;
 
         &.item {
-            //transition-property: opacity, box-shadow;
             @include transition(.25s ease-in-out box-shadow);
             @include opacity(.5);
             background: $brand-blue;
             left: 0;
-            //box-shadow: inset 0 0 0 20px $white;
         }
 
         &.slick-active {
             @include transition(.25s ease-in-out box-shadow);
-            //opacity: 1;
             left: 0;
             transform: translate3d(0, 0, 0);
-            //box-shadow: inset 0 0 0 20px $white;
         }
 
         &.item:nth-child(1) {
