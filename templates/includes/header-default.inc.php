@@ -10,5 +10,13 @@
 			<span class="vert"></span>
 			<span class="vert"></span>
 		</div> 
-	</div>    
+	</div>
+
+	<?php if(is_page('about')) { ?>
+		<div class="item">
+			<span>
+				<img src="<?php bloginfo('template_url'); ?>/dist/images/wheelie.png" alt="Look at this awesome wheelie." />
+			</span>
+		</div>
+	<?php } ?>
 </div>

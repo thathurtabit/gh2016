@@ -181,6 +181,16 @@ li {
 
 }
 
+.section-heading--blue {
+    @extend .section-heading;
+    color: $white;
+
+    &::before {
+        background-color: $brand-blue;
+        color: $white;
+    }
+} 
+
 
 .sub-heading {
     @extend .section-heading;    
@@ -239,6 +249,20 @@ li {
        @include rotateY(180deg);
     }
 }
+
+
+.sub-heading--blue {
+    @extend .sub-heading;
+    color: $gray;
+
+    &::after {
+        color: $gray;
+    }
+
+    span::before {
+        border-color: $brand-blue;
+    }
+} 
 
 // SUB HEADING UNDER SPLIT SECTION
 .split-bg-content .sub-heading {
@@ -300,6 +324,10 @@ li {
 
     &.heading--icon-comment::after {
         content: $fa-var-comment-o;
+    }
+
+    &.heading--icon-design::after {
+        content: $fa-var-lightbulb-o;
     }
 
 }

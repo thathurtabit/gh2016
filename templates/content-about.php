@@ -1,5 +1,25 @@
-<?php the_content(); ?>
+<div class="row">
 
-<p>Ghosthorses.co.uk is a tiny web design agency based in Manchester, formed through the love of designing and building wonderlicious websites.</p>
+	<div class="entry-content-inner col-md-8">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	     <?php the_content(); ?>
+	    <?php endwhile; endif; ?>
+	</div>
 
-<p>Our goal is simple; to create excellent websites that make your business shine and our egos soar. We're small enough to take real pride in each and every job we do, yet agile enough to take on projects of all sizes. 'Bring it', as they say in those terrible films.</p>
+	<div class="col-md-4">
+		Hi five?
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-md-8 col-md-offset-2">
+
+	<?php if( get_field('alternative_content') ): ?>
+		<p><?php the_field('alternative_content'); ?></p>
+	<?php endif; ?>
+
+	</div>
+
+</div>
