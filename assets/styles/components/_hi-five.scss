@@ -1,0 +1,33 @@
+.high-five-hand-wrapper {
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+
+	&:hover {
+		strong {
+			opacity: 1;
+		}
+		.high-five-hand {
+			transform: scale(3);
+		}
+	}
+}
+
+.high-five-hand {
+	transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	max-width: 100px;
+	margin: 0 auto;
+	transform: scale(1);
+
+	strong {
+		transition: opacity 0.25s ease-in-out;
+		transform: rotate(45deg);
+		opacity: 0;
+		color: $brand-blue;
+		font-size: 20px;
+		position: absolute;
+		top: 76px;
+    	left: 33px;
+	}
+}
+

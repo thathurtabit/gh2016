@@ -13,7 +13,7 @@
 	</div>
 
 	<?php if(is_page('about')) { ?>
-		<div class="item">
+		<div class="wheelie-across">
 			<span>
 				<img src="<?php bloginfo('template_url'); ?>/dist/images/wheelie.png" alt="Look at this awesome wheelie." />
 			</span>
