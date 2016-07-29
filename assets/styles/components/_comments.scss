@@ -1,4 +1,7 @@
-
+#comments {
+	max-width: 750px;
+    margin: 0 auto;
+}
 
 .comment-form p {
   @extend .form-group;

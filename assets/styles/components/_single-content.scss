@@ -112,6 +112,8 @@
 .entry-content-inner {
 	font-family: $font-family-serif;
 	font-weight: 300;
+	max-width: 700px;
+	margin-top: 30px;
 
 	> p:first-of-type {
 		font-size: 20px;
@@ -195,6 +197,31 @@
 	.pageloaded & {
 		transition-delay: 2s;
 		left: 100%;
+	}
+}
+
+.what-we-did {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	li.yep,
+	li.no {
+		position: relative;
+
+		&::before {
+			font-family: 'FontAwesome';
+			color: $brand-blue;
+			margin-right: 10px;
+		}
+	}
+
+	li.yep::before {
+		content: $fa-var-check
+	}
+
+	li.no::before {
+		content: $fa-var-times;
 	}
 }
 

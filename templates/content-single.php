@@ -61,6 +61,13 @@
         <div class="entry-content content-border-main-col">
           <div class="entry-content-inner">
             <?php the_content(); ?>
+
+            <?php
+            // if there is a link to the website, then show it
+            if(get_field('the_link')) { ?>
+            <a href="<?php the_field('the_link'); ?>" target="_blank" class="btn-blue center">Visit website</a>
+          <?php } ?>
+
           </div>
         </div>
 
@@ -77,11 +84,14 @@
         <?php } ?>
         
         
+        <?php if (!(is_singular('portfolio'))) { ?>
         <div class="content-border-main-col comments-wrap content-border-top">
           <h2 class="sub-heading heading--icon-comment on-white">Comments<span></span></h2>
 
           <?php comments_template('/templates/comments.php'); ?>
         </div>
+
+        <?php } ?>
 
       </div>
 
