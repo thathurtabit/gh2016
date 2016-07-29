@@ -12,6 +12,20 @@
 
 
 
+label {
+	font-weight: 200;
+
+	span.note {
+		font-size: 14px;
+		display: block;
+		margin-bottom: 5px;
+		color: lighten($gray, 15%);
+	}
+}
+
+.caveat {
+	color: $brand-blue;
+}
 
 // Shared Input Styles
 %form-input {
@@ -24,14 +38,18 @@
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 1.428571429;
-	color: #555;
-	background-color: transparent;
+	color: $gray-light;
+	background-color: darken($white, 1%);
 	background-image: none;
 	border-radius: 0;
 	box-shadow: none;
+	max-width: 600px;
 
 	&:focus {
 		background-color: darken($white, 2%);
+		border-color: $brand-blue;
+		outline: 0;
+		color: $gray;
 	}
 }
 
@@ -45,22 +63,41 @@
 .comment-form [type=email],
 .comment-form [type=text],
 .comment-form [type=url],
-.form-control {
+.form-control,
+.wpcf7-form-control,
+option {
 	@extend %form-input;
 	border: 1px solid $border-color;
-	padding: 25px;
+	padding: 25px 15px;
     font-size: 18px;
+
+    &.wpcf7-not-valid {
+		border-color: $brand-red !important;
+	}
 }
 
+select.wpcf7-form-control {
+	padding: 0 10px;
+    height: 55px;
+}
 // Textara Input
 
-.comment-form textarea {
+.comment-form textarea,
+.wpcf7-form-control.wpcf7-textarea  {
 	@extend %form-input;
 	min-height: 200px;
-	font-size: 22px;
-	color: $brand-blue;
+	font-size: 20px;
+	padding-top: 15px;
 }
 
+// Error msg
+.wpcf7-form-control-wrap span.wpcf7-not-valid-tip {
+	font-family: $font-family-sans-serif;
+	font-size: 15px;
+	color: $brand-red;
+	text-transform: uppercase;
+	font-weight: 700;
+}
 
 // MAIN NAV SEARCH WRAP
 #search-wrap {

@@ -523,3 +523,20 @@ blockquote,
         }
     }
 }
+
+form h3 {
+    position: relative;
+    padding: 20px 0;
+    margin: 20px 0;
+
+    &::before {
+        content: '';
+        width: 30px;
+        height: 0;
+        position: absolute;
+        top: 0;
+        border-top: 2px solid $brand-blue;
+    }
+}
+
+

@@ -121,10 +121,10 @@
 
 		&::before {
 			position: absolute;
-			top: 0;
+			top: -20px;
 			left: 0;
 			content: '';
-			width: 30px;
+			width: 40px;
 			border-bottom: 2px solid $brand-blue;
 		}
 	}
@@ -193,7 +193,7 @@
 	bottom: 0;
 
 	.pageloaded & {
-		transition-delay: 1s;
+		transition-delay: 2s;
 		left: 100%;
 	}
 }

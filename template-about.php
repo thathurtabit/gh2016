@@ -29,11 +29,11 @@
           <h2 class="sub-heading on-white heading--icon-design">Design<span></span>
           </h2>
 
-          <ul class="large-ul-blocks blocks--circle">
-            <li>Website Design</li>
+          <ul class="list-ul-blocks blocks--circle">
+            <li class="purple">Website Design</li>
             <li>User Interface Design</li>
-            <li>Logo Design</li>
-            <li>Responsive Design</li>
+            <li class="orange">Logo Design</li>
+            <li class="red">Responsive Design</li>
           </ul>
       </div>
 
@@ -41,11 +41,11 @@
           <h2 class="sub-heading on-white heading--icon-code">Coding<span></span>
           </h2>
 
-          <ul class="large-ul-blocks blocks--circle">
-            <li>HTML5</li>
-            <li>CSS / SASS / LESS</li>
+          <ul class="list-ul-blocks blocks--circle">
+            <li class="red">HTML5</li>
+            <li class="green">CSS3 / SASS / LESS</li>
             <li>WordPress</li>
-            <li>Responsive Development</li>
+            <li class="pink">Responsive Development</li>
           </ul>
                        
       </div>  

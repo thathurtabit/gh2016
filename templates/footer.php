@@ -1,16 +1,22 @@
-<section id="contact-finger-wrap" class="section--background-blue section--border-white waypoints">
-	<h2 class="sub-heading  heading--icon-meh">Don't Be Shy<span></span></h2>
+<?php // if(!(is_page('contact')) || !(is_page('planner'))) { ?> 
+<?php if(!(is_page(array('contact', 'planner')))) { ?>
 
-	<!-- GHOST HORSES SVG -->
-<div id="finger-slider">
-	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
-<span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
-</div>
 
-<div id="contact-slider" class="animateme">
-	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
-</div>
-</section><!-- / GHOST HORSES SVG -->
+	<section id="contact-finger-wrap" class="section--background-blue section--border-white waypoints">
+		<h2 class="sub-heading  heading--icon-meh">Don't Be Shy<span></span></h2>
+
+		<!-- GHOST HORSES SVG -->
+	<div id="finger-slider">
+		<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
+	<span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
+	</div>
+
+	<div id="contact-slider" class="animateme">
+		<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
+	</div>
+	</section><!-- / GHOST HORSES SVG -->
+
+<?php } ?>
 
 <footer id="main-footer" class="content-info block--position-relative section--border-sides-white-only scrollme waypoints">
 	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></h2>
