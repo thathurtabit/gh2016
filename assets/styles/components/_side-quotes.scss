@@ -1,0 +1,42 @@
+// Side Quotes
+
+.side-quotes {
+
+}
+
+.side-quotes__blockquote {
+	position: relative;
+	border: 0;
+	padding: 0;
+    margin-top: 50px;
+
+	&::before {
+		@include flip-spin-y;
+		content: '\201C';
+		position: absolute;
+		font-size: 30px;
+		top: -30px;
+		left: 0;
+		color: $brand-blue;
+	}
+
+	&::after {
+		content: '';
+		border-bottom: 2px solid $brand-blue;
+		bottom: -10px; 
+		left: 0;
+		width: 20px;
+		position: relative;
+    	display: block;
+	}
+}
+
+.side-quotes__cite {
+	font-size: 11px;
+	color: $gray-light;
+	text-transform: uppercase;
+	font-style: normal;
+	padding-top: 20px;
+	display: block;
+}
+

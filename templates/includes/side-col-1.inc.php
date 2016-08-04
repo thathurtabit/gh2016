@@ -24,13 +24,15 @@
 		);
 	?>
 
-	<blockquote>
-		<?php
-		// ECHO OUT RANDOM THING
-		echo $items[array_rand($items)]; ?>
-	</blockquote>
-	<small>Facts from <a href="http://www.chucknorrisfacts.com/
-" target="_blank">CNF</a></small>
+	<div class="side-quotes">
+		<blockquote class="side-quotes__blockquote">
+			<?php
+			// ECHO OUT RANDOM THING
+			echo $items[array_rand($items)]; ?>
+		</blockquote>
+		<cite class="side-quotes__cite">Facts from <a href="http://www.chucknorrisfacts.com/
+	" target="_blank">CNF</a></cite>
+	</div>
 <?php } else { ?>
 	
 	<h3>Social stuff</h3>

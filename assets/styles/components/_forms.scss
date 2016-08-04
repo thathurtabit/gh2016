@@ -132,6 +132,7 @@ select.wpcf7-form-control {
 			border: 0;
 			line-height: 60px;
 			width: 100%;
+			max-width: inherit;
 			font-size: 22px;
 			text-align: center;
 			color: $gray-light;

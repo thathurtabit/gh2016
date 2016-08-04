@@ -23,7 +23,7 @@
     </div><!-- / ARTICLE ROW -->
 
     <!-- ARTICLE ROW -->
-    <div class="row section--background-white border--top padding--top padding--bottom">
+    <div class="row section--background-white border--top padding--top padding--left padding--right padding--bottom">
 
       <div class="col-md-5 col-md-offset-1">
           <h2 class="sub-heading on-white heading--icon-design">Design<span></span>

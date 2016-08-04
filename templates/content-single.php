@@ -13,8 +13,7 @@
         </div>
         <header class="article-img-bg__header content-border-main-col col-md-7">
           <h1><?php the_title(); ?></h1>
-              <?php if(function_exists('yoast_breadcrumb')) 
-        {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
+              
         </header>
         <div class="col-md-3 content-border-side-col">
           <!-- TITLE TOP RIGHT -->
@@ -36,8 +35,7 @@
         </div>
         <header class="article-img-bg__header content-border-main-col col-md-7">
           <h1><?php the_title(); ?></h1>
-              <?php if(function_exists('yoast_breadcrumb')) 
-        {yoast_breadcrumb('<div class="single-breadcrumbs container"><p id="breadcrumbs">','</p></div>');} ?>
+              
         </header>
         <div class="col-md-3 content-border-side-col">
           <!-- TITLE TOP RIGHT -->

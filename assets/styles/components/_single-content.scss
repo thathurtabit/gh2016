@@ -73,7 +73,8 @@
 }
 
 .article-img-bg__header h1 {
-	display: inline;
+	display: inline-block;
+	max-width: 700px;
 	background-color: $brand-blue;
 	color: $white;
 	padding: 5px 10px;
