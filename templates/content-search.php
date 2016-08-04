@@ -1,4 +1,4 @@
-<div class="article-divider">
+<div class="article-divider waypoints">
 	<article <?php post_class('row'); ?>>
 	<div class="article__thumb col-md-3 col-md-offset-1">		
 		<!-- FEATURED THUMBNAIL -->

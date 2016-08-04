@@ -1,6 +1,6 @@
 <?php if(is_singular('portfolio')) { ?>
 	
-	<h3>What we did</h3>
+	<h3>What I did</h3>
 	<?php
 	// What We Did List
 	if(get_field('what_we_did')) { ?>
@@ -35,6 +35,8 @@
 	</div>
 <?php } else { ?>
 	
-	<h3>Social stuff</h3>
+	<h3>Am I available?</h3>
+	
+	<p>Maybe, who knows?<br />Well I should, so get in touch over at <a href="<?php bloginfo('url'); ?>/contact">Contact <i class="fa fa-comment-o"></i></a>.</p>
 
 <?php } ?>

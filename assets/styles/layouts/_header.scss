@@ -336,6 +336,16 @@ body:not(.home) #nav-banner-center {
 	}
 }
 	
+// STOP MULTIPLE ACTIVE ITEMS (based on body class)
+.single-portfolio.single-format-standard .latest a,
+.single-portfolio.single-format-standard .latest a:hover{
+	color: $gray-light !important;
+
+	a::after {
+		@include scale(0,0);
+	}
+}
+
 // ACTIVE MENU ITEM (based on body class)
 .single-portfolio .work a,
 .single-portfolio .work a:hover,

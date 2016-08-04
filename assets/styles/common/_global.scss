@@ -71,6 +71,17 @@
     color: $gray;
 }
 
+.display-block {
+    display: block;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
 
 // Make all images responsive
 img {

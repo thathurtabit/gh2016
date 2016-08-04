@@ -235,16 +235,34 @@ body {
         }
 
         .article-divider {            
-            border-bottom: 1px solid $border-color;
+            position: relative;
+
+            &::before {
+                transition: width 2s ease-in-out;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 1px;
+                width: 0;
+                left: 0;
+                background-color: $border-color;
+            }
+
+            &.waypoint-active::before {
+                width: 100%;
+            }
             
-            &:last-child {
-                border-bottom: 0;
+            &:last-child::before {
+                background-color: transparent;
             }
         }
+
+
     }
 
     .entry-content-inner {
         max-width: inherit;
+        margin-top: 0;
     }
 }
 

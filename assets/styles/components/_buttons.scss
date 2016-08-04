@@ -407,6 +407,42 @@ a:hover {
 }
 
 
+.btn-return {
+	background: transparent;
+	display: block;
+	border: 0;
+	color: $gray;
+	position: relative;
+
+	&::before {
+		content: $fa-var-chevron-left;
+		font-family: 'FontAwesome';
+		border-radius: 100%;
+		border: 2px solid $border-color;
+		text-align: center;
+		line-height: 18px;
+		font-size: 10px;
+		width: 20px;
+		height: 20px;
+		margin-top: -8px;
+		transition: transform 0.25s ease-in-out;
+		transform: translate(0, 0);
+		position: absolute;
+		right: 0;
+    	top: 10px;
+    	color: $border-color;
+	}
+
+	&:hover {
+		@include animate-color();
+
+		&::before {
+			@include animate-bgcolor();
+			color: $white;
+		}
+	}
+}
+
 // THIS BUTTON WILL EXTEND STUFF
 .btn-blue,
 .comment-form [type=submit],
