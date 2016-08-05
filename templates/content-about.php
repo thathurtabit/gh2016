@@ -1,44 +1,53 @@
-<div class="row content-border-main-col">
-
-	<div class="entry-content-inner col-md-5">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	     <?php the_content(); ?>
-	    <?php endwhile; endif; ?>
-	</div>
-
-	<div class="col-md-2">
-
-		<div class="high-five-hand-wrapper">
-			<div class="high-five-hand">
-				<strong>Yeah!</strong>
-				<?php get_template_part('dist/images/inline', 'hand.svg');?>
-			</div>
-			<h4>High five?</h4>
-		</div>
-
-	</div>
-
-	<div class="col-md-5">
-		<?php if( get_field('alternative_content') ): ?>
-			<p><?php the_field('alternative_content'); ?></p>
-		<?php endif; ?>
-		<a href="<?php bloginfo('url');?>/portfolio" class="btn btn--color-blue btn--size-tiny btn--arrow-right">View portfolio</a>
-	</div>
-
-</div>
-
 <div class="row">
 
-	<div class="col-md-6 col-md-offset-3 content-divider--top">
-
-		<div class="high-five-hand-wrapper">
-			<div class="high-five-hand">
-				<strong>Yeah!</strong>
-				<?php get_template_part('dist/images/inline', 'hand.svg');?>
-			</div>
-			<h4>High five?</h4>
+	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured">
+		<div class="content-big-blocks__content one">
+			<h2>Who?</h2>
+			<svg height="74" width="74" class="content-big-blocks__svg">
+			 	<circle class="content-big-blocks__content-circle" cx="37" cy="37" r="30" />
+			 </svg>
 		</div>
-
 	</div>
 
-</div>
+	<div class="col-md-6 content-big-blocks">
+		<div class="content-big-blocks__content two">
+			<i class="fa fa-quote-left bg-fa"></i>
+
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		     <?php the_content(); ?>
+		    <?php endwhile; endif; ?>
+		</div>
+	</div>
+
+</div><!-- / ROW -->
+
+<div class="row section--background-white">
+
+	<div class="col-md-6 content-big-blocks">
+		<div class="content-big-blocks__content three">
+			<i class="fa fa-thumbs-o-up bg-fa"></i>
+
+			<?php if( get_field('alternative_content') ): ?>
+				<p><?php the_field('alternative_content'); ?></p>
+			<?php endif; ?>
+			<a href="<?php bloginfo('url');?>/portfolio" class="btn btn--color-blue btn--size-tiny btn--arrow-right">View portfolio</a>
+		</div>
+	</div>
+
+	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured reverse">
+		<div class="content-big-blocks__content four">
+			<div class="high-five-hand-wrapper">
+				<div class="high-five-hand">
+					<strong>Yeah!</strong>
+					<?php get_template_part('dist/images/inline', 'hand.svg');?>
+				</div>
+				<h4>High five?</h4>
+			</div>
+			 <svg height="74" width="74" class="content-big-blocks__svg">
+			 	<circle class="content-big-blocks__content-circle" cx="37" cy="37" r="30" />
+			 </svg>
+		</div>
+	</div>
+
+</div><!-- / ROW -->
+

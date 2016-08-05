@@ -1,5 +1,5 @@
 .high-five-hand-wrapper {
-	width: 300px;
+	width: 200px;
 	margin: 0 auto;
 	text-align: center;
 
@@ -7,28 +7,29 @@
 		strong {
 			opacity: 1;
 		}
+
 		.high-five-hand {
-			transform: scale(3);
+			transform: scale(5);
 		}
 	}
 }
 
 .high-five-hand {
 	transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	max-width: 100px;
+	max-width: 50px;
 	margin: 0 auto;
 	transform: scale(1);
 
 	strong {
+		@include animate-color;
 		transition: opacity 0.25s ease-in-out;
-		transform: rotate(45deg);
 		opacity: 0;
 		text-transform: uppercase;
 		color: $brand-blue;
-		font-size: 17px;
+		font-size: 9px;
 		position: absolute;
-		top: 79px;
-    	left: 36px;
+		top: 40px;
+    	left: 17px;
 	}
 }
 

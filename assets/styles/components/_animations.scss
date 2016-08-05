@@ -110,6 +110,31 @@
 
 
 
+// SVG CIRCLE ANIMATION
+@mixin svg-circle-animation() {
+  @include animation-name(svg-circle-animation);
+  @include animation-duration(2s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(50% 50%);
+}
+
+// Animate=spin spin keyframes
+@keyframes svg-circle-animation {
+    from {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 5;
+    }
+    to {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 221;
+    }
+}
+// end SVG CIRCLE ANIMATION
+
+
+
+
 // Floaty bounce
 @mixin floaty-bounce() {
   @include animation-name(floaty-bounce);
