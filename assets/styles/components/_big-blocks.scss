@@ -4,7 +4,8 @@
 	align-items: center;
 	min-height: 400px;
 	overflow: hidden;
-	font-size: 28px;
+	font-family: $font-family-serif;
+	font-size: 20px;
 
 	&.align-full {
 		align-items: stretch;
@@ -16,33 +17,35 @@
 	justify-content: center;
 }
 
-.bg-fa {
-	font-size: 100vh;
+.side-quote {
+	font-family: $font-family-serif;
 	position: absolute;
-	z-index: -1;
-	color: rgba(0, 0, 0, 0.025);
-	top: 0;
-	margin-top: -50%;
+	color: $brand-blue;
+	top: 11px;
+	left: -30px;
+	font-size: 40px;
+	font-style: normal;
+	height: 20px;
+    line-height: 20px;
 }
 
 
 .content-big-block--coloured {
-	@include animate-bgcolor;
-	@include animation-duration(30s);
-	background-color: $brand-blue;
 	color: $white;
-
-	&.reverse {
-		@include animation-direction(reverse);
-	}
 }
 
 .content-big-blocks__content {
 	transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 	opacity: 0;
 	transform: translate(0, 10px);
-	max-width: 560px;
+	max-width: 70%;
 	margin: 0 auto;
+	position: relative;
+
+	&.full {
+		width: 100%;
+		max-width: inherit;
+	}
 
 	h2 {
 		margin: 0;
@@ -62,6 +65,22 @@
 
 	&.four {
 		transition-delay: 2.5s;
+	}
+
+	&.five {
+		transition-delay: 3s;
+	}
+
+	&.six {
+		transition-delay: 3.5s;
+	}
+
+	&.seven {
+		transition-delay: 4s;
+	}
+
+	&.eight {
+		transition-delay: 4.5s;
 	}
 
 
@@ -84,9 +103,9 @@
 
 .content-big-blocks__content-circle {
 	transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-	stroke: rgba(0, 0, 0, 0.2);
+	stroke: rgba(0, 0, 0, 0.05);
 	fill: transparent;
-	stroke-width: 5px;
+	stroke-width: 60px;
 	stroke-dashoffset: 0;
 	transition-delay: 3s;
 

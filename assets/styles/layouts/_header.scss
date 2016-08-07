@@ -207,7 +207,7 @@
 
 			&:hover::after {
 				@include scale(1,1);
-				background-color: rgba(255,255,255,1);
+				background-color: rgba(255,255,255,0.2);
 			}
 		}
 
@@ -248,7 +248,7 @@
 		@include respond-to(screen-sm) {
 			float: none; // override default styles
 			text-align: center;
-			border-bottom: 1px solid $border-color;
+			border-bottom: 1px solid rgba(255,255,255,0.2);
 
 			>li {
 				float: none; // override default styles

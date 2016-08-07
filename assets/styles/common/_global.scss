@@ -8,6 +8,14 @@
     border-top: 0;
 }
 
+.section--border-white-top-only {
+    border-top: 10px solid $white;
+}
+
+.section--border-white-bottom-only {
+    border-bottom: 10px solid $white;
+}
+
 .section--border-sides-white-only {
     border-left: 10px solid $white;
     border-right: 10px solid $white;
@@ -29,7 +37,9 @@
 .section--border-white,
 .section--border-sides-white-only,
 .section--border-white-sides-top,
-.section--border-white-top-bottom {
+.section--border-white-top-bottom,
+.section--border-white-top-only,
+.section--border-white-bottom-only {
 
     // FROM BREAKPOINT
     @include respond-to(screen-sm) {

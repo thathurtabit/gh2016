@@ -1,8 +1,8 @@
 <div class="row">
 
-	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured">
+	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured section--background-orange">
 		<div class="content-big-blocks__content one">
-			<h2>Who?</h2>
+			<h2 class="sub-heading alt heading--icon-question">Who<span></span></h2>
 			<svg height="74" width="74" class="content-big-blocks__svg">
 			 	<circle class="content-big-blocks__content-circle" cx="37" cy="37" r="30" />
 			 </svg>
@@ -11,7 +11,7 @@
 
 	<div class="col-md-6 content-big-blocks">
 		<div class="content-big-blocks__content two">
-			<i class="fa fa-quote-left bg-fa"></i>
+			<i class="side-quote">&ldquo;</i>
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		     <?php the_content(); ?>
@@ -25,7 +25,7 @@
 
 	<div class="col-md-6 content-big-blocks">
 		<div class="content-big-blocks__content three">
-			<i class="fa fa-thumbs-o-up bg-fa"></i>
+			<i class="side-quote">&ldquo;</i>
 
 			<?php if( get_field('alternative_content') ): ?>
 				<p><?php the_field('alternative_content'); ?></p>
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured reverse">
+	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured section--background-green">
 		<div class="content-big-blocks__content four">
 			<div class="high-five-hand-wrapper">
 				<div class="high-five-hand">
