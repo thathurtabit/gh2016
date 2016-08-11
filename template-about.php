@@ -22,9 +22,9 @@
 
     </div><!-- / ARTICLE ROW -->
 
-    <div class="row section--background-white">
+    <div class="row content-big-blocks-row section--background-white">
 
-      <div class="col-md-6 content-big-blocks--centered content-big-block--coloured section--background-red">
+      <div class="content-big-blocks--centered content-big-block--coloured section--background-red">
         <div class="content-big-blocks__content five">
           <h2 class="sub-heading alt heading--icon-design">Design<span></span>
           </h2>
@@ -34,8 +34,8 @@
         </div>
       </div>
 
-      <div class="col-md-6 content-big-blocks align-full">
-        <div class="content-big-blocks__content full six">
+      <div class="content-big-blocks align-full">
+        <div class="content-big-blocks__content full list six">
           <ul class="list-ul-blocks blocks--circle">
             <li class="purple">Website Design</li>
             <li>User Interface Design</li>
@@ -47,10 +47,20 @@
 
     </div><!-- / ROW -->
 
-    <div class="row section--background-white section--border-white-bottom-only">
+    <div class="row content-big-blocks-row section--background-white section--border-white-bottom-only">
 
-      <div class="col-md-6 content-big-blocks align-full">
-        <div class="content-big-blocks__content full seven">
+      <div class="content-big-blocks--centered content-big-block--coloured section--background-purple">
+        <div class="content-big-blocks__content eight">
+          <h2 class="sub-heading alt heading--icon-code">Coding<span></span>
+          </h2>
+          <svg height="74" width="74" class="content-big-blocks__svg">
+            <circle class="content-big-blocks__content-circle" cx="37" cy="37" r="30" />
+           </svg>
+        </div>
+      </div>
+
+      <div class="content-big-blocks align-full">
+        <div class="content-big-blocks__content full list seven">
           <ul class="list-ul-blocks blocks--circle">
             <li class="red">HTML5</li>
             <li class="green">CSS3 / SASS / LESS</li>
@@ -60,15 +70,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 content-big-blocks--centered content-big-block--coloured section--background-purple">
-        <div class="content-big-blocks__content eight">
-          <h2 class="sub-heading alt heading--icon-code">Coding<span></span>
-          </h2>
-          <svg height="74" width="74" class="content-big-blocks__svg">
-            <circle class="content-big-blocks__content-circle" cx="37" cy="37" r="30" />
-           </svg>
-        </div>
-      </div>
+      
     
     </div><!-- / ROW -->
       

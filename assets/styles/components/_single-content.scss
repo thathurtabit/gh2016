@@ -39,7 +39,7 @@
 	background-size: cover;
 	background: transparent;
 	width: 100%;
-	height: 200px;
+	height: 250px;
 	overflow: hidden;
 	position: relative;
 	display: flex;
@@ -195,13 +195,17 @@
 .wheelie-across {
 	transition: left 2s ease-in-out;
 	position: absolute;
-	left: -20%;
-	width: 160px;
+	left: -25%;
+	width: 70px;
 	bottom: 0;
 
 	.pageloaded & {
 		transition-delay: 2s;
 		left: 100%;
+	}
+
+	@include respond-to(screen-md) {
+		width: 160px;
 	}
 }
 

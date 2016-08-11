@@ -1,12 +1,12 @@
 
 .pupilleft,
 .pupilright {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   position: relative;
   background: $black;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
 
   // FROM SMALL
   @media (min-width: $screen-sm-min) {

@@ -13,7 +13,7 @@
 .large-ul-blocks {
     list-style-type: none;
     padding: 0;
-    margin: 20px;
+    margin: 40px 20px 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -34,7 +34,7 @@
         z-index: -1;
 
         // FROM BREAKPOINT
-        @media (min-width: $grid-float-breakpoint) {
+        @include respond-to(screen-sm) {
             margin-top: -25px;
         }
     }
@@ -49,7 +49,7 @@
         z-index: -1;
 
         // FROM BREAKPOINT
-        @media (min-width: $grid-float-breakpoint) {
+        @include respond-to(screen-sm) {
             margin-top: -37px;
         }
     }
@@ -64,7 +64,7 @@
         z-index: -1;
 
         // FROM BREAKPOINT
-        @media (min-width: $grid-float-breakpoint) {
+        @include respond-to(screen-sm) {
             margin-top: -37px;
         }
     }
@@ -79,17 +79,17 @@
         align-items: center;
 
         // FROM BREAKPOINT
-        @media (min-width: $grid-float-breakpoint) {
+        @include respond-to(screen-sm) {
             flex: 1 50%;
         }
 
         // FROM MEDIUM 
-        @media (min-width: $screen-md-min) {
+        @include respond-to(screen-md) {
             flex: 1 33.33%;
         }
 
         // FROM LARGE 
-        @media (min-width: $screen-lg-min) {
+        @include respond-to(screen-lg) {
         }
 
 
@@ -135,7 +135,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 20px 0 0;
+            margin: 0;
             height: 100px;
             overflow: hidden;
             line-height: 1;
@@ -147,20 +147,20 @@
             
 
             // FROM BREAKPOINT
-            @media (min-width: $grid-float-breakpoint) {
+            @include respond-to(screen-sm) {
                 margin: 20px;
                 height: 150px;
                 font-size: 30px;
             }
             // FROM MEDIUM 
-            @media (min-width: $screen-md-min) {
+            @include respond-to(screen-md) {
                 font-size: 40px;
                 height: 200px;
                 font-size: 33px;
             }
 
             // FROM LARGE 
-            @media (min-width: $screen-lg-min) {
+            @include respond-to(screen-lg) {
                 height: 240px;
                 font-size: 40px;
             }

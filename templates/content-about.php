@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row content-big-blocks-row">
 
-	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured section--background-orange">
+	<div class="content-big-blocks--centered content-big-block--coloured section--background-orange">
 		<div class="content-big-blocks__content one">
 			<h2 class="sub-heading alt heading--icon-question">Who<span></span></h2>
 			<svg height="74" width="74" class="content-big-blocks__svg">
@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-6 content-big-blocks border-top">
+	<div class="content-big-blocks border-top">
 		<div class="content-big-blocks__content two">
 			<i class="side-quote">&ldquo;</i>
 
@@ -21,20 +21,9 @@
 
 </div><!-- / ROW -->
 
-<div class="row section--background-white">
+<div class="row content-big-blocks-row section--background-white">
 
-	<div class="col-md-6 content-big-blocks">
-		<div class="content-big-blocks__content three">
-			<i class="side-quote">&ldquo;</i>
-
-			<?php if( get_field('alternative_content') ): ?>
-				<p><?php the_field('alternative_content'); ?></p>
-			<?php endif; ?>
-			<a href="<?php bloginfo('url');?>/portfolio" class="btn-blue--smaller btn--arrow-right">View portfolio</a>
-		</div>
-	</div>
-
-	<div class="col-md-6 content-big-blocks--centered content-big-block--coloured section--background-green">
+	<div class="content-big-blocks--centered content-big-block--coloured section--background-green">
 		<div class="content-big-blocks__content four">
 			<div class="high-five-hand-wrapper">
 				<div class="high-five-hand">
@@ -46,6 +35,17 @@
 			 <svg height="74" width="74" class="content-big-blocks__svg">
 			 	<circle class="content-big-blocks__content-circle" cx="37" cy="37" r="30" />
 			 </svg>
+		</div>
+	</div>
+
+	<div class="content-big-blocks">
+		<div class="content-big-blocks__content three">
+			<i class="side-quote">&ldquo;</i>
+
+			<?php if( get_field('alternative_content') ): ?>
+				<p><?php the_field('alternative_content'); ?></p>
+			<?php endif; ?>
+			<a href="<?php bloginfo('url');?>/portfolio" class="btn-blue--smaller btn--arrow-right">View portfolio</a>
 		</div>
 	</div>
 

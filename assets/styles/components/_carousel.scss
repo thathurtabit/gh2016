@@ -68,7 +68,6 @@
     opacity: 0.5;
     transform: rotate(45deg); 
     border-radius: 0;
-    border: 2px solid $white;
     content: '';
     top: 50%;
     left: 50%;
@@ -77,6 +76,10 @@
     background: transparent;
     position: absolute;
     z-index: 1;
+
+    @include respond-to(screen-sm) {
+        border: 2px solid $white;
+    }
 }
 
 .slick-next::after {

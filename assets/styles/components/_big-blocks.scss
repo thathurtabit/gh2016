@@ -1,10 +1,15 @@
+
+
 .content-big-blocks,
 %content-big-blocks {
 	display: flex;
 	align-items: center;
-	min-height: 400px;
 	font-family: $font-family-serif;
 	font-size: 20px;
+
+	@include respond-to(screen-sm) {
+		min-height: 400px;
+	}
 
 	&.align-full {
 		align-items: stretch;
@@ -15,6 +20,10 @@
 	@extend %content-big-blocks;
 	justify-content: center;
 }
+
+
+
+
 
 .side-quote {
 	font-family: $font-family-serif;
@@ -33,6 +42,11 @@
 	color: $white;
 	position: relative;
 	overflow: hidden;
+	min-height: 100px;
+
+	@include respond-to(screen-sm) {
+		min-height: 400px;
+	}
 
 	&::before {
 		transition: transform 0.25s ease-in-out;
@@ -59,8 +73,16 @@
 	opacity: 0;
 	transform: translate(0, 10px);
 	max-width: 70%;
-	margin: 0 auto;
+	margin: 30px auto;
 	position: relative;
+
+	&.list {
+		margin: 0;
+	}
+
+	p {
+		margin-bottom: 2rem;
+	}
 
 	&.full {
 		width: 100%;
@@ -134,5 +156,30 @@
 		@include svg-circle-animation;
 	}
 }
+
+
+// LAYOUT
+.content-big-blocks-row {
+	
+	@include respond-to(screen-sm) {
+		display: flex;
+
+		&:nth-child(even) {
+			.content-big-blocks:first-of-type,
+			.content-big-block--coloured:first-of-type {
+				order: 2;
+			}
+		}
+	}
+
+	.content-big-blocks,
+	.content-big-block--coloured {
+
+		@include respond-to(screen-sm) {
+			flex: 0 0 50%;
+		}
+	}
+}
+
 
 

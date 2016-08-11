@@ -118,16 +118,27 @@ li {
     // Make icon appear above
     &::before,
     &::after {
-    	@include square(70px);    	
+    	@include square(50px);    	
     	font-family: 'FontAwesome';
         content: '';
-    	line-height: 70px;
+    	line-height: 50px;
     	text-align: center;
-    	top: -48px;
+    	top: -30px;
     	left: 50%;
-    	margin-left: -35px;
+    	margin-left: -25px;
     	position: absolute;
     	z-index: 31;
+
+        @include respond-to(screen-sm) {
+            top: -33px;
+        }
+
+        @include respond-to(screen-md) {
+            @include square(70px);
+            margin-left: -35px;
+            top: -48px;
+            line-height: 70px;
+        }
     }
 
     &::before {
@@ -203,7 +214,7 @@ li {
         @include transition(all 0.3s ease-in-out); 
         @include rotateY(0deg);
         @include square(50px);
-        top: -48px;
+        top: -32px;
         left: 50%;
         margin-left: -25px;
         position: absolute;
@@ -213,10 +224,15 @@ li {
             @include square(100%);
             content: '';
             margin-left: -25px;
+            margin-top: -9px;
             position: absolute;
             background-color: transparent;
             border: 3px solid $white;
             border-radius: 0;
+
+            @include respond-to(screen-md) {
+                margin-top: 0;
+            }
         }
     }
 
@@ -239,10 +255,17 @@ li {
     }
 
     &::after {
-        @include square(70px);
-        margin-left: -35px;
+        @include square(50px);
+        margin-left: -25px;
         margin-top: -9px;
         color: $white;
+
+        @include respond-to(screen-md) {
+            @include square(70px);
+            margin-left: -35px;
+            top: -33px;
+            line-height: 70px;
+        }
     }
 
     &:hover span {
@@ -396,7 +419,7 @@ article {
     }
 
     .article__content-wrap {
-        margin: 20px;
+        margin: 20px 0;
 
        // FROM BREAKPOINT
         @include respond-to(screen-sm) {

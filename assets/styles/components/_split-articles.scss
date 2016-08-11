@@ -22,6 +22,14 @@
     max-width: 600px;
     margin: 40px auto;
     margin-right: auto;
+
+    .article__section-title h1 {
+        font-size: 27px;
+
+        @include respond-to(screen-md) {
+            font-size: 33px;
+        }
+    }
 }
 
 .featured-img.featured-img--flat {
@@ -173,8 +181,8 @@
     .sub-heading,
     .article--split,
     .split-tags {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 5%;
+        margin-right: 5%;
 
         @include respond-to(screen-lg) {
             max-width: 500px;
