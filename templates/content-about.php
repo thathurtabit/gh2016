@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-6 content-big-blocks">
+	<div class="col-md-6 content-big-blocks border-top">
 		<div class="content-big-blocks__content two">
 			<i class="side-quote">&ldquo;</i>
 
@@ -30,7 +30,7 @@
 			<?php if( get_field('alternative_content') ): ?>
 				<p><?php the_field('alternative_content'); ?></p>
 			<?php endif; ?>
-			<a href="<?php bloginfo('url');?>/portfolio" class="btn btn--color-blue btn--size-tiny btn--arrow-right">View portfolio</a>
+			<a href="<?php bloginfo('url');?>/portfolio" class="btn-blue--smaller btn--arrow-right">View portfolio</a>
 		</div>
 	</div>
 

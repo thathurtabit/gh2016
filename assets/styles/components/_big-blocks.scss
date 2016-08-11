@@ -3,7 +3,6 @@
 	display: flex;
 	align-items: center;
 	min-height: 400px;
-	overflow: hidden;
 	font-family: $font-family-serif;
 	font-size: 20px;
 
@@ -32,6 +31,27 @@
 
 .content-big-block--coloured {
 	color: $white;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		transition: transform 0.25s ease-in-out;
+		content: '';
+		position: absolute;
+		z-index: 0;
+		border-radius: 100%;
+		top: 50%;
+		left: 50%;
+		width: 300px;
+		height: 300px;
+		margin-top: -150px;
+		margin-left: -150px;
+		border: 50px solid rgba(255, 255, 255, 0.2);
+	}
+
+	&:hover::before {
+		transform: scale(3);
+	}
 }
 
 .content-big-blocks__content {

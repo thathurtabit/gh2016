@@ -468,6 +468,23 @@ a:hover {
 	}
 }
 
+.btn-blue--smaller {
+	@extend .btn-blue;
+	padding: 5px 43px 5px 10px;
+
+	&::after {
+		top: 5px;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		padding: 5px 50px 5px 10px;
+	}
+
+
+}
+
 .comment-form [type=submit],
 .comment-form [type=submit]:hover,
 .comment-form [type=submit]:focus,

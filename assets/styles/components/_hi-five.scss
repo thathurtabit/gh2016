@@ -9,7 +9,7 @@
 		}
 
 		.high-five-hand {
-			transform: scale(5);
+			transform: scale(4);
 		}
 	}
 }
@@ -22,13 +22,13 @@
 
 	strong {
 		@include animate-color;
+		font-family: $font-family-serif-alt;
 		transition: opacity 0.25s ease-in-out;
 		opacity: 0;
-		text-transform: uppercase;
 		color: $brand-blue;
-		font-size: 9px;
+		font-size: 12px;
 		position: absolute;
-		top: 40px;
+		top: 34px;
     	left: 17px;
 	}
 }

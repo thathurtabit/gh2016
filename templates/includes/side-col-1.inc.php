@@ -21,6 +21,9 @@
 		'Chuck Norris once kicked a horse in the chin. Its decendants are known today as Giraffes.',
 		'Chuck Norris can win a game of Connect Four in only three moves.',
 		'Chuck Norris can cut through a hot knife with butter.',
+		'There used to be a street named after Chuck Norris, but it was changed because nobody crosses Chuck Norris and lives.',
+		'Chuck Norris doesn\'t read books. He stares them down until he gets the information he wants.',
+		'Chunk Norris can fast-forward live TV.'
 		);
 	?>
 
@@ -37,6 +40,6 @@
 	
 	<h3>Am I available?</h3>
 	
-	<p>Maybe, who knows?<br />Well I should, so get in touch over at <a href="<?php bloginfo('url'); ?>/contact">Contact <i class="fa fa-comment-o"></i></a>.</p>
+	<p>Maybe, who knows?<br />I should, so get in touch over at <a href="<?php bloginfo('url'); ?>/contact">Contact <i class="fa fa-comment-o"></i></a>.</p>
 
 <?php } ?>
