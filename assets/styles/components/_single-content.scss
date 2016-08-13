@@ -15,9 +15,52 @@
 
 
 .article-row {
-	display: flex;
 	padding: 0;
+	display: flex;
+	flex-direction: column;
+
+	// Reorder content
+	.main-content-col {
+		order: 1;
+	}
+
+	.content-border-side-col {
+		order: 2;
+	}
+
+	& > div:nth-child(3) {
+		order: 3;
+	}
+
+
+
+	@include respond-to(screen-md) {
+		flex-direction: row;
+
+		.main-content-col {
+			order: 2;
+		}
+
+		.content-border-side-col {
+			order: 1;
+		}
+
+
+	}
 }
+
+
+// HEADER SIDE COL
+.article-img-bg__wrap .content-border-side-col {
+	display: none;
+
+	@include respond-to(screen-md) {
+		display: block;
+	}
+}
+
+
+
 
 // TEXT COLOUR
 .article-row,
@@ -27,7 +70,10 @@
 
 .article-row--blocks {
 	@extend .article-row;
-	flex-wrap: wrap;
+
+	@include respond-to(screen-md) {
+		flex-wrap: wrap;
+	}
 }
 
 
@@ -35,8 +81,11 @@
 	padding-top: 0;
 }
 
+
+
 .article-img-bg {
 	background-size: cover;
+	background-image: none;
 	background: transparent;
 	width: 100%;
 	height: 250px;
@@ -58,6 +107,43 @@
 		height: 600px;
 	}
 }
+
+
+// Hide BG on certain pages
+.page-template-template-latest,
+.page-template-template-about,
+.page-template-default, 
+.post-type-archive-portfolio {
+
+	// SMALLER SCREENS
+	@media screen and (max-width: ($screen-xs - 1)) {
+		article {
+			min-height: inherit;
+		}
+		.article-img-bg {
+			background-image: none !important;
+			height: 170px;
+		}
+		.article-img-bg__header--large-text {
+			padding-top: 70px;
+		}
+	}
+
+	// SCREEN MEDIUM
+	@media screen and (min-width: $screen-xs) and (max-width: ($screen-sm - 1)) {
+		article {
+			min-height: inherit;
+		}
+		.article-img-bg {
+			background-image: none !important;
+			height: 220px;
+		}
+		.article-img-bg__header--large-text {
+			padding-top: 65px;
+		}
+	}
+}
+
 
 .article-img-bg__wrap {
 	border-bottom: 1px solid $border-color;
@@ -97,10 +183,15 @@
     align-items: center;
 
 	h1 {
-		font-size: 20vw;
+		font-size: 17vw;
 		line-height: 1;
 		flex: 1;
 		margin: 0;
+
+		// RESPONSIVE
+		@include respond-to(screen-md) {
+			font-size: 20vw;
+		}
 
 		// CUSTOM SIZES
 		.production-diary & {

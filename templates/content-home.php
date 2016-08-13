@@ -256,7 +256,7 @@
 </ul>
 
 	<div class="row block--spacing-center block--position-bottom">
-		<a href="#but-what" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
+		<a href="#but-what" class="btn btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 	
 </section><!-- / BUT HOW? -->
@@ -276,7 +276,7 @@
 </ul>
 
 	<div class="row block--spacing-center block--position-bottom">
-		<a href="#latest-split" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
+		<a href="#latest-split" class="btn btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 
 </section><!-- / BUT WHAT -->
@@ -507,7 +507,7 @@
 </div>
 
 	<div class="row block--spacing-center block--position-bottom">
-		<a href="#contact-finger-wrap" class="btn btn--color-white btn--size-large btn--arrow-down btn--bgcolor-spin btn--scrollto">More</a>
+		<a href="#contact-finger-wrap" class="btn btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">More</a>
 	</div>
 
 

@@ -285,6 +285,39 @@ body {
     }
 }
 
+.content-list-block-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(screen-xs) {
+        flex-direction: row;
+
+        .content-list-block__img {
+            flex: 0 0 30%;
+            margin-right: 30px;
+        }
+    }
+
+    @include respond-to(screen-sm) {
+        min-height: inherit;
+        
+        .content-list-block__img {
+            flex: 0 0 30%;
+            margin-right: 0;
+        }
+    }
+    
+    @include respond-to(screen-md) {
+        flex-direction: column;
+    }
+}
+
+.content-list-block__img,
+.content-list-block__text {
+    flex: 1;
+}
+
+
 // REORDER ON LARGER SCREENS
 .article__thumb {
     @include respond-to('screen-md') {
