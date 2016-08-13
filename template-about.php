@@ -24,7 +24,7 @@
 
     <div class="row content-big-blocks-row section--background-white">
 
-      <div class="content-big-blocks--centered content-big-block--coloured section--background-red">
+      <div class="content-big-blocks--centered content-big-block--coloured section--color-red">
         <div class="content-big-blocks__content five">
           <h2 class="sub-heading alt heading--icon-design">Design<span></span>
           </h2>
@@ -49,7 +49,7 @@
 
     <div class="row content-big-blocks-row section--background-white section--border-white-bottom-only">
 
-      <div class="content-big-blocks--centered content-big-block--coloured section--background-purple">
+      <div class="content-big-blocks--centered content-big-block--coloured section--color-purple">
         <div class="content-big-blocks__content eight">
           <h2 class="sub-heading alt heading--icon-code">Coding<span></span>
           </h2>

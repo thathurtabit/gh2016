@@ -6,6 +6,7 @@
 	align-items: center;
 	font-family: $font-family-serif;
 	font-size: 20px;
+	border-bottom: 1px solid $border-color;
 
 	@include respond-to(screen-sm) {
 		min-height: 400px;
@@ -39,7 +40,6 @@
 
 
 .content-big-block--coloured {
-	color: $white;
 	position: relative;
 	overflow: hidden;
 	min-height: 100px;
@@ -60,7 +60,48 @@
 		height: 300px;
 		margin-top: -150px;
 		margin-left: -150px;
-		border: 50px solid rgba(255, 255, 255, 0.2);
+		border: 50px solid rgba(0, 0, 0, 0.05);
+	}
+
+	// Change colours
+	&.section--color-green {
+		h2.sub-heading::after {
+			color: $brand-green;
+		}
+
+		&::before {
+			border-color: rgba(116, 195, 144, 1);
+		}
+	}
+
+	&.section--color-orange {
+		h2.sub-heading::after {
+			color: $brand-orange;
+		}
+
+		&::before {
+			border-color: rgba(252, 174, 80, 1);
+		}
+	}
+
+	&.section--color-red {
+		h2.sub-heading::after {
+			color: $brand-red;
+		}
+
+		&::before {
+			border-color: rgba(228, 102, 83, 1);
+		}
+	}
+
+	&.section--color-purple {
+		h2.sub-heading::after {
+			color: $brand-purple;
+		}
+
+		&::before {
+			border-color: rgba(144, 105, 222, 1);
+		}
 	}
 
 	&:hover::before {
@@ -91,6 +132,11 @@
 
 	h2 {
 		margin: 0;
+
+		&::after {
+			top: -61px;
+			color: $gray;
+		}
 	}
 
 	&.one {
@@ -150,6 +196,23 @@
 	stroke-width: 60px;
 	stroke-dashoffset: 0;
 	transition-delay: 3s;
+
+	// Change colours
+	.section--color-green & {
+		stroke: rgba(116, 195, 144, 0.2);
+	}
+
+	.section--color-orange & {
+		stroke: rgba(252, 174, 80, 0.2);
+	}
+
+	.section--color-red & {
+		stroke: rgba(228, 102, 83, 0.2);
+	}
+
+	.section--color-purple & {
+		stroke: rgba(144, 105, 222, 0.2);
+	}
 
 	// Animate
 	.pageloaded & {

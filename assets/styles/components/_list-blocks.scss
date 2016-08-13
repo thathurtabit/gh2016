@@ -26,6 +26,10 @@
 		letter-spacing: 3px;
 		box-shadow: inset 0 -1px $border-color;
 
+		&:last-of-type {
+			box-shadow: none;
+		}
+
 		&::before {
 			content: '';
 			transition: transform 0.25s ease-in-out;

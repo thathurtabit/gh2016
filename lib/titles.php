@@ -19,7 +19,7 @@ function title() {
   } elseif (is_search()) {
     return __('Search', 'sage');
   } elseif (is_404()) {
-    return __('Not Found', 'sage');
+    return __('404', 'sage');
   } else {
     return get_the_title();
   }

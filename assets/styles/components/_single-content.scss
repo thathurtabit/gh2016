@@ -146,9 +146,12 @@
 
 
 .article-img-bg__wrap {
-	border-bottom: 1px solid $border-color;
-	background-color: $white-rgba;
 	flex: 1;
+
+	@include respond-to(screen-md) {
+		border-bottom: 1px solid $border-color;
+		background-color: $white-rgba;
+	}
 
 	h1,
 	h2,
@@ -305,22 +308,30 @@
 	padding: 0;
 	list-style-type: none;
 
-	li.yep,
-	li.no {
+	li.yep {
 		position: relative;
 
 		&::before {
 			font-family: 'FontAwesome';
 			color: $brand-blue;
 			margin-right: 10px;
+			font-size: 13px;
+			position: relative;
+			top: -2px;
 		}
+	}
+
+	li.no,
+	li.na {
+		display: none;
 	}
 
 	li.yep::before {
 		content: $fa-var-check
 	}
 
-	li.no::before {
+	li.no::before,
+	li.na::before {
 		content: $fa-var-times;
 	}
 }

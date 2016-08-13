@@ -2,6 +2,14 @@
 	width: 200px;
 	margin: 0 auto;
 	text-align: center;
+	
+	h4 {
+		font-family: $font-family-sans-serif;
+		font-weight: 700;
+		font-size: 15px;
+		letter-spacing: 0;
+		line-height: 13px;
+	}
 
 	&:hover {
 		strong {
@@ -9,16 +17,18 @@
 		}
 
 		.high-five-hand {
-			transform: scale(4);
+			transform: scale(6);
 		}
 	}
 }
 
 .high-five-hand {
 	transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	max-width: 50px;
+	max-width: 30px;
 	margin: 0 auto;
 	transform: scale(1);
+	position: relative;
+    top: 13px;
 
 	strong {
 		@include animate-color;
@@ -26,10 +36,10 @@
 		transition: opacity 0.25s ease-in-out;
 		opacity: 0;
 		color: $brand-blue;
-		font-size: 12px;
+		font-size: 8px;
 		position: absolute;
-		top: 34px;
-    	left: 17px;
+		top: 20px;
+    	left: 9px;
 	}
 }
 
