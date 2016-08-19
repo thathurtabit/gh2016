@@ -46,18 +46,13 @@ label {
 	max-width: 600px;
 
 	&:focus {
-		background-color: darken($white, 2%);
+		background-color: darken($white, 4%);
 		border-color: $brand-blue;
 		outline: 0;
 		color: $gray;
 	}
 }
 
-// Search Form Only
-.search-form .search-field {
-	@extend %form-input;
-	border: 0;
-}
 
 // Form Inputs
 .comment-form [type=email],
@@ -129,6 +124,7 @@ select.wpcf7-form-control {
 			box-shadow: none;
 			display: block;
 			height: 60px;
+			padding: 0;
 			border: 0;
 			line-height: 60px;
 			width: 100%;
@@ -198,6 +194,7 @@ select.wpcf7-form-control {
 
 			&:focus {
 				background-color: rgba(255,255,255,.2);
+				color: $white;
 			}
 
 

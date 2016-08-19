@@ -20,6 +20,7 @@
 .content-big-blocks--centered {
 	@extend %content-big-blocks;
 	justify-content: center;
+	box-shadow: 1px 0 $border-color;
 }
 
 
@@ -187,6 +188,7 @@
 	left: 50%;
 	margin-left: -37px;
 	margin-top: -37px;
+	border-radius: 100%;
 }
 
 .content-big-blocks__content-circle {
@@ -231,6 +233,9 @@
 			.content-big-blocks:first-of-type,
 			.content-big-block--coloured:first-of-type {
 				order: 2;
+				border-left: 1px solid $border-color;
+
+				box-shadow: none;
 			}
 		}
 	}

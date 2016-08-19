@@ -48,16 +48,16 @@
     }
 
     @include respond-to(screen-sm) {
-        margin: 15px 0 30px -90px;
+    //    margin: 15px 0 30px -90px;
     }
 
     @include respond-to(screen-md) {
-        margin: 15px 0 30px -75px;
+    //    margin: 15px 0 30px -75px;
     }
 
     @include respond-to(screen-lg) {
         @include square(180px);
-        margin: 20px 0 50px -100px;
+        margin: 20px 0 50px -90px;
     }
 
 
@@ -216,8 +216,8 @@
     .sub-heading,
     .article--split,
     .split-tags {
-        margin-left: 5%;
-        margin-right: 5%;
+        // margin-left: 5%;
+        // margin-right: 5%;
 
         @include respond-to(screen-lg) {
             max-width: 500px;

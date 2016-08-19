@@ -27,7 +27,7 @@ body {
 }
 
 .section--height-full-vh {
-    min-height: 490px;
+    min-height: $height-mobile-horizontal;
 
      // FROM BREAKPOINT
     @include respond-to(screen-sm) {
@@ -236,6 +236,7 @@ body {
 
         .article-divider {            
             position: relative;
+            overflow: hidden;
 
             &::before {
                 transition: width 2s ease-in-out;
@@ -248,8 +249,24 @@ body {
                 background-color: $border-color;
             }
 
+            &::after {
+                transition: left 1s ease-in-out;
+                transition-delay: 0.5s;
+                content: '';
+                position: absolute;
+                top: 0;
+                height: 1px;
+                width: 29%;
+                left: -30%;
+                border-top: 2px solid $brand-blue;
+            }
+
             &.waypoint-active::before {
                 width: 100%;
+            }
+
+            &.waypoint-active::after {
+                left: 100%;
             }
             
             &:last-child::before {

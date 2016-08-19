@@ -12,7 +12,7 @@
  
 
     <!-- ARTICLE ROW -->
-    <div class="article-row row section--background-white section--border-white-top-only">     
+    <div class="article-row row section--background-white border-top section--border-white-top-only">     
 
       <div class="col-md-12">
                   
@@ -22,7 +22,7 @@
 
     </div><!-- / ARTICLE ROW -->
 
-    <div class="row content-big-blocks-row section--background-white">
+    <div class="row content-big-blocks-row  section--background-white">
 
       <div class="content-big-blocks--centered content-big-block--coloured section--color-red">
         <div class="content-big-blocks__content five">

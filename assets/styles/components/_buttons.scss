@@ -385,10 +385,11 @@ a:hover {
 
 	@include transition(all 0.15s ease-in-out);
     @include gradient-vertical(rgba(255,255,255,0),rgba(255,255,255,0.1), 50%, 50%);
-    background-size: 200%;
+    background-size: 0;
     background-position: 0 0;
 
     &:hover {
+    	background-size: 200%;
         background-position: 0 100%;
     }
 

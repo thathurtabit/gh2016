@@ -172,7 +172,7 @@
 
     // FROM SMALL 
     @include respond-to(screen-sm) {
-        top: 355px;
+        //top: 355px;
         width: 50%;
         left: auto;
         right: 25%;
@@ -181,7 +181,7 @@
     // FROM MEDIUM
     // White screen (code below) comes in
     @include respond-to(screen-md) {
-        top: 355px;
+        //top: 355px;
         width: 50%;
         left: auto;
         right: 25%;

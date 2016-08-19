@@ -1,6 +1,6 @@
 <div class="row content-big-blocks-row">
 
-	<div class="content-big-blocks--centered border-top content-big-block--coloured section--color-orange">
+	<div class="content-big-blocks--centered content-big-block--coloured section--color-orange">
 		<div class="content-big-blocks__content one">
 			<h2 class="sub-heading alt heading--icon-question">Who<span></span></h2>
 			<svg height="74" width="74" class="content-big-blocks__svg">
@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<div class="content-big-blocks border-top">
+	<div class="content-big-blocks">
 		<div class="content-big-blocks__content two">
 			<i class="side-quote">&ldquo;</i>
 
