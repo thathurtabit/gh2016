@@ -27,7 +27,7 @@ body {
 }
 
 .section--height-full-vh {
-    
+    min-height: 490px;
 
      // FROM BREAKPOINT
     @include respond-to(screen-sm) {

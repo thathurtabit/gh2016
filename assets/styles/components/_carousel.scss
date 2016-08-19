@@ -98,6 +98,7 @@
 
 #bg-carousel {
     //position: relative;
+    min-height: $height-mobile-horizontal;
 	height: 100vh;
 
     // FROM MEDIUM 
@@ -119,7 +120,7 @@
 
     .slick-slide {
         height: 100vh;
-        //min-height: 800px;
+        min-height: $height-mobile-horizontal;
 
         &.item {
             @include transition(.25s ease-in-out box-shadow);

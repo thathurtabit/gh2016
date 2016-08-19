@@ -33,8 +33,8 @@
     position: absolute;
     z-index: 33;
     top: 50%;
-    left: 30px;
-    right: 30px;
+    left: 20px;
+    right: 20px;
     margin: -140px 0 0;
     padding: 20px 0;
     color: $white;
@@ -459,6 +459,7 @@
 
     // CHILDREN
     .item {
+        min-height: $height-mobile-horizontal;
         height: 100vh;
         font-size: 80px;
         overflow: hidden;
