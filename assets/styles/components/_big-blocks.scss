@@ -20,7 +20,10 @@
 .content-big-blocks--centered {
 	@extend %content-big-blocks;
 	justify-content: center;
-	box-shadow: 1px 0 $border-color;
+
+	@include respond-to(screen-sm) {
+		box-shadow: 1px 0 $border-color;
+	}
 }
 
 

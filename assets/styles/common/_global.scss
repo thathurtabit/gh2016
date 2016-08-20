@@ -124,6 +124,19 @@ img {
         width: 50px;
     }
 
+    &.small {
+        position: relative;
+        top: -10px;
+        
+        .wf-active & {
+            width: 30px;
+        }
+        #zigzag,
+        #zigzag-2 {
+            width: 30px;
+        }
+    }
+
     .content-border-side-col & {
         position: relative;
         top: 9px;
