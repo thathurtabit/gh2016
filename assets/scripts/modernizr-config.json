@@ -1,0 +1,20 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/css/backgroundcliptext",
+    "test/css/flexbox",
+    "test/css/flexboxlegacy",
+    "test/css/remunit",
+    "test/css/vhunit",
+    "test/css/vmaxunit",
+    "test/css/vminunit",
+    "test/css/vwunit",
+    "test/elem/picture",
+    "test/img/sizes",
+    "test/img/srcset",
+    "test/svg/clippaths"
+  ]
+}
