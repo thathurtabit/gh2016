@@ -91,22 +91,28 @@
   top: 32%;
   left: 31%;
 
+  // FROM X SMALL
+  @include respond-to(screen-xs) {
+    top: 33%;
+    left: 32%;
+  }
+
   // FROM SMALL
   @include respond-to(screen-sm) {
-    top: 32%;
+    top: 33%;
     left: 31%;
   }
 
   // FROM MEDIUM 
   @include respond-to(screen-md) {
-    top: 32%;
-    left: 31%;
+    top: 33%;
+    left: 32%;
   }
 
   // FROM LARGE 
   @include respond-to(screen-lg) {
-    top: 32%;
-    left: 31%;
+    top: 33%;
+    left: 32%;
   }
 }
 
