@@ -120,10 +120,12 @@
 		article {
 			min-height: inherit;
 		}
+
 		.article-img-bg {
 			background-image: none !important;
 			height: 170px;
 		}
+
 		.article-img-bg__header--large-text {
 			padding-top: 70px;
 		}
@@ -134,10 +136,12 @@
 		article {
 			min-height: inherit;
 		}
+
 		.article-img-bg {
 			background-image: none !important;
 			height: 220px;
 		}
+		
 		.article-img-bg__header--large-text {
 			padding-top: 65px;
 		}
@@ -171,6 +175,7 @@
 	background-color: $brand-blue;
 	color: $white;
 	padding: 5px 10px;
+	line-height: 30px;
 	margin: 0;
 }
 
@@ -252,7 +257,8 @@
 		padding: 20px;
 		display: block;
 		color: $brand-red;
-		background-color: darken($white, 2%);
+		background-color: darken($white, 3%);
+		border: 1px solid $border-color;
 	}
 
 	time {

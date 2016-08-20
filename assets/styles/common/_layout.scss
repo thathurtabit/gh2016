@@ -189,7 +189,7 @@ body {
     align-self: stretch;
 
     @include respond-to(screen-md) {
-        padding: 25px 50px;
+        padding: 30px 50px 27px;
         
         .article-img-bg__wrap & {
             border-left: 1px solid $border-color;

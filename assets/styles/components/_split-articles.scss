@@ -24,11 +24,7 @@
     margin-right: auto;
 
     .article__section-title h1 {
-        font-size: 27px;
-
-        @include respond-to(screen-md) {
-            font-size: 33px;
-        }
+        font-size: 22px;
     }
 }
 

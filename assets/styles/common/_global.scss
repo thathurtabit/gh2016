@@ -111,3 +111,38 @@
 img {
     @include img-responsive;
 }
+
+.zigzag,
+.zigzag--blue {
+    transition: width 1s ease-in-out;
+    transition-delay: 0.5s;
+    width: 0;
+    display: inline-block;
+    overflow: hidden;
+
+    .wf-active & {
+        width: 50px;
+    }
+
+    .content-border-side-col & {
+        position: relative;
+        top: 9px;
+    }
+
+    #zigzag {
+        width: 50px;
+    }
+
+    #zigzag-2 {
+        fill: none;
+        stroke: $white;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+        width: 50px;
+    }
+}
+
+.zigzag--blue #zigzag-2 {
+    stroke: $brand-blue;
+}
+

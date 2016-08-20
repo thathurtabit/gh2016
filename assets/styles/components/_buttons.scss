@@ -409,11 +409,13 @@ a:hover {
 
 
 .btn-return {
+	@include text-overflow();
 	background: transparent;
 	display: block;
 	border: 0;
 	color: $gray;
 	position: relative;
+	padding-right: 30px;
 
 	&::before {
 		content: $fa-var-chevron-left;

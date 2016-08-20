@@ -9,7 +9,7 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
 
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     box-shadow: 0 0 0 3px rgba(0,0,0,0.25);
     width: 14px;
     height: 14px;
@@ -20,7 +20,7 @@
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     box-shadow: 0 0 0 4px rgba(0,0,0,0.25);
     width: 16px;
     height: 16px;
@@ -31,7 +31,7 @@
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
      box-shadow: 0 0 0 5px rgba(0,0,0,0.25);
     width: 18px;
     height: 18px;
@@ -45,30 +45,36 @@
 
 .eyeleft,
 .eyeright {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: absolute;
   background: $white;
   overflow: hidden;   
   border-radius: 50%;
   box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
 
+  // FROM X-SMALL
+  @include respond-to(screen-xs) {
+    width: 20px;
+    height: 20px;
+  }
+
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     box-shadow: 0 0 0 3px rgba(0,0,0,0.75);
     width: 28px;
     height: 28px;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     box-shadow: 0 0 0 4px rgba(0,0,0,0.75);
     width: 32px;
     height: 32px;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
      box-shadow: 0 0 0 5px rgba(0,0,0,0.75);
     width: 35px;
     height: 35px;
@@ -86,19 +92,19 @@
   left: 31%;
 
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 32%;
     left: 31%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 32%;
     left: 31%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 32%;
     left: 31%;
   }
@@ -109,19 +115,19 @@
   left: 41%;
 
     // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 34%;
     left: 41%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 34%;
     left: 41%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 34%;
     left: 41%;
   }
@@ -137,19 +143,19 @@
     left: 49%;
 
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 36%;
     left: 49%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 36%;
     left: 49%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 36%;
     left: 49%;
   }
@@ -160,19 +166,19 @@
     left: 60%;
 
     // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 41%;
     left: 60%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 41%;
     left: 60%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 41%;
     left: 60%;
   }
@@ -188,19 +194,19 @@
     left: 35%;
 
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 41%;
     left: 35%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 41%;
     left: 35%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 41%;
     left: 35%;
   }
@@ -211,19 +217,19 @@
     left: 47.5%;
 
     // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 41.5%;
     left: 47.5%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 41.5%;
     left: 47.5%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 41.5%;
     left: 47.5%;
   }
@@ -238,19 +244,19 @@
     left: 41%;
 
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 44%;
     left: 41%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 44%;
     left: 41%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 44%;
     left: 41%;
   }
@@ -261,19 +267,19 @@
     left: 53.5%;
 
     // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 45%;
     left: 53.5%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 45%;
     left: 53.5%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 45%;
     left: 53.5%;
   }
@@ -288,19 +294,19 @@
     left: 32%;
 
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 38.5%;
     left: 32%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 38.5%;
     left: 32%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 38.5%;
     left: 32%;
   }
@@ -311,19 +317,19 @@
     left: 43.5%;
 
     // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 40.5%;
     left: 43.5%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 40.5%;
     left: 43.5%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 40.5%;
     left: 43.5%;
   }
@@ -339,19 +345,19 @@
     left: 28%;
 
   // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 45%;
     left: 28%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 45%;
     left: 28%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 45%;
     left: 28%;
   }
@@ -362,19 +368,19 @@
     left: 46%;
 
     // FROM SMALL
-  @media (min-width: $screen-sm-min) {
+  @include respond-to(screen-sm) {
     top: 46.5%;
     left: 46%;
   }
 
   // FROM MEDIUM 
-  @media (min-width: $screen-md-min) {
+  @include respond-to(screen-md) {
     top: 46.5%;
     left: 46%;
   }
 
   // FROM LARGE 
-  @media (min-width: $screen-lg-min) {
+  @include respond-to(screen-lg) {
     top: 46.5%;
     left: 46%;
   }
