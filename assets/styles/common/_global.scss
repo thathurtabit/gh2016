@@ -159,3 +159,15 @@ img {
     stroke: $brand-blue;
 }
 
+
+// BREAK LONG URLS
+.entry-content-inner,
+#comments {    
+  // Careful, this breaks the word wherever it is without a hyphen */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  // Adds a hyphen where the word breaks */
+  hyphens: auto;
+}
+

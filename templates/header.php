@@ -5,9 +5,9 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar one"></span>
+        <span class="icon-bar two"></span>
+        <span class="icon-bar three"></span>
       </button>
       <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><span class="sr-only"><?php bloginfo('name'); ?>"</span><?php get_template_part('dist/images/inline', 'horse.svg');?></a>
     </div>

@@ -127,6 +127,7 @@
 				display: block;
 				position: relative;
 				left: -2px;
+				width: 50px;
 
 				.whitelogo {
 					@include transition(.25s ease-in-out all);
@@ -143,14 +144,19 @@
 			@include square(50px);
 			margin: 10px auto 0;
 			display: block;
-			position: relative;
-			left: -2px;
+			position: absolute;
+			left: 29px;
+
+			@include respond-to(screen-sm) {
+				left: 8px;
+			}
 
 			.whitelogo {
 				@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
 				@include transition(.25s ease-in-out all);
 				@include translate(-10px, 0);
 				fill: $brand-blue;
+				width: 50px;
 			}
 
 		}
@@ -385,8 +391,31 @@ body:not(.home) #nav-banner-center {
 	}
 
 	.icon-bar {
+		transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+		transform-origin: 50% 50%;
 		background-color: $brand-blue;
 		height: 3px;
+
+		&.one {
+			transform: rotate(45deg) translate(5px, 5px);
+		}
+		
+		&.two {
+			opacity: 0;
+		}
+
+		&.three {
+			transform: rotate(-45deg) translate(5px, -5px);
+		}
+
+	}
+
+	&.collapsed .icon-bar {
+		transform: rotate(0) translate(0, 0);
+		
+		&.two {
+			opacity: 1;
+		}
 	}
 
 	// HOVER

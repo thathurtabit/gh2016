@@ -70,8 +70,10 @@
 
 .article-row--blocks {
 	@extend .article-row;
+	display: block;
 
 	@include respond-to(screen-md) {
+		display: flex;
 		flex-wrap: wrap;
 	}
 }

@@ -19,7 +19,13 @@
   svg {    
   @include flip-spin-y();
     position: relative;
-    top: 5px;
+    top: 0;
+    left: -5px;
+
+    .whitelogo {
+      fill: $white;
+      backface-visibility: visible;
+    }
   }
 
   &::before,

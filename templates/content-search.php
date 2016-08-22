@@ -5,7 +5,7 @@
           <?php include( TEMPLATEPATH . '/templates/includes/list-featured-thumbnail.inc.php' ); ?>
           <!-- / FEATURED THUMBNAIL -->
 	</div>
-	<div class="col-sm-8">
+	<div class="col-sm-8 article__content-col">
 	  <header>
 	    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	    <?php if (get_post_type() === 'post') { get_template_part('templates/entry-meta'); } ?>

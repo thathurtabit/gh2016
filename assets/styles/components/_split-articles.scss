@@ -46,7 +46,7 @@
 
     @include respond-to(screen-xs) {
         @include square(150px);
-        margin: 15px 0 30px -75px;
+        margin: 15px 0 20px -75px;
     }
 
     @include respond-to(screen-sm) {
@@ -59,7 +59,7 @@
 
     @include respond-to(screen-lg) {
         @include square(180px);
-        margin: 20px 0 50px -90px;
+        margin: 20px 0 20px -90px;
     }
 
 

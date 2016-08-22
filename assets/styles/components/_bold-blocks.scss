@@ -20,7 +20,7 @@
     padding: 0;
     margin: 40px 20px 20px;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
 
     svg {
@@ -110,17 +110,20 @@
         position: relative;
         text-align: center;
         font-family: $font-family-serif;
-        flex: 1 100%;
+        flex: 0 0 100%;
+        width: 100%;
         align-items: center;
 
         // FROM BREAKPOINT
         @include respond-to(screen-xs) {
-            flex: 1 50%;
+            flex: 0 0 50%;
+            width: 50%;
         }
 
         // FROM MEDIUM 
         @include respond-to(screen-md) {
-            flex: 1 33.33%;
+            flex: 0 0 33.33%;
+            width: 33.33%;
         }
 
         // FROM LARGE 
