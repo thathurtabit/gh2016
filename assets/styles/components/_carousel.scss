@@ -18,13 +18,16 @@
 // Left / Right
 .slick-prev,
 .slick-next {
+    @include text-hide;
     border-radius: 100%;
-    //border: 1px solid rgba(255,255,255,.2);
+    position: absolute;
+    background-color: transparent;
+    border: 0;
     z-index: 10;
+    top: 20px;
 
     &::before {
         @include transition(color 0.25s ease-in-out);
-        
         font-family: 'FontAwesome';
         position: relative;
         z-index: 2;
