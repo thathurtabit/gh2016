@@ -76,7 +76,6 @@
 
 		// AFFIX HORSE
 		.navbar-brand #horse .whitelogo {
-			@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
 			fill: $brand-blue !important;
 		}
 
@@ -132,7 +131,6 @@
 				.whitelogo {
 					@include transition(.25s ease-in-out all);
 					@include translate(-10px, 0);
-					@include filter(drop-shadow(0 2px 0 rgba(0,0,0,0.1)));
 					fill: $white !important;
 				}
 
@@ -152,7 +150,6 @@
 			}
 
 			.whitelogo {
-				@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
 				@include transition(.25s ease-in-out all);
 				@include translate(-10px, 0);
 				fill: $brand-blue;
@@ -314,7 +311,6 @@ body:not(.home) #nav-banner-center {
 
 	// AFFIX HORSE
 	.navbar-brand #horse .whitelogo {
-		@include filter(drop-shadow(0 2px 0 rgba(255,255,255,0.4)));
 		fill: $brand-blue !important;
 	}
 
