@@ -25,6 +25,7 @@
 .high-five-hand {
 	transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	max-width: 30px;
+	width: 100%; // Safari fix
 	margin: 0 auto;
 	transform: scale(1);
 	position: relative;

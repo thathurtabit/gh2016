@@ -221,9 +221,10 @@ body {
 .archive,
 .blog,
 .search,
-.latest {
+.latest,
+.post-type-archive-portfolio {
 
-    .entry-content.content-border-main-col {
+    .entry-content {
         padding: 0;
 
         article {
@@ -282,56 +283,98 @@ body {
 }
 
 
-.content-list-block {
-    flex: 0 100%;
-    border-bottom: 1px solid $border-color;
-    padding: 20px;
+// .content-list-block {
+//     //flex: 1 0 100%;
+//     border-bottom: 1px solid $border-color;
+//     padding: 20px;
 
-    @include respond-to(screen-sm) {
-    }
+//     @include respond-to(screen-sm) {
+//     }
 
-    @include respond-to(screen-md) {
-        border: 0;
-        flex: 0 33%;
-        padding: 40px;
-    }
+//     @include respond-to(screen-md) {
+//         border: 0;
+//         //flex: 0 33%;
+//         padding: 40px;
+//     }
 
-    @include respond-to(screen-lg) {
-        flex: 0 25%;
-        padding: 50px;
-    }
-}
+//     @include respond-to(screen-lg) {
+//         //flex: 0 25%;
+//         padding: 50px;
+//     }
+// }
 
-.content-list-block-wrap {
-    display: flex;
-    flex-direction: column;
+// .content-list-block-wrap {
+//     //display: flex;
+//     //flex-direction: column;
 
-    @include respond-to(screen-xs) {
-        flex-direction: row;
+//     @include respond-to(screen-xs) {
+//         //flex-direction: row;
 
-        .content-list-block__img {
-            flex: 0 0 30%;
-            margin-right: 30px;
-        }
-    }
+//         .content-list-block__img {
+//             //flex: 0 0 30%;
+//             margin-right: 30px;
+//         }
+//     }
 
-    @include respond-to(screen-sm) {
-        min-height: inherit;
+//     @include respond-to(screen-sm) {
+//         min-height: inherit;
         
-        .content-list-block__img {
-            flex: 0 0 30%;
-            margin-right: 0;
+//         .content-list-block__img {
+//             //flex: 0 0 30%;
+//             margin-right: 0;
+//         }
+//     }
+    
+//     @include respond-to(screen-md) {
+//         //flex-direction: column;
+
+//         .content-list-block__img {
+//             //flex: none;
+//             //width: 100%;
+//         }
+//     }
+// }
+
+
+// CHANGE UP FOR PORTFOLIO CONTENT
+.content-list-block-wrap {
+
+    article {
+        min-height: inherit !important;
+    }
+
+    // RESPONSIVE
+    @include respond-to(screen-md) {
+        text-align: center;
+        padding: 20px;
+
+        .article-divider {
+
+            display: inline-block;
+            max-width: 350px;
+            vertical-align: top;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            &::before,
+            &::after {
+                display: none !important;
+            }
+
+            article {
+                padding: 20px;
+                text-align: left;
+
+                .article__thumb {
+                    margin: 0 !important;
+                }
+            }
         }
     }
-    
-    @include respond-to(screen-md) {
-        flex-direction: column;
-    }
-}
 
-.content-list-block__img,
-.content-list-block__text {
-    flex: 1;
+     @include respond-to(screen-lg) {
+        padding: 50px;
+     }
 }
 
 
