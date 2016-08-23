@@ -283,7 +283,7 @@ body {
 
 
 .content-list-block {
-    flex: 0 100%;
+    flex: 1 0 100%;
     border-bottom: 1px solid $border-color;
     padding: 20px;
 
@@ -326,12 +326,12 @@ body {
     
     @include respond-to(screen-md) {
         flex-direction: column;
-    }
-}
 
-.content-list-block__img,
-.content-list-block__text {
-    flex: 1;
+        .content-list-block__img {
+            flex: none;
+            width: 100%;
+        }
+    }
 }
 
 
