@@ -1,8 +1,8 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "ghosthorses",
+  "homepage": "http://ghosthorses.co.uk",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Stephen Fairbanks <stephen@ghosthorses.co.uk>"
   ],
   "license": "MIT",
   "private": true,

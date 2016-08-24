@@ -1,9 +1,17 @@
-## This site uses Sage theme as a starter template:
+# Ghosthorses 2016 theme
 
-More info below:
+This repository is housing for my Ghosthorses.co.uk WordPress theme.
+
+[ghosthorses.co.uk](http://ghosthorses.co.uk "Ghosthorses.co.uk")
 
 
-# [Sage](https://roots.io/sage/)
+
+
+## This site used Sage theme as a starter template:
+
+More info on Starter theme below:
+
+### [Sage](https://roots.io/sage/)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
