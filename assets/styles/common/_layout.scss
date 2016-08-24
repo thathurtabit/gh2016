@@ -283,58 +283,6 @@ body {
 }
 
 
-// .content-list-block {
-//     //flex: 1 0 100%;
-//     border-bottom: 1px solid $border-color;
-//     padding: 20px;
-
-//     @include respond-to(screen-sm) {
-//     }
-
-//     @include respond-to(screen-md) {
-//         border: 0;
-//         //flex: 0 33%;
-//         padding: 40px;
-//     }
-
-//     @include respond-to(screen-lg) {
-//         //flex: 0 25%;
-//         padding: 50px;
-//     }
-// }
-
-// .content-list-block-wrap {
-//     //display: flex;
-//     //flex-direction: column;
-
-//     @include respond-to(screen-xs) {
-//         //flex-direction: row;
-
-//         .content-list-block__img {
-//             //flex: 0 0 30%;
-//             margin-right: 30px;
-//         }
-//     }
-
-//     @include respond-to(screen-sm) {
-//         min-height: inherit;
-        
-//         .content-list-block__img {
-//             //flex: 0 0 30%;
-//             margin-right: 0;
-//         }
-//     }
-    
-//     @include respond-to(screen-md) {
-//         //flex-direction: column;
-
-//         .content-list-block__img {
-//             //flex: none;
-//             //width: 100%;
-//         }
-//     }
-// }
-
 
 // CHANGE UP FOR PORTFOLIO CONTENT
 .content-list-block-wrap {
