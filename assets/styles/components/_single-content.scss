@@ -231,19 +231,21 @@
 .entry-content-inner {
 	font-family: $font-family-serif;
 	font-weight: 300;
-	max-width: 700px;
+	max-width: 650px;
 	margin-top: 30px;
+	font-size: 18px;
 
 	> p:first-of-type {
-		font-size: 20px;
+		font-size: 23px;
 		position: relative;
 		padding-bottom: 20px;
 		margin-bottom: 20px;
+		line-height: 1.7;
 	}
 
 	p,
 	li {
-		line-height: 1.7;
+		line-height: 1.9;
 	}
 
 	p {

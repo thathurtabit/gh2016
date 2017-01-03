@@ -28,7 +28,7 @@
 
           // site preloader -- also uncomment the div in the header and the css style for #preloader
           $(window).load(function(){
-            $('#spinner-wrapper').fadeOut('5000',function(){$(this).remove();});
+            $('#spinner-wrapper').fadeOut('2000',function(){$(this).remove();});
           });
 
         });
@@ -42,6 +42,12 @@
           $('html,body').animate({scrollTop: targetOffset - 120}, 800);
           return false;
         });
+
+        // Toggle class button search
+        $(".btn-search").click(function(){ 
+          this.toggleClass("btn-cross");
+        });
+        
 
 
         // Fix navbar on scroll

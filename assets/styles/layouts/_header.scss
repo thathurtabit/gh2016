@@ -220,6 +220,21 @@
 		    margin: 0 auto;
 		    top: -16px;
 
+		    &[aria-expanded="true"] .fa.fa-search::after {
+		    	transition: all 0.25s ease-in-out;
+		    	transform: translateY(0);
+		    	content: $fa-var-remove;
+		    	position: absolute;
+				top: -2px;
+				font-size: 12px;
+				right: -4px;
+		    }
+
+		    &[aria-expanded="true"]:hover .fa.fa-search::after {
+		    	transform: translateY(-3px);
+		    }
+
+
 	    	// RESPONSIVE
 			// FROM SMALL
 			@include respond-to(screen-sm) {

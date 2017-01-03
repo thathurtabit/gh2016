@@ -208,6 +208,15 @@
             border-bottom: 0;
         }
     }
+
+    .featured-img.featured-img--flat {
+
+        // RESPONSIVE
+        // FROM LARGE
+        @include respond-to(screen-md) {
+            margin: -30px 0 40px -90px;
+        }
+    }
 }
 
 
