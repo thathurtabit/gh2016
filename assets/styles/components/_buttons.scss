@@ -214,7 +214,7 @@ a:hover {
         z-index: -1;
 
         .btn__rectangle {
-			@include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+			@include transition (stroke-width $ani-svg-line-time, stroke-dashoffset $ani-svg-line-time, stroke-dasharray $ani-svg-line-time);
 			@include opacity(0);
 			position: absolute;
 			top: 0;
@@ -428,7 +428,7 @@ a:hover {
 		width: 20px;
 		height: 20px;
 		margin-top: -8px;
-		transition: transform 0.25s ease-in-out;
+		transition: transform $ani-svg-line-time ease-in-out;
 		transform: translate(0, 0);
 		position: absolute;
 		right: 0;

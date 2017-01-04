@@ -23,20 +23,74 @@
     flex-wrap: wrap;
     justify-content: space-around;
 
-    svg {
+    .svg {
         transition: opacity 0.25s ease-in-out;
         opacity: 0;
     }
 
+    // BORDER
+    .svg-border {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        background: transparent url(http://images.medicaldaily.com/sites/medicaldaily.com/files/2016/09/13/brain.png);
+
+        &::before,
+        &::after {
+            transition: width $ani-trans-time ease-in-out;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            transform: rotate(45deg);
+        }
+
+        .thumb-rectangle {
+            @include transition (stroke-width $ani-svg-line-time, stroke-dashoffset $ani-svg-line-time, stroke-dasharray $ani-svg-line-time, opacity $ani-svg-line-time);
+            position: absolute;
+            width: 100%;
+            height: 100%;            
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            //opacity: 0;
+            fill: transparent;
+            stroke: $gray;
+            stroke-dasharray: 5;
+            stroke-dashoffset: 200;
+            stroke-width: 5px;
+        }
+    }
+
     // DIAMOND
-    &.blocks--diamond svg {
+    &.blocks--diamond .svg {
         @include rotate(45deg);
         position: absolute;
         top: 50%;
         left: 50%;
         margin-top: -21px;
         margin-left: -25px;
-        z-index: -1;
+        z-index: 9;
 
         // FROM XTRA SMALL
         @include respond-to(screen-xs) {
@@ -55,13 +109,13 @@
     }
 
     // CIRCLE
-    &.blocks--circle svg {
+    &.blocks--circle .svg {
         position: absolute;
         top: 50%;
         left: 50%;
         margin-top: -34px;
         margin-left: -37px;
-        z-index: -1;
+        z-index: 9;
 
         // FROM XTRA SMALL
         @include respond-to(screen-xs) {
@@ -80,13 +134,13 @@
     }
 
     // SQUARE
-    &.blocks--square svg {
+    &.blocks--square .svg {
         position: absolute;
         top: 50%;
         left: 50%;
         margin-top: -33px;
         margin-left: -37px;
-        z-index: -1;
+        z-index: 9;
 
         // FROM XTRA SMALL
         @include respond-to(screen-xs) {
@@ -125,15 +179,25 @@
             flex: 0 0 33.33%;
             width: 33.33%;
         }
+       
 
-        // FROM LARGE 
-        @include respond-to(screen-lg) {
+        &:hover .thumb-rectangle {
+            opacity: 1;
+            stroke-dasharray: 0;
+            stroke-dashoffset: 300;
+            stroke-width: 5px;
+        }
+
+        &:hover .svg-border {
+            &::before,
+            &::after {
+                width: 100%;
+            }
         }
 
 
-
         // On hover, make the SVGs appear
-        &:hover svg {
+        &:hover .svg {
             opacity: 1;
         }
 
@@ -152,6 +216,7 @@
             @include translate(0,10px);
             font-weight: normal;
             display: block;
+            z-index: 10;
 
             .waypoint-active & {
                 @include scale(1);
@@ -162,18 +227,19 @@
 
         // Span loop for transition delay
         @for $i from 1 to 7 {
-          &:nth-child(#{$i}) span {
+          &:nth-child(#{$i}) > span {
              @include transition-delay(0s + ($i / 8));
           }
         }
 
-        span {
+        > span {
             @include transition(all 0.25s ease-in-out);    
             background-color: rgba(255,255,255,0); 
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0;
+            position: relative;
             height: 100px;
             overflow: hidden;
             line-height: 1;
@@ -212,7 +278,7 @@
         .block__diamond,
         .block__circle,
         .block__square {            
-            @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+            @include transition (stroke-width $ani-svg-line-time, stroke-dashoffset $ani-svg-line-time, stroke-dasharray $ani-svg-line-time);
             position: absolute;
             top: 0;
             right: 0;

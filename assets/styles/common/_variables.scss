@@ -42,6 +42,12 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 
+// Animation times
+$ani-svg-line-time:		2s;
+$ani-movement-time:		2s;
+$ani-trans-time:		.5s;
+
+
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -95,6 +101,7 @@ $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
 $border-color:            rgba(0,0,0,0.09) !default;
+$border-color-solid:	  #ddd;
 
 
 //== Iconography

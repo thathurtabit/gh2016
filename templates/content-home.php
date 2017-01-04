@@ -247,12 +247,42 @@
 
 <ul class="large-ul-blocks blocks--diamond">
 <!--<ul class="large-ul-blocks blocks--diamond">-->
-	<li><span><b>Creativity</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span><b>Smarts</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span><b>Love</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span><b>Perspiration</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span><b>Magic</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
-	<li><span><b>Good-Looks</b></span><svg height="50" width="50"><rect height="100%" width="100%" class="block__diamond" /></svg></li>
+	<li><span><b>Creativity</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
+	</li>
+	<li><span><b>Smarts</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
+	</li>
+	<li><span><b>Love</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
+	</li>
+	<li><span><b>Perspiration</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
+	</li>
+	<li><span><b>Magic</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
+	</li>
+	<li><span><b>Good-Looks</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
+	</li>
 </ul>
 
 	<div class="row block--spacing-center block--position-bottom">
@@ -267,12 +297,48 @@
 
 <ul class="large-ul-blocks blocks--circle">
 <!--<ul class="large-ul-blocks blocks--circle">-->
-	<li><span><b>Digital Design / UI</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span><b>Logos</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span><b>HTML5 / CSS3</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span><b>SASS / LESS</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span><b>Responsive</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>
-	<li><span><b>WordPress</b></span><svg height="74" width="74"><circle class="block__circle" cx="37" cy="37" r="35" /></svg></li>	
+	<li><span><b>Digital Design / UI</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="74" width="74" class="svg">
+	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</li>
+	<li><span><b>Logos</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="74" width="74" class="svg">
+	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</li>
+	<li><span><b>HTML5 / CSS3</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="74" width="74" class="svg">
+	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</li>
+	<li><span><b>SASS / LESS</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="74" width="74" class="svg">
+	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</li>
+	<li><span><b>Responsive</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="74" width="74" class="svg">
+	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</li>
+	<li><span><b>WordPress</b>
+		<span class="svg-border">
+			<svg><rect class="thumb-rectangle" /></svg>
+		</span>
+	</span><svg height="74" width="74" class="svg">
+	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</li>	
 </ul>
 
 	<div class="row block--spacing-center block--position-bottom">
@@ -313,7 +379,7 @@
 		    	
 
 			       <!-- section FEATURED IMG -->
-			      	<section class="featured-img featured-img--flat">
+			      	<section class="featured-img featured-img--flat featured-img--long">
 			      	
 			    		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
@@ -325,6 +391,9 @@
 							<?php if (has_post_thumbnail( $post->ID ) ): ?>
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
 
+							<span class="featured-img--svg-border">
+								<svg><rect class="thumb-rectangle" /></svg>
+							</span>
 						</a>
 													
 			
@@ -337,9 +406,14 @@
 							<span class="featured-img--flat-thumb"
 								<?php get_template_part('dist/images/inline', 'horse.svg');?>
 								</span><!-- / END BG IMG -->
-
+								<span class="featured-img--svg-border">
+									<svg><rect class="thumb-rectangle" /></svg>
+								</span>
 							</a>
 						<?php }	?>
+
+						
+
 			      	</section>
 			      	<!-- / section FEATURED IMG -->
 
@@ -361,7 +435,7 @@
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
-							echo wp_trim_words( $content , '48' ); ?>
+							echo wp_trim_words( $content , '35' ); ?>
 						</p>
 
 						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>
@@ -419,7 +493,7 @@
 			    	
 
 			      <!-- section FEATURED IMG -->
-			      	<section class="featured-img featured-img--flat">
+			      	<section class="featured-img featured-img--flat featured-img--long">
 
 			      	
 			    		<?php
@@ -431,7 +505,9 @@
 							<span class="featured-img--flat-thumb"
 							<?php if (has_post_thumbnail( $post->ID ) ): ?>
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
-
+							<span class="featured-img--svg-border">
+								<svg><rect class="thumb-rectangle" /></svg>
+							</span>
 						</a>
 													
 			
@@ -444,9 +520,12 @@
 							<span class="featured-img--flat-thumb"
 								<?php get_template_part('dist/images/inline', 'horse.svg');?>
 								</span><!-- / END BG IMG -->
-
+								<span class="featured-img--svg-border">
+									<svg><rect class="thumb-rectangle" /></svg>
+								</span>
 							</a>
 						<?php }	?>
+
 			      	</section>
 			      	<!-- / section FEATURED IMG -->
 
@@ -468,7 +547,7 @@
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
-							echo wp_trim_words( $content , '38' ); ?>
+							echo wp_trim_words( $content , '35' ); ?>
 						</p>
 
 						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>

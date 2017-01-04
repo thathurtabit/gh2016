@@ -43,7 +43,6 @@
 				<ul class="footer-social-icons list-center">
 					<li><a href="http://twitter.com/nonbeliever" target="_blank" title="Find updates on Twitter"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="http://www.facebook.com/ghosthorses" target="_blank" title="Find updates on Facebook"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="https://plus.google.com/112561861475615412276" target="_blank" title="Find updates on Google"><i class="fa fa-google"></i></a></li>
 					<li><a href="http://codepen.io/thathurtabit/" target="_blank" title="Find updates on CodePen"><i class="fa fa-codepen"></i></a></li>
 					<li><a href="https://github.com/thathurtabit" target="_blank" title="Find updates on Github"><i class="fa fa-github"></i></a></li>
 					<li><a href="http://www.linkedin.com/in/stephenfairbanks" target="_blank" title="Find updates on LinkedIn"><i class="fa fa-linkedin"></i></a></li>

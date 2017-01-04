@@ -114,7 +114,7 @@ img {
 
 .zigzag,
 .zigzag--blue {
-    transition: width 1s ease-in-out;
+    transition: width $ani-svg-line-time ease-in-out;
     transition-delay: 0.5s;
     width: 0;
     display: inline-block;
