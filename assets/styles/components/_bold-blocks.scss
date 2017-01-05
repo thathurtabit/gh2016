@@ -31,11 +31,13 @@
     // BORDER
     .svg-border {
         position: absolute;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-        background: transparent url(http://images.medicaldaily.com/sites/medicaldaily.com/files/2016/09/13/brain.png);
+        width: 50px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -25px;
+        background: transparent;
 
         &::before,
         &::after {
@@ -44,7 +46,7 @@
             position: absolute;
             width: 0;
             height: 1px;
-            border-top: 2px solid rgba(255,255,255,0.3);
+            border-top: 4px solid rgba(255,255,255,0.25);
         }
 
         &::before {
@@ -58,12 +60,15 @@
         }
 
         svg {
-            width: 30px;
-            height: 30px;
-            transform: rotate(45deg);
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
         }
 
-        .thumb-rectangle {
+        .thumb-circle {
             @include transition (stroke-width $ani-svg-line-time, stroke-dashoffset $ani-svg-line-time, stroke-dasharray $ani-svg-line-time, opacity $ani-svg-line-time);
             position: absolute;
             width: 100%;
@@ -80,6 +85,92 @@
             stroke-dashoffset: 200;
             stroke-width: 5px;
         }
+    }
+
+
+    li > span::before {
+        transition: transform ($ani-movement-time / 2) ease-in-out, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scale(1.1) translateY(5px);
+        opacity: 0;
+
+        background-color: rgba(0,0,0,0);
+        background-position: center !important;
+        background-size: cover !important;
+    }
+
+    // HOVER
+    li:hover > span::before {
+        opacity: 0.75;
+        transform: scale(1.2) translateY(-5px);
+        background-color: rgba(0,0,0,0.9) !important;
+    }
+
+    // DIAMOND BG
+    &.blocks--diamond {
+           
+
+        li:nth-child(1) > span::before {
+            background: url(../images/big-block-creativity.png) no-repeat;
+        }
+
+        li:nth-child(2) > span::before {
+            background: url(../images/big-block-smarts.png) no-repeat;
+        }
+
+        li:nth-child(3) > span::before {
+            background: url(../images/big-block-love.png) no-repeat;
+        }
+
+        li:nth-child(4) > span::before {
+            background: url(../images/big-block-perspiration.png) no-repeat;
+        }
+
+        li:nth-child(5) > span::before {
+            background: url(../images/big-block-magic.png) no-repeat;
+        }
+
+        li:nth-child(6) > span::before {
+            background: url(../images/big-block-good-looks.png) no-repeat;
+        }
+
+    }
+
+
+
+    // CIRCLE BG
+    &.blocks--circle {
+           
+
+        li:nth-child(1) > span::before {
+            background: url(../images/big-block-ui.png) no-repeat;
+        }
+
+        li:nth-child(2) > span::before {
+            background: url(../images/big-block-logos.png) no-repeat;
+        }
+
+        li:nth-child(3) > span::before {
+            background: url(../images/big-block-htmlcss.png) no-repeat;
+        }
+
+        li:nth-child(4) > span::before {
+            background: url(../images/big-block-sass.png) no-repeat;
+        }
+
+        li:nth-child(5) > span::before {
+            background: url(../images/big-block-responsive.png) no-repeat;
+        }
+
+        li:nth-child(6) > span::before {
+            background: url(../images/big-block-wordpress.png) no-repeat;
+        }
+
     }
 
     // DIAMOND
@@ -113,23 +204,23 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -34px;
-        margin-left: -37px;
+        margin-top: -28px;
+        margin-left: -29px;
         z-index: 9;
 
         // FROM XTRA SMALL
         @include respond-to(screen-xs) {
-            margin-top: -36px;
+            margin-top: -28px;
         }
 
         // FROM BREAKPOINT
         @include respond-to(screen-sm) {
-            margin-top: -37px;
+            margin-top: -28px;
         }
 
         // FROM BREAKPOINT
         @include respond-to(screen-md) {
-            margin-top: -36px;
+            margin-top: -28px;
         }
     }
 
@@ -181,7 +272,7 @@
         }
        
 
-        &:hover .thumb-rectangle {
+        &:hover .thumb-circle {
             opacity: 1;
             stroke-dasharray: 0;
             stroke-dashoffset: 300;
@@ -292,6 +383,7 @@
             stroke-dasharray: 140;
             stroke-dashoffset: -400;
             stroke-width: 10px;
+            stroke: $brand-orange;
         }
 
         .block__square { 
@@ -304,6 +396,7 @@
             stroke-dasharray: 5;
             stroke-dashoffset: 0;
             stroke-width: 5px;
+            stroke: $brand-red;
         }
 
     }
@@ -312,10 +405,7 @@
     li:hover {
 
         @include scale(1.05);
-
-        span {
-            background-color: rgba(255,255,255,0.2);
-        }
+      
 
         .block__diamond {
            stroke-width: 10px;

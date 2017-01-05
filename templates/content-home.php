@@ -249,37 +249,37 @@
 <!--<ul class="large-ul-blocks blocks--diamond">-->
 	<li><span><b>Creativity</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
 	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li><span><b>Smarts</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
 	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li><span><b>Love</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
 	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li><span><b>Perspiration</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
 	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li><span><b>Magic</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
 	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li><span><b>Good-Looks</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
 	</span><svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
@@ -299,45 +299,45 @@
 <!--<ul class="large-ul-blocks blocks--circle">-->
 	<li><span><b>Digital Design / UI</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
-	</span><svg height="74" width="74" class="svg">
-	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</span><svg height="60" width="60" class="svg">
+	<circle class="block__circle" cx="28" cy="29" r="25" /></svg>		
 	</li>
 	<li><span><b>Logos</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
-	</span><svg height="74" width="74" class="svg">
-	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</span><svg height="60" width="60" class="svg">
+	<circle class="block__circle" cx="28" cy="29" r="25" /></svg>		
 	</li>
 	<li><span><b>HTML5 / CSS3</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
-	</span><svg height="74" width="74" class="svg">
-	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</span><svg height="60" width="60" class="svg">
+	<circle class="block__circle" cx="28" cy="29" r="25" /></svg>		
 	</li>
 	<li><span><b>SASS / LESS</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
-	</span><svg height="74" width="74" class="svg">
-	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</span><svg height="60" width="60" class="svg">
+	<circle class="block__circle" cx="28" cy="29" r="25" /></svg>		
 	</li>
 	<li><span><b>Responsive</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
-	</span><svg height="74" width="74" class="svg">
-	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</span><svg height="60" width="60" class="svg">
+	<circle class="block__circle" cx="28" cy="29" r="25" /></svg>		
 	</li>
 	<li><span><b>WordPress</b>
 		<span class="svg-border">
-			<svg><rect class="thumb-rectangle" /></svg>
+			<svg><circle class="thumb-circle" /></svg>
 		</span>
-	</span><svg height="74" width="74" class="svg">
-	<circle class="block__circle" cx="37" cy="37" r="35" /></svg>		
+	</span><svg height="60" width="60" class="svg">
+	<circle class="block__circle" cx="28" cy="29" r="25" /></svg>		
 	</li>	
 </ul>
 
@@ -392,7 +392,7 @@
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
 
 							<span class="featured-img--svg-border">
-								<svg><rect class="thumb-rectangle" /></svg>
+								<svg><circle class="thumb-circle" /></svg>
 							</span>
 						</a>
 													
@@ -407,7 +407,7 @@
 								<?php get_template_part('dist/images/inline', 'horse.svg');?>
 								</span><!-- / END BG IMG -->
 								<span class="featured-img--svg-border">
-									<svg><rect class="thumb-rectangle" /></svg>
+									<svg><circle class="thumb-circle" /></svg>
 								</span>
 							</a>
 						<?php }	?>
@@ -506,7 +506,7 @@
 							<?php if (has_post_thumbnail( $post->ID ) ): ?>
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
 							<span class="featured-img--svg-border">
-								<svg><rect class="thumb-rectangle" /></svg>
+								<svg><circle class="thumb-circle" /></svg>
 							</span>
 						</a>
 													
@@ -521,7 +521,7 @@
 								<?php get_template_part('dist/images/inline', 'horse.svg');?>
 								</span><!-- / END BG IMG -->
 								<span class="featured-img--svg-border">
-									<svg><rect class="thumb-rectangle" /></svg>
+									<svg><circle class="thumb-circle" /></svg>
 								</span>
 							</a>
 						<?php }	?>
