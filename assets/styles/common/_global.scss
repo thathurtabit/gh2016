@@ -112,6 +112,27 @@ img {
     @include img-responsive;
 }
 
+#starburst {
+    @include animate-spin();
+    transition: all $ani-trans-time ease-in-out;
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -300px;
+    position: absolute;
+    fill-opacity: 0;
+
+    .entry-content-inner & {
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -100px;
+    }
+}
+
+
 .zigzag,
 .zigzag--blue {
     transition: width $ani-svg-line-time ease-in-out;

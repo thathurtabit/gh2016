@@ -12,9 +12,10 @@
 @import 'common/mixins';
 @import 'common/bootstrap'; // Import only what we need
 
+
+@import 'components/animations';
 @import 'common/global';
 @import 'common/layout';
-@import 'components/animations';
 @import 'components/buttons';
 @import 'components/comments';
 @import 'components/forms';

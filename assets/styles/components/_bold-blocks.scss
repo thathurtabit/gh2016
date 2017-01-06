@@ -59,14 +59,7 @@
             right: 0;
         }
 
-        svg {
-            width: 100px;
-            height: 100px;
-            top: 50%;
-            left: 50%;
-            margin-left: -50px;
-            margin-top: -50px;
-        }
+        
 
         .thumb-circle {
             @include transition (stroke-width $ani-svg-line-time, stroke-dashoffset $ani-svg-line-time, stroke-dasharray $ani-svg-line-time, opacity $ani-svg-line-time);
@@ -280,6 +273,10 @@
         }
 
         &:hover .svg-border {
+            #starburst {
+                fill-opacity: 0.1;
+            }
+
             &::before,
             &::after {
                 width: 100%;
@@ -383,7 +380,7 @@
             stroke-dasharray: 140;
             stroke-dashoffset: -400;
             stroke-width: 10px;
-            stroke: $brand-orange;
+            stroke: $brand-orange-rgba;
         }
 
         .block__square { 
@@ -396,7 +393,7 @@
             stroke-dasharray: 5;
             stroke-dashoffset: 0;
             stroke-width: 5px;
-            stroke: $brand-red;
+            stroke: $brand-red-rgba;
         }
 
     }

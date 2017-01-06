@@ -166,10 +166,6 @@
             background-color: transparent;
         }
 
-        // HOVER
-        &:hover {
-           // @include scale(1.2);
-        }
     }
 
     .thumb-click::after,
@@ -219,6 +215,15 @@
             @include shadow-pulse();
         }
     }
+
+    &:hover #starburst {
+        fill-opacity: 0.1;
+
+        .entry-content-inner & {
+            fill-opacity: 0.5;
+        }
+    }
+
 
     &:hover .thumb-rectangle {
         stroke-dasharray: 4;

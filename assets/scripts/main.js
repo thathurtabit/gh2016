@@ -42,13 +42,7 @@
           $('html,body').animate({scrollTop: targetOffset - 120}, 800);
           return false;
         });
-
-        // Toggle class button search
-        $(".btn-search").click(function(){ 
-          this.toggleClass("btn-cross");
-        });
-        
-
+      
 
         // Fix navbar on scroll
         // http://getbootstrap.com/javascript/#affix
