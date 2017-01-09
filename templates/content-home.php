@@ -435,7 +435,7 @@
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
-							echo wp_trim_words( $content , '35' ); ?>
+							echo wp_trim_words( $content , '25' ); ?>
 						</p>
 
 						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>
@@ -547,7 +547,7 @@
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
-							echo wp_trim_words( $content , '35' ); ?>
+							echo wp_trim_words( $content , '25' ); ?>
 						</p>
 
 						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>

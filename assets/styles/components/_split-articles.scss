@@ -23,18 +23,44 @@
     margin: 40px auto;
     margin-right: auto;
 
+    .article__section-title {
+        margin: 0;
+        padding: 20px 0 10px;
+        background-color: $brand-purple;
+
+        @include respond-to(screen-sm) {
+            margin: -40px 30px 0 30px;
+            padding: 20px 40px 10px;
+        }
+    }
+
     .article__section-title h1 {
-        font-size: 22px;
+        font-size: 25px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 1;
+
+        @include respond-to(screen-sm) {
+            font-size: 30px;
+            line-height: 1.2;
+        }
     }
 }
 
 .featured-img.featured-img--flat.featured-img--long {
-    border-left: 0 solid $white;
+    transition: border-left $ani-movement-time ease-in-out, border-right $ani-movement-time ease-in-out, opacity $ani-trans-time ease-in-out, transform $ani-trans-time ease-in-out !important;
+    border-left: 8px solid rgba(255,255,255,0);
+    border-right: 8px solid rgba(255,255,255,0);
     background-color: $white;
     height: 150px;
     width: 100%;
-    margin: 30px 0 60px !important;
+    margin: 30px 0 0 !important;
     left: 0;
+
+    .waypoint-active & {
+        border-left: 8px solid $white-rgba;
+        border-right: 8px solid $white-rgba;
+    }
 
     .thumb-click,
     .featured-img--flat-thumb {
@@ -43,12 +69,6 @@
         height: 150px;
     }
 
-    .thumb-click {
-
-    }
-
-    .featured-img--flat-thumb {
-    }
 }
 
 .featured-img.featured-img--flat {
@@ -117,7 +137,7 @@
     .featured-img--flat-thumb {
         @include transition(all $ani-trans-time ease-in-out);
         @include square(200px);
-        box-shadow: inset 0 0 0 5px $white;
+        //box-shadow: inset 0 0 0 5px $white;
         position: absolute;
         top: 0;
         display: block;
@@ -297,6 +317,18 @@
             margin-left: auto;
             margin-right: auto;
         }
+    }
+
+    article .article__content-wrap {
+        margin: 10px 0 0 20px;
+
+        @include respond-to(screen-sm) {
+            margin: 10px 70px;
+        }
+    }
+
+    article .article__content {
+        margin-top: 0;
     }
 
     // Default

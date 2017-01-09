@@ -465,11 +465,17 @@ blockquote,
     &::before {
         content: '\201C';
         font-family: $font-family-serif;
-        position: absolute;
-        left: -30px;
-        top: -10px;
-        font-size: 40px;
         color: rgba(255,255,255,0.5);
+        font-size: 50px;
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        line-height: 49px;
+        text-align: center;
+        padding: 0;
+        position: absolute;
+        left: -40px;
     }
 }
 
