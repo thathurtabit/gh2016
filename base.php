@@ -15,12 +15,22 @@ use Roots\Sage\Wrapper;
       </div>
     <![endif]-->
     <div id="spinner-wrapper">
-      <div class="gh-folding-cube">
+      <svg class="preloader-circle">
+        <circle cx="40" cy="40" r="30"/>
+      </svg>
+      <svg class="preloader-line">
+        <line x1="0" y1="0" x2="80" y2="80" />
+      </svg>
+      <svg class="preloader-line">
+        <line x1="80" y1="80" x2="0" y2="0" />
+      </svg>
+      <!-- <div class="gh-folding-cube">
         <div class="gh-cube1 gh-cube"></div>
         <div class="gh-cube2 gh-cube"></div>
         <div class="gh-cube4 gh-cube"></div>
         <div class="gh-cube3 gh-cube"></div>
-      </div>
+      </div> -->
+      
       <div class="preloader-horse">
         <?php get_template_part('dist/images/inline', 'horse.svg');?>
       </div>

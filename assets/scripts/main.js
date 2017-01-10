@@ -28,7 +28,7 @@
 
           // site preloader -- also uncomment the div in the header and the css style for #preloader
           $(window).load(function(){
-            $('#spinner-wrapper').fadeOut('2000',function(){$(this).remove();});
+            //$('#spinner-wrapper').fadeOut('2000',function(){$(this).remove();});
           });
 
         });
