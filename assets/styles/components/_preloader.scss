@@ -8,28 +8,46 @@
   z-index: 999999;
 }
 
-.preloader-circle {
+.preloader-diamond {
+  transform: rotate(45deg);
+
+  rect {
+    stroke-width: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.preloader-circle,
+.preloader-diamond {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   top: 50%;
   left: 50%;
-  margin-left: -40px;
-  margin-top: -40px;
+  margin-left: -30px;
+  margin-top: -30px;
   fill: transparent;
   stroke: $white-rgba;
   stroke-width: 5px;
-  stroke-dasharray: 40;
-  stroke-dashoffset: 40;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 0;
   stroke-linecap: round;
   animation: circle-dash 5s linear alternate infinite;
 
   @keyframes circle-dash {
     from {
-      stroke-dashoffset: 40;
+      //transform: rotate(360deg);
+      stroke-dasharray: 50;
     }
     to {
-      stroke-dashoffset: 0;
+      //transform: rotate(0deg);
+      stroke-dasharray: 200;
     }
   }
   
@@ -59,9 +77,11 @@
 
   @keyframes line-dash {
     from {
+      transform: rotate(0deg);
       stroke-dashoffset: 120;
     }
     to {
+      transform: rotate(360deg);
       stroke-dashoffset: 0;
     }
   }
@@ -92,36 +112,37 @@
 
   &::before,
   &::after {
-    @include square(36px);
+    @include square(54px);
     @include animate-spin();
     @include animation-duration(7s);
     position: absolute;
-    margin-left: -18px;
-    margin-top: -18px;
+    margin-left: -27px;
+    margin-top: -27px;
+    border-radius: 100%;
     left: 50%;
     top: 50%;
-    content: '';
+    //content: '';
     z-index: 1;
     background-color: $brand-blue;
   }
 }
 
 .gh-folding-cube {
-  @include square(40px);
+  @include square(80px);
   @include rotateZ(45deg);
   @include animation-duration(1.25s);
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -20px;
-  margin-top: -20px;
+  margin-left: -40px;
+  margin-top: -40px;
 
   .gh-cube {
     float: left;
     width: 50%;
     height: 50%;
     position: relative;
-    transform: scale(1.1); 
+    transform: scale(0.8); 
   }
 
   .gh-cube::before {
@@ -137,15 +158,15 @@
   }
 
   .gh-cube2 {
-    transform: scale(1.1) rotateZ(90deg);
+    transform: scale(0.8) rotateZ(90deg);
   }
 
   .gh-cube3 {
-    transform: scale(1.1) rotateZ(180deg);
+    transform: scale(0.8) rotateZ(180deg);
   }
 
   .gh-cube4 {
-    transform: scale(1.1) rotateZ(270deg);
+    transform: scale(0.8) rotateZ(270deg);
   }
 
   .gh-cube2::before {
