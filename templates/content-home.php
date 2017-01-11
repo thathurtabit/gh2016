@@ -348,7 +348,7 @@
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
-<section id="latest-split" class="block--position-relative section--border-white section--background-purple waypoints">
+<section id="latest-split" class="block--position-relative section--border-white section--background-green waypoints">
 <h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
 
 <div class="row block--position-relative">

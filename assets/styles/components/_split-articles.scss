@@ -26,7 +26,7 @@
     .article__section-title {
         margin: 0;
         padding: 20px 0 10px;
-        background-color: $brand-purple;
+        background-color: $brand-green;
 
         @include respond-to(screen-sm) {
             margin: -40px 30px 0 30px;
@@ -107,16 +107,16 @@
             height: 50px;
             fill: transparent;
             opacity: 0;
-            stroke: $white;
-            stroke-width: 5px;
-            stroke-dasharray: 50;
+            stroke: rgba(255,255,255,0.5);
+            stroke-width: 7px;
+            stroke-dasharray: 10;
             stroke-dashoffset: 0;
             stroke-linecap: round;
             animation: circle-dash 3s linear alternate infinite;
 
             @keyframes circle-dash {
                 from {
-                  stroke-dasharray: 50;
+                  stroke-dasharray: 10;
                 }
                 to {
                   stroke-dasharray: 200;
@@ -179,7 +179,7 @@
 
     .thumb-click {
         z-index: 2;
-        background-color: $brand-blue;
+        background-color: rgba(0,0,0,0.3);
     }
 
     
