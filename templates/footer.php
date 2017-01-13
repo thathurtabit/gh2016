@@ -65,12 +65,7 @@
 
 	</div>
 	<section id="ghost-horses-svg" class="container-fluid"><!-- GHOST HORSES SVG -->
-		<span class="horses" data-when="enter"
-        data-from="1"
-        data-to="0.5"
-        data-opacity="1"
-        data-translatex="1000"><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span><span id="horse-white-bg-span" class="horses"><?php get_template_part('dist/images/inline', 'horsewhite.svg');?></span>
-
+		<span class="horses"><?php get_template_part('dist/images/inline', 'horseoutline.svg');?></span>
     </section>
 </div>
 

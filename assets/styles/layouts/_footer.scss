@@ -20,7 +20,7 @@
 
 	// FROM MEDIUM 
 	@include respond-to(screen-md) {
-		margin-bottom: 701px;
+		margin-bottom: 496px;
 		padding: 0 0 200px;
 	}
 }
@@ -82,7 +82,6 @@
 
 
 #ghost-horses-svg {
-    //background: url(../images/code.png);
     background-attachment: fixed;
     position: relative;
     padding: 10%;
@@ -91,7 +90,28 @@
 
     	// FROM SMALL
 	@include respond-to(screen-md) {
-    	min-height: 600px;
+    	min-height: 375px;
+	}
+
+	#horse {
+		fill: transparent;
+
+		path {
+			stroke-width: 5px;
+			stroke: $gray;
+			stroke-dasharray: 3050;
+            stroke-dashoffset: 0;
+            stroke-linecap: round;
+            animation: logo-dash 8s linear alternate infinite;
+            @keyframes logo-dash {
+            from {
+              stroke-dasharray: 500;
+            }
+            to {
+              stroke-dasharray: 3050;
+            }
+          }
+		}
 	}
 
     .horses {

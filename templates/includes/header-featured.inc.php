@@ -1,6 +1,7 @@
 <div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php the_post_thumbnail_url( 'full' ); ?>">
     <header class="article-img-bg__header--large-text page-border-main-col">
-      <h1><?php the_title(); ?></h1>              
+      <h1><?php the_title(); ?></h1>
+      <?php get_template_part('dist/images/inline', 'horseoutline.svg');?>         
     </header>
     <div class="animated-lines-page">
 		<div class="animated-lines--quarter-vertical">

@@ -23,6 +23,46 @@
     flex-wrap: wrap;
     justify-content: space-around;
 
+    // ICONS
+    li i.fa {
+        display: none;
+
+        // FROM MEDIUM 
+        @include respond-to(screen-md) {
+            display: block;
+            transition: color 0.25s ease-in-out, transform 0.25s cubic-bezier(.51,1.58,.92,1.22);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: scale(1);
+            color: rgba(0,0,0,.05);
+            border-radius: 100%;
+            line-height: 240px;
+            text-align: center;
+            font-size: 100px;
+            z-index: 1;
+        }
+        @include respond-to(screen-lg) {
+            line-height: 277px;
+            font-size: 120px;
+        }
+
+        @include respond-to(screen-xl) {
+            line-height: 285px;
+            font-size: 130px;
+        }
+    }
+
+    // ICONS HOVER
+    li:hover i.fa {
+        transform: scale(1.2);
+        color: rgba(255,255,255,.15);
+        box-shadow: 0 0 rgba(0,0,0,0);
+    }
+
+
     .svg {
         transition: opacity 0.25s ease-in-out;
         opacity: 0;
@@ -82,14 +122,14 @@
 
 
     li > span::before {
-        transition: transform ($ani-movement-time / 2) ease-in-out, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
+        transition: transform ($ani-movement-time / 3) ease-in-out, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        transform: scale(1.1) translateY(5px);
+        transform: scale(1.2);
         opacity: 0;
 
         background-color: rgba(0,0,0,0);
@@ -99,9 +139,9 @@
 
     // HOVER
     li:hover > span::before {
-        opacity: 0.75;
-        transform: scale(1.2) translateY(-5px);
-        background-color: rgba(0,0,0,0.9) !important;
+        opacity: 0.6;
+        transform: scale(1.1) ;
+        background-color: rgba(0,0,0,1) !important;
     }
 
     // DIAMOND BG
@@ -311,6 +351,32 @@
                 @include opacity(1);
                 @include translate(0,0);
             }
+
+            // FROM MEDIUM 
+            @include respond-to(screen-md) {
+                &::after {
+                    transition: height 0.25s ease-in-out, width 0.25s ease-in-out, border-top 0.25s ease-in-out, margin-left 0.25s ease-in-out, transform 0.25s cubic-bezier(.51,1.58,.92,1.22);
+                    content: "";
+                    height: 10px;
+                    transform: translateY(0);
+                    border-top: 3px solid rgba(0,0,0,0.2);
+                    border-radius: 100%;
+                    width: 10px;
+                    position: absolute;
+                    bottom: -30px;
+                    margin-left: -5px;
+                    left: 50%;
+                }
+            }
+        }
+
+        // Bold text hover
+        &:hover b::after {
+            border-top-color: $white;
+            transform: translateY(15px);
+            width: 20px;
+            height: 20px;
+            margin-left: -10px;
         }
 
         // Span loop for transition delay

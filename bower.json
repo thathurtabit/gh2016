@@ -9,7 +9,6 @@
   "dependencies": {
     "font-awesome": "fontawesome#^4.5.0",
     "slick-carousel": "^1.5.9",
-    "vivus": "^0.3.0",
     "animatewithsass": "^3.2.2",
     "waypoints": "^4.0.0",
     "bootstrap-sass": "^3.3.6",

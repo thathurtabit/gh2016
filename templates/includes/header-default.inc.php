@@ -1,7 +1,7 @@
-<div class="article-img-bg parallax-window" data-parallax="scroll" data-image-src="<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png">
+<div class="article-img-bg">
     <header class="article-img-bg__header--large-text page-border-main-col">
       <h1><?php get_template_part('templates/page', 'header'); ?></h1>
-          
+      <?php get_template_part('dist/images/inline', 'horse.svg');?>
     </header>
     <div class="animated-lines-page">
 		<div class="animated-lines--quarter-vertical">

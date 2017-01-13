@@ -11,7 +11,6 @@
 		<?php if (has_post_thumbnail( $post->ID ) ): ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
 		<span class="featured-img--svg-border">
-			<?php get_template_part('dist/images/inline', 'starburst.svg');?>
 			<svg><rect class="thumb-rectangle" /></svg>
 			
 		</span>

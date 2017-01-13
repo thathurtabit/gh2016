@@ -90,13 +90,18 @@
 .article-img-bg {
 	background-size: cover;
 	background-image: none;
-	background: transparent;
+	background-color: $brand-blue;
 	width: 100%;
 	height: 250px;
 	overflow: hidden;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
+
+	// When Parallax
+	&.parallax-window {
+		background-color: transparent;
+	}
 
 	// RESPONSIVE
 	@include respond-to(screen-sm) {
@@ -196,10 +201,25 @@
     top: 0;
 
 	h1 {
+		transition: text-shadow $ani-movement-time ease-in-out;
 		font-size: 17vw;
 		line-height: 1;
 		flex: 1;
-		margin: 0;
+		margin: 0;		
+		text-shadow: 0 0 0 rgba(0,0,0,0.1);
+		transition-delay: 0.25s;
+
+		.pageloaded & {
+			text-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+
+			@include respond-to(screen-sm) {
+				text-shadow: 20px 20px 0 rgba(0,0,0,0.1);
+			}
+
+			@include respond-to(screen-md) {
+				text-shadow: 30px 30px 0 rgba(0,0,0,0.1);
+			}
+		}
 
 		// RESPONSIVE
 		@include respond-to(screen-md) {
@@ -216,6 +236,43 @@
 		}
 
 	}
+
+	#horse {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -16%;
+		width: 50%;
+		margin-left: -25%;
+		z-index: -1;
+
+		.whitelogo {
+			width: 500px;
+			fill: transparent;
+			stroke: rgba(0,0,0,0.4);
+			stroke-width: 6px;
+			//stroke-dasharray: 50;
+            //stroke-dashoffset: 0;
+            stroke-linecap: round;
+            animation: logo-dash 10s linear alternate;
+            @keyframes logo-dash {
+            from {
+            	opacity: 0;
+            	stroke-dasharray: 50;
+              	//stroke-dashoffset: 0;
+            }
+            to {
+            	opacity: 1;
+            	stroke-dasharray: 3050;
+              	//stroke-dashoffset: 3500;
+            }
+          }
+
+		}
+
+	}
+
+
 }
 
 // Intro top border
