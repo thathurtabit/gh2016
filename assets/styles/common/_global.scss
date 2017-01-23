@@ -183,7 +183,10 @@ img {
 
 // BREAK LONG URLS
 .entry-content-inner,
-#comments {    
+#comments,
+.article--split,
+.featured-img-link,
+h1, h2, h3, h4, h5, p, li, blockquote, a {    
   // Careful, this breaks the word wherever it is without a hyphen */
   overflow-wrap: break-word;
   word-wrap: break-word;

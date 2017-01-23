@@ -5,11 +5,15 @@
 	display: flex;
 	align-items: center;
 	font-family: $font-family-serif;
-	font-size: 20px;
-	border-bottom: 1px solid $border-color;
+	font-size: 17px;
+
+	@include respond-to(screen-xs) {
+		border-bottom: 1px solid $border-color;
+	}
 
 	@include respond-to(screen-sm) {
 		min-height: 400px;
+		font-size: 20px;
 	}
 
 	&.align-full {
@@ -60,11 +64,19 @@
 		border-radius: 100%;
 		top: 50%;
 		left: 50%;
-		width: 300px;
-		height: 300px;
-		margin-top: -150px;
-		margin-left: -150px;
-		border: 50px solid rgba(0, 0, 0, 0.05);
+		width: 200px;
+		height: 200px;
+		margin-top: -100px;
+		margin-left: -100px;
+		border: 25px solid rgba(0, 0, 0, 0.05);
+
+		@include respond-to(screen-sm) {
+			width: 300px;
+			height: 300px;
+			margin-top: -150px;
+			margin-left: -150px;
+			border-width: 50px;
+		}
 	}
 
 	// Change colours

@@ -50,7 +50,7 @@
         }
 
         @include respond-to(screen-xl) {
-            line-height: 285px;
+            line-height: 305px;
             font-size: 130px;
         }
     }
@@ -122,14 +122,14 @@
 
 
     li > span::before {
-        transition: transform ($ani-movement-time / 3) ease-in-out, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
+        transition: transform 5s linear, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        transform: scale(1.2);
+        transform: scale(1.2) translateY(10px);
         opacity: 0;
 
         background-color: rgba(0,0,0,0);
@@ -140,7 +140,7 @@
     // HOVER
     li:hover > span::before {
         opacity: 0.6;
-        transform: scale(1.1) ;
+        transform: scale(1.2) translateY(0);
         background-color: rgba(0,0,0,1) !important;
     }
 
@@ -338,10 +338,10 @@
 
         // Bold
         b {
-            @include transition(all 0.25s ease-in-out);
+            @include transition(all 0.5s ease-in-out);
             @include scale(0.5);
             @include opacity(0);
-            @include translate(0,10px);
+            @include translate(-20px,0);
             font-weight: normal;
             display: block;
             z-index: 10;
@@ -353,31 +353,31 @@
             }
 
             // FROM MEDIUM 
-            @include respond-to(screen-md) {
-                &::after {
-                    transition: height 0.25s ease-in-out, width 0.25s ease-in-out, border-top 0.25s ease-in-out, margin-left 0.25s ease-in-out, transform 0.25s cubic-bezier(.51,1.58,.92,1.22);
-                    content: "";
-                    height: 10px;
-                    transform: translateY(0);
-                    border-top: 3px solid rgba(0,0,0,0.2);
-                    border-radius: 100%;
-                    width: 10px;
-                    position: absolute;
-                    bottom: -30px;
-                    margin-left: -5px;
-                    left: 50%;
-                }
-            }
+            // @include respond-to(screen-md) {
+            //     &::after {
+            //         transition: height 0.25s ease-in-out, width 0.25s ease-in-out, border-top 0.25s ease-in-out, margin-left 0.25s ease-in-out, transform 0.25s cubic-bezier(.51,1.58,.92,1.22);
+            //         content: "";
+            //         height: 10px;
+            //         transform: translateY(0);
+            //         border-top: 3px solid rgba(0,0,0,0.2);
+            //         border-radius: 100%;
+            //         width: 10px;
+            //         position: absolute;
+            //         bottom: -30px;
+            //         margin-left: -5px;
+            //         left: 50%;
+            //     }
+            // }
         }
 
         // Bold text hover
-        &:hover b::after {
-            border-top-color: $white;
-            transform: translateY(15px);
-            width: 20px;
-            height: 20px;
-            margin-left: -10px;
-        }
+        // &:hover b::after {
+        //     border-top-color: $white;
+        //     transform: translateY(15px);
+        //     width: 20px;
+        //     height: 20px;
+        //     margin-left: -10px;
+        // }
 
         // Span loop for transition delay
         @for $i from 1 to 7 {
@@ -426,6 +426,10 @@
             @include respond-to(screen-lg) {
                 height: 240px;
                 font-size: 40px;
+            }
+
+            @include respond-to(screen-xl) {
+                height: 260px;
             }
         }
 

@@ -367,50 +367,31 @@
 		    	
 
 			       <!-- section FEATURED IMG -->
-			      	<section class="featured-img featured-img--flat featured-img--long">
-			      	
-			    		<?php
+			      	<section class="featured-img-link"
+
+			      		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail() ) {
-							?> <a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+						if ( has_post_thumbnail($post->ID ) ) { 
+							
+							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"
 
-							<!-- BG IMG -->
-							<span class="featured-img--flat-thumb"
-							<?php if (has_post_thumbnail( $post->ID ) ): ?>
-							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
-
-							<span class="featured-img--svg-border">
-								<svg><rect class="thumb-rectangle" /></svg>
-							</span>
-						</a>
-													
-			
-						<?php endif; ?>
-			
 						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 
-								<!-- BG IMG -->
-							<span class="featured-img--flat-thumb"
-								<?php get_template_part('dist/images/inline', 'horse.svg');?>
-								</span><!-- / END BG IMG -->
-								<span class="featured-img--svg-border">
-									<svg><rect class="thumb-rectangle" /></svg>
-								</span>
-							</a>
-						<?php }	?>
+							style="background-image:url(<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png)"
 
-						
 
-			      	</section>
-			      	<!-- / section FEATURED IMG -->
+						<?php } // end else ?>
 
+			      	><!-- END SECTION OPEN -->
+
+			      	<!-- LINK WRAP -->
+
+			      	<a href="<?php the_permalink() ?>" class="featured-img-link__a" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+			      	
 
 			      	<!-- SECTION TITLE -->
 			       <header class="article__section-title">			      	
-		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>" class="btn--bg-white-slide">
-				        <?php the_title(); ?>
-				        </a></h1>				    
+		      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>				    
 			       </header>
 			       <!-- / SECTION TITLE -->
 
@@ -426,10 +407,12 @@
 							echo wp_trim_words( $content , '25' ); ?>
 						</p>
 
-						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>
 				      </p>
 				  </section>
-				  <!-- / CONTENT -->	      	      
+				  <!-- / CONTENT -->
+
+				  </a><!-- END LINK WRAP -->      	      
 
 			    </article>
     			<!--/ NEWS ARTICLE -->
@@ -452,7 +435,7 @@
 
 			
 		</section>
-		<?php } } ?>
+		<?php } } // END WHILE LOOP ?>
 	</div>
 
 	<div class="col-md-6">
@@ -476,58 +459,41 @@
 		        <!-- / DATE -->
 			</h2>
 
-				<!--PRODUCTION ARTICLE -->
-			     <article class="article--split article--white">
-			    	
+				<!-- PRODUCTION ARTICLE -->
+			    <article class="article--split article--white">
+		    	
 
-			      <!-- section FEATURED IMG -->
-			      	<section class="featured-img featured-img--flat featured-img--long">
+			       <!-- section FEATURED IMG -->
+			      	<section class="featured-img-link"
 
-			      	
-			    		<?php
+			      		<?php
 			      		// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail() ) {
-							?> <a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+						if ( has_post_thumbnail($post->ID ) ) { 
+							
+							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"
 
-							<!-- BG IMG -->
-							<span class="featured-img--flat-thumb"
-							<?php if (has_post_thumbnail( $post->ID ) ): ?>
-							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"></span><!-- / END BG IMG -->
-							<span class="featured-img--svg-border">
-								<svg><rect class="thumb-rectangle" /></svg>
-							</span>
-						</a>
-													
-			
-						<?php endif; ?>
-			
 						<?php } else { ?>
-							<a href="<?php the_permalink() ?>" class="thumb-click" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 
-								<!-- BG IMG -->
-							<span class="featured-img--flat-thumb"
-								<?php get_template_part('dist/images/inline', 'horse.svg');?>
-								</span><!-- / END BG IMG -->
-								<span class="featured-img--svg-border">
-									<svg><rect class="thumb-rectangle" /></svg>
-								</span>
-							</a>
-						<?php }	?>
+							style="background-image:url(<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png)"
 
-			      	</section>
-			      	<!-- / section FEATURED IMG -->
 
+						<?php } // end else ?>
+
+			      	><!-- END SECTION OPEN -->
+
+			      	<!-- LINK WRAP -->
+
+			      	<a href="<?php the_permalink() ?>" class="featured-img-link__a" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+			      	
 
 			      	<!-- SECTION TITLE -->
 			       <header class="article__section-title">			      	
-		      		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>" class="btn--bg-white-slide">
-				        <?php the_title(); ?>
-				        </a></h1>				    
+		      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>				    
 			       </header>
 			       <!-- / SECTION TITLE -->
 
 
-			      	<!-- CONTENT -->
+			       <!-- CONTENT -->
 			       <section class="article__content-wrap">
 				      	
 
@@ -538,10 +504,12 @@
 							echo wp_trim_words( $content , '25' ); ?>
 						</p>
 
-						<p class="article__btn-wrap"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin">Learn more</a>
+						<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>
 				      </p>
 				  </section>
-				  <!-- / CONTENT -->	      
+				  <!-- / CONTENT -->
+
+				  </a><!-- END LINK WRAP -->      	      
 
 			    </article>
     			<!--/ PRODUCTION ARTICLE -->

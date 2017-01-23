@@ -283,9 +283,61 @@ body {
 }
 
 
+.article-divider-work {
+    border-bottom: 1px solid $border-color;
+
+    // RESPONSIVE
+    @include respond-to(screen-md) {
+        max-width: 33.33%;
+        box-shadow: 1px 0 0 $border-color;
+
+        &:nth-child(3n) {
+            box-shadow: none;
+        }
+
+    }
+
+    @include respond-to(screen-lg) {
+        max-width: 25%;
+
+        &:nth-child(3n) {
+            box-shadow: 1px 0 0 $border-color;
+        }
+
+        &:nth-child(4n) {
+            box-shadow: none;
+        }
+    }
+
+    article {
+        text-align: left;
+    }
+
+    .entry-summary {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    
+
+}
+
 
 // CHANGE UP FOR PORTFOLIO CONTENT
 .content-list-block-wrap {
+
+
+    // WHEN WORK LISTING, GET RID OF PADDING
+    .post-type-archive-portfolio & {
+        padding: 0!important;
+
+        // RESPONSIVE
+        @include respond-to(screen-md) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+    }
 
     article {
         min-height: inherit !important;
