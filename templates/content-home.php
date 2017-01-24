@@ -391,7 +391,7 @@
 
 			      	<!-- SECTION TITLE -->
 			       <header class="article__section-title">			      	
-		      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>				    
+		      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>
 			       </header>
 			       <!-- / SECTION TITLE -->
 
@@ -404,7 +404,7 @@
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
-							echo wp_trim_words( $content , '25' ); ?>
+							echo wp_trim_words( $content , '15' ); ?>
 						</p>
 
 						<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>
@@ -487,8 +487,8 @@
 			      	
 
 			      	<!-- SECTION TITLE -->
-			       <header class="article__section-title">			      	
-		      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>				    
+			       <header class="article__section-title">			      			      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>
+		      		
 			       </header>
 			       <!-- / SECTION TITLE -->
 
@@ -501,7 +501,7 @@
 					      	<?php
 					      	// GET THE CONTENT
 							$content = get_the_content();
-							echo wp_trim_words( $content , '25' ); ?>
+							echo wp_trim_words( $content , '15' ); ?>
 						</p>
 
 						<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>

@@ -341,7 +341,7 @@
             @include transition(all 0.5s ease-in-out);
             @include scale(0.5);
             @include opacity(0);
-            @include translate(-20px,0);
+            @include translate(-10px,0);
             font-weight: normal;
             display: block;
             z-index: 10;

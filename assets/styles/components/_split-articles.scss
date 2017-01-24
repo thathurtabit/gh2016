@@ -25,7 +25,13 @@
 
     .article__section-title {
         margin: 0;
-        padding: 0 0 10px;
+        padding: 20px 20px 10px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
 
         @include respond-to(screen-sm) {
             padding: 20px 40px 10px;
@@ -37,6 +43,9 @@
         overflow-wrap: break-word;
         word-wrap: break-word;
         line-height: 1.1;
+        z-index: 1;
+        bottom: 5px;
+        background: darken($brand-green-rgba, 15%);
 
         @include respond-to(screen-xs) {
             font-size: 30px;
@@ -66,7 +75,6 @@
     }
     
     @include respond-to(screen-md) {
-        min-height: 540px;
         display: flex;
         flex-direction:row;
         flex-wrap: nowrap;
@@ -74,36 +82,67 @@
     }
 
     @include respond-to(screen-lg) {
-        min-height: 480px;      
         margin: 30px;
     }
 
     @include respond-to(screen-xl) {
-        min-height: 420px;
     }
 }
 
 
 .featured-img-link__a {
     transition: background-color 0.25s ease-in-out;
-    background-color: darken($brand-green-rgba, 15%);
-    padding: 20px 10px;
+    background-color: rgba(116, 195, 144, 0.4);
+    //padding: 20px 10px;
     display: block;
     min-width: 50%;
+    position: relative;
 
     &:hover {
-        background-color: darken($brand-green-rgba, 25%);
+        background-color: rgba(116, 195, 144, 0.25);
+
+        .article--split__header-bg {
+            opacity: 0.9;
+            transform: scale(1.5) translate3d(0,0,0);
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 50px 50px 0;
+        border-color: transparent $white transparent transparent;
     }
 
     // RESPONSIVE
     @include respond-to(screen-xs) {
-        padding: 30px 30px 50px;
+        //padding: 30px 30px 50px;
     }
     @include respond-to(screen-md) {
-        padding: 40px 20px 40px;
+        //padding: 40px 20px 40px;
     }
 
 }
+
+
+.article--split__header-bg {
+    transition: all 0.5s ease-in-out;
+    opacity: 0.05;
+    transform: scale(1.5) translate3d(0,5px,0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
 
 .featured-img-link__button {
     background-color: transparent!important;
@@ -424,10 +463,13 @@
     }
 
     article .article__content-wrap {
-        margin: 10px 0 0 20px;
+        margin: 0;
+        padding: 20px 60px 30px;
+        height: 200px;
+        background: darken($brand-green-rgba, 15%);
 
         @include respond-to(screen-sm) {
-            margin: 10px 70px;
+            padding: 20px 80px 30px;
         }
     }
 
@@ -449,7 +491,7 @@
     .split-tags {
         transition: opacity $ani-trans-time ease-in-out, transform $ani-trans-time ease-in-out;
         opacity: 0;
-        transform: translate(-20px, 0);
+        transform: translate(-10px, 0);
     }
 
     // When scroll hits
