@@ -15,6 +15,23 @@
     background-color: $brand-red;
 }
 
+
+.svg--rect-anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    rect {
+        stroke: #fff;
+        stroke-width: 4px;
+        width: 100%;
+        height: 100%;
+        fill: transparent;
+    }
+}
+
 .large-ul-blocks {
     list-style-type: none;
     padding: 0;
@@ -120,7 +137,7 @@
         }
     }
 
-
+    // BEFORE
     li > span::before {
         transition: transform 5s linear, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
         content: "";
@@ -137,11 +154,57 @@
         background-size: cover !important;
     }
 
-    // HOVER
+    // BEFORE HOVER
     li:hover > span::before {
         opacity: 0.6;
         transform: scale(1.2) translateY(0);
         background-color: rgba(0,0,0,1) !important;
+    }
+
+    // AFTER
+    .rect--border-anim {
+        transition: transform $ani-trans-time ease-in-out, opacity $ani-trans-time ease-in-out;
+        position: absolute;
+
+        @include respond-to(screen-xs) {
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+        }
+
+        @include respond-to(screen-md) {
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+        }
+
+        @include respond-to(screen-lg) {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .svg-rect {
+            width: 100%;
+            height: 100%;
+
+            rect {
+                transition: transform $ani-trans-time ease-in-out;
+                stroke: rgba(255,255,255,0.2);
+                stroke-width: 4px;
+                stroke-dasharray: 2000;
+                stroke-dashoffset: 2000;
+                fill: transparent;
+            }
+        }
+    }
+
+    // AFTER HOVER
+    li:hover .rect--border-anim rect {
+        animation: rect-border-anim 2s linear alternate forwards;  
     }
 
     // DIAMOND BG
@@ -352,32 +415,9 @@
                 @include translate(0,0);
             }
 
-            // FROM MEDIUM 
-            // @include respond-to(screen-md) {
-            //     &::after {
-            //         transition: height 0.25s ease-in-out, width 0.25s ease-in-out, border-top 0.25s ease-in-out, margin-left 0.25s ease-in-out, transform 0.25s cubic-bezier(.51,1.58,.92,1.22);
-            //         content: "";
-            //         height: 10px;
-            //         transform: translateY(0);
-            //         border-top: 3px solid rgba(0,0,0,0.2);
-            //         border-radius: 100%;
-            //         width: 10px;
-            //         position: absolute;
-            //         bottom: -30px;
-            //         margin-left: -5px;
-            //         left: 50%;
-            //     }
-            // }
+         
         }
 
-        // Bold text hover
-        // &:hover b::after {
-        //     border-top-color: $white;
-        //     transform: translateY(15px);
-        //     width: 20px;
-        //     height: 20px;
-        //     margin-left: -10px;
-        // }
 
         // Span loop for transition delay
         @for $i from 1 to 7 {
