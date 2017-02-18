@@ -1,5 +1,3 @@
-
-
 // !! REMEMBER TO BEM !!
 
 // .block {
@@ -56,11 +54,11 @@
 }
 
 .slick-prev {
-    left: -10px;
+    left: -12px;
 }
 
 .slick-next {
-    right: -10px;
+    right: -12px;
 }
 
 .slick-prev::after,
@@ -140,26 +138,32 @@
 
         &.item:nth-child(1) {
             background: $brand-blue;
+            background: linear-gradient(45deg, $brand-blue 0%, adjust-hue($brand-blue, $gradient-hue-amount) 100%);
         }
 
         &.item:nth-child(2) {
             background: $brand-pink;
+            background: linear-gradient(45deg, $brand-pink 0%, adjust-hue($brand-pink, $gradient-hue-amount) 100%);
 		}
 
 		&.item:nth-child(3) {            
             background: $brand-red;
+            background: linear-gradient(45deg, $brand-red 0%, adjust-hue($brand-red, $gradient-hue-amount) 100%);
 		}
 
 		&.item:nth-child(4) {            
             background: $brand-yellow;
+            background: linear-gradient(45deg, $brand-yellow 0%, adjust-hue($brand-yellow, $gradient-hue-amount) 100%);
 		}
 
         &.item:nth-child(5) {            
             background: $brand-purple;
+            background: linear-gradient(45deg, $brand-purple 0%, adjust-hue($brand-purple, $gradient-hue-amount) 100%);
         }
 
         &.item:nth-child(6) {      
             background: $brand-green;
+            background: linear-gradient(45deg, $brand-green 0%, adjust-hue($brand-green, $gradient-hue-amount) 100%);
         }
     }
 }

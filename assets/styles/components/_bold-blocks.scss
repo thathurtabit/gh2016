@@ -1,18 +1,14 @@
 
 #but-how,
 #but-what {
-    @include respond-to(screen-xs) {
-      //  margin-top: -23px;
-    }
-    @include respond-to(screen-xs) {
-     //   min-height: 800px;
-    }
     background-color: $brand-orange;
+    background: linear-gradient(45deg, $brand-orange 0%, adjust-hue($brand-orange, $gradient-hue-amount) 100%);
     color: $white;
 }
 
 #but-what {
     background-color: $brand-red;
+    background: linear-gradient(45deg, $brand-red 0%, adjust-hue($brand-red, $gradient-hue-amount) 100%);
 }
 
 

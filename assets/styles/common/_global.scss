@@ -56,34 +56,42 @@
 // BACKGROUND COLOURS
 .section--background-purple {
     background-color: $brand-purple;
+    background: linear-gradient(45deg, $brand-purple 0%, adjust-hue($brand-purple, $gradient-hue-amount) 100%);
 }
 
 .section--background-blue {
     background-color: $brand-blue;
+    background: linear-gradient(45deg, $brand-blue 0%, adjust-hue($brand-blue, $gradient-hue-amount) 100%);
 }
 
 .section--background-green {
     background-color: $brand-green;
+    background: linear-gradient(45deg, $brand-green 0%, adjust-hue($brand-green, $gradient-hue-amount) 100%);
 }
 
 .section--background-red {
     background-color: $brand-red;
+    background: linear-gradient(45deg, $brand-red 0%, adjust-hue($brand-red, $gradient-hue-amount) 100%);
 }
 
 .section--background-pink {
     background-color: $brand-pink;
+    background: linear-gradient(45deg, $brand-pink 0%, adjust-hue($brand-pink, $gradient-hue-amount) 100%);
 }
 
 .section--background-orange {
     background-color: $brand-orange;
+    background: linear-gradient(45deg, $brand-orange 0%, adjust-hue($brand-orange, $gradient-hue-amount) 100%);
 }
 
 .section--background-gray-dark {
     background-color: $gray-dark;
+    background: linear-gradient(45deg, $gray-dark 0%, adjust-hue($gray-dark, $gradient-hue-amount) 100%);
 }
 
 .section--background-white {
     background-color: $white;
+    background: linear-gradient(45deg, $white 0%, adjust-hue($white, $gradient-hue-amount) 100%);
     color: $gray;
 }
 
