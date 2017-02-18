@@ -39,7 +39,7 @@
           // { duration:800, easing:'swing'});
 
           var targetOffset = $(this.hash).offset().top;
-          $('html,body').animate({scrollTop: targetOffset - 120}, 800);
+          $('html,body').animate({scrollTop: targetOffset - 120}, 600, 'swing');
           return false;
         });
       
@@ -83,13 +83,13 @@
           asNavFor: '#bg-carousel, #float-illustrations-1, #vert-carousel',
           speed: 1000,
           autoplay: true,
-          autoplaySpeed: 10000,
+          autoplaySpeed: 15000,
           swipe: true
         });
         $('#adjective-carousel').slick({
           speed: 1000,                  
           autoplay: true,
-          autoplaySpeed: 10000
+          autoplaySpeed: 12500
         });
         $('#vert-carousel').slick({
           arrows: false,
