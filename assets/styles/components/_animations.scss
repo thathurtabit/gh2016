@@ -402,10 +402,20 @@
 
 
 @keyframes rect-border-anim {
-    from {
-      stroke-dashoffset: 2000;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
+  from {
+    stroke-dashoffset: 2000;
   }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@keyframes zigzag-bg-anim {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -215px 0;
+  }
+}

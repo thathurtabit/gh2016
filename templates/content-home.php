@@ -243,7 +243,11 @@
 
 <section id="but-how" class="section--border-white block--position-relative waypoints"><!-- BUT HOW? -->
 
-<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
+<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? 
+<span class="zigzag-long"></span>
+</span>
+
+</h2>
 
 <ul class="large-ul-blocks blocks--diamond">
 <!--<ul class="large-ul-blocks blocks--diamond">-->
@@ -312,7 +316,9 @@
 
 <section id="but-what" class="section--border-white waypoints"><!-- BUT WHAT -->
 
-<h2 class="section-heading heading--icon-code">But like, what do you DO? <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
+<h2 class="section-heading heading--icon-code">But like, what do you DO?
+<span class="zigzag-long"></span>
+</h2>
 
 <ul class="large-ul-blocks blocks--circle">
 <!--<ul class="large-ul-blocks blocks--circle">-->
@@ -392,7 +398,9 @@
 
 <!-- LATEST STUFF -->
 <section id="latest-split" class="block--position-relative section--border-white section--background-green waypoints">
-<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></span></h2>
+<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff 
+<span class="zigzag-long"></span>
+</h2>
 
 <div class="row block--position-relative">
 	<div class="col-md-6">

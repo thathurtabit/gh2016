@@ -186,8 +186,21 @@ li {
         // WHEN SECTION IS VISIBLE - ANIMATE
         .waypoint-active & {
             width: 50px;
+            height: 43px;
             margin-left: -25px;
         }
+    }
+
+    .zigzag-long {
+        position: absolute;
+        width: 50px;
+        height: 10px;
+        margin-left: -25px;
+        bottom: 0;
+        left: 50%;
+        overflow: hidden;
+        background: url('../images/zigzag-long.png') repeat-x;
+        animation: zigzag-bg-anim 7s linear infinite;
     }
 
 }

@@ -19,7 +19,9 @@
 <?php } ?>
 
 <footer id="main-footer" class="content-info block--position-relative section--border-sides-white-only scrollme waypoints">
-	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff  <span class="zigzag"><?php get_template_part('dist/images/inline', 'zigzag.svg');?></h2>
+	<h2 class="section-heading  heading--icon-ellipsis-h">Footer stuff
+		<span class="zigzag-long"></span>
+	</h2>
   <div class="row footer-split-links">
 		
 		<div class="col-md-6 first">
