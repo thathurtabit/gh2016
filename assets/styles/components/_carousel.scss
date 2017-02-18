@@ -124,14 +124,14 @@
         min-height: $height-mobile-horizontal;
 
         &.item {
-            @include transition(.25s ease-in-out box-shadow);
+            @include transition(.5s ease-in-out box-shadow);
             @include opacity(.5);
             background: $brand-blue;
             left: 0;
         }
 
         &.slick-active {
-            @include transition(.25s ease-in-out box-shadow);
+            @include transition(.5s ease-in-out box-shadow);
             left: 0;
             transform: translate3d(0, 0, 0);
         }

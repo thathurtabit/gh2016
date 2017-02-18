@@ -465,7 +465,8 @@
         overflow: hidden;
 
         span {
-            @include transition(left 0.75s cubic-bezier(.87,-.41,.19,1.44));
+            //@include transition(left 1s cubic-bezier(.87,-.41,.19,1.44));
+            @include transition(left 0.75s cubic-bezier(.35,.01,.21,1));
             @include transition-delay(0.25s);
             position: absolute;
             left: -500px;
@@ -527,7 +528,8 @@
             overflow: hidden;
 
             span {
-                @include transition(right 0.75s cubic-bezier(.87,-.41,.19,1.44));
+                //@include transition(right 1s cubic-bezier(.87,-.41,.19,1.44));
+                @include transition(right 0.75s cubic-bezier(.35,.01,.21,1));
                 @include transition-delay(0.25s);
                 position: absolute;
                 right: -500px;
