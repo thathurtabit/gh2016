@@ -146,19 +146,20 @@
         opacity: 0;
         background-position: center !important;
         background-size: cover !important;
+        z-index: 1;
     }
 
     // BEFORE HOVER
     li:hover > span::before {
         opacity: 0.6;
         transform: scale(1.5) translateY(0);
-        background-color: rgba(0,0,0,1) !important;
     }
 
     // BORDER
     .rect--border-anim {
         transition: transform $ani-trans-time ease-in-out, opacity $ani-trans-time ease-in-out;
         position: absolute;
+        z-index: 2;
 
         @include respond-to(screen-xs) {
             top: 3px;
@@ -219,12 +220,12 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 0;
+        z-index: -1;
     }
 
     li.off .wipe::before,
     li.on .wipe::after {
-      background-color: rgba(0,0,0,0.25);
+      background-color: $gray-dark;
     }
 
     // ===============
