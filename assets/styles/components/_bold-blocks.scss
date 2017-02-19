@@ -144,8 +144,6 @@
         bottom: 0;
         transform: scale(1.5) translateY(30px);
         opacity: 0;
-
-        background-color: rgba(0,0,0,0);
         background-position: center !important;
         background-size: cover !important;
     }
@@ -157,7 +155,7 @@
         background-color: rgba(0,0,0,1) !important;
     }
 
-    // AFTER
+    // BORDER
     .rect--border-anim {
         transition: transform $ani-trans-time ease-in-out, opacity $ani-trans-time ease-in-out;
         position: absolute;
@@ -189,7 +187,7 @@
 
             rect {
                 transition: transform $ani-trans-time ease-in-out;
-                stroke: rgba(255,255,255,0.2);
+                stroke: rgba(255,255,255,0.4);
                 stroke-width: 4px;
                 stroke-dasharray: 2000;
                 stroke-dashoffset: 2000;
@@ -198,14 +196,54 @@
         }
     }
 
-    // AFTER HOVER
+    // BORDER HOVER
     li:hover .rect--border-anim rect {
         animation: rect-border-anim 2s linear alternate forwards;  
     }
 
+    .wipe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    .wipe::before,
+    .wipe::after {
+        transition: transform $ani-trans-time $transition-type;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    li.off .wipe::before,
+    li.on .wipe::after {
+      background-color: rgba(0,0,0,0.25);
+    }
+
+    // ===============
+    // HORIZONTAL HOVER
+
+    li .wipe::after {
+      transform: translate3d(-100%,0,0);
+    }
+
+    li.off  .wipe::before {
+      transform: translate3d(100%,0,0);
+    }
+
+    li.on  .wipe::after {
+      transform: translate3d(0,0,0);
+    }
+
     // DIAMOND BG
-    &.blocks--diamond {
-           
+    &.blocks--diamond {           
 
         li:nth-child(1) > span::before {
             background: url(../images/big-block-creativity.png) no-repeat;

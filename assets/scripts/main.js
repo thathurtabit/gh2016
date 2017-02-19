@@ -123,8 +123,14 @@
           swipe: false
         });
 
-          // GOOGLEY EYES
-          // If you use this code, please link to this pen (cdpn.io/rkcjt). Thanks :)
+
+        // jQuery - if that's your bag
+        $(".large-ul-blocks li").hover(function () {
+           $(this).toggleClass("on off");
+        });
+
+        // GOOGLEY EYES
+        // If you use this code, please link to this pen (cdpn.io/rkcjt). Thanks :)
 
         function doGooglyEyes() {
 
