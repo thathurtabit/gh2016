@@ -243,6 +243,11 @@
 
 <section id="but-how" class="section--border-white block--position-relative waypoints"><!-- BUT HOW? -->
 
+<div class="lines line-pattern-1">
+	
+		<?php get_template_part('dist/images/inline', 'pattern-wave.svg');?>
+</div>
+
 <h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? 
 <span class="zigzag-long"></span>
 </span>
@@ -252,72 +257,73 @@
 <ul class="large-ul-blocks blocks--diamond">
 <!--<ul class="large-ul-blocks blocks--diamond">-->
 	<li class="off">
-		<i class="fa fa-lightbulb-o"></i>
 		<span><b>Creativity</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-lightbulb-o"></i>
+			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
 			<span class="wipe"></span>
 		</span>
-		<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
-
 	</li>
 	<li class="off">
-		<i class="fa fa-flask"></i>
 		<span><b>Smarts</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-flask"></i>
+			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
 			<span class="wipe"></span>
 		</span>
-		<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li class="off">
-		<i class="fa fa-heart"></i>
 		<span><b>Love</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-heart"></i>
+			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
 			<span class="wipe"></span>
 		</span>
-		<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li class="off">
-		<i class="fa fa-tint"></i>
 		<span><b>Perspiration</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-tint"></i>
+			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
 			<span class="wipe"></span>
 		</span>
-		<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 	<li class="off">
-		<i class="fa fa-magic"></i>
 		<span><b>Magic</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-magic"></i>
+			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
 			<span class="wipe"></span>
-		</span>
-		<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
+		</span>	
 	</li>
 	<li class="off">
-		<i class="fa fa-smile-o"></i>
+		
 		<span><b>Good-Looks</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-smile-o"></i>
+			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
 			<span class="wipe"></span>
 		</span>
-		<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>		
 	</li>
 </ul>
 
 	<div class="row block--spacing-center block--position-bottom">
 		<a href="#but-what" class="btn btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
-	
+
+
 </section><!-- / BUT HOW? -->
 
 <section id="but-what" class="section--border-white waypoints"><!-- BUT WHAT -->
@@ -329,76 +335,78 @@
 <ul class="large-ul-blocks blocks--circle">
 <!--<ul class="large-ul-blocks blocks--circle">-->
 	<li class="off">
-		<i class="fa fa-desktop"></i>
-		<span><b>Digital Design / UI</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+		<span><b>Design : UI</b>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-desktop"></i>
+			<svg height="60" width="60" class="svg">
+				<circle class="block__circle" cx="28" cy="29" r="25" />
+			</svg>	
 			<span class="wipe"></span>
-		</span>
-		<svg height="60" width="60" class="svg">
-			<circle class="block__circle" cx="28" cy="29" r="25" />
-		</svg>		
+		</span>	
 	</li>
 	<li class="off">
-		<i class="fa fa-rocket"></i>
 		<span><b>Logos</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-rocket"></i>
+			<svg height="60" width="60" class="svg">
+				<circle class="block__circle" cx="28" cy="29" r="25" />
+			</svg>	
 			<span class="wipe"></span>
-		</span>
-		<svg height="60" width="60" class="svg">
-			<circle class="block__circle" cx="28" cy="29" r="25" />
-		</svg>		
+		</span>	
 	</li>
 	<li class="off">
-		<i class="fa fa-code"></i>
-		<span><b>HTML5 / CSS3</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+		<span><b>HTML5 : CSS3</b>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-code"></i>
+			<svg height="60" width="60" class="svg">
+				<circle class="block__circle" cx="28" cy="29" r="25" />
+			</svg>	
 			<span class="wipe"></span>
-		</span>
-		<svg height="60" width="60" class="svg">
-			<circle class="block__circle" cx="28" cy="29" r="25" />
-		</svg>		
+		</span>	
 	</li>
 	<li class="off">
-		<i class="fa fa-diamond"></i>
-		<span><b>SASS / LESS</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+		<span><b>Sass : Less</b>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-diamond"></i>
+			<svg height="60" width="60" class="svg">
+				<circle class="block__circle" cx="28" cy="29" r="25" />
+			</svg>	
 			<span class="wipe"></span>
 		</span>
-		<svg height="60" width="60" class="svg">
-			<circle class="block__circle" cx="28" cy="29" r="25" />
-		</svg>		
+			
 	</li>
 	<li class="off">
-		<i class="fa fa-arrows-alt"></i>
 		<span><b>Responsive</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-arrows-alt"></i>
+			<svg height="60" width="60" class="svg">
+				<circle class="block__circle" cx="28" cy="29" r="25" />
+			</svg>	
 			<span class="wipe"></span>
 		</span>
-		<svg height="60" width="60" class="svg">
-			<circle class="block__circle" cx="28" cy="29" r="25" />
-		</svg>		
 	</li>
 	<li class="off">
-		<i class="fa fa-wordpress"></i>
 		<span><b>WordPress</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span class="circle--border-anim">
+				<svg class="svg-circle"><circle cx="51%" cy="51%" r="48%"  /></svg>
 			</span>
+			<i class="fa fa-wordpress"></i>
+			<svg height="60" width="60" class="svg">
+				<circle class="block__circle" cx="28" cy="29" r="25" />
+			</svg>
 			<span class="wipe"></span>
 		</span>
-		<svg height="60" width="60" class="svg">
-			<circle class="block__circle" cx="28" cy="29" r="25" />
-		</svg>		
+				
 	</li>	
 </ul>
 

@@ -1,4 +1,10 @@
 
+$bb-wh-xs:  150px;
+$bb-wh-sm:  175px;
+$bb-wh-md:  200px;
+$bb-wh-lg:  250px;
+$bb-wh-xl:  275px;
+
 #but-how,
 #but-what {
     background-color: $brand-orange;
@@ -31,10 +37,22 @@
 .large-ul-blocks {
     list-style-type: none;
     padding: 0;
-    margin: 40px 20px 20px;
+    margin: 5rem 20px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    @include respond-to(screen-xs) {
+        margin-top: 7rem;
+    }
+
+    @include respond-to(screen-md) {
+        margin-top: 9rem;
+    }
+
+    @include respond-to(screen-xl) {
+        margin-top: 10rem;
+    }
 
     // ICONS
     li i.fa {
@@ -44,26 +62,36 @@
         @include respond-to(screen-md) {
             display: block;
             transition: color 0.25s ease-in-out, transform 0.25s cubic-bezier(.51,1.58,.92,1.22);
-            width: 100%;
-            height: 100%;
+            width: $bb-wh-md;
+            height: $bb-wh-md;
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 50%;
+            top: 50%;
+            margin-left: -($bb-wh-md / 2);
+            margin-top: -($bb-wh-md / 2);
             transform: scale(1);
             color: rgba(0,0,0,.05);
             border-radius: 100%;
-            line-height: 240px;
+            line-height: $bb-wh-md;
             text-align: center;
             font-size: 100px;
-            z-index: 1;
+            z-index: 11;
         }
         @include respond-to(screen-lg) {
-            line-height: 277px;
+            line-height: $bb-wh-lg;
+            width: $bb-wh-lg;
+            height: $bb-wh-lg;
+            margin-left: -($bb-wh-lg / 2);
+            margin-top: -($bb-wh-lg / 2);
             font-size: 120px;
         }
 
         @include respond-to(screen-xl) {
-            line-height: 305px;
+            line-height: $bb-wh-xl;
+            width: $bb-wh-xl;
+            height: $bb-wh-xl;
+            margin-left: -($bb-wh-xl / 2);
+            margin-top: -($bb-wh-xl / 2);
             font-size: 130px;
         }
     }
@@ -112,41 +140,42 @@
             right: 0;
         }
 
-        
-
-        .thumb-circle {
-            @include transition (stroke-width $ani-svg-line-time, stroke-dashoffset $ani-svg-line-time, stroke-dasharray $ani-svg-line-time, opacity $ani-svg-line-time);
-            position: absolute;
-            width: 100%;
-            height: 100%;            
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            //opacity: 0;
-            fill: transparent;
-            stroke: $gray;
-            stroke-dasharray: 5;
-            stroke-dashoffset: 200;
-            stroke-width: 5px;
-        }
     }
 
     // BEFORE
     li > span::before {
-        transition: transform 5s linear, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: scale(1.5) translateY(30px);
-        opacity: 0;
-        background-position: center !important;
-        background-size: cover !important;
-        z-index: 1;
+        display: none;
+
+        @include respond-to(screen-md) {
+            display: block;
+            width: $bb-wh-md;
+            height: $bb-wh-md;
+            transition: transform 5s linear, opacity $ani-trans-time ease-in-out, background-color $ani-trans-time ease-in-out;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: scale(1.5) translateY(30px);
+            opacity: 0;
+            border-radius: 100%;
+            overflow: hidden;
+            background-position: center !important;
+            background-size: cover !important;
+            z-index: 1;
+        }
+
+        @include respond-to(screen-lg) {
+            width: $bb-wh-lg;
+            height: $bb-wh-lg;
+        }
+
+        @include respond-to(screen-xl) {
+            width: $bb-wh-xl;
+            height: $bb-wh-xl;
+        }
+
     }
 
     // BEFORE HOVER
@@ -160,19 +189,32 @@
         transition: transform $ani-trans-time ease-in-out, opacity $ani-trans-time ease-in-out;
         position: absolute;
         z-index: 2;
+        border-radius: 100%;
+        overflow: hidden;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;        
+        width: $bb-wh-xs;
+        height: $bb-wh-xs;
 
-        @include respond-to(screen-xs) {
+
+        @include respond-to(screen-sm) {
             top: 3px;
             left: 3px;
             right: 3px;
             bottom: 3px;
+            width: $bb-wh-sm;
+            height: $bb-wh-sm;
         }
 
         @include respond-to(screen-md) {
             top: 5px;
             left: 5px;
             right: 5px;
-            bottom: 5px;
+            bottom: 5px;            
+            width: $bb-wh-md;
+            height: $bb-wh-md;
         }
 
         @include respond-to(screen-lg) {
@@ -180,6 +222,8 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
+            width: $bb-wh-lg;
+            height: $bb-wh-lg;
         }
 
         .svg-rect {
@@ -202,6 +246,56 @@
         animation: rect-border-anim 2s linear alternate forwards;  
     }
 
+
+
+    // CIRCLE BORDER
+    .circle--border-anim {
+        display: none;
+
+        @include respond-to(screen-md) {
+            display: block;
+            transition: transform $ani-trans-time ease-in-out, opacity $ani-trans-time ease-in-out;
+            position: absolute;
+            z-index: 2;
+            border-radius: 100%;
+            overflow: hidden;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;            
+            width: $bb-wh-md;
+            height: $bb-wh-md;
+        }
+
+        @include respond-to(screen-lg) {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            width: $bb-wh-lg;
+            height: $bb-wh-lg;
+        }
+
+        .svg-circle {
+            width: 100%;
+            height: 100%;
+
+            circle {
+                transition: transform $ani-trans-time ease-in-out;
+                stroke: rgba(255,255,255,0.2);
+                stroke-width: 2px;
+                stroke-dasharray: 2000;
+                stroke-dashoffset: 2000;
+                fill: transparent;
+            }
+        }
+    }
+
+    // BORDER HOVER
+    li:hover .circle--border-anim circle {
+        animation: rect-border-anim 2s linear alternate forwards;  
+    }
+
     .wipe {
         position: absolute;
         top: 0;
@@ -209,6 +303,33 @@
         right: 0;
         bottom: 0;
         z-index: 0;
+        overflow: hidden;
+        width: $bb-wh-xs;
+        height: $bb-wh-xs;
+        display: none;
+
+
+        @include respond-to(screen-sm) {
+            width: $bb-wh-sm;
+            height: $bb-wh-sm;
+        }
+
+        @include respond-to(screen-md) {
+            width: $bb-wh-md;
+            height: $bb-wh-md;
+            border-radius: 100%;
+            display: block;
+        }
+
+        @include respond-to(screen-lg) {
+            width: $bb-wh-lg;
+            height: $bb-wh-lg;
+        }
+
+        @include respond-to(screen-xl) {
+            width: $bb-wh-xl;
+            height: $bb-wh-xl;
+        }
     }
 
     .wipe::before,
@@ -225,7 +346,7 @@
 
     li.off .wipe::before,
     li.on .wipe::after {
-      background-color: $gray-dark;
+      background-color: rgba(255,255,255,0.85);
     }
 
     // ===============
@@ -312,7 +433,7 @@
         left: 50%;
         margin-top: -21px;
         margin-left: -25px;
-        z-index: 9;
+        z-index: 12;
 
         // FROM XTRA SMALL
         @include respond-to(screen-xs) {
@@ -337,7 +458,7 @@
         left: 50%;
         margin-top: -28px;
         margin-left: -29px;
-        z-index: 9;
+        z-index: 12;
 
         // FROM XTRA SMALL
         @include respond-to(screen-xs) {
@@ -362,7 +483,7 @@
         left: 50%;
         margin-top: -33px;
         margin-left: -37px;
-        z-index: 9;
+        z-index: 12;
 
         // FROM XTRA SMALL
         @include respond-to(screen-xs) {
@@ -386,41 +507,26 @@
         position: relative;
         text-align: center;
         font-family: $font-family-serif;
+        display: flex;
         flex: 0 0 100%;
-        width: 100%;
+        border-radius: 100%;
         align-items: center;
+        justify-content: center;
 
         // FROM BREAKPOINT
         @include respond-to(screen-xs) {
             flex: 0 0 50%;
             width: 50%;
+            margin-bottom: 5rem;
         }
 
         // FROM MEDIUM 
         @include respond-to(screen-md) {
             flex: 0 0 33.33%;
             width: 33.33%;
+            margin-bottom: 8rem;
         }
-       
-
-        &:hover .thumb-circle {
-            opacity: 1;
-            stroke-dasharray: 0;
-            stroke-dashoffset: 300;
-            stroke-width: 5px;
-        }
-
-        &:hover .svg-border {
-            #starburst {
-                fill-opacity: 0.1;
-            }
-
-            &::before,
-            &::after {
-                width: 100%;
-            }
-        }
-
+               
 
         // On hover, make the SVGs appear
         &:hover .svg {
@@ -437,22 +543,24 @@
         // Bold
         b {
             @include transition(all 0.5s ease-in-out);
+            transition-delay: 0 !important;
             @include scale(0.5);
             @include opacity(0);
             @include translate(-10px,0);
             font-weight: normal;
             display: block;
-            z-index: 10;
+            z-index: 13;
 
             .waypoint-active & {
                 @include scale(1);
                 @include opacity(1);
                 @include translate(0,0);
             }
-
-         
         }
 
+        &:hover b {
+            color: $gray-dark;
+        }
 
         // Span loop for transition delay
         @for $i from 1 to 7 {
@@ -462,49 +570,44 @@
         }
 
         > span {
-            @include transition(all 0.25s ease-in-out);    
+            @include transition(all 0.25s ease-in-out);   
+            transform: scale(0);
             background-color: rgba(255,255,255,0); 
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0;
             position: relative;
-            height: 100px;
+            height: 100px;            
             overflow: hidden;
             line-height: 1;
             font-size: 27px;
+            z-index: 10; 
 
             .waypoint-active & {
-                background-color: rgba(255,255,255,0.1); 
-            }
-            
-            @include respond-to(screen-xs) {
-                margin: 0 5px;
-                height: 100px;
-                font-size: 23px;
+                transform: scale(1);
             }
 
-            // FROM SMALL
             @include respond-to(screen-sm) {
-                margin: 20px;
-                height: 150px;
-                font-size: 30px;
-            }
-            // FROM MEDIUM 
-            @include respond-to(screen-md) {
-                font-size: 40px;
-                height: 200px;
-                font-size: 33px;
+                width: $bb-wh-sm;
+                height: $bb-wh-sm;                
+                border-radius: 100%;
+                background: rgba(255,255,255,0.05);
             }
 
-            // FROM LARGE 
+            @include respond-to(screen-md) {
+                width: $bb-wh-md;
+                height: $bb-wh-md;
+            }
+
             @include respond-to(screen-lg) {
-                height: 240px;
-                font-size: 40px;
+                width: $bb-wh-lg;
+                height: $bb-wh-lg;
             }
 
             @include respond-to(screen-xl) {
-                height: 260px;
+                width: $bb-wh-xl;
+                height: $bb-wh-xl;
             }
         }
 
@@ -567,4 +670,46 @@
             stroke-dasharray: 220;
         }
     }
+}
+
+
+
+.lines {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-size: cover;
+
+    span {
+        width: 1px;
+        height: 100vh;
+        background-color: rgba(255,255,255,0.25);
+    }
+}
+
+
+#jagged-line {
+    position: absolute;
+    width: 100%;
+    fill:none;
+    stroke:#000000;
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+#pattern-wave {
+    position: absolute;
+    width: 100%;
+    fill:none;
+    stroke: rgba(255,255,255,0.2);
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 }
