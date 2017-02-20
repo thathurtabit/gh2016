@@ -1,4 +1,4 @@
-<section id="home-intro" class="section--height-full-vh section--border-white-all"><!-- HOME INTRO CAROUSEL -->
+<section id="home-intro" class="section--height-full-vh block--position-relative section--border-white-all waypoints"><!-- HOME INTRO CAROUSEL -->
 
 <div id="home-intro-text-wrap">
 	<div id="home-intro-text">
@@ -226,10 +226,13 @@
 </div>
 
 
-<!--<svg height="200" width="200"><path d="M 50 50 L 150 50 L 100 150 z"></path></svg>-->
+<!-- BG TRIANGLE -->
+<div class="bg-triangle">
 <svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-triangle">
-  <polygon points="0,0 100,0 50,100"/>
+<polygon points="0,0 100,0 50,100"/>
 </svg>
+</div>
+<!-- / BG TRIANGLE -->
 
 <div class="animated-lines animated-lines--quarter-vertical">
 		<span></span>
@@ -243,389 +246,431 @@
 
 <section id="but-how" class="section--border-white block--position-relative waypoints"><!-- BUT HOW? -->
 
-<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? 
-<span class="zigzag-long"></span>
-</span>
+<!-- CONTENT LIFT -->
+<div class="content-lift">
 
-</h2>
+	<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? 
+	<span class="zigzag-long"></span>
+	</span>
 
-<ul class="large-ul-blocks blocks--diamond">
-<!--<ul class="large-ul-blocks blocks--diamond">-->
-	<li class="off">
-		
-		<span><b>Creativity</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
-			<i class="fa fa-lightbulb-o"></i>
-			<span class="wipe"></span>
-		</span>
-		
+	</h2>
 
-	</li>
-	<li class="off">
-		<span>
-			<b>Smarts</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
-			<i class="fa fa-flask"></i>
-			<span class="wipe"></span>
-		</span>
-	</li>
-	<li class="off">		
-		<span><b>Love</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-heart"></i>
-			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>
-	<li class="off">		
-		<span><b>Perspiration</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-tint"></i>
-			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>
-	<li class="off">
-		<span><b>Magic</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-magic"></i>
-			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>
-	<li class="off">
-		<span><b>Good-Looks</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-smile-o"></i>
-			<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
-			<span class="wipe"></span>
-		</span>
+	<ul class="large-ul-blocks blocks--diamond">
+	<!--<ul class="large-ul-blocks blocks--diamond">-->
+		<li class="off">
 			
-	</li>
-</ul>
+			<span><b>Creativity</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
+				<i class="fa fa-lightbulb-o"></i>
+				<span class="wipe"></span>
+			</span>
+			
+
+		</li>
+		<li class="off">
+			<span>
+				<b>Smarts</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>
+				<i class="fa fa-flask"></i>
+				<span class="wipe"></span>
+			</span>
+		</li>
+		<li class="off">		
+			<span><b>Love</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-heart"></i>
+				<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>
+		<li class="off">		
+			<span><b>Perspiration</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-tint"></i>
+				<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>
+		<li class="off">
+			<span><b>Magic</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-magic"></i>
+				<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>
+		<li class="off">
+			<span><b>Good-Looks</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-smile-o"></i>
+				<svg height="50" width="50" class="svg"><rect height="100%" width="100%" class="block__diamond" /></svg>	
+				<span class="wipe"></span>
+			</span>
+				
+		</li>
+	</ul>
 
 	<div class="row block--spacing-center block--position-bottom">
 		<a href="#but-what" class="btn btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
+
+</div><!-- / CONTENT LIFT -->
+
+<!-- BG TRIANGLE -->
+<div class="bg-triangle">
+<svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-triangle">
+<polygon points="0,0 100,0 50,100"/>
+</svg>
+</div>
+<!-- / BG TRIANGLE -->
 	
 </section><!-- / BUT HOW? -->
 
-<section id="but-what" class="section--border-white waypoints"><!-- BUT WHAT -->
+<section id="but-what" class="section--border-white block--position-relative waypoints"><!-- BUT WHAT -->
 
-<h2 class="section-heading heading--icon-code">But like, what do you DO?
-<span class="zigzag-long"></span>
-</h2>
+<!-- CONTENT LIFT -->
+<div class="content-lift">
 
-<ul class="large-ul-blocks blocks--circle">
-<!--<ul class="large-ul-blocks blocks--circle">-->
-	<li class="off">		
-		<span><b> Design : UI</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-desktop"></i>
-			<svg height="60" width="60" class="svg">
-				<circle class="block__circle" cx="28" cy="29" r="25" />
-			</svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>
-	<li class="off">		
-		<span><b>Logos</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-rocket"></i>
-			<svg height="60" width="60" class="svg">
-				<circle class="block__circle" cx="28" cy="29" r="25" />
-			</svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>
-	<li class="off">		
-		<span><b>HTML5 : CSS3</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-code"></i>
-			<svg height="60" width="60" class="svg">
-				<circle class="block__circle" cx="28" cy="29" r="25" />
-			</svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>
-	<li class="off">		
-		<span><b>Sass : Less</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-diamond"></i>
-			<svg height="60" width="60" class="svg">
-				<circle class="block__circle" cx="28" cy="29" r="25" />
-			</svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>
-	<li class="off">
-		
-		<span><b>Responsive</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
-			</span>
-			<i class="fa fa-arrows-alt"></i>
-			<svg height="60" width="60" class="svg">
-				<circle class="block__circle" cx="28" cy="29" r="25" />
-			</svg>	
-			<span class="wipe"></span>
-		</span>
+	<h2 class="section-heading heading--icon-code">But like, what do you DO?
+	<span class="zigzag-long"></span>
+	</h2>
+
+	<ul class="large-ul-blocks blocks--circle">
+	<!--<ul class="large-ul-blocks blocks--circle">-->
+		<li class="off">		
+			<span><b> Design : UI</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-desktop"></i>
+				<svg height="60" width="60" class="svg">
+					<circle class="block__circle" cx="28" cy="29" r="25" />
+				</svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>
+		<li class="off">		
+			<span><b>Logos</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-rocket"></i>
+				<svg height="60" width="60" class="svg">
+					<circle class="block__circle" cx="28" cy="29" r="25" />
+				</svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>
+		<li class="off">		
+			<span><b>HTML5 : CSS3</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-code"></i>
+				<svg height="60" width="60" class="svg">
+					<circle class="block__circle" cx="28" cy="29" r="25" />
+				</svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>
+		<li class="off">		
+			<span><b>Sass : Less</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-diamond"></i>
+				<svg height="60" width="60" class="svg">
+					<circle class="block__circle" cx="28" cy="29" r="25" />
+				</svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>
+		<li class="off">
 			
-	</li>
-	<li class="off">
-		<span><b>WordPress</b>
-			<span class="rect--border-anim">
-				<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+			<span><b>Responsive</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-arrows-alt"></i>
+				<svg height="60" width="60" class="svg">
+					<circle class="block__circle" cx="28" cy="29" r="25" />
+				</svg>	
+				<span class="wipe"></span>
 			</span>
-			<i class="fa fa-wordpress"></i>
-			<svg height="60" width="60" class="svg">
-				<circle class="block__circle" cx="28" cy="29" r="25" />
-			</svg>	
-			<span class="wipe"></span>
-		</span>			
-	</li>	
-</ul>
+				
+		</li>
+		<li class="off">
+			<span><b>WordPress</b>
+				<span class="rect--border-anim">
+					<svg class="svg-rect"><rect height="100%" width="100%"  /></svg>
+				</span>
+				<i class="fa fa-wordpress"></i>
+				<svg height="60" width="60" class="svg">
+					<circle class="block__circle" cx="28" cy="29" r="25" />
+				</svg>	
+				<span class="wipe"></span>
+			</span>			
+		</li>	
+	</ul>
 
 	<div class="row block--spacing-center block--position-bottom">
 		<a href="#latest-split" class="btn btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">Learn more</a>
 	</div>
 
+
+</div><!-- / CONTENT LIFT -->
+
+<!-- BG TRIANGLE -->
+<div class="bg-triangle">
+<svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-triangle">
+<polygon points="0,0 100,0 50,100"/>
+</svg>
+</div>
+<!-- / BG TRIANGLE -->
+
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
 <section id="latest-split" class="block--position-relative section--border-white section--background-green waypoints">
-<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff 
-<span class="zigzag-long"></span>
-</h2>
 
-<div class="row block--position-relative">
-	<div class="col-md-6">
-	
-		<?php
-		// NEWS Custom Loop Args
-		$news_args = array('post_type' => 'post','showposts' => '1' );
-		// my loop
-		$news_loop = new WP_Query( $news_args );		  
-		if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
-
-		<section class="split-bg-content first">
-			<h2 class="sub-heading heading--icon-news"><a href="<?php bloginfo('url'); ?>/latest" class="btn--bg-white-slide white">Latest<span></span></a>
-
-				<!-- DATE -->
-				<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
-      			<i class="fa fa-calendar-o"></i>
-		        <?php the_time('jS'); ?>		    
-		        <?php the_time('M'); ?>		        
-		        <?php the_time('Y'); ?>
-		        </time>
-		        <!-- / DATE -->
-			</h2>
-
-				<!-- NEWS ARTICLE -->
-			    <article class="article--split article--white">
-		    	
-
-			       <!-- section FEATURED IMG -->
-			      	<section class="featured-img-link"
-
-			      		<?php
-			      		// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail($post->ID ) ) { 
-							
-							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"
-
-						<?php } else { ?>
-
-							style="background-image:url(<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png)"
+<!-- CONTENT LIFT -->
+<div class="content-lift">
 
 
-						<?php } // end else ?>
+	<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff 
+	<span class="zigzag-long"></span>
+	</h2>
 
-			      	><!-- END SECTION OPEN -->
-
-			      	<!-- LINK WRAP -->
-
-			      	<a href="<?php the_permalink() ?>" class="featured-img-link__a" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-			      	
-
-			      	<!-- SECTION TITLE -->
-			       <header class="article__section-title">			      	
-		      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>
-			       </header>
-			       <!-- / SECTION TITLE -->
-
-
-			       <!-- CONTENT -->
-			       <section class="article__content-wrap">
-				      	
-
-				        <p class="article__content blockquote">
-					      	<?php
-					      	// GET THE CONTENT
-							$content = get_the_content();
-							echo wp_trim_words( $content , '15' ); ?>
-						</p>
-
-						<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>
-				      </p>
-				  </section>
-				  <!-- / CONTENT -->
-
-				  </a><!-- END LINK WRAP -->      	      
-
-			    </article>
-    			<!--/ NEWS ARTICLE -->
-    			
-    			<!-- POST TAGS -->
-				  <?php
-				  // IF THERE'S TAGS, GO GET 'EM
-					$posttags = get_the_tags();
-					if ($posttags) { ?>
-					<div class="split-tags split-tags--top-border split-tags--white">
-					<?php
-					  //foreach($posttags as $tag) {
-					  //  echo $tag->name . ' '; 
-					 the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); 
-					 // } ?>
-					</div>
-					<?php }
-					?>
-				<!-- / POST TAGS -->
-
-			
-		</section>
-		<?php } } // END WHILE LOOP ?>
-	</div>
-
-	<div class="col-md-6">
+	<div class="row block--position-relative">
+		<div class="col-md-6">
 		
-		<?php
-			// PRODUCTION DIARY Custom Loop Args
-			$prod_args = array('post_type' => 'production-diary','showposts' => '1' );
+			<?php
+			// NEWS Custom Loop Args
+			$news_args = array('post_type' => 'post','showposts' => '1' );
 			// my loop
-			$prod_loop = new WP_Query( $prod_args );		  
-			if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
+			$news_loop = new WP_Query( $news_args );		  
+			if ( $news_loop->have_posts() ) { while ( $news_loop->have_posts() ) { 	$news_loop->the_post(); ?>
 
-		<section class="split-bg-content">
-			<h2 class="sub-heading  heading--icon-cog"><a href="<?php bloginfo('url'); ?>/production-diary" class="btn--bg-white-slide white">Production Diary<span></span></a>
-				<!-- DATE -->
-				<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
-	      		<i class="fa fa-calendar-o"></i>
-		        <?php the_time('jS'); ?>				        
-		        <?php the_time('M'); ?>				        
-		        <?php the_time('Y'); ?>
-		        </time>
-		        <!-- / DATE -->
-			</h2>
+			<section class="split-bg-content first">
+				<h2 class="sub-heading heading--icon-news"><a href="<?php bloginfo('url'); ?>/latest" class="btn--bg-white-slide white">Latest<span></span></a>
 
-				<!-- PRODUCTION ARTICLE -->
-			    <article class="article--split article--white">
-		    	
+					<!-- DATE -->
+					<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
+	      			<i class="fa fa-calendar-o"></i>
+			        <?php the_time('jS'); ?>		    
+			        <?php the_time('M'); ?>		        
+			        <?php the_time('Y'); ?>
+			        </time>
+			        <!-- / DATE -->
+				</h2>
 
-			       <!-- section FEATURED IMG -->
-			      	<section class="featured-img-link"
+					<!-- NEWS ARTICLE -->
+				    <article class="article--split article--white">
+			    	
 
-			      		<?php
-			      		// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail($post->ID ) ) { 
-							
-							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"
+				       <!-- section FEATURED IMG -->
+				      	<section class="featured-img-link"
 
-						<?php } else { ?>
+				      		<?php
+				      		// check if the post has a Post Thumbnail assigned to it.
+							if ( has_post_thumbnail($post->ID ) ) { 
+								
+								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"
 
-							style="background-image:url(<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png)"
+							<?php } else { ?>
 
-
-						<?php } // end else ?>
-
-			      	><!-- END SECTION OPEN -->
-
-			      	<!-- LINK WRAP -->
-
-			      	<a href="<?php the_permalink() ?>" class="featured-img-link__a" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
-			      	
-
-			      	<!-- SECTION TITLE -->
-			       <header class="article__section-title">			      			      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>
-		      		
-			       </header>
-			       <!-- / SECTION TITLE -->
+								style="background-image:url(<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png)"
 
 
-			       <!-- CONTENT -->
-			       <section class="article__content-wrap">
+							<?php } // end else ?>
+
+				      	><!-- END SECTION OPEN -->
+
+				      	<!-- LINK WRAP -->
+
+				      	<a href="<?php the_permalink() ?>" class="featured-img-link__a" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
 				      	
 
-				        <p class="article__content blockquote">
-					      	<?php
-					      	// GET THE CONTENT
-							$content = get_the_content();
-							echo wp_trim_words( $content , '15' ); ?>
-						</p>
+				      	<!-- SECTION TITLE -->
+				       <header class="article__section-title">			      	
+			      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>
+				       </header>
+				       <!-- / SECTION TITLE -->
 
-						<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>
-				      </p>
-				  </section>
-				  <!-- / CONTENT -->
 
-				  </a><!-- END LINK WRAP -->      	      
+				       <!-- CONTENT -->
+				       <section class="article__content-wrap">
+					      	
 
-			    </article>
-    			<!--/ PRODUCTION ARTICLE -->
+					        <p class="article__content blockquote">
+						      	<?php
+						      	// GET THE CONTENT
+								$content = get_the_content();
+								echo wp_trim_words( $content , '15' ); ?>
+							</p>
 
-    			<!-- POST TAGS -->
-				  <?php
-				  // IF THERE'S TAGS, GO GET 'EM
-					$posttags = get_the_tags();
-					if ($posttags) { ?>
-					<div class="split-tags split-tags--top-border split-tags--white">
-					<?php
-					  //foreach($posttags as $tag) {
-					  //  echo $tag->name . ' '; 
-					 the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); 
-					 // } ?>
-					</div>
-					<?php }
-					?>
-				<!-- / POST TAGS -->
+							<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>
+					      </p>
+					  </section>
+					  <!-- / CONTENT -->
 
-			
+					  </a><!-- END LINK WRAP -->      	      
+
+				    </article>
+	    			<!--/ NEWS ARTICLE -->
+	    			
+	    			<!-- POST TAGS -->
+					  <?php
+					  // IF THERE'S TAGS, GO GET 'EM
+						$posttags = get_the_tags();
+						if ($posttags) { ?>
+						<div class="split-tags split-tags--top-border split-tags--white">
+						<?php
+						  //foreach($posttags as $tag) {
+						  //  echo $tag->name . ' '; 
+						 the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); 
+						 // } ?>
+						</div>
+						<?php }
+						?>
+					<!-- / POST TAGS -->
+
+				
 			</section>
+			<?php } } // END WHILE LOOP ?>
+		</div>
 
-			<?php } } ?>
-	
+		<div class="col-md-6">
+			
+			<?php
+				// PRODUCTION DIARY Custom Loop Args
+				$prod_args = array('post_type' => 'production-diary','showposts' => '1' );
+				// my loop
+				$prod_loop = new WP_Query( $prod_args );		  
+				if ( $prod_loop->have_posts() ) { while ( $prod_loop->have_posts() ) { 	$prod_loop->the_post(); ?>
+
+			<section class="split-bg-content">
+				<h2 class="sub-heading  heading--icon-cog"><a href="<?php bloginfo('url'); ?>/production-diary" class="btn--bg-white-slide white">Production Diary<span></span></a>
+					<!-- DATE -->
+					<time datetime="<?php echo the_time('Y-m-j'); ?>" class="side-date" pubdate>
+		      		<i class="fa fa-calendar-o"></i>
+			        <?php the_time('jS'); ?>				        
+			        <?php the_time('M'); ?>				        
+			        <?php the_time('Y'); ?>
+			        </time>
+			        <!-- / DATE -->
+				</h2>
+
+					<!-- PRODUCTION ARTICLE -->
+				    <article class="article--split article--white">
+			    	
+
+				       <!-- section FEATURED IMG -->
+				      	<section class="featured-img-link"
+
+				      		<?php
+				      		// check if the post has a Post Thumbnail assigned to it.
+							if ( has_post_thumbnail($post->ID ) ) { 
+								
+								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?> style="background-image:url(<?php echo $image[0]; ?>)"
+
+							<?php } else { ?>
+
+								style="background-image:url(<?php bloginfo('template_url'); ?>/dist/images/page-header-default.png)"
+
+
+							<?php } // end else ?>
+
+				      	><!-- END SECTION OPEN -->
+
+				      	<!-- LINK WRAP -->
+
+				      	<a href="<?php the_permalink() ?>" class="featured-img-link__a" rel="bookmark" title="Learn more about <?php the_title_attribute(); ?>">
+				      	
+
+				      	<!-- SECTION TITLE -->
+				       <header class="article__section-title">			      			      		<h1 class="btn--bg-white-slide"><?php the_title(); ?></h1>
+			      		
+				       </header>
+				       <!-- / SECTION TITLE -->
+
+
+				       <!-- CONTENT -->
+				       <section class="article__content-wrap">
+					      	
+
+					        <p class="article__content blockquote">
+						      	<?php
+						      	// GET THE CONTENT
+								$content = get_the_content();
+								echo wp_trim_words( $content , '15' ); ?>
+							</p>
+
+							<p class="article__btn-wrap"><button rel="bookmark" title="Read more... it's good for you - <?php the_title_attribute(); ?>" class="btn btn--color-white btn--size-small btn--arrow-right btn--bgcolor-spin featured-img-link__button">Learn more</button>
+					      </p>
+					  </section>
+					  <!-- / CONTENT -->
+
+					  </a><!-- END LINK WRAP -->      	      
+
+				    </article>
+	    			<!--/ PRODUCTION ARTICLE -->
+
+	    			<!-- POST TAGS -->
+					  <?php
+					  // IF THERE'S TAGS, GO GET 'EM
+						$posttags = get_the_tags();
+						if ($posttags) { ?>
+						<div class="split-tags split-tags--top-border split-tags--white">
+						<?php
+						  //foreach($posttags as $tag) {
+						  //  echo $tag->name . ' '; 
+						 the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); 
+						 // } ?>
+						</div>
+						<?php }
+						?>
+					<!-- / POST TAGS -->
+
+				
+				</section>
+
+				<?php } } ?>
+		
+		</div>
+
+		<div class="the-divider"></div>
+
 	</div>
-
-	<div class="the-divider"></div>
-
-</div>
 
 	<div class="row block--spacing-center block--position-bottom">
 		<a href="#contact-finger-wrap" class="btn btn--color-white btn--arrow-down btn--bgcolor-spin btn--scrollto">More</a>
 	</div>
 
+
+</div><!-- / CONTENT LIFT -->
+
+<!-- BG TRIANGLE -->
+<div class="bg-triangle">
+<svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-triangle">
+<polygon points="0,0 100,0 50,100"/>
+</svg>
+</div>
+<!-- / BG TRIANGLE -->
 
 
 </section><!-- / LATEST STUFF -->

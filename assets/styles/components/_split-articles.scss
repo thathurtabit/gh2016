@@ -56,10 +56,21 @@
 
 
 .featured-img-link {
-    transition: box-shadow 0.5s ease-in-out, border-width 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out, border-width 0.5s ease-in-out, transform 0.25s cubic-bezier(.33,.46,.59,1.26), opacity 0.25s ease-in-out;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
     background-size: cover;    
     min-width: 50%;
+    opacity: 0;
+    transform: scale(0);
+
+    #latest-split .row .col-md-6:nth-child(2) & {
+        transition-delay: 0.2s;
+    }
+
+    .waypoint-active & {
+        opacity: 1;
+        transform: scale(1);
+    }
 
     &:hover {        
         @include shadow-pulse-soft();

@@ -107,6 +107,7 @@
         $('#bg-carousel').slick({
           arrows: false,
           fade: true,
+          speed: 1000,
           touchMove: false,
           swipe: false,
         }); 

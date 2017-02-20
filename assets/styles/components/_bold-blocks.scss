@@ -1,9 +1,13 @@
 
 #but-how,
 #but-what {
-    background-color: $brand-orange;
-    background: linear-gradient(45deg, $brand-orange 0%, adjust-hue($brand-orange, $gradient-hue-amount) 100%);
     color: $white;
+}
+
+#but-how{
+    background-color: $brand-orange;
+    background: linear-gradient(45deg, $brand-purple 0%, adjust-hue($brand-purple, $gradient-hue-amount) 100%);
+    
 }
 
 #but-what {
@@ -71,7 +75,8 @@
     // ICONS HOVER
     li:hover i.fa {
         transform: scale(1.2);
-        color: rgba(255,255,255,.1);
+        //color: rgba(255,255,255,.1);
+        color: rgba(0,0,0,.15);
         box-shadow: 0 0 rgba(0,0,0,0);
     }
 
@@ -144,6 +149,7 @@
         bottom: 0;
         transform: scale(1.5) translateY(30px);
         opacity: 0;
+        background-blend-mode: multiply;
         background-position: center !important;
         background-size: cover !important;
         z-index: 1;
@@ -225,7 +231,8 @@
 
     li.off .wipe::before,
     li.on .wipe::after {
-      background-color: $gray-dark;
+      background-color:rgba(0,0,0,.4);
+      //@include animate-bgcolor();
     }
 
     // ===============
@@ -444,7 +451,8 @@
             @include transition(all 0.5s ease-in-out);
             @include scale(0.5);
             @include opacity(0);
-            @include translate(-10px,0);
+            @include translate(0,10px);
+            transition-delay: 0!important;
             font-weight: normal;
             display: block;
             z-index: 10;
@@ -453,9 +461,11 @@
                 @include scale(1);
                 @include opacity(1);
                 @include translate(0,0);
-            }
+            }         
+        }
 
-         
+        &:hover b {
+            text-shadow: 0 2px 2px rgba(0,0,0,0.1);
         }
 
 
@@ -475,7 +485,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0;
+            margin: 0 0 10px;
             position: relative;
             height: 100px;
             overflow: hidden;
@@ -489,7 +499,7 @@
             }
             
             @include respond-to(screen-xs) {
-                margin: 0 5px;
+                margin: 0 5px 10px;
                 height: 100px;
                 font-size: 23px;
             }
@@ -518,6 +528,12 @@
             }
         }
 
+        // LI HOVER
+        &:hover > span {
+            transition-delay: 0!important;
+            box-shadow: 0 5px 3px rgba(0,0,0,0.05);
+        }
+
         .block__diamond,
         .block__circle,
         .block__square {            
@@ -535,7 +551,7 @@
             stroke-dasharray: 140;
             stroke-dashoffset: -400;
             stroke-width: 10px;
-            stroke: $brand-orange-rgba;
+            stroke: $brand-yellow-rgba;
         }
 
         .block__square { 
@@ -548,7 +564,7 @@
             stroke-dasharray: 5;
             stroke-dashoffset: 0;
             stroke-width: 5px;
-            stroke: $brand-red-rgba;
+            stroke: $brand-yellow-rgba;
         }
 
     }

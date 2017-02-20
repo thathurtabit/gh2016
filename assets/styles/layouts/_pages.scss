@@ -35,46 +35,80 @@
     position: relative;
     overflow: hidden;
     background: $brand-blue;
+}
 
-    
-    .svg-triangle {
-        display: none;
+.content-lift {
+    position: relative;
+    z-index: 2;
+}
 
-        // FROM LARGE 
-        @include respond-to(screen-lg) {
-            display: block;
-            position: absolute;
-            top: -50px;
-            left: 0;
-            right: 0;
-            bottom: 0;
+.bg-triangle {
+    display: none;
+    overflow: hidden;
+    z-index: 0;
 
-            polygon {            
-                @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                stroke-dasharray: 2;
-                stroke-dashoffset: -50;
-                stroke-width: .2px;
-                fill: rgba(0,0,0,.05);
-            }
-        }
 
-    }
 
-    &:hover {
-
-        .svg-triangle polygon {
-            stroke-width: .2px;
-            stroke-dashoffset: 0;
-            stroke-dasharray: 10;
-        }
-
+    @include respond-to(screen-lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
     }
 }
+
+.svg-triangle {
+
+    // FROM LARGE 
+    @include respond-to(screen-lg) {
+        transition: transform 0.25s ease-in-out;
+        transform: translate3d(0,-100%,0);
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+
+        .waypoint-active & {
+            transform: translate3d(0,-10%,0);
+        }
+
+        polygon {            
+            @include transition (stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            stroke-dasharray: 2;
+            stroke-dashoffset: -50;
+            stroke-width: .2px;
+            fill: rgba(0,0,0,.025);
+
+                // CHANGE COLOR FOR HOME INTRO
+                #home-intro & {
+                    fill: rgba(0,0,0,.1);
+                }
+        }
+    }
+
+}
+
+&:hover {
+
+    .svg-triangle polygon {
+        stroke-width: 2px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 10;
+    }
+
+}
+
 
 
 .speech-bubble,
