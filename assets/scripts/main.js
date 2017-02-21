@@ -82,13 +82,13 @@
         $('#person-carousel').slick({
           asNavFor: '#bg-carousel, #float-illustrations-1, #vert-carousel',
           speed: 1000,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 15000,
           swipe: true
         });
         $('#adjective-carousel').slick({
           speed: 1000,                  
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 12500
         });
         $('#vert-carousel').slick({

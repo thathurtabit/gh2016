@@ -246,7 +246,27 @@ gulp.task('scss-lint', function() {
 
 // ### Clean
 // `gulp clean` - Deletes the build folder entirely.
-gulp.task('clean', require('del').bind(null, [path.dist]));
+//gulp.task('clean', require('del').bind(null, [path.dist]));
+
+var gulp = require('gulp'),
+    del = require('del');
+
+gulp.task('clean', function () {
+    // Return the promise that del produces.
+    return del(['build']);
+});
+
+gulp.task('copy-bower', ['clean'], function () {
+    var src = [
+        './bower_components/bootstrap/dist/**',
+        './bower_components/jquery/dist/*'
+    ];
+    // Return your stream.
+    return gulp.src(src, { base: '.' })
+       .pipe(gulp.dest('./build/'));
+});
+
+gulp.task('default', ['copy-bower'], function () { });
 
 // ### Watch
 // `gulp watch` - Use BrowserSync to proxy your dev server and synchronize code

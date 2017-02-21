@@ -35,11 +35,32 @@
     position: relative;
     overflow: hidden;
     background: $brand-blue;
+
+    @include respond-to(screen-lg) {
+        .bg-triangle::before {
+            background: url(../images/bg-wire-circle-home.png) no-repeat center;
+        }
+    }
 }
 
 .content-lift {
     position: relative;
     z-index: 2;
+    position: relative;
+
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: -60px;
+        background: rgba(0,0,0,0.035);
+        z-index: -1;
+        border-left: 1px solid rgba(255,255,255,.1);
+    }
 }
 
 .bg-triangle {
@@ -48,16 +69,134 @@
     z-index: 0;
 
 
-
     @include respond-to(screen-lg) {
+        transition: background-position 1s ease-in-out;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         display: block;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            left: 50%;
+            top: 50%;
+            margin-top: -400px;
+            margin-left: -400px;
+            z-index: -1;
+            //background: url(../images/pattern-grid.png), url(../images/bg-wire-circle.png) no-repeat center;
+            background: url(../images/bg-wire-circle.png) no-repeat center;
+            @include animate-spin();
+            @include animation-duration(20s);
+        } 
     }
 }
+
+
+#but-how,
+#but-what {
+    color: $white;
+}
+
+#but-how {
+    background-color: $brand-orange;
+    background: linear-gradient(45deg, $brand-purple 0%, adjust-hue($brand-purple, $gradient-hue-amount) 100%);
+    position: relative;
+
+    .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background: url(../images/bg-ink-br.png) no-repeat;
+            background-position: 300% bottom;
+
+            // &::before {
+            //     background: url(../images/bg-wire-triangle.png) no-repeat center;
+            //     @include transform-origin(50% 46%);
+            // }
+        }        
+    }
+
+    &.waypoint-active .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background-position: 100% bottom;
+        }
+    }    
+}
+
+#but-what {
+    background-color: $brand-red;
+    background: linear-gradient(45deg, $brand-red 0%, adjust-hue($brand-red, $gradient-hue-amount) 100%);
+
+    .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background: url(../images/bg-ink-bl.png) no-repeat;
+            background-position: -200% bottom;
+
+            // &::before {
+            //     background: url(../images/bg-wire-square.png) no-repeat center;
+            // }
+        }        
+    }
+
+    &.waypoint-active .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background-position: 0% bottom;
+        }
+    }   
+}
+
+
+#latest-split {
+
+    .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background: url(../images/bg-ink-b.png) no-repeat;
+            background-position: center 300%;
+        }        
+    }
+
+    &.waypoint-active .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background-position: center 100%;
+
+            // &::before {
+            //     background: url(../images/bg-wire-cross.png) no-repeat center;
+            //     @include transform-origin(50% 50%);
+            // }
+        }
+    }   
+}
+
+
+#contact-finger-wrap {
+
+    .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background: url(../images/bg-ink-tr.png) no-repeat;
+            background-position: 200% top;
+        }        
+    }
+
+    &.waypoint-active .bg-triangle {
+
+        @include respond-to(screen-lg) {
+            background-position: 100% top;
+        }
+    }   
+}
+
+
+
 
 .svg-triangle {
 

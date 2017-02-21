@@ -24,21 +24,30 @@
 
 
 #contact-finger-wrap {
-    position: relative;
-    padding: 100px 10%;    
+    position: relative;   
     overflow: hidden;
     min-height: 500px;
 
     // FROM MEDIUM
     @include respond-to(screen-md) {
-        padding: 100px 10%;
         min-height: 750px;
     }
 
     // FROM MEDIUM
     @include respond-to(screen-lg) {
-        padding: 100px 10%;
         min-height: 850px;
+    }
+}
+
+#contact-finger-wrap .content-lift {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .sub-heading {
+        margin-top: 100px;
     }
 }
 

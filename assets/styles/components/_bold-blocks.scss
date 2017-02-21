@@ -1,21 +1,4 @@
 
-#but-how,
-#but-what {
-    color: $white;
-}
-
-#but-how{
-    background-color: $brand-orange;
-    background: linear-gradient(45deg, $brand-purple 0%, adjust-hue($brand-purple, $gradient-hue-amount) 100%);
-    
-}
-
-#but-what {
-    background-color: $brand-red;
-    background: linear-gradient(45deg, $brand-red 0%, adjust-hue($brand-red, $gradient-hue-amount) 100%);
-}
-
-
 .svg--rect-anim {
     position: absolute;
     top: 0;
@@ -54,7 +37,7 @@
             left: 0;
             top: 0;
             transform: scale(1);
-            color: rgba(0,0,0,.05);
+            color: rgba(0,0,0,.1);
             border-radius: 100%;
             line-height: 198px;
             text-align: center;
@@ -222,16 +205,19 @@
         transition: transform $ani-trans-time $transition-type;
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
         z-index: -1;
     }
 
     li.off .wipe::before,
     li.on .wipe::after {
-      background-color:rgba(0,0,0,.4);
+      background-color:rgba(255,255,255,.1);
       //@include animate-bgcolor();
     }
 
@@ -239,12 +225,10 @@
     // HORIZONTAL HOVER
 
     li .wipe::after {
-      //transform: translate3d(-100%,0,0);
       transform: translate3d(0,200%,0) rotate(45deg);
     }
 
     li.off  .wipe::before {
-      //transform: translate3d(100%,0,0);
       transform: translate3d(0,-200%,0) rotate(45deg);
     }
 
@@ -478,7 +462,7 @@
 
         > span {
             @include transition(all 0.25s ease-in-out);    
-            background-color: rgba(255,255,255,0.05);
+            border: 1px dashed rgba(255,255,255,0.25);
             border-radius: 100%;
             opacity: 0;
             transform: scale(0);
@@ -528,11 +512,6 @@
             }
         }
 
-        // LI HOVER
-        &:hover > span {
-            transition-delay: 0!important;
-            box-shadow: 0 5px 3px rgba(0,0,0,0.05);
-        }
 
         .block__diamond,
         .block__circle,

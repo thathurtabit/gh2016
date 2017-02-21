@@ -2,19 +2,35 @@
 <?php if(!(is_page(array('contact', 'planner')))) { ?>
 
 
-	<section id="contact-finger-wrap" class="section--background-blue section--border-white waypoints">
-		<h2 class="sub-heading  heading--icon-meh">Don't Be Shy<span></span></h2>
+<section id="contact-finger-wrap" class="section--background-blue section--border-white waypoints">
 
-		<!-- GHOST HORSES SVG -->
-	<div id="finger-slider">
-		<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
-	<span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
-	</div>
+<!-- CONTENT LIFT -->
+<div class="content-lift">
 
-	<div id="contact-slider" class="animateme">
-		<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
-	</div>
-	</section><!-- / GHOST HORSES SVG -->
+<h2 class="sub-heading  heading--icon-meh">Don't Be Shy<span></span></h2>
+
+	<!-- GHOST HORSES SVG -->
+<div id="finger-slider">
+	<h4 id="finger-get-in-touch"><a href="contact">Get in Touch</a></h4>
+<span id="finger-point-wrap" class="--diamond"><?php get_template_part('dist/images/inline', 'pointed.svg');?></span>
+</div>
+
+<div id="contact-slider" class="animateme">
+	<a href="contact" class="btn btn--color-white btn--size-x-large btn--bgcolor-spin section--background-blue"><span>Contact</span><svg height="50" width="50"><rect height="100%" width="100%" class="btn__rectangle" /></svg></a>
+</div>
+
+</div><!-- / CONTENT LIFT -->
+
+<!-- BG TRIANGLE -->
+<div class="bg-triangle">
+	<svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-triangle">
+	<polygon points="0,0 100,0 50,100"/>
+	</svg>
+</div>
+<!-- / BG TRIANGLE -->
+
+
+</section><!-- / GHOST HORSES SVG -->
 
 <?php } ?>
 
