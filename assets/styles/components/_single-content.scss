@@ -115,6 +115,25 @@
 	@include respond-to(screen-lg) {
 		height: 600px;
 	}
+
+	// CHANGE UP IN PORTFOLIO
+	.single-portfolio & {
+	height: 300px;
+
+		// RESPONSIVE
+		@include respond-to(screen-sm) {
+			height: 500px;
+		}
+
+		@include respond-to(screen-md) {
+			height: 700px;
+		}
+
+		@include respond-to(screen-lg) {
+			height: 900px;
+		}
+
+	}
 }
 
 

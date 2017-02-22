@@ -50,7 +50,7 @@
         $(".btn--scrollto").click(function(){  
 
           var targetOffset = $(this.hash).offset().top;
-          $('html,body').animate({scrollTop: targetOffset - 120}, 600, 'swing');
+          $('html,body').animate({scrollTop: targetOffset - 120}, 300, 'swing');
           return false;
         });
       

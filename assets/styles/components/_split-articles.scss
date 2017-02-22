@@ -187,7 +187,14 @@
         height: 140px;
     }
 
-    
+    @include respond-to(screen-xl) {
+        height: 180px;
+
+        a,
+        .featured-img--flat-thumb {
+            height: 180px;
+        }
+    } 
 }
 
 
