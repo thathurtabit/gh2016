@@ -44,7 +44,6 @@
 	padding-top: 10px;
 	background-color: rgba(255,255,255,.9);
 	z-index: $zindex-navbar;
-	overflow: hidden;
 
 	// FROM SMALL
 	@include respond-to(screen-sm) {
@@ -219,6 +218,7 @@
 		    display: block;
 		    margin: 0 auto;
 		    top: -16px;
+		    z-index: ($zindex-search + 1);
 
 		    &[aria-expanded="true"] .fa.fa-search::after {
 		    	transition: all 0.25s ease-in-out;

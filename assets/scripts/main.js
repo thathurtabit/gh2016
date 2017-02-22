@@ -33,10 +33,21 @@
 
         });
 
+
+        // SHOW & HIDE SEARCH BOX
+        //
+        $(".btn-search, .btn-search-close").click(function(){
+
+          if ($("#search-wrap").hasClass("open")) {
+            $("#search-wrap").removeClass("open").delay(250).hide(10);
+          } else {
+            $("#search-wrap").show(1).addClass("open");
+          }
+          
+        });
+
         // Smooth scroll to #target
         $(".btn--scrollto").click(function(){  
-          // $('html,body').animate({scrollTop:$(this.hash).offset().top},
-          // { duration:800, easing:'swing'});
 
           var targetOffset = $(this.hash).offset().top;
           $('html,body').animate({scrollTop: targetOffset - 120}, 600, 'swing');

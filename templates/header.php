@@ -20,14 +20,16 @@
           wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']);
         endif;
         ?>
-        <button class="btn-search" role="button" data-toggle="collapse" data-target="#search-wrap" aria-expanded="false" aria-controls="search-wrap"><i class="fa fa-search"></i></button>
+        <button class="btn-search" role="button"><i class="fa fa-search"></i></button>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="collapse" id="search-wrap">
+<div id="search-wrap">
+  <button class="btn-search-close" role="button"><i class="fa fa-times"></i></button>
   <form role="search" method="get" class="form-inline" action="<?php echo home_url( '/' ); ?>">
       <div class="form-group">
           <label class="sr-only"><?php echo _x( 'Search for:', 'label' ) ?></label>
+          <span class="search-icon"></span>
           <input type="search" class="form-control"
               placeholder="<?php echo esc_attr_x( 'Search me...', 'placeholder' ) ?>"
               value="<?php echo get_search_query() ?>" name="s"
