@@ -21,6 +21,7 @@
         endif;
         ?>
         <button class="btn-search" role="button"><i class="fa fa-search"></i></button>
+        <button class="toggle-color" data-toggle="tooltip" data-placement="right" title="Toggle theme?"><span class="sr-only">Toggle theme?</span></button>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -37,4 +38,5 @@
       </div>
   </form>
 </div>
+
 </header>

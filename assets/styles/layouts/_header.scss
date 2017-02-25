@@ -76,6 +76,11 @@
 		// AFFIX HORSE
 		.navbar-brand #horse .whitelogo {
 			fill: $brand-blue !important;
+
+			// WHEN THEME-MUTED
+			.theme-muted & {
+				fill: $white !important;
+			}
 		}
 
 		.navbar-collapse a,
@@ -109,6 +114,11 @@
 		padding-left: 0;
 		border-radius: 100%;
 		background-color: rgba(255,255,255,.2);
+
+		// WHEN THEME-MUTED
+		.theme-muted & {
+			background-color: rgba(0,0,0,.4);
+		}
 
 		// RESPONSIVE
 		// FROM SMALL
@@ -160,6 +170,11 @@
 		&:hover {
 			@include white-flash();
 
+			// WHEN THEME-MUTED
+			.theme-muted & {
+				animation: none !important;
+			}
+
 			.whitelogo {
 	    		@include animate-bgcolor-fill();
 			}
@@ -185,6 +200,12 @@
 				text-align: left;
 				color: $white;
 				text-shadow: 0 2px 0 rgba(0,0,0,0.1);
+
+				// WHEN THEME-MUTED
+				.theme-muted & {
+					color: $gray-light;
+					text-shadow: 0 0 0 rgba(0,0,0,0);
+				}
 			}
 			
 			&::after {
@@ -210,6 +231,11 @@
 			&:hover::after {
 				@include scale(1,1);
 				background-color: rgba(255,255,255,0.2);
+
+				// WHEN THEME-MUTED
+				.theme-muted & {
+					background-color: rgba(255,255,255,0.5);
+				}
 			}
 		}
 
@@ -345,13 +371,33 @@ body:not(.home) #nav-banner-center {
 	.current-menu-item a:hover,
 	.current-page-parent a,
 	.current-page-parent a:hover {
-		color: $brand-blue !important;
+		color: $brand-blue !important;	
 
 		a::after {
 			@include scale(1,1);
 		}
 	}
 }
+
+// MUTED THEME
+body:not(.home).theme-muted #nav-banner-center .navbar-brand #horse .whitelogo {
+	fill: $white !important;
+}
+
+body:not(.home).theme-muted #nav-banner-center {
+	.current-menu-item a,
+	.current-menu-item a:hover,
+	.current-page-parent a,
+	.current-page-parent a:hover {
+		color: $gray !important;
+
+		&::after {
+			background-color: rgba(255,255,255,.4);
+		}
+	}
+}
+
+
 	
 // STOP MULTIPLE ACTIVE ITEMS (based on body class)
 .single-portfolio.single-format-standard .latest a,
@@ -380,6 +426,22 @@ body:not(.home) #nav-banner-center {
 }
 
 
+// THEME MUTED ACTIVE ITEM
+.theme-muted.single-portfolio .work a,
+.theme-muted.single-portfolio .work a:hover,
+.theme-muted.single-format-standard .latest a,
+.theme-muted.single-format-standard .latest a:hover,
+.theme-muted.single-production-diary .latest a,
+.theme-muted.single-production-diary .latest a:hover,
+.theme-muted.post-type-archive-production-diary .latest a,
+.theme-muted.post-type-archive-production-diary .latest a:hover {
+	color: $gray !important;
+
+	&::after {
+		background-color: rgba(255,255,255,0.4) !important;
+		transform: scale(1) !important;
+	}
+}
 
 // NAVBAR TOGGLE
 .navbar-default .navbar-toggle {

@@ -68,13 +68,38 @@
         });
      
 
-      $('.waypoints').each(function() {
-        $(this).waypoint(function() {
-          //$('.waypoints').removeClass('waypoint-active');
-          $(this.element).addClass('waypoint-active');
-        },
-         { offset: '40%'});
-      });
+        $('.waypoints').each(function() {
+          $(this).waypoint(function() {
+            //$('.waypoints').removeClass('waypoint-active');
+            $(this.element).addClass('waypoint-active');
+          },
+           { offset: '40%'});
+        });
+
+        // Enable tooltips
+        $('[data-toggle="tooltip"]').tooltip();
+        
+
+        // Change theme and save with cookie - toggle
+        $(".toggle-color").click(function () {
+          
+              // If the website is already set to mute, then revert color
+            if ($("body").hasClass("theme-muted")) {
+              $("body").removeClass("theme-muted");
+              localStorage['theme-mute'] = "theme-default";
+              // Else add the muted theme class and save
+            } else {
+              $("body").addClass("theme-muted");
+              localStorage['theme-mute'] = "theme-muted";
+            }
+        });
+
+        // Check the sessionStorage property and add class
+         if ('theme-mute' in localStorage) {
+           // remove any default class setting here first
+           $("body").addClass(localStorage['theme-mute']);
+         };
+
              
 
       },

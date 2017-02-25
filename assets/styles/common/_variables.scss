@@ -26,6 +26,10 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white:           		 #fff;
 $white-rgba:			rgba(255,255,255,0.9);
 
+//$muted:					darken($white, 0%);
+$muted:					$white;
+$muted-dark:			$gray-dark;
+
 $brand-green:			#74C390 !default;
 $brand-green-rgba:		rgba(116, 195, 144, 0.85);
 $brand-blue:			#51BCE8 !default; // rgb(81,188,232)

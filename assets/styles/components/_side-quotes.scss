@@ -15,6 +15,12 @@
 		left: 0;
 		color: $brand-blue;
 		line-height: 42px;
+		background-color: rgba(0,0,0,.05);
+
+		// WHEN THEME-MUTED
+		.theme-muted & {
+			color: $gray-light;
+		}
 	}
 
 	&::after {
@@ -25,6 +31,11 @@
 		width: 20px;
 		position: relative;
     	display: block;
+    	
+    	// WHEN THEME-MUTED
+		.theme-muted & {
+			border-color: $gray-light;
+		}
 	}
 }
 

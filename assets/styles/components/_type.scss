@@ -243,6 +243,11 @@ li {
             border: 3px solid $white;
             border-radius: 0;
 
+            // WHEN THEME-MUTED
+            .theme-muted & {
+                border-color: $gray-light;
+            }
+
             @include respond-to(screen-md) {
                 margin-top: 0;
             }
@@ -258,6 +263,11 @@ li {
 
         span::before {
             border-color: $brand-blue;
+
+            // WHEN THEME-MUTED
+            .theme-muted & {
+                border-color: lighten($gray-light, 25%);
+            }
         }
 
     }
@@ -272,6 +282,11 @@ li {
         margin-left: -25px;
         margin-top: -9px;
         color: $white;
+
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            color: $gray-light;
+        }
 
         @include respond-to(screen-md) {
             @include square(70px);
@@ -457,11 +472,20 @@ article {
     &.article--white {
         color: $white;
 
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            color: lighten($gray-light, 30%);
+        }
+
         a,
         a:link,
         a:visited,
         a:active {
             color: $white;
+            // WHEN THEME-MUTED
+            .theme-muted & {
+                color: lighten($gray-light, 30%);
+            }
         }
 
     }
@@ -509,6 +533,11 @@ blockquote,
     left: 50%;
     margin-left: -80px;
     width: 160px;
+
+    // WHEN THEME-MUTED
+    .theme-muted & {
+        color: $gray-light;
+    }
 }
 
 
@@ -590,6 +619,11 @@ form h3 {
         position: absolute;
         top: 0;
         border-top: 2px solid $brand-blue;
+
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            border-color: lighten($gray-light, 25%);
+        }
     }
 }
 

@@ -1,0 +1,13 @@
+.tooltip {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.tooltip.right.fade {
+	transition: margin-left 0.25s ease-in-out, opacity 0.25s ease-in-out;
+	margin-left: 10px;
+
+	&.in {
+		margin-left: 5px;
+	}
+}

@@ -77,11 +77,17 @@
 			background-color: $brand-red;
 		}
 
+		// WHEN THEME-MUTED
+		&::before {
+			.theme-muted & {
+				background-color: $gray-light !important;
+			}
+		}
+
 		// HOVER
 		&:hover {
 			color: $white;
 			letter-spacing: 5px;
-
 			&::before {
 				transform: scaleX(1);
 			}

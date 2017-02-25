@@ -98,6 +98,11 @@
 	display: flex;
 	align-items: flex-end;
 
+	// WHEN THEME-MUTED
+    .theme-muted & {
+    	background-color: $muted-dark;
+    }
+
 	// When Parallax
 	&.parallax-window {
 		background-color: transparent;
@@ -205,6 +210,11 @@
 	padding: 5px 10px;
 	line-height: 30px;
 	margin: 0;
+
+	// WHEN THEME-MUTED
+	.theme-muted & {
+		background-color: $gray;
+	}
 }
 
 
@@ -306,6 +316,11 @@
 	content: '';
 	width: 40px;
 	border-bottom: 3px solid $brand-blue;
+
+	// WHEN THEME-MUTED
+	.theme-muted & {
+		border-bottom-color: lighten($gray-light, 25%);
+	}
 }
 
 .entry-content-inner {
@@ -389,6 +404,10 @@
 
 .fa-tags {
 	color: $brand-blue;
+
+	.theme-muted & {
+		color: $gray-light;
+	}
 }
 
 .wheelie-across {

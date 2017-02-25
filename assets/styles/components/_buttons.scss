@@ -20,7 +20,16 @@ a:active,
 a:hover {
 	@include transition(all 0.2s ease-in-out);
 	text-decoration: none;
+
+	.theme-muted & {
+		color: $gray-dark;
+	}
 }
+
+.theme-muted a:hover {
+	color: $gray-light;
+}
+
 
 .btn,
 .btn:focus {
@@ -35,6 +44,12 @@ a:hover {
 	border: 3px solid $white;
 	padding-right: 46px;
 
+	// WHEN THEME-MUTED
+	.theme-muted & {
+		color: $gray-light !important;
+		border-color: $gray-light;
+	}
+
 	&::before {
 		position: absolute;
 		content: '';
@@ -43,6 +58,11 @@ a:hover {
 		bottom: 0;
 		width: 3px;
 		background: $white;
+
+		// WHEN THEME-MUTED
+		.theme-muted & {
+			background: $gray-light;
+		}
 	}
 
 	&::after {
@@ -299,9 +319,7 @@ a:hover {
 	    	border: 20px solid $white;
 	    	line-height: 240px;
 	    }
-
 	}	
-
 }
 
 .btn--color-white {
@@ -312,6 +330,11 @@ a:hover {
 	&:hover,
 	&:focus {
 		color: $white !important;
+
+		// WHEN THEME-MUTED
+		.theme-muted & {
+			color: $gray-light !important;
+		}
 	}
 }
 
@@ -399,7 +422,36 @@ a:hover {
     &.white,
     &.white:hover {
     	color: $white;
+
+    	// WHEN THEME-MUTED
+    	.theme-muted & {
+    		color: $gray-light;
+    	}
     }
+}
+
+
+// TOGGLE THE WEBSITE COLOR!
+.toggle-color {
+	position: absolute;
+	top: 35px;
+	left: 60px;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 0;
+	outline: none;
+	box-shadow: 0 0 0 5px rgba(0,0,0,0.05);
+	z-index: 2000;
+
+	// WHEN THEME-MUTED
+	.theme-muted & {
+		background-color: $brand-blue;
+
+		&:hover {
+			@include animate-bgcolor();
+		}
+	}
 }
 
 
@@ -462,6 +514,12 @@ a:hover {
 	width: auto;
 	margin-top: 30px;
 
+		// WHEN THEME-MUTED
+	.theme-muted & {
+		border-color: $gray-light;
+		color: $gray-light;
+	}
+
 	&::before {
 		background-color: $brand-blue;
 	}
@@ -471,6 +529,11 @@ a:hover {
 	&:focus {	
 		border-color: $brand-blue;
 		color: $brand-blue;
+
+		.theme-muted & {
+			border-color: $gray-light;
+			color: $gray-light;
+		}
 	}
 }
 
@@ -511,6 +574,19 @@ a:hover {
 	&:hover {
 		background-color: $white;
 		color: $brand-blue;
+	}
+}
+
+// WHEN THEME-MUTED
+.theme-muted .btn--blue-block,
+.theme-muted .comment .reply a,
+.theme-muted .post-tags ul li a {
+	background-color: $gray-light;
+	color: $white;
+
+	&:hover {
+		background-color: $white;
+		color: $gray-light;
 	}
 }
 

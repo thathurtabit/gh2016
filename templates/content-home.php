@@ -244,7 +244,7 @@
 </section><!-- / HOME INTRO CAROUSEL -->
 
 
-<section id="but-how" class="section--border-white block--position-relative waypoints"><!-- BUT HOW? -->
+<section id="but-how" class="section--border-white block--position-relative section--dark-background waypoints"><!-- BUT HOW? -->
 
 <!-- CONTENT LIFT -->
 <div class="content-lift">
@@ -445,7 +445,7 @@
 </section><!-- / BUT WHAT -->
 
 <!-- LATEST STUFF -->
-<section id="latest-split" class="block--position-relative section--border-white section--background-green waypoints">
+<section id="latest-split" class="block--position-relative section--border-white section--background-green section--dark-background waypoints">
 
 <!-- CONTENT LIFT -->
 <div class="content-lift">

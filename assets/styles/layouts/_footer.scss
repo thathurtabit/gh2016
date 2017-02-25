@@ -25,6 +25,10 @@
 	}
 }
 
+#main-footer .list-center li a {
+	color: $white !important;
+}
+
 .footer-col {
 	padding: 0 30px 30px;
 
@@ -47,6 +51,7 @@
 		font-size: 25px;
 		padding-left: 20px;
 		padding-right: 20px;
+		color: $white !important;
 		
 	}
 }

@@ -161,8 +161,16 @@ body {
     &.split-tags--white ul li a {
         color: $white;
 
+        .theme-muted & {
+            color: $gray-light;
+        }
+
         &:hover {
             color: darken($white, 5%);
+
+            .theme-muted & {
+                color: darken($gray-light, 5%);
+            }
         }
 
     }

@@ -31,9 +31,6 @@
 }
 
 
-
-
-
 .side-quote {
 	font-family: $font-family-serif;
 	position: absolute;
@@ -44,6 +41,11 @@
 	font-style: normal;
 	height: 20px;
     line-height: 20px;
+
+    // WHEN THEME-MUTED
+	.theme-muted & {
+		color: darken($gray-lighter, 10%);
+	}
 }
 
 
@@ -124,6 +126,32 @@
 		transform: scale(3);
 	}
 }
+
+
+// WHEN THEME-MUTED
+.theme-muted .content-big-block--coloured {
+	&.section--color-green,
+	&.section--color-orange,
+	&.section--color-red,
+	&.section--color-purple {
+		color: $gray-light;
+
+		&::before,
+		&::after {
+			border-color: $gray-light;
+			color: $gray-light;
+		}
+
+		h2.sub-heading:after {
+			color: $gray-light;
+		}
+
+		.content-big-blocks__content-circle {
+			stroke: rgba(0,0,0,0.1);
+		}
+	}
+}
+
 
 .content-big-blocks__content {
 	transition: opacity 1s ease-in-out, transform 1s ease-in-out;

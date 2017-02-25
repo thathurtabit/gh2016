@@ -1,3 +1,7 @@
+body.theme-muted  {
+    background-color: $muted;
+}
+
 // WHITE BORDERS
 .section--border-white-all {
     border: 10px solid $white;
@@ -53,6 +57,13 @@
 }
 
 
+// WHEN THEME MUTED
+.theme-muted .section--dark-background {
+    background-color: $muted-dark!important;
+    background: linear-gradient(45deg, $muted-dark 0%, darken($muted-dark, 10%) 100%)!important;
+}
+
+
 // BACKGROUND COLOURS
 .section--background-purple {
     background-color: $brand-purple;
@@ -94,6 +105,22 @@
     background: linear-gradient(45deg, $white 0%, adjust-hue($white, $gradient-hue-amount) 100%);
     color: $gray;
 }
+
+
+// WHEN THEME-MUTED
+.theme-muted {
+    .section--background-orange,
+    .section--background-pink,
+    .section--background-red,
+    .section--background-green,
+    .section--background-blue,
+    .section--background-purple {
+        background: linear-gradient(45deg, $muted 0%, darken($muted, 10%) 100%);
+        color: $gray-light;
+    }
+}
+
+
 
 .display-block {
     display: block;
@@ -186,6 +213,11 @@ img {
 
 .zigzag--blue #zigzag-2 {
     stroke: $brand-blue;
+
+    // WHEN THEME-MUTED
+    .theme-muted & {
+        stroke: darken($gray-lighter, 10%);
+    }
 }
 
 

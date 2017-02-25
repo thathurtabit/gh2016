@@ -63,10 +63,12 @@
         padding-top: 5px;
         color: $gray;
 
-        // SPAN TEXT
-        span {
-            @include tada();
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            color: darken($white, 30%);
+            text-shadow: 0 1px 1px rgba(255,255,255,0.2);
         }
+        
     }
 
     #adjective-carousel,

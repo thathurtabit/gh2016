@@ -47,6 +47,11 @@
         bottom: 5px;
         background: darken($brand-green-rgba, 15%);
 
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            background-color: rgba(0,0,0,0.75);
+        }
+
         @include respond-to(screen-xs) {
             font-size: 30px;
             line-height: 1.2;
@@ -62,6 +67,11 @@
     min-width: 50%;
     opacity: 0;
     transform: scale(0);
+
+    // WHEN THEME-MUTED
+    .theme-muted & {
+        filter: grayscale(1);
+    }
 
     #latest-split .row .col-md-6:nth-child(2) & {
         transition-delay: 0.2s;
@@ -80,23 +90,25 @@
     // RESPONSIVE
     @include respond-to(screen-xs) {
         border: 5px solid $white;
+
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            border-color: $gray-light;
+        }
     }
     @include respond-to(screen-sm) {
-        border: 7px solid $white;
+        border-width: 7px;
     }
     
     @include respond-to(screen-md) {
         display: flex;
         flex-direction:row;
         flex-wrap: nowrap;
-        border: 10px solid $white;
+        border-width: 10px;
     }
 
     @include respond-to(screen-lg) {
         margin: 30px;
-    }
-
-    @include respond-to(screen-xl) {
     }
 }
 
@@ -129,6 +141,11 @@
         border-style: solid;
         border-width: 0 50px 50px 0;
         border-color: transparent $white transparent transparent;
+
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            border-color: transparent $gray-light transparent transparent;
+        }
     }
 
     // RESPONSIVE
@@ -206,6 +223,11 @@
     margin: 10px 0 30px -50px;
     overflow: hidden;    
     box-shadow: 3px 3px 0 rgba(0,0,0,0.05);
+
+    // WHEN THEME-MUTED
+    .theme-muted & {
+        filter: grayscale(1);
+    }
 
     // HOVER
     &:hover {
@@ -470,8 +492,6 @@
     .sub-heading,
     .article--split,
     .split-tags {
-        // margin-left: 5%;
-        // margin-right: 5%;
 
         @include respond-to(screen-lg) {
             max-width: 600px;
@@ -485,6 +505,12 @@
         padding: 20px 60px 30px;
         height: 200px;
         background: darken($brand-green-rgba, 15%);
+
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            background: rgba(0,0,0,0.75);
+        }
+
 
         @include respond-to(screen-sm) {
             padding: 20px 80px 30px;

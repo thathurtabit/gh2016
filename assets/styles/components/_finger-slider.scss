@@ -51,6 +51,16 @@
     }
 }
 
+// SVG
+.finger-point {
+    fill: $white;
+    
+    // WHEN THEME-MUTE
+    .theme-muted & {
+        fill: $gray-light;
+    }
+}
+
 
 #finger-slider {
     position: absolute;
@@ -59,6 +69,13 @@
     bottom: 0;
     width: 62%;
     overflow: hidden;
+
+    a {
+        // WHEN THEME-MUTE
+        .theme-muted & {        
+            color: $white;
+        }
+    }
 }
 
 

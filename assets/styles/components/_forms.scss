@@ -25,6 +25,11 @@ label {
 
 .caveat {
 	color: $brand-blue;
+
+	// WHEN THEME-MUTED
+	.theme-muted & {
+		color: $gray-light;
+	}
 }
 
 // Shared Input Styles
@@ -215,6 +220,11 @@ select.wpcf7-form-control {
 	    	font-size: 25px;
 	    	text-align: center;
 	    	color: $brand-blue;
+
+	    	// WHEN THEME-MUTED
+        	.theme-muted & {
+	    		color: $gray-light;
+	    	}
 	    }
 	}
 
@@ -338,6 +348,11 @@ select.wpcf7-form-control {
 			background-color: $white;
 			border-color: $brand-blue;
 			color: $gray-dark;
+
+			// WHEN THEME-MUTED
+        	.theme-muted & {
+        		border-color: $muted;
+        	}
 		}
 
 		
