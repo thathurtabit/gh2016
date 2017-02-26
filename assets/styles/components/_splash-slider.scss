@@ -446,25 +446,30 @@
 
     //RESPONSIVE
     // FROM BREAKPOINT
+    @include respond-to(screen-xs) {
+        width: 70%;
+        bottom: 20px;
+    }
+
     @include respond-to(screen-sm) {
-        width: 75%;
+        width: 57%;
         bottom: 20px;
     }
 
     // FROM MEDIUM 
     @include respond-to(screen-md) {
-        width: 65%;
+        width: 52%;
     }
 
     // FROM LARGE 
     @include respond-to(screen-lg) {
-        width: 62%;
+        width: 48%;
 
     }
 
     // FROM LARGER 
-    @media (min-width: 1500px) {
-        width: 55%;
+    @include respond-to(screen-xl) {
+        width: 40%;
     }
 
 
@@ -523,7 +528,7 @@
     // FROM MEDIUM 
     @include respond-to(screen-md) {
         display: block;
-        width: 40%;
+        width: 35%;
         top: 0;
         bottom: 20px;
         right: 0;
@@ -566,5 +571,13 @@
             }
 
         }
+    }
+
+    @include respond-to(screen-lg) {
+        width: 30%;
+    }
+
+    @include respond-to(screen-xl) {
+
     }
 }

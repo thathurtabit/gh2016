@@ -10,34 +10,32 @@
 
   // FROM SMALL
   @include respond-to(screen-sm) {
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.25);
-    width: 14px;
-    height: 14px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+    width: 7px;
+    height: 7px;
 
     &#pupil-left--dt {
-      box-shadow: 0 0 0 3px rgba(255,0,0,0.25);
+      //box-shadow: 0 0 0 1px rgba(255,0,0,0.25);
     }
   }
 
   // FROM MEDIUM 
   @include respond-to(screen-md) {
-    box-shadow: 0 0 0 4px rgba(0,0,0,0.25);
-    width: 16px;
-    height: 16px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
 
     &#pupil-left--dt {
-      box-shadow: 0 0 0 4px rgba(255,0,0,0.25);
+      //box-shadow: 0 0 0 4px rgba(255,0,0,0.25);
     }
   }
 
   // FROM LARGE 
   @include respond-to(screen-lg) {
-     box-shadow: 0 0 0 5px rgba(0,0,0,0.25);
-    width: 18px;
-    height: 18px;
+     box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
+    width: 8px;
+    height: 8px;
 
      &#pupil-left--dt {
-      box-shadow: 0 0 0 5px rgba(255,0,0,0.25);
+      //box-shadow: 0 0 0 5px rgba(255,0,0,0.25);
     }
   }
 }
@@ -55,29 +53,29 @@
 
   // FROM X-SMALL
   @include respond-to(screen-xs) {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   // FROM SMALL
   @include respond-to(screen-sm) {
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.75);
-    width: 28px;
-    height: 28px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+    width: 21px;
+    height: 21px;
   }
 
   // FROM MEDIUM 
   @include respond-to(screen-md) {
-    box-shadow: 0 0 0 4px rgba(0,0,0,0.75);
-    width: 32px;
-    height: 32px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+    width: 24px;
+    height: 24px;
   }
 
   // FROM LARGE 
   @include respond-to(screen-lg) {
-     box-shadow: 0 0 0 5px rgba(0,0,0,0.75);
-    width: 35px;
-    height: 35px;
+     box-shadow: 0 0 0 3px rgba(0,0,0,0.75);
+    width: 27px;
+    height: 27px;
   }
 }
 
@@ -100,7 +98,7 @@
   // FROM SMALL
   @include respond-to(screen-sm) {
     top: 33%;
-    left: 31%;
+    left: 32%;
   }
 
   // FROM MEDIUM 
@@ -164,6 +162,12 @@
   @include respond-to(screen-lg) {
     top: 36%;
     left: 49%;
+  }
+
+  // FROM X-LARGE 
+  @include respond-to(screen-xl) {
+    top: 36%;
+    left: 50%;
   }
 }
 
@@ -266,6 +270,12 @@
     top: 44%;
     left: 41%;
   }
+
+  // FROM X-LARGE 
+  @include respond-to(screen-xl) {
+    top: 44.5%;
+    left: 42%;
+  }
 }
 
 #eyeright--bj {
@@ -288,6 +298,12 @@
   @include respond-to(screen-lg) {
     top: 45%;
     left: 53.5%;
+  }
+
+  // FROM X-LARGE 
+  @include respond-to(screen-xl) {
+    top: 45.2%;
+    left: 54%;
   }
 }
 
