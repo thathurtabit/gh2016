@@ -445,6 +445,7 @@ a:hover {
 	outline: none;
 	overflow: hidden;
 	z-index: 2000;
+	background-color: $gray-light;
 
 	&:hover {
 		transform: rotate(-45deg);

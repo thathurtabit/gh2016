@@ -44,6 +44,11 @@
     .bg-triangle {
         background: url(../images/bg-laptop-home.png) no-repeat;
         background-position: 300% bottom;
+        background-size: contain;
+
+        @include respond-to(screen-md) {
+            background-size: initial;
+        }
     }
 
     &.waypoint-active .bg-triangle {
@@ -92,6 +97,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    
 
     &::before {
         display: none;
@@ -146,6 +152,12 @@
     .bg-triangle {
         background: url(../images/bg-monitor.png) no-repeat;
         background-position: 300% bottom;
+
+        background-size: contain;
+
+        @include respond-to(screen-md) {
+            background-size: initial;
+        }
     }
 
     &.waypoint-active .bg-triangle {
@@ -165,6 +177,11 @@
     .bg-triangle {        
         background: url(../images/bg-tablet.png) no-repeat;
         background-position: -200% bottom;
+        background-size: contain;
+
+        @include respond-to(screen-md) {
+            background-size: initial;
+        }
 
         @include respond-to(screen-lg) {
             &::before {
@@ -193,7 +210,12 @@
 
     .bg-triangle {
         background: url(../images/bg-phone.png) no-repeat;
-        background-position: center 300%;       
+        background-position: center 300%;
+        background-size: contain;
+
+        @include respond-to(screen-md) {
+            background-size: initial;
+        }   
     }
 
     &.waypoint-active .bg-triangle {
@@ -213,8 +235,13 @@
 
     .bg-triangle {
 
-    background: url(../images/bg-laptop.png) no-repeat;
-    background-position: 200% top;
+        background: url(../images/bg-laptop.png) no-repeat;
+        background-position: 200% top;
+        background-size: contain;
+
+        @include respond-to(screen-md) {
+            background-size: initial;
+        }
 
         @include respond-to(screen-lg) {
             &::before {

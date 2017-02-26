@@ -29,7 +29,25 @@
     background-color: transparent;
     border: 0;
     z-index: 10;
-    top: 30px;
+    top: 7px;
+    height: 30px;
+    outline: none;
+
+    @include respond-to(screen-sm) {
+        top: 14px;
+    }
+
+    @include respond-to(screen-md) {
+        top: 16px;
+    }
+
+    @include respond-to(screen-lg) {
+        top: 18px;
+    }
+
+    @include respond-to(screen-xl) {
+        top: 22px;
+    }
 
     &::before {
         @include transition(color 0.25s ease-in-out);

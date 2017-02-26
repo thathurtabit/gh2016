@@ -502,13 +502,17 @@
 
     article .article__content-wrap {
         margin: 0;
-        padding: 20px 60px 30px;
+        padding: 20px 30px 30px;
         height: 200px;
         background: darken($brand-green-rgba, 15%);
 
         // WHEN THEME-MUTED
         .theme-muted & {
             background: rgba(0,0,0,0.75);
+        }
+
+        @include respond-to(screen-xs) {
+            padding: 20px 30px 30px 50px;
         }
 
 
