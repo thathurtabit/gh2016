@@ -113,12 +113,6 @@
 		z-index: 1001;
 		padding-left: 0;
 		border-radius: 100%;
-		background-color: rgba(255,255,255,.2);
-
-		// WHEN THEME-MUTED
-		.theme-muted & {
-			background-color: rgba(0,0,0,.4);
-		}
 
 		// RESPONSIVE
 		// FROM SMALL
@@ -146,6 +140,15 @@
 			}
 		}
 
+		@include respond-to(screen-sm) {
+			background-color: rgba(255,255,255,.2);
+
+			// WHEN THEME-MUTED
+			.theme-muted & {
+				background-color: rgba(0,0,0,.2);
+			}
+		}
+
 		#horse {		
 			@include transition(.25s ease-in-out all);
 			@include square(50px);
@@ -163,6 +166,11 @@
 				@include translate(-10px, 0);
 				fill: $brand-blue;
 				width: 50px;
+
+				// WHEN THEME-MUTED
+				.theme-muted & {
+					fill: $gray-light;
+				}
 			}
 
 		}
@@ -293,6 +301,11 @@
 			float: none; // override default styles
 			text-align: center;
 			border-bottom: 1px solid rgba(255,255,255,0.2);
+
+			// WHEN MUTED
+            .theme-muted & {
+                border-color: rgba(0,0,0,.075);
+            }
 
 			>li {
 				float: none; // override default styles
@@ -468,6 +481,11 @@ body:not(.home).theme-muted #nav-banner-center {
 		transform-origin: 50% 50%;
 		background-color: $brand-blue;
 		height: 3px;
+
+		// WHEN THEME-MUTED
+		.theme-muted & {
+			background-color: $gray-light;
+		}
 
 		&.one {
 			transform: rotate(45deg) translate(5px, 5px);

@@ -234,12 +234,6 @@
 </div>
 <!-- / BG TRIANGLE -->
 
-<div class="animated-lines animated-lines--quarter-vertical">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
 
 </section><!-- / HOME INTRO CAROUSEL -->
 

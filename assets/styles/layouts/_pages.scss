@@ -41,6 +41,16 @@
         background-color: $muted;
     }
 
+    .bg-triangle {
+        background: url(../images/bg-laptop-home.png) no-repeat;
+        background-position: 300% bottom;
+    }
+
+    &.waypoint-active .bg-triangle {
+        background-position: center;
+    }  
+
+
     @include respond-to(screen-lg) {
         .bg-triangle::before {
             background: url(../images/bg-wire-circle-home.png) no-repeat center;
@@ -50,6 +60,7 @@
                 background: url(../images/bg-wire-circle-home-dark.png) no-repeat center;
             }
         }
+        
     }
 }
 
@@ -74,21 +85,25 @@
 }
 
 .bg-triangle {
-    display: none;
     overflow: hidden;
-    z-index: 0;
+    z-index: 0;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::before {
+        display: none;
+    }
 
 
     @include respond-to(screen-lg) {
         transition: background-position 1s ease-in-out;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
 
         &::before {
+
+            display: block;
             content: "";
             position: absolute;
             width: 800px;
@@ -125,23 +140,16 @@
 
     // WHEN THEME-MUTED
     .theme-muted & {
-        background: linear-gradient(45deg, $muted 0%, darken($muted, 10%) 100%);
+        background: linear-gradient(45deg, $muted 0%, darken($muted, 5%) 100%);
     }
 
     .bg-triangle {
-
-        @include respond-to(screen-lg) {
-            background: url(../images/bg-ink-br.png) no-repeat;
-            background-position: 300% bottom;
-
-        }        
+        background: url(../images/bg-monitor.png) no-repeat;
+        background-position: 300% bottom;
     }
 
     &.waypoint-active .bg-triangle {
-
-        @include respond-to(screen-lg) {
-            background-position: 100% bottom;
-        }
+        background-position: center;
     }    
 }
 
@@ -151,52 +159,53 @@
 
     // WHEN THEME-MUTED
     .theme-muted & {
-        background: linear-gradient(45deg, $muted 0%, darken($muted, 10%) 100%);
+        background: linear-gradient(45deg, $muted 0%, darken($muted, 5%) 100%);
     }
 
-    .bg-triangle {
+    .bg-triangle {        
+        background: url(../images/bg-tablet.png) no-repeat;
+        background-position: -200% bottom;
 
         @include respond-to(screen-lg) {
-            background: url(../images/bg-ink-bl.png) no-repeat;
-            background-position: -200% bottom;
-
             &::before {
                 // WHEN THEME-MUTED
                 .theme-muted & {
                     background: url(../images/bg-wire-circle-dark.png) no-repeat center;
                 }
             }
-
         }        
     }
 
     &.waypoint-active .bg-triangle {
+        background-position: center;
+    }
 
-        @include respond-to(screen-lg) {
-            background-position: 0% bottom;
+    // WHEN THEM MUTED
+    .theme-muted & {
+        .content-lift::after {
+            border-color: rgba(0,0,0,.075);
         }
-    }   
+    }
 }
 
 
 #latest-split {
 
     .bg-triangle {
-
-        @include respond-to(screen-lg) {
-            background: url(../images/bg-ink-b.png) no-repeat;
-            background-position: center 300%;
-
-        }        
+        background: url(../images/bg-phone.png) no-repeat;
+        background-position: center 300%;       
     }
 
     &.waypoint-active .bg-triangle {
+        background-position: center;
+    }
 
-        @include respond-to(screen-lg) {
-            background-position: center 100%;
-
+    // WHEN THEM MUTED
+    .theme-muted & {
+        .content-lift::after {
+            border-color: rgba(0,0,0,.075);
         }
-    }   
+    }
 }
 
 
@@ -204,10 +213,10 @@
 
     .bg-triangle {
 
-        @include respond-to(screen-lg) {
-            background: url(../images/bg-ink-tr.png) no-repeat;
-            background-position: 200% top;
+    background: url(../images/bg-laptop.png) no-repeat;
+    background-position: 200% top;
 
+        @include respond-to(screen-lg) {
             &::before {
                 // WHEN THEME-MUTED
                 .theme-muted & {
@@ -218,11 +227,15 @@
     }
 
     &.waypoint-active .bg-triangle {
+        background-position: center;        
+    }
 
-        @include respond-to(screen-lg) {
-            background-position: 100% top;
+    // WHEN THEM MUTED
+    .theme-muted & {
+        .content-lift::after {
+            border-color: rgba(0,0,0,.075);
         }
-    }   
+    }
 }
 
 
@@ -230,8 +243,11 @@
 
 .svg-triangle {
 
+    display: none;
+
     // FROM LARGE 
     @include respond-to(screen-lg) {
+        display: block;
         transition: transform 0.25s ease-in-out;
         transform: translate3d(0,-100%,0);
         display: block;
@@ -378,6 +394,11 @@
                 background: rgba(255,255,255,.066);
                 border-left: 1px solid rgba(255,255,255,.2);
 
+                // WHEN MUTED
+                .theme-muted & {
+                    border-color: rgba(0,0,0,.075);
+                }
+
                 .pageloaded & {
                     top: 0;
                     bottom: 0;
@@ -393,6 +414,11 @@
                 background: rgba(255,255,255,.033);
                 border-left: 1px solid rgba(255,255,255,.2);
 
+                // WHEN MUTED
+                .theme-muted & {
+                    border-color: rgba(0,0,0,.075);
+                }
+
                 .pageloaded & {
                     top: 0;
                     bottom: 0;
@@ -407,6 +433,11 @@
                 left: 75%;
                 background: rgba(255,255,255,0);
                 border-left: 1px solid rgba(255,255,255,.2);
+
+                // WHEN MUTED
+                .theme-muted & {
+                    border-color: rgba(0,0,0,.075);
+                }
 
                 .pageloaded & {
                     top: 0;

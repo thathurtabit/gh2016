@@ -337,14 +337,15 @@
 	> p:first-of-type {
 		font-size: 20px;
 		position: relative;
-		padding-bottom: 10px;
+		padding-bottom: 0;
 		margin-bottom: 10px;
 		line-height: 1.5;
+		font-weight: 400;
 
 		@include respond-to(screen-sm) {
 			font-size: 23px;
-			line-height: 1.7;			
-			padding-bottom: 20px;
+			line-height: 1.6;			
+			padding-bottom: 0;
 			margin-bottom: 20px;
 		}
 	}

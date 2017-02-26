@@ -433,16 +433,44 @@ a:hover {
 
 // TOGGLE THE WEBSITE COLOR!
 .toggle-color {
+	transition: transform 0.25s ease-in-out;
+	transform: rotate(45deg);
 	position: absolute;
-	top: 35px;
-	left: 60px;
-	width: 30px;
-	height: 30px;
+    top: 25px;
+    left: 45px;
+	width: 20px;
+	height: 20px;
 	border-radius: 100%;
 	border: 0;
 	outline: none;
-	box-shadow: 0 0 0 5px rgba(0,0,0,0.05);
+	overflow: hidden;
 	z-index: 2000;
+
+	&:hover {
+		transform: rotate(-45deg);
+	}
+
+	&::after {
+		content: "";
+		left: 50%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background-color: rgba(255,255,255,0.2);
+	}
+
+	@include respond-to(screen-sm) {
+		position: absolute;
+		top: 38px;
+    	left: 40px;
+	}
+
+	@include respond-to(screen-md) {
+		top: 40px;
+		left: 60px;		
+	}
+
 
 	// WHEN THEME-MUTED
 	.theme-muted & {

@@ -41,6 +41,11 @@
 
     &:hover::before {
         color: $white;
+
+        // WHEN MUTED
+        .theme-muted & {
+            color: lighten($gray-light, 20%);
+        }
     }
 
 }
@@ -87,6 +92,10 @@
 
     @include respond-to(screen-sm) {
         border: 2px solid $white;
+
+        .theme-muted & {
+            border-color: lighten($gray-light, 25%);
+        }
     }
 }
 
@@ -181,7 +190,7 @@
         // WHEN THEME-MUTED
         .theme-muted & {
             background: $white;
-            background: linear-gradient(45deg, $muted 0%, darken($muted, 10%) 100%)!important;
+            background: linear-gradient(45deg, $muted 0%, darken($muted, 5%) 100%)!important;
         }
     }
 }

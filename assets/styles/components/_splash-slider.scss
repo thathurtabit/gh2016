@@ -153,8 +153,12 @@
             stroke-dashoffset: -200;
             stroke-width: 2px;
 
+            // WHEN THEME-MUTED
+            .theme-muted & {
+                stroke: rgba(0,0,0,.2);
+            }
+
             &:hover {
-                stroke: rgba(255,255,255,.5);
                 stroke-dasharray: 5;
                 stroke-dashoffset: 400;
                 stroke-width: 3px;
@@ -435,6 +439,11 @@
     margin-bottom: 0;
     color: $white;
 
+    // WHEN THEME-MUTED
+    .theme-muted & {
+        filter: grayscale(1);
+    }
+
     //RESPONSIVE
     // FROM BREAKPOINT
     @include respond-to(screen-sm) {
@@ -523,6 +532,11 @@
         margin-left: 0;
         margin-bottom: 0;
         color: $white;
+
+        // WHEN THEME-MUTED
+        .theme-muted & {
+            filter: grayscale(1);
+        }
 
         .item {
             height: 100vh;
