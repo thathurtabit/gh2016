@@ -243,7 +243,7 @@
 <!-- CONTENT LIFT -->
 <div class="content-lift">
 
-	<h2 class="section-heading heading--icon-question">Lovely websites you say, b-but how? 
+	<h2 class="section-heading heading--icon-question"><span class="highlight">Lovely websites</span> you say, b-but how? 
 	<span class="zigzag-long"></span>
 	</span>
 
@@ -339,7 +339,7 @@
 <!-- CONTENT LIFT -->
 <div class="content-lift">
 
-	<h2 class="section-heading heading--icon-code">But like, what do you DO?
+	<h2 class="section-heading heading--icon-code">But like, <span class="highlight">what do you DO?</span>
 	<span class="zigzag-long"></span>
 	</h2>
 
@@ -445,7 +445,7 @@
 <div class="content-lift">
 
 
-	<h2 class="section-heading  heading--icon-bolt block--position-absolute">Latest stuff 
+	<h2 class="section-heading  heading--icon-bolt block--position-absolute"><span class="highlight">Latest</span> stuff 
 	<span class="zigzag-long"></span>
 	</h2>
 

@@ -10,7 +10,7 @@ var gulpif       = require('gulp-if');
 var imagemin     = require('gulp-imagemin');
 var jshint       = require('gulp-jshint');
 var lazypipe     = require('lazypipe');
-var less         = require('gulp-less');
+//var less         = require('gulp-less');
 var merge        = require('merge-stream');
 var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
@@ -19,7 +19,7 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
-var scsslint     = require('gulp-scss-lint');
+//var scsslint     = require('gulp-scss-lint');
 var cache        = require('gulp-cached');
 
 // See https://github.com/austinpray/asset-builder
@@ -87,9 +87,9 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
-    .pipe(function() {
-      return gulpif('*.less', less());
-    })
+    // .pipe(function() {
+    //   return gulpif('*.less', less());
+    // })
     .pipe(function() {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
@@ -235,14 +235,14 @@ gulp.task('jshint', function() {
 });
 
 // https://www.npmjs.com/package/gulp-scss-lint
-gulp.task('scss-lint', function() {
-  return gulp.src([path.source + 'styles/**/*.scss', '!' + path.source + 'styles/**/_animations.scss'])
-    .pipe(cache('scsslint'))
-    .pipe(scsslint({
-      'config': 'scss-lint.yml',
-      'maxBuffer': 587200
-    }));
-});
+// gulp.task('scss-lint', function() {
+//   return gulp.src([path.source + 'styles/**/*.scss', '!' + path.source + 'styles/**/_animations.scss'])
+//     .pipe(cache('scsslint'))
+//     .pipe(scsslint({
+//       'config': 'scss-lint.yml',
+//       'maxBuffer': 587200
+//     }));
+// });
 
 // ### Clean
 // `gulp clean` - Deletes the build folder entirely.
@@ -285,7 +285,7 @@ gulp.task('watch', function() {
     }
   });
   gulp.watch([path.source + 'styles/**/*'], ['styles']);
-  gulp.watch([path.source + 'styles/**/*'], ['scss-lint']);
+  //gulp.watch([path.source + 'styles/**/*'], ['scss-lint']);
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
   gulp.watch([path.source + 'images/**/*'], ['images']);
